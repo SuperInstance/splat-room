@@ -179,7 +179,10 @@ nothing recorded.
 
 ## CROSS — steals and extensions
 
-*(Sibling riffs had not landed when this file was written; the two
+*(First filed before siblings landed; the reserved slots below
+were filled 2026-10-21T18:10Z when the oracle's IDEATION.md landed —
+see the two EXTENDED entries. Original header kept: sibling riffs had
+not landed when this file was written; the two
 steals below are from chiaroscuro — a real seat's shipped work — and
 two reserved slots name what I will extend the moment siblings land.
 Steal honestly, credit plainly.)*
@@ -200,15 +203,31 @@ bars. This is the cleaner steal: not a feature, a DISCIPLINE, and it
 is why idea 5's receipt prints the still/move ratio rather than a
 satisfaction score.
 
-**Reserved: [sibling riff slot 1].** The first sibling riff on audio
-or pose will likely own the chirp schedule or the pose fusion — if so,
-idea 4's punctuation and idea 1's pin rule should CONSUME their
-calculator outputs verbatim (the liaison's lens registry is the
-contract), not re-derive them.
+**Extended (2026-10-21T18:10Z, after the oracle's IDEATION.md landed):
+oracle's steal 6 + COLLISIONS-1, from the pages side.** The librarian's
+collision says the shimmer cells ARE the pose error signal — a SLAM
+frontend with no separate tracker. My extension is what the PHONE SHOWS
+while that loop runs, because an invisible correction is a silent
+experiment: pose-locked cells STOP RAINING. Fidelity weather (idea 2)
+already has the vocabulary — delta-rain on changed cells, afterimage on
+settled ones — so convergence becomes legible as weather calming: a
+one-row SETTLED-FRACTION bar (countable cells, like the fidelity bar),
+and the pin rule of idea 1 loses its "vantage guess" clause entirely —
+**pin = the moment the room stops arguing with the phone**
+(settled fraction over threshold while still). The oracle's first
+measurement (pose-corrected shimmer energy falls monotonically) thus
+gets its display twin for free: the weather report IS the convergence
+readout, and Casey can see a pin about to fire before it does.
 
-**Reserved: [sibling riff slot 2].** The first sibling riff on the
-splat/Blender side owns what idea 3's ghost layer actually receives; I
-expect to steal its projection format whole and re-render it as glyphs
-— the extension direction is: the ghost should be rendered THROUGH the
-same glyph pipeline (a depth-ramp glyph set), not as pixels, so the
-registration screen stays one language.
+**Extended (same): oracle's steal 2 + COLLISIONS-6 — the flight lines.**
+If every UI act is a measurement (OVER and chirps as TDOA events the
+bench mics record), the phone holds the OTHER half of each event: the
+exact moment it played. Phone-speaker-out → bench-mic-in, phone
+receipt vs bench receipt = one distance, drawn. So the walk receipt
+(idea 5) gains FLIGHT LINES: from each keyframe's map position to the
+bench mic's position, labeled with the measured TDOA distance — the
+walkie-talkie's log drawn as the room's own survey lines. This is the
+ASCII-PHONE addendum's pose fusion getting a teacher-free anchor: GPS
+and tilt guess, the flight line MEASURES, and the walked map is
+corrected by the UI's own transmissions. The interface is the
+instrument; now the receipt shows the instrument working.
