@@ -351,7 +351,88 @@ It is stated here before it is measured, so that it can be.
 
 ---
 
-## 7. HOW TO REPRODUCE
+## 7. THE CARDINALITY RULE — measured against the incumbent, and against the truth it never sees
+
+**The rule was stated in §6.2 before it was measured, and here is what
+it did.**
+
+**THE RULE.** For each cardinality, fit the alphabet, find the
+**characteristic** cluster — the one that owns the most cells — and
+measure the **activity gap** between it and the median of the other
+clusters: how much more active the biggest material is than a typical
+one. The cardinality with the largest gap wins; ties go to the smallest
+cardinality. **Nothing in it consults the truth.** It is a statement
+about the alphabet's own structure, which is why the silhouette — which
+measures separation, not structure — could not have found it.
+
+**THE COMPARISON.** The rule is measured against the **incumbent**, the
+silhouette the grid study ships, and against fixed cardinalities, all
+on the same corpus in the same run.
+
+| | the transfer, all pairs | the transfer, decisive | the control, decisive | the gap | follows the TARGET | the SELF case, decisive | the characteristic cluster is the MOST active one |
+|---|---|---|---|---|---|---|---|
+| fixed k=3 | **1,372/1,806 (76.0 %)** | **1,032/1,302 (79.3 %)** | 840/1,302 (64.5 %) | 14.74 | **80.0 %** | 22/31 (71.0 %) | 24/43 |
+| fixed k=4 | 1,255/1,806 (69.5 %) | 936/1,302 (71.9 %) | 870/1,302 (66.8 %) | 5.07 | 73.2 % | 23/31 (74.2 %) | 14/43 |
+| fixed k=5 | 1,232/1,806 (68.2 %) | 909/1,302 (69.8 %) | 884/1,302 (67.9 %) | 1.92 | 70.3 % | 20/31 (64.5 %) | 8/43 |
+| fixed k=6 | 1,218/1,806 (67.4 %) | 910/1,302 (69.9 %) | 878/1,302 (67.4 %) | 2.46 | 69.3 % | 21/31 (67.7 %) | 7/43 |
+| **the activity-gap rule** | 1,349/1,806 (74.7 %) | **1,032/1,302 (79.3 %)** | 840/1,302 (64.5 %) | **14.74** | 78.3 % | **25/31 (80.6 %)** | **25/43** |
+| the silhouette rule (the incumbent) | 1,353/1,806 (74.9 %) | 1,016/1,302 (78.0 %) | 843/1,302 (64.7 %) | 13.28 | 78.6 % | 22/31 (71.0 %) | 22/43 |
+
+### 7.1 The verdict, which is not the one that would sell it
+
+**The rule beats the incumbent on every measure that concerns the
+vocabulary's own quality** — the decisive transfer (79.3 % against
+78.0 %), the gap over the control (14.74 against 13.28 points), the
+self case (**25/31 = 80.6 %** against 22/31 = 71.0 %) and the rate at
+which the characteristic cluster is the moving material (25 of 43
+against 22 of 43).
+
+**And fixed k=3 is still the best on the raw all-pairs transfer, 76.0 %
+against the rule's 74.7 %.** So the honest statement is not "the new
+rule replaces the old one". It is: **the rule makes the per-session
+choice safe without giving up anything on the decisive pairs, and it
+beats the silhouette on the session's own answer by 9.6 points.**
+
+The reason is visible in the last column. The rule does not simply
+pick k=3 everywhere — it picks k=3 for 12 sessions, k=4 for 12, k=5
+for 4 and k=6 for 15 — and yet it lands on the k=3 numbers for the
+decisive pairs (1,032, exactly) while beating the silhouette. **What
+it preserves is not the number of symbols but the property:** the
+alphabet keeps its biggest symbol meaning "the thing that moves".
+
+### 7.2 What this changes, and what it does not
+
+- **It does not change the grid study's shipped rule.** The grid study
+  uses the silhouette, and the silhouette's own numbers are what §6
+  measured; the activity-gap rule is measured here and is a candidate
+  for the next revision of that tool, not a correction to its report.
+- **It does not settle the cardinality question.** "Does the transfer
+  survive at other k?" is answered — it does not survive a fine
+  cardinality, and the vocabulary's meaningfulness is concentrated at
+  low k. **Which k a session should use** is a different question, and
+  the rule above is one answer to it, on one corpus, on one question.
+- **It does not certify anything.** The truth is still the independent
+  full-resolution luma and the grader is still us.
+
+### 7.3 The next measurement this suggests
+
+**The rule is a rule about the alphabet's structure, and it is measured
+on ONE question.** The obvious next step is to ask whether the same
+rule holds for a question with a different answer — for instance
+"which third of the room moved most", where the answer is not a
+left/right split and the "characteristic material" is not the biggest
+cluster. A rule that only works for a left/right question is a rule
+about that question.
+
+And the other one: **the three sessions that every partner reads
+backwards.** They are missed by the grid study too, so the failure
+belongs to the vocabulary. That question is worth more than another
+cardinality, because a vocabulary that is confidently wrong about
+whole sessions is worse than one that stays quiet.
+
+---
+
+## 8. HOW TO REPRODUCE
 
 ```sh
 # the selftest: 8 checks

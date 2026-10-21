@@ -217,8 +217,76 @@ def similarity(a: dict, b: dict) -> float:
     return float(np.corrcoef(va, vb)[0, 1])
 
 
-def study_k(materials: list[dict], k: int) -> dict:
-    """The whole study at ONE cardinality.
+def choose_k_by_silhouette(material: dict, ks=K_SWEEP) -> dict:
+    """The INCUMBENT rule: the silhouette of the training descriptors.
+
+    This is what the glyph grid study ships, and the comparison a new
+    rule has to win is against it.  It is truth-blind too: it measures
+    how separated the clusters are, and never looks at the answer.
+    """
+    train_desc = material['train_desc']
+    even = material['even']
+    sils = {}
+    for k in ks:
+        labels, char_for, centres, means, scale = gg.fit_alphabet(
+            train_desc, k, seed=11, cell_mask=even)
+        z = train_desc.reshape(-1, train_desc.shape[-1]) / scale
+        fit_cells = z[even.reshape(-1)]
+        fit_labels = gg.assign_nearest(centres, fit_cells)
+        sils[k] = gg.silhouette_score(fit_labels, fit_cells)
+    if not sils:
+        return {'k': None, 'sils': {}}
+    best = min(sils, key=lambda k: (-sils[k], k))
+    return {'k': best, 'sils': {str(k): round(v, 4) for k, v in sils.items()}}
+
+
+def choose_k_by_activity_gap(material: dict, ks=K_SWEEP) -> dict:
+    """THE RULE, stated before it was measured.
+
+    The CHARACTERISTIC cluster is the one that owns the most cells.  For
+    the vocabulary to mean anything, that cluster must also be the one
+    that MOVES -- otherwise "the biggest material" and "the moving
+    material" have come apart, and the question has nothing left to
+    ask.  The sweep showed that coming apart: at three symbols the
+    biggest cluster is the most active one in 24 of 43 sessions, and at
+    six symbols in 7 of 43.
+
+    So, for each cardinality: fit the alphabet, find the biggest
+    cluster, and measure the ACTIVITY GAP between it and the median of
+    the other clusters.  The cardinality with the largest gap wins, and
+    ties go to the smallest cardinality so the choice is deterministic.
+
+    NOTHING HERE CONSULTS THE TRUTH.  It is a statement about the
+    alphabet's own structure, which is why it can be evaluated against
+    a truth it has never seen -- and why the silhouette, which measures
+    separation and not structure, could not have found it.
+    """
+    gaps = {}
+    for k in ks:
+        model = session_model(material, k)
+        if model is None:
+            continue
+        means = list(model['cluster_mean_activity'])
+        if len(means) < 2:
+            continue
+        counts = np.bincount(model['train_labels'].reshape(-1)[
+            model['observed'].reshape(-1)], minlength=k)
+        biggest = int(np.argmax(counts))
+        others = [m for i, m in enumerate(means) if i != biggest]
+        if not others:
+            continue
+        gap = float(means[biggest] - float(np.median(others)))
+        gaps[k] = gap
+    if not gaps:
+        return {'k': None, 'gaps': {}}
+    # the largest gap wins; the smallest k wins a tie
+    best = min(gaps, key=lambda k: (-gaps[k], k))
+    return {'k': best, 'gaps': {str(k): round(v, 6) for k, v in gaps.items()}}
+
+
+def study_k(materials: list[dict], k, k_picker=None) -> dict:
+    """The whole study at ONE cardinality -- or, when a picker is given,
+    at the cardinality each session's own rule chooses.
 
     The corpus is read ONCE by the caller and the alphabets are refitted
     per cardinality, because a vocabulary with three symbols and one
@@ -226,15 +294,22 @@ def study_k(materials: list[dict], k: int) -> dict:
     sweep exists to answer is whether a vocabulary transfers or a
     PARTICULAR vocabulary transfers."""
     models = []
+    picked: list[int] = []
     for m in materials:
-        model = session_model(m, k)
+        kk = k
+        if k_picker is not None:
+            kk = k_picker(m)['k']
+            if kk is None:
+                continue
+        model = session_model(m, kk)
         if model is None:
             continue
         models.append(model)
+        picked.append(model['k'])
     n = len(models)
     if not n:
         raise SystemExit('no usable sessions')
-    print('  k=%d: %d sessions' % (k, n))
+    print('  k=%s: %d sessions' % (k if k_picker is None else 'per-session', n))
 
     # the truth side of every session, for the conditional analysis
     truths = {m['session']: m['truth']['half'] for m in models}
@@ -258,7 +333,7 @@ def study_k(materials: list[dict], k: int) -> dict:
             r = answer_with(a, b, a['characteristic'])
             # the control: a cluster of A that is NOT the characteristic
             # one.  If the transfer is real, the control must be worse.
-            others = [c for c in range(k) if c != a['characteristic']]
+            others = [c for c in range(a['k']) if c != a['characteristic']]
             control_cluster = int(others[rng.integers(len(others))]) if others \
                 else a['characteristic']
             c = answer_with(a, b, control_cluster)
@@ -415,9 +490,11 @@ def study_k(materials: list[dict], k: int) -> dict:
         'study': 'the glyph grid transfer test -- is the vocabulary the room\'s or the capture\'s?',
         'generated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
         'method': {
-            'k': k,
+            'k': k if k is not None else 'PER SESSION, by the activity-gap rule',
             'k_why': ('FIXED, so two alphabets can be compared at all; k=3 is the '
-                      'silhouette\'s own modal choice over the corpus'),
+                      'silhouette\'s own modal choice over the corpus.  The sweep '
+                      'runs every cardinality, and the activity-gap rule lets '
+                      'each session choose its own'),
             'the_transfer': ('A\'s alphabet, fitted on A, answers B\'s question: A\'s '
                              'cells are assigned to A\'s centres in A\'s scaled space, '
                              'and A\'s characteristic cluster is counted in B\'s halves '
@@ -466,6 +543,9 @@ def study_k(materials: list[dict], k: int) -> dict:
                 'the_reading': ('the same transfer with a random non-characteristic '
                                 'cluster: the floor the transfer must beat to mean '
                                 'anything'),
+            },
+            'the_k_distribution': {
+                str(kk): picked.count(kk) for kk in sorted(set(picked))
             },
             'the_decay_curve': curve,
             'the_mechanism': {
@@ -556,6 +636,31 @@ def measure(corpus: Path, out_dir: Path, ks=K_SWEEP) -> dict:
             primary = res
     if primary is None:
         primary = res
+
+    # THE RULE, stated before it was measured: the cardinality that
+    # keeps the biggest cluster and the moving material the same thing.
+    print('  the activity-gap rule:')
+    res_rule = study_k(materials, None, k_picker=choose_k_by_activity_gap)
+    by_k['the_activity_gap_rule'] = res_rule['summary']
+    picked = {}
+    for m in materials:
+        p = choose_k_by_activity_gap(m, ks)
+        if p['k'] is not None:
+            picked[str(p['k'])] = picked.get(str(p['k']), 0) + 1
+    by_k['the_activity_gap_rule']['the_k_it_picks'] = picked
+
+    # THE INCUMBENT: the silhouette, which is what the grid study
+    # ships.  A new rule has to win against this one, not against
+    # nothing.
+    print('  the silhouette rule (the incumbent):')
+    res_sil = study_k(materials, None, k_picker=choose_k_by_silhouette)
+    by_k['the_silhouette_rule'] = res_sil['summary']
+    picked_sil = {}
+    for m in materials:
+        p = choose_k_by_silhouette(m, ks)
+        if p['k'] is not None:
+            picked_sil[str(p['k'])] = picked_sil.get(str(p['k']), 0) + 1
+    by_k['the_silhouette_rule']['the_k_it_picks'] = picked_sil
 
     out = primary['out']
     out['the_cardinality_sweep'] = {

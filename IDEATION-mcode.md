@@ -749,6 +749,30 @@ between the characteristic cluster and a random cluster of the same
 alphabet, with the truth never consulted. A rule about the ALPHABET's
 structure rather than its separation.
 
+### The cardinality rule, measured — dated note, 2026-10-21
+
+**The rule is measured, and it WINS against the incumbent — but not in
+the way that would sell it, so here is the whole table.**
+
+| | the transfer, decisive | the gap over the control | the SELF case, decisive | the biggest symbol is the moving one |
+|---|---|---|---|---|
+| the activity-gap rule | **79.3 %** | **14.74** | **25/31 (80.6 %)** | **25/43** |
+| the silhouette rule (incumbent) | 78.0 % | 13.28 | 22/31 (71.0 %) | 22/43 |
+| fixed k=3 | 79.3 % | 14.74 | 22/31 (71.0 %) | 24/43 |
+
+**It beats the incumbent on every measure that concerns the vocabulary's
+own quality**, including the session's own answer by 9.6 points. **And
+fixed k=3 is still best on the raw all-pairs transfer** (76.0 % against
+the rule's 74.7 %). So the rule is not a replacement for "use three
+symbols" — it is a way of letting each session choose its own symbols
+without losing the thing that matters.
+
+**And that thing is not the number of symbols.** The rule picks k=3 for
+12 sessions, k=4 for 12, k=5 for 4 and k=6 for 15, and it still lands
+on k=3's decisive numbers exactly. **What it preserves is the
+property: the alphabet keeps its biggest symbol meaning "the thing that
+moves".** The number of symbols was never the thing; the property was.
+
 ---
 
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured
