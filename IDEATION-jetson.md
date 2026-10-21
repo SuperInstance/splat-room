@@ -198,3 +198,30 @@ vantage instead of the fixed subset, same cadence, no new training. Then
 the walk receipt's "splats +4,100 this walk (fed by k4,k7)" row is
 derived, not asserted — the receipt becomes a SELECT over the run log,
 which is the ledger culture working as intended.
+
+**Added 2026-10-21 ~19:30Z — on the meaning lens (mcode idea 1, the
+glyph sidecar): same byte from both directions, and a mechanistic
+version of their proving measurement.** Two riffs filed independently
+landed on byte-not-embedding: their sidecar (one character, closed
+alphabet, never rendered) and my riff #1 (sparse codebook index over
+the ramp alphabet + confidence, CE-supervised against the view's ASCII
+map). When the wide lens and the meaning lens converge with the
+builders lens on the same storage shape, that is evidence about the
+shape, not a coincidence to harmonize away. The extension: mcode's
+proving measurement ("does the sidecar's character predict the splat's
+geometry better than a 512-d CLIP embedding, at a tenth the bytes")
+keeps a teacher in the baseline and stays correlative. My guided run
+makes it mechanistic and teacher-free: splats are INJECTED at known
+ramp levels (the trainer now logs each injected splat's seed level
+through the strategy state — duplicated/split children inherit,
+prunes drop), so the question becomes: does the seed character predict
+the MATURE geometry (final scale, opacity survival) of the very splat
+it seeded? If `#`-seeded splats anchor (shrink, survive) differently
+from `:`-seeded ones, the character doesn't just predict geometry —
+it CAUSED placement, which is a stronger claim at zero extra runs: the
+seed-join ships with the guided run's artifacts
+(`guided_lego_seedjoin.pt`). And their grid-over-embedding thesis gets
+its arbitration from the sibling arms: if ascii-first scheduling
+(riff #2 arm) matches pixel-first geometry timing, the grid carries
+the fitting meaning and the sidecar carries the query meaning — two
+jobs, two scales, no wrong unit.
