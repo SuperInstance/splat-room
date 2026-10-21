@@ -1,0 +1,5 @@
+# Python bytecode caches.  The tools import each other inside this
+# repository (glyph_transfer.py imports glyph_grid.py), which writes a
+# __pycache__ into experiments/ on every run.
+__pycache__/
+*.pyc
