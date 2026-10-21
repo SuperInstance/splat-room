@@ -213,6 +213,24 @@ ours.
    every partner, consistently. A vocabulary that is confidently wrong
    about a whole session is worse than one that abstains, and this one
    never abstains.
+
+   > **Dated correction, later on 2026-10-21: "every partner" was too
+   > strong, and the failure diagnosis (`docs/GLYPH-FAILURE.md`) says
+   > what the truth is.** One session — 1792554532 — is read backwards
+   > by 95 % of its partners; the other two of the three (11.9 % and
+   > 19.0 %) are read wrongly by 88 % and 81 %, so their partners are
+   > not unanimous. The rates in §2.4 are unchanged and were always
+   > right; the characterisation was not. **And the failures are four
+   > sessions, not three, and they split into three mechanisms:** two
+   > are the grid reading a near-tie (17 and 20 observed cells, truth
+   > ratios 1.082 and 1.094, grid counts of 4-4 and 2-3 — the grid has
+   > no opinion and neither does the truth), one is a near-tie with a
+   > big margin (32 cells, ratio 1.003), and **one is a genuine
+   > inversion** (857 cells, ratio 1.248, where the biggest cluster
+   > sits at L 0.266 while the energy sits at L 0.555 and the most
+   > ACTIVE cluster sits at L 0.594 — so electing the characteristic
+   > cluster by activity rather than by cell count would turn it
+   > round).
 3. **The control-not-at-chance kill.** The control sits at 58.3 %, not
    50 %. Part of what the "transfer" measures is a region's geometry,
    not a vocabulary's meaning, and the two are not separated by more
@@ -426,7 +444,17 @@ about that question.
 
 And the other one: **the three sessions that every partner reads
 backwards.** They are missed by the grid study too, so the failure
-belongs to the vocabulary. That question is worth more than another
+belongs to the vocabulary.
+
+> **Dated note, later on 2026-10-21: this is DONE — see
+> `docs/GLYPH-FAILURE.md`.** "Every partner" was too strong for two of
+> the three, and the failure set is four sessions, not three. Two of
+> the four are the grid reading a near-tie, one is a near-tie with a
+> big margin, and **one is a genuine inversion with 857 observed cells
+> and a decisive question** — the only one that is a real defect, and
+> the one an activity-based election would turn round. The
+> activity-gap rule repairs **none** of them, so the cardinality and
+> the failure are unrelated. That question is worth more than another
 cardinality, because a vocabulary that is confidently wrong about
 whole sessions is worse than one that stays quiet.
 

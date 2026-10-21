@@ -773,6 +773,42 @@ on k=3's decisive numbers exactly. **What it preserves is the
 property: the alphabet keeps its biggest symbol meaning "the thing that
 moves".** The number of symbols was never the thing; the property was.
 
+### The failure diagnosis — dated note, 2026-10-21
+
+**The vocabulary's errors are systematic, and only ONE of the four is a
+defect.** `experiments/glyph_failure.py` (7/7 selftest),
+`results/glyph_failure.json`, report `docs/GLYPH-FAILURE.md`.
+
+The hypothesis was sharp: the characteristic cluster is elected by CELL
+COUNT while the truth is CHANGE ENERGY, so a session is read backwards
+exactly when the biggest cluster's spatial bias points the other way.
+The margin **flips sign** — **+0.1674** where the partners are right,
+**−0.1298** where they are wrong — so it has directional power, though
+3 of the 18 right sessions also carry a negative margin.
+
+**And the four failures are three different things:**
+
+- **two are the grid reading a near-tie** — 17 and 20 observed cells,
+  truth ratios 1.082 and 1.094, grid counts of 4-4 and 2-3. The grid
+  has no opinion and neither does the truth.
+- **one is a near-tie with a big margin** — 32 cells, ratio 1.003.
+- **one is a REAL inversion** — 1792554532, with **857 observed cells**
+  and a decisive ratio of **1.248**, whose biggest cluster sits at
+  L 0.266 while the energy sits at L 0.555 and whose **most ACTIVE
+  cluster sits at L 0.594**. **Electing the characteristic cluster by
+  activity instead of by cell count would turn it round.**
+
+**The shape of it: the failures are where the evidence is thin.** Three
+of the four have under 300 observed cells — only 10 of 43 sessions do
+— and the median observed cells of a failure is **26 against 586**. So
+the vocabulary is not blind. **It has nothing to say when almost
+nothing moved, and it says it anyway.**
+
+**And the activity-gap rule repairs NONE of the four**, so the
+cardinality and the failure are unrelated. A clean negative result, and
+worth having: a reader who assumed the new rule would carry the fix
+would be wrong.
+
 ---
 
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured
