@@ -198,8 +198,13 @@ def inject_edge_splats(params, optimizers, state, step, viewmat, K, W, H,
         return torch.cat([v, torch.zeros((n, *v.shape[1:]), device=v.device)])
 
     _update_param_with_optimizer(param_fn, optimizer_fn, params, optimizers)
+    # per-splat seed level rides the strategy state (dup/split inherit, prune drops),
+    # so end-of-run params join back to the ramp level that seeded them
+    lvl = edge_levels[idx[0][pick], idx[1][pick]].float()
     for k2, v in state.items():
-        if isinstance(v, torch.Tensor):
+        if k2 == "seed_levels":
+            state[k2] = torch.cat((v, lvl))
+        elif isinstance(v, torch.Tensor):
             state[k2] = torch.cat((v, torch.zeros(n, device=v.device)))
     log.append((step, n))
     return n
@@ -260,6 +265,10 @@ def main():
     scene_scale = float((c2w_train[:, :3, 3].norm(dim=-1)).max())  # ~4.1 for lego
     strategy.check_sanity(params, optimizers)
     state = strategy.initialize_state(scene_scale=scene_scale)
+    if args.guided:
+        # rides duplicate/split/remove via the strategy ops (mcode cross: the
+        # join key for "does the seed character carry geometry")
+        state["seed_levels"] = torch.zeros(N0, device=device)
 
     inject_log = []
     val_idx = torch.arange(args.val_subset)
@@ -336,6 +345,13 @@ def main():
                   f"inj {rec['n_injected']:6d} {rec['elapsed_s']:8.1f}s", flush=True)
 
     out.close()
+    if args.guided:
+        torch.save({
+            "seed_levels": state["seed_levels"].cpu(),
+            "scales": params["scales"].detach().cpu(),
+            "opacities": params["opacities"].detach().cpu(),
+            "means": params["means"].detach().cpu(),
+        }, args.out.replace(".jsonl", "_seedjoin.pt"))
     print(f"DONE guided={args.guided} cross25={crossings['25']} cross30={crossings['30']} "
           f"final_psnr={psnr:.2f} n_gs={len(params['means'])}")
 
