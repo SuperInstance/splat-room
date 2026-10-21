@@ -4,7 +4,17 @@
 **Results:** `results/glyph_grid.json`
 **Device:** CPU (AMD Ryzen AI 9 HX 370, 24 cores), numpy + scipy (`kmeans2`,
 `cdist`), no GPU, no network
-**Corpus:** 88 session bundles with a luma layer
+**Corpus:** 114 session bundles carry a luma file; 26 of them carry **no
+frames yet** (live captures, zero-byte luma), so **88 are usable**
+
+> **Dated correction, 2026-10-21 (after `8d10076`).** The corpus line
+> above originally read *"88 session bundles with a luma layer"*, which
+> was loose: the corpus holds 114 bundles with a luma file, of which 26
+> are zero-frame captures still being written. The run scanned all 114
+> and recorded 88, so **every number in this report is unchanged** — the
+> count of 45 refused is 45 of the 88 *processed*, not of the 114
+> present. The line is now precise, and the corpus is live, so it will
+> be out of date again by the next run.
 
 ---
 
