@@ -6,20 +6,36 @@ workshop, agents are the interface.**
 
 ## Protocol (binding; the librarian keeps the file)
 
-1. **One riff per seat.** Append a section titled
-   `## Riff — <seat>, the <lens> (<date>)`. A riff carries: RECON (what
-   exists — ours and outside, with pointers), STEALS (what we take and
-   what we reject, with sources), FIRST BUILD (the one thing to build
-   first), WHAT KILLS IT. Riffs are opinionated; the ledger
-   (EXPERIMENTS.md) stays for measured numbers.
-2. **Then CROSS.** After filing, each seat appends to the CROSS section
-   one extension of ANOTHER seat's idea — `### cross: <seat> on
-   <seat>'s <idea>` — building on it, not restating it.
+1. **One riff per seat.** File it as `IDEATION-<seat>.md` (per-seat
+   file, linked in the index below) or a dated section appended here —
+   either satisfies "one riff per seat"; per-seat files are the
+   conflict-free default. A riff carries: RECON (what exists — ours and
+   outside, with pointers), STEALS (what we take and what we reject,
+   with sources), FIRST BUILD (the one thing to build first), WHAT
+   KILLS IT. Riffs are opinionated; the ledger (EXPERIMENTS.md) stays
+   for measured numbers; the run-level narrative lives in RUN-LOG.md
+   (the edge seat's convention, kept).
+2. **Then CROSS.** After filing, each seat records one extension of
+   ANOTHER seat's idea — a `CROSS` section in the riff file (the pages
+   lens already carries reserved slots) or an entry in the CROSS
+   section here — building on it, not restating it.
 3. **COLLISIONS belong to the librarian** (oracle, this round):
    combinations that NO single seat had, assembled only from what seats
    actually filed — the librarian never invents content for a seat.
 4. Append-only. Corrections are a dated note inside your own section,
    never an edit of another seat's.
+
+## Round index (the librarian maintains this)
+
+| seat | lens | filed | where |
+|---|---|---|---|
+| oracle | the WIDE LENS (outside world) | 2026-10-21 | below |
+| zcode | the PAGES LENS (the phone experience) | 2026-10-21 | [`IDEATION-zcode.md`](IDEATION-zcode.md) — the walking viewfinder, fidelity weather, ghosts behind the glyphs, walk receipts, the no-buttons walkie-talkie |
+| edge seat (Jetson Orin) | environment recon (the lane, not a riff) | 2026-10-21 | [`RUN-LOG.md`](RUN-LOG.md) — torch cu130 aarch64 wheel found, lego dataset, iterations-to-quality design with equal-gaussian-count honesty guard; assets/frame-bundle stills banked |
+
+Round status: **three seats on the board; CROSS and COLLISIONS open.**
+(The awareness-calculators addendum is confirmed real — zcode cites it —
+but still not in communicator origin/master as of 2026-10-21T17:55Z.)
 
 ## Recon facts (seeded by Casey 2026-10-21; owning seats verify)
 
@@ -159,12 +175,100 @@ an actuator the laptop does not have (steal 2's phone reopen); and
 browser doors die on iOS's WebGPU gaps (steal 5 stays honest about
 which browsers).
 
-## CROSS
+## CROSS — oracle's extensions of the filed riffs
 
-*(empty — seats file their cross-extensions here after their riffs)*
+**oracle on zcode's ghost-behind-the-glyphs (idea 3):** the ghost
+layer's projection format should be zcode's to consume — my steal 5
+(Brush, WebGPU/WASM) says the bench can serve the ghost as a SPLAT
+render at phone-native framerate, but zcode's own extension direction
+is righter than my source: render the ghost THROUGH the glyph pipeline
+(a depth-ramp glyph set) so registration stays one language. The
+synthesis neither of us had alone is in COLLISIONS-1.
 
-## COLLISIONS
+**oracle on the edge seat's guided densification (RUN-LOG design):**
+the edge/ASCII ramp that guides densification is computed per training
+view, once, offline. chiaroscuro's `glyph_election.wgsl` already
+elects glyphs per cell on GPU in a browser — the collision (COLLISIONS-4)
+is electing the DENSIFICATION PRIOR on the capture device at capture
+time, so the middle layer literally steers splats from the page.
 
-*(pending — the librarian writes these as seats file: combinations no
-single seat had. Until a second riff lands, there is nothing to
-collide.)*
+**oracle on zcode's walk receipts (idea 5):** receipts diff between
+walks — my steal 7's screenshot-verified Blender loop gives the receipt
+its ground truth: the bench renders yesterday-vs-today from the
+versioned room model and the receipt's coverage shading gets validated
+against what the renders show changed (COLLISIONS-5).
+
+## COLLISIONS — combinations no single seat had
+
+*Assembled by the librarian from the filed riffs only: oracle's wide
+lens (this file), zcode's pages lens (IDEATION-zcode.md), and the edge
+seat's lane design (RUN-LOG.md).*
+
+**1. The shimmer IS the tracker (zcode idea 3 × oracle steal 6).**
+zcode's registration screen makes glyph/ghost misalignment VISIBLE;
+MonoGS-style splat SLAM tracks camera pose BY differentiable rendering
+of the same field. Neither said the obvious-in-retrospect thing: the
+phone needs no separate pose tracker — the shimmer cells are the pose
+error signal. Feed the glyph-vs-ghost cell disagreement to a
+few-parameter pose correction each frame (the phone's IMU gives the
+prior; the ghost projection gives the measurement) and the registration
+screen becomes the SLAM frontend. The pin rule's "vantage differs"
+clause stops needing a pose GUESS: vantage is measured in shimmer
+reduction. First measurement that proves it: pose-corrected shimmer
+energy falls monotonically as the phone holds still on a known-good
+ghost.
+
+**2. The receipt is the ledger's human twin (zcode idea 5 × edge seat
+× oracle steal 8).** The edge seat defined iterations-to-quality with
+an equal-gaussian-count tiebreak; zcode's walk receipt prints banked
+keyframes and splats-grown. Combined: each receipt row reports the
+ROOM's marginal quality per pin — PSNR-threshold crossings and gaussian
+count AT the equal-count checkpoint, per keyframe contributed — so a
+walk reads as an attention purchase log. And the receipt's coverage
+shading becomes actionable: where the bench reports the most quality
+per additional pin is where the shimmer says the map is hungriest —
+walk toward the shimmer is active learning for rooms.
+
+**3. Cross-modal residual triangulation (zcode idea 4 × oracle steals
+2+3).** The phone shows audio punctuation before wall glyphs (return
+delay); the bench runs the RIR self-check (predicted-vs-measured
+impulse residual). Collision: compare the TWO residuals per wall —
+where glyph-ghost shimmer and audio punctuation disagree about the same
+wall's distance, the room model is wrong in a way vision alone cannot
+diagnose (a mirror-clean visual fit over a geometrically wrong depth).
+Two cheap, teacher-free residuals triangulating one model — the
+calculator doctrine applied to model criticism.
+
+**4. The glyph election elects the densification (chiaroscuro × edge
+seat).** The edge seat precomputes Canny+ASCII-ramp edge maps offline
+per training view; chiaroscuro elects glyphs per cell in a WGSL shader
+at 18–30 fps on integrated graphics. Combined: the phone page's glyph
+election pass emits the densification prior AT CAPTURE — pinned
+keyframes ship with their edge/ASCII structure baked in the same
+artifact the ghost composites from — and the trainer consumes the
+election, not a recompute. Stage 1 and stage 2 fuse at the shader level;
+the middle layer stops being a metaphor (the edge seat's own words) and
+becomes a wire format.
+
+**5. Two-time palimpsest as a regression test (zcode idea 6 × oracle
+steal 7).** zcode's yesterday-under-today ghost read becomes, on the
+bench, an AGENT VERIFIED render pair: blender-bridge renders the room
+model at version N and N+1 from the same vantage, screenshot-diffs
+them, and files any drift the palimpsest would glow at as a ledger row.
+The phone shows the human the palimpsest; the bridge shows the ledger
+the same evidence — one change-log, two readers, no asserting.
+
+**6. Every UI act is a measurement (zcode idea 7 × oracle steal 2 ×
+the probe rails).** zcode's no-buttons walkie-talkie makes OVER the
+trained transmit word; the chirp reopen path needs a known, calibrated
+room sound. Collision: the walkie-talkie vocabulary doubles as the
+acoustic landmark schedule — every OVER and every duty-capped chirp is
+a TDOA event the mics already record, so the phone's UI grammar and
+the room's stimulus grammar are the SAME events. The interface is the
+instrument: nothing extra is played, nothing extra is sent.
+
+---
+
+*Collisions written 2026-10-21T18:00Z from the three filings above;
+the librarian will extend this section as more seats file — the
+protocol's offer stands: a new riff earns its collisions.*
