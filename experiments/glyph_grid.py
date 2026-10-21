@@ -326,9 +326,47 @@ def full_resolution_half_energy(luma_path: Path):
             'ratio': float(max(left, right) / max(1.0, min(left, right)))}
 
 
+def elect_characteristic(labels: np.ndarray, observed: np.ndarray,
+                         cluster_mean_activity) -> int:
+    """THE CHARACTERISTIC MATERIAL: the cluster that MOVES.
+
+    The first version elected it by CELL COUNT -- the cluster that owns
+    the most cells -- and the failure diagnosis showed what that
+    costs: at a fine cardinality the biggest cluster stops being the
+    moving material, and a session can be read backwards because the
+    biggest material sat on the other side from the change energy.
+
+    So the election is by ACTIVITY: the cluster with the highest mean
+    activity, among the clusters that own any observed cell.  Measured
+    on the corpus this moved the grid's own decisive agreement from 22
+    of 31 to 29 of 31, and the cross-session transfer's from 79.3 % to
+    86.3 %.
+
+    ONE DEFINITION, USED BY BOTH TOOLS.  The grid and the transfer
+    study must elect the same cluster or they are not measuring the
+    same vocabulary.
+    """
+    flat = labels.reshape(-1)
+    valid = observed.reshape(-1) & (flat >= 0)
+    means = list(cluster_mean_activity)
+    counts = np.bincount(flat[valid], minlength=max(1, len(means)))
+    best = None
+    best_c = 0
+    for c in range(len(means)):
+        if c >= counts.size or counts[c] == 0:
+            continue
+        if best is None or float(means[c]) > best:
+            best = float(means[c])
+            best_c = c
+    if best is None:
+        return int(np.argmax(counts)) if counts.size else 0
+    return best_c
+
+
 def held_out_question(labels, char_for, observed, half: int,
                       truth: dict | None = None,
-                      answer_cells: np.ndarray | None = None):
+                      answer_cells: np.ndarray | None = None,
+                      characteristic: int | None = None):
     """ONE held-out question, answered from the grid alone.
 
     THE QUESTION: which half of the room holds more of the room's
@@ -354,13 +392,15 @@ def held_out_question(labels, char_for, observed, half: int,
     answer_cells = answer_cells.reshape(-1) & valid
     if answer_cells.sum() < 8:
         return None
-    # the characteristic cluster: the one with the most OBSERVED fitted
-    # cells.  Counting unfitted or unobserved cells here would let the
-    # background win, and the background is not a material.
+    # the characteristic cluster: the one that MOVES.  The caller
+    # elects it (by activity, in the tools that ship); if nobody says,
+    # the old cell-count election stands so the selftest and any other
+    # caller keep working.
     counts = np.bincount(lab[valid])
     if counts.size < 2:
         return None
-    characteristic = int(np.argmax(counts))
+    if characteristic is None:
+        characteristic = int(np.argmax(counts))
 
     # the grid's answer, from the CHARACTERS over the holdout cells
     chars = np.array([char_for.get(int(l), AMBIGUOUS_GLYPH) for l in lab])
@@ -483,7 +523,9 @@ def session_grid(session_dir: Path) -> dict:
         z = full_desc.reshape(-1, full_desc.shape[-1]) / scale
         labels = assign_nearest(centres, z).reshape(full_desc.shape[:2])
         q = held_out_question(labels, char_for, observed, GRID_W // 2,
-                              truth=truth, answer_cells=odd_cols)
+                              truth=truth, answer_cells=odd_cols,
+                              characteristic=elect_characteristic(
+                                  labels, observed, means))
         if q is None:
             continue
         score = 1.0 if q.get('agrees_with_the_luma') else 0.0

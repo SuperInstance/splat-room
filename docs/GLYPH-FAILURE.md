@@ -151,6 +151,16 @@ assumed the new rule would carry the fix would be wrong.
   the moving material, not the biggest material. On the corpus it
   would turn round the single genuine inversion, and it would leave
   the two ties alone — because a tie has no answer to turn.
+
+  > **Dated note, later on 2026-10-21: the fix is MEASURED (§8) and my
+  > prediction was HALF WRONG.** It does **not** turn 1792554532 round:
+  > that session goes from 4.8 % to **28.6 %** — better, and still
+  > wrong. It does **not** leave the ties alone: 1792555166 and
+  > 1792555182 get slightly worse. **But it is a large aggregate win
+  > anyway** — the decisive transfer rises from 79.3 % to **86.3 %** and
+  > the grid's own decisive agreement from 22/31 to **29/31**. The fix
+  > was worth shipping and the prediction about *which session* it
+  > would rescue was wrong.
 - **The vocabulary should be able to ABSTAIN.** At 17 observed cells
   the grid says something with the same confidence as it says at 957.
   A vocabulary that reports its evidence — the number of observed
@@ -213,5 +223,85 @@ python experiments/glyph_failure.py --out results
 The run writes `results/glyph_failure.json`, which carries every
 session's features, its transfer rates under both vocabularies, its
 same-way margin, and the verdict on each.
+
+---
+
+## 8. THE FIX, MEASURED — and the prediction was half wrong
+
+**The election was measured. It is a large win, it shipped, and it did
+not do what I said it would do.**
+
+### 8.1 The measurement
+
+The same alphabets, the same sessions, the same truth. **Only the
+election changes**: the characteristic cluster is the one that MOVES
+instead of the one that owns the most cells.
+
+| | the cell-count election | **the activity election** |
+|---|---|---|
+| the transfer, all pairs | 1,372/1,806 (76.0 %) | **1,420/1,806 (78.6 %)** |
+| **the transfer, decisive** | 1,032/1,302 (79.3 %) | **1,123/1,302 (86.3 %)** |
+| the self case, decisive | 22/31 (71.0 %) | **29/31 (93.5 %)** |
+| sessions whose election changed | — | **19 of 43** |
+| sessions that improved / worsened / unchanged | — | **20 / 16 / 7** |
+| the grid's decisive misses | 5 | **2** |
+
+**The election changed for 19 of 43 sessions, and the aggregate moved
++6.99 points on the decisive transfer.** Some sessions went to 1.000
+from 0.691. One crossed the other way (0.857 → 0.548).
+
+### 8.2 The prediction was wrong, and here is exactly how
+
+**I wrote:** *"On the corpus it would turn round the single genuine
+inversion, and it would leave the two ties alone."*
+
+**What happened:** 1792554532 went from **4.8 % to 28.6 %** — better,
+and still wrong. The two ties got *worse*, not better (0.095 → 0.071
+and 0.095 → 0.048). **So both clauses were wrong.**
+
+**But the fix was still worth shipping**, and the reason is the thing I
+did not predict: **the election changes what a session's PARTNERS
+count, so it improves the vocabulary as a whole, and it cannot rescue
+a single session that its partners read wrongly.** The failure lives in
+the source's cluster landing in the wrong place inside the target — and
+a fix to the target's own election cannot touch that.
+
+**And the failure set is better than the prediction claimed:**
+
+| | cell-count election | **activity election** |
+|---|---|---|
+| systematic failures (consistent and wrong) | 4 | **2** |
+| of those, the genuine inversions | 1 | **0** |
+| of those, the near-ties with almost no observed cells | 3 | **2** |
+
+**The two that remain are 1792555166 (17 observed cells, truth ratio
+1.082, grid count 0-1) and 1792555182 (20 observed cells, ratio 1.094,
+grid count 2-2).** Both are the grid answering a question it has no
+evidence for, on a truth that has no answer either.
+
+### 8.3 What this costs
+
+**The overconfidence got worse.** The grid's median margin rises from
+1.300 to **1.360** while the truth's is 1.173. The revised vocabulary
+is more confident than the room is, by more than it was. The likely
+cause is the election itself: **a cluster elected by a MEAN activity is
+elected by a quantity that a handful of very active cells can
+dominate**, and the same is true of the margin, which is a ratio of
+counts.
+
+### 8.4 The next measurement, which is now the abstention rule
+
+**The two remaining failures are both failures of CONFIDENCE, not of
+direction.** The grid's count is 0-1 and 2-2; the truth's ratio is
+1.082 and 1.094. Neither side has an answer, and the grid answers
+anyway, in the same voice it uses when it is right.
+
+**So the rule worth shipping next is not another election. It is an
+abstention:** a grid that reported its evidence beside its answer — the
+number of observed cells, the margin between its two halves — would let
+a consumer see which of its answers are worth having. **The grid
+already knows both numbers.** What is missing is a rule for saying
+"I do not know", and the two failures above are exactly the sessions
+where it should say it.
 
 *Committed for Muse to review; not merged.*

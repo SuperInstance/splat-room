@@ -148,6 +148,30 @@ def transfer_rate_for(models: list[dict], target_index: int) -> float:
     return hits / max(1, n)
 
 
+def aggregate_rates(models: list[dict]) -> dict:
+    """The transfer over EVERY ordered pair, and the share of the
+    decisive pairs it gets right."""
+    hits = 0
+    dec_hits = 0
+    dec_total = 0
+    for i, a in enumerate(models):
+        for j, b in enumerate(models):
+            if i == j:
+                continue
+            r = gt.answer_with(a, b, a['characteristic'])
+            ok = (r['answer'] == b['truth']['half'])
+            hits += ok
+            if b['truth']['ratio'] >= gt.TIE_RATIO:
+                dec_total += 1
+                dec_hits += ok
+    n = len(models) * (len(models) - 1)
+    return {
+        'all_pairs': [hits, n, round(hits / max(1, n), 4)],
+        'decisive_pairs': [dec_hits, dec_total,
+                           round(dec_hits / max(1, dec_total), 4)],
+    }
+
+
 def measure(corpus: Path, out_dir: Path) -> dict:
     materials = []
     for d in sorted(corpus.iterdir()):
@@ -170,30 +194,66 @@ def measure(corpus: Path, out_dir: Path) -> dict:
             continue
         rows.append(d)
 
-    # the two vocabularies, and what each partner says about each
-    # session
-    models3 = [gt.session_model(m, 3) for m in materials]
-    models3 = [m for m in models3 if m is not None]
-    models_rule = []
+    # THE THREE ELECTIONS.  The grid tool now elects the characteristic
+    # cluster by ACTIVITY, so this tool keeps the OLD cell-count
+    # election as its baseline and measures the new one against it.
+    models3 = []      # the OLD election: the cluster with the most cells
+    models_act = []   # the NEW election: the cluster that moves
+    models_rule = []  # the activity-gap cardinality rule
     for m in materials:
+        mo = gt.session_model(m, 3)
+        if mo is None:
+            continue
+        means = list(mo['cluster_mean_activity'])
+        lab = mo['train_labels'].reshape(-1)
+        obs = mo['observed'].reshape(-1)
+        counts = np.bincount(lab[obs & (lab >= 0)], minlength=len(means))
+        cell_count = int(np.argmax(counts)) if counts.size else 0
+        activity = int(max(range(len(means)), key=lambda c: means[c]))
+
+        base = dict(mo)
+        base['characteristic'] = cell_count
+        models3.append(base)
+
+        act = dict(mo)
+        act['characteristic'] = activity
+        models_act.append(act)
+
         pick = gt.choose_k_by_activity_gap(m)
-        mm = gt.session_model(m, pick['k']) if pick['k'] is not None else None
-        models_rule.append(mm)
-    keep = [(a, b) for a, b in zip(models3, models_rule) if a and b]
-    models3 = [a for a, _ in keep]
-    models_rule = [b for _, b in keep]
+        rm = gt.session_model(m, pick['k']) if pick['k'] is not None else None
+        if rm is not None:
+            rmeans = list(rm['cluster_mean_activity'])
+            rlab = rm['train_labels'].reshape(-1)
+            robs = rm['observed'].reshape(-1)
+            rcounts = np.bincount(rlab[robs & (rlab >= 0)], minlength=len(rmeans))
+            rm = dict(rm)
+            rm['characteristic'] = int(np.argmax(rcounts)) if rcounts.size else 0
+        models_rule.append(rm)
+
+    keep = [(a, b, c) for a, b, c in zip(models3, models_act, models_rule)
+            if a and b and c]
+    models3 = [a for a, _, _ in keep]
+    models_act = [b for _, b, _ in keep]
+    models_rule = [c for _, _, c in keep]
+
+    n_election_changed = sum(1 for a, b in zip(models3, models_act)
+                              if a['characteristic'] != b['characteristic'])
 
     rates3 = []
     rates_rule = []
+    rates_act = []
     for i, m in enumerate(models3):
         r3 = transfer_rate_for(models3, i)
         rr = transfer_rate_for(models_rule, i)
+        ra = transfer_rate_for(models_act, i)
         rates3.append(r3)
         rates_rule.append(rr)
+        rates_act.append(ra)
 
-    for row, r3, rr in zip(rows, rates3, rates_rule):
+    for row, r3, rr, ra in zip(rows, rates3, rates_rule, rates_act):
         row['the_transfer_rate_at_k3'] = round(r3, 4)
         row['the_transfer_rate_under_the_activity_gap_rule'] = round(rr, 4)
+        row['the_transfer_rate_under_the_activity_election'] = round(ra, 4)
         # The rate is the share of partners that answered CORRECTLY, so
         # the partners are on the wrong side exactly when it is below
         # one half.  (The first version of this tested the rate against
@@ -220,6 +280,10 @@ def measure(corpus: Path, out_dir: Path) -> dict:
         repair.  The rate is the share of partners answering correctly,
         so the rule repairs it when the rate is above one half."""
         return r['the_transfer_rate_under_the_activity_gap_rule'] >= 0.5
+
+    def election_repairs(r: dict) -> bool:
+        """Does the activity ELECTION get this session right?"""
+        return r['the_transfer_rate_under_the_activity_election'] >= 0.5
 
     # THE TEST OF THE HYPOTHESIS: among the sessions whose partners
     # AGREE (consistent), do the ones that are WRONG have a negative
@@ -265,10 +329,26 @@ def measure(corpus: Path, out_dir: Path) -> dict:
             'the_fix': {
                 'n_sessions_fixed_by_the_activity_gap_rule': sum(
                     1 for r in failures if rule_repairs(r)),
+                'n_sessions_fixed_by_the_activity_ELECTION': sum(
+                    1 for r in failures if election_repairs(r)),
+                'the_election_measured': {
+                    'the_change': ('the same alphabets at k=3, with the '
+                                   'characteristic cluster elected by ACTIVITY '
+                                   'instead of by cell count -- the moving '
+                                   'material, not the biggest material'),
+                    'n_sessions_whose_election_changed': n_election_changed,
+                    'the_cell_count_election': aggregate_rates(models3),
+                    'the_activity_election': aggregate_rates(models_act),
+                    'the_reading': ('the aggregate decides whether the fix is '
+                                    'worth shipping, and the per-session rates '
+                                    'decide whether the one genuine inversion '
+                                    'was turned round'),
+                },
                 'the_failures': [
                     {'session': r['session'],
                      'the_transfer_rate_at_k3': r['the_transfer_rate_at_k3'],
                      'the_transfer_rate_under_the_rule': r['the_transfer_rate_under_the_activity_gap_rule'],
+                     'the_transfer_rate_under_the_activity_election': r['the_transfer_rate_under_the_activity_election'],
                      'the_same_way_margin': r['the_same_way_margin'],
                      'the_biggest_cluster_left_fraction': r['the_biggest_cluster_left_fraction'],
                      'the_energy_left_fraction': r['the_energy_left_fraction'],
@@ -345,6 +425,22 @@ def selftest() -> int:
        margin(0.1, 0.2) > 0, str(margin(0.1, 0.2)))
     ck('margin: against a LEFT energy, a right cluster scores negative',
        margin(0.9, 0.2) < 0, str(margin(0.9, 0.2)))
+
+    # 4. the activity ELECTION: electing the cluster by activity must
+    #    be a different choice from electing it by cell count, and it
+    #    must pick the active one.
+    model = {'cluster_mean_activity': [0.9, 0.1, 0.4],
+             'characteristic': 0}
+    elected = max(range(len(model['cluster_mean_activity'])),
+                  key=lambda c: model['cluster_mean_activity'][c])
+    ck('election: the activity election picks the ACTIVE cluster',
+       elected == 0, str(elected))
+    model2 = {'cluster_mean_activity': [0.1, 0.9, 0.4],
+              'characteristic': 2}
+    elected2 = max(range(len(model2['cluster_mean_activity'])),
+                   key=lambda c: model2['cluster_mean_activity'][c])
+    ck('election: the activity election overrides the cell count',
+       elected2 == 1 and model2['characteristic'] != elected2, str(elected2))
 
     failed = [c for c in checks if not c[1]]
     for name, ok, detail in checks:

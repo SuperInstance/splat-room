@@ -141,8 +141,10 @@ def session_model(material: dict, k: int) -> dict:
     counts = np.bincount(lab[valid])
     if counts.size < 2:
         return None
-    # the characteristic material: the cluster that owns the most cells
-    characteristic = int(np.argmax(counts))
+    # the characteristic material: the cluster that MOVES.  The SAME
+    # election the grid tool ships -- one definition, so the two tools
+    # are not measuring different vocabularies.
+    characteristic = gg.elect_characteristic(labels, observed, means)
 
     model = dict(material)
     model.update({

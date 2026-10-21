@@ -285,6 +285,24 @@ transfer curve.
 
 ## 6. THE CARDINALITY SWEEP — the vocabulary's meaningfulness is concentrated at low k
 
+> **Dated correction, later on 2026-10-21: this section's HEADLINE IS
+> REFUTED by its own follow-up, and §9 has the numbers.** The sweep was
+> measured against the cell-count election of the characteristic
+> cluster, and the sweep's conclusion — *"more symbols is not a richer
+> vocabulary, it is a diluted one"* — was really a conclusion about the
+> **election**. Once the characteristic cluster is elected by ACTIVITY
+> (the cluster that moves) instead of by cell count, the gap over the
+> control **does not collapse**: it goes **23.35 points at k=3 to
+> 17.36 at k=6**, where before it went 14.74 to 1.92. The transfer
+> holds at 86.3 % across k=3 and 84.1 % at k=6. **The extra symbols
+> were never the problem; the election was.** The confound check in
+> §6.1 was pointing at the answer all along — it asked whether the
+> biggest cluster was still the moving one, and at k=5 it was in only 8
+> of 43 sessions.
+>
+> **§6 below is left as the record of what was measured, with the
+> measurement it was taken against named.**
+
 **The first of the three numbers above, measured. And it is the most
 consequential thing in this study: the cardinality is not a free
 parameter, and more symbols is not a richer vocabulary — it is a
@@ -370,6 +388,23 @@ It is stated here before it is measured, so that it can be.
 ---
 
 ## 7. THE CARDINALITY RULE — measured against the incumbent, and against the truth it never sees
+
+> **Dated correction, later on 2026-10-21: the VERDICT REVERSES, and
+> §9 has the numbers.** Measured against the cell-count election, the
+> activity-gap rule beat the incumbent silhouette rule on the decisive
+> transfer (79.3 % against 78.0 %) and on the self case (25/31 against
+> 22/31). **With the characteristic cluster elected by ACTIVITY, the
+> incumbent is ahead again**: the silhouette rule takes **86.1 %** on
+> the decisive transfer against the activity-gap rule's **84.6 %**, and
+> **29/31** on the self case against **27/31**. The new rule's
+> advantage was an artefact of the failure mode it was designed to
+> repair.
+>
+> **And the reason is now obvious in hindsight:** with the activity
+> election the characteristic cluster **is** the most active one in
+> **43 of 43** sessions, so the property the activity-gap rule exists
+> to preserve is guaranteed by construction, and a rule that preserves
+> a guarantee is redundant. **§7 below is left as the record.**
 
 **The rule was stated in §6.2 before it was measured, and here is what
 it did.**
@@ -473,7 +508,93 @@ python experiments/glyph_transfer.py --out results
 The run writes `results/glyph_transfer.json`, which carries every
 ordered pair, its answer, its truth, its control, its similarity, and
 whether the two sessions shared a truth at all — plus the per-session
-consistency and the conditional analysis that separates a transfer from a
-copy.
+consistency, the conditional analysis that separates a transfer from a
+copy, and the whole cardinality sweep with both rules.
+
+---
+
+## 9. THE REVERSAL — one change undoes two conclusions
+
+**§6 and §7 are both refuted by one change, and the change was made
+because the failure diagnosis asked for it.**
+
+**THE CHANGE.** The characteristic cluster — the one the question counts
+in each half — was elected by **cell count**, the cluster that owns the
+most cells. It is now elected by **activity**, the cluster that moves.
+One definition, `elect_characteristic` in `experiments/glyph_grid.py`,
+used by both tools.
+
+**The whole sweep, re-measured under the new election:**
+
+| | the first build (cell count) | **the revision (activity)** |
+|---|---|---|
+| the transfer, decisive, at k=3 | 79.3 % | **86.3 %** |
+| the gap over the control, at k=3 | 14.74 points | **23.35 points** |
+| the gap over the control, at k=6 | 2.46 points | **17.36 points** |
+| the transfer, decisive, at k=6 | 69.9 % | **84.1 %** |
+| the self case, decisive, at k=3 | 22/31 | **29/31** |
+| the characteristic cluster is the most active one | 24 of 43 | **43 of 43** |
+
+**So "more symbols is not a richer vocabulary, it is a diluted one" was
+wrong, and it was wrong about the wrong thing.** The dilution was the
+**election**: at a fine cardinality the cell-count election picks a
+background cluster instead of the moving one, and a background cluster
+carries no information about where the change is. Once the election
+picks the moving material, **the vocabulary holds up at every
+cardinality** — 86.3 %, 84.3 %, 84.2 %, 84.1 % for k = 3, 4, 5, 6.
+
+**And the new cardinality rule loses, and it should.** With the
+activity election the incumbent silhouette rule takes **86.1 %** on
+the decisive transfer and **29/31** on the self case, against the
+activity-gap rule's **84.6 %** and **27/31**. The new rule existed to
+preserve the property "the biggest cluster is the moving material" —
+and the revision **guarantees** that property (43 of 43 sessions), so
+the rule has nothing left to do.
+
+### 9.1 What this costs and what it buys
+
+**It buys the grid.** The grid's own decisive agreement goes from
+26/31 to **29/31**, and the decisive misses from 5 to **2**. The
+transfer's decisive agreement goes up **7 points**, and the gap over
+the control from 14.7 points to **23.4**. The bytes do not move: the
+grid is still 983 bytes.
+
+**It costs the overconfidence.** The grid's median margin rises from
+1.300 to **1.360** while the truth's is 1.173, so the revised
+vocabulary is more confident than the room is, by more than it was.
+That is now the sharpest defect in the grid, and it is the same kind
+of defect as before: a cluster elected by a mean over cells is
+elected by a quantity a handful of very active cells can dominate.
+
+### 9.2 The lesson, which is the fleet's oldest one
+
+**Two conclusions were filed from a measurement, and both were true of
+the MEASUREMENT and false of the THING.** The sweep measured the
+cardinality; the conclusion was about the vocabulary. The rule study
+measured a rule; the conclusion was about rules. **Both conclusions
+were made about a system whose election rule was itself unexamined,**
+and the failure diagnosis is what examined it.
+
+**A measurement's conclusion inherits every unexamined choice underneath
+it.** The corpus's near-ties, the silence, the one room, the one
+viewpoint — those are all choices the measurements inherit. The
+election was one more, and it was the one that moved the numbers.
+
+### 9.3 The next measurement this suggests
+
+**The abstention rule is now worth more than anything else in this
+report.** The revised vocabulary still answers on 17 and 20 observed
+cells, where its own count is 0-1 and 2-2 and the truth's ratio is
+1.082 and 1.094. **Those are the two failures that remain, and they
+are failures because the grid says something it has no evidence for.**
+A grid that reports its evidence beside its answer — the observed-cell
+count, the margin between its two halves — would let a consumer see
+which answers are worth having. The grid already knows both numbers.
+
+**And the overconfidence has a cause worth chasing:** a cluster elected
+by a mean activity is elected by a quantity that a few very active
+cells can dominate. Electing by the cluster's *total* activity, or by
+a robust centre instead of a mean, is the obvious next measurement, and
+it is one line.
 
 *Committed for Muse to review; not merged.*

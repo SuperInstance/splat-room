@@ -809,6 +809,62 @@ cardinality and the failure are unrelated. A clean negative result, and
 worth having: a reader who assumed the new rule would carry the fix
 would be wrong.
 
+### The election, and the reversal — dated note, 2026-10-21
+
+**The one-line fix was measured and it SHIPPED: the characteristic
+cluster is elected by ACTIVITY — the cluster that moves — instead of by
+cell count.** One definition, `elect_characteristic`, used by both
+tools so they cannot drift apart.
+
+**It is a large win.** The decisive transfer goes **79.3 % → 86.3 %**,
+the gap over the control **14.74 → 23.35 points**, and the grid's own
+decisive agreement **22/31 → 29/31 (93.6 %)** with the decisive misses
+falling from 5 to **2**. The grid itself is byte-for-byte unchanged:
+983 bytes, 18,470×, 0.83 bytes per source frame. The systematic
+failures fall from 4 to **2**, and both that remain are the near-ties
+with 17 and 20 observed cells.
+
+**And my prediction was HALF WRONG.** I wrote that it would turn round
+1792554532 and leave the ties alone. It did not: that session went
+4.8 % → **28.6 %**, better and still wrong, and the ties got slightly
+worse. **The election changes what a session's PARTNERS count, so it
+improves the vocabulary as a whole and cannot rescue a session its
+partners read wrongly.** The failure lives in the source.
+
+**And the fix REFUTES two things this seat filed two days ago.**
+
+- **"More symbols is not a richer vocabulary, it is a diluted one"** —
+  WRONG. Re-measured under the new election the gap over the control
+  does not collapse with k at all: **23.35 points at k=3 to 17.36 at
+  k=6**, and the transfer holds at 86.3 %, 84.3 %, 84.2 %, 84.1 %. The
+  dilution was the **election**, not the cardinality: at a fine
+  cardinality the cell-count election picks a background cluster, and
+  a background cluster carries no information about where the change
+  is. The confound check was pointing at the answer all along.
+- **"The activity-gap rule beats the incumbent"** — WRONG. The
+  incumbent silhouette rule now takes **86.1 %** and **29/31** against
+  the new rule's 84.6 % and 27/31. The rule existed to preserve
+  "the biggest cluster is the moving material", and the revision
+  **guarantees** it — 43 of 43 sessions. A rule that preserves a
+  guarantee is redundant.
+
+**The lesson, and it is the fleet's oldest one: a measurement's
+conclusion inherits every unexamined choice underneath it.** Both
+conclusions were true of the MEASUREMENT and false of the THING, and
+the thing they did not examine was the election rule — which the
+failure diagnosis is what examined. The corpus's near-ties, its
+silence, its one room and its one viewpoint are all choices a
+measurement inherits; the election was one more, and it was the one
+that moved the numbers.
+
+**And the cost, stated plainly: the overconfidence got worse.** The
+grid's median margin rises 1.300 → **1.360** against the truth's
+1.173. A cluster elected by a MEAN activity is elected by a quantity a
+handful of very active cells can dominate. **The next measurement is
+the abstention rule**, because the two failures that remain are both
+failures of confidence rather than of direction: the grid answers on 17
+observed cells in the same voice it uses when it is right.
+
 ---
 
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured

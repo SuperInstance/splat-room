@@ -1,6 +1,6 @@
 {
   "study": "the glyph grid -- splat-room stage 1",
-  "generated_utc": "2026-10-21T19:56:54Z",
+  "generated_utc": "2026-10-21T21:34:14Z",
   "method": {
     "grid": "40x24 over the 160x96 luma, 4x4 px per cell",
     "change_noise_floor_luma": 3.0,
@@ -70,27 +70,27 @@
         },
         "4": {
           "silhouette": 0.4132,
-          "agrees_with_the_luma": false,
-          "characters_left": 145,
-          "characters_right": 138,
+          "agrees_with_the_luma": true,
+          "characters_left": 38,
+          "characters_right": 65,
           "inertia": 143.04
         },
         "5": {
           "silhouette": 0.3838,
           "agrees_with_the_luma": true,
-          "characters_left": 131,
-          "characters_right": 132,
+          "characters_left": 34,
+          "characters_right": 61,
           "inertia": 143.56
         },
         "6": {
           "silhouette": 0.3745,
-          "agrees_with_the_luma": false,
-          "characters_left": 125,
-          "characters_right": 114,
+          "agrees_with_the_luma": true,
+          "characters_left": 24,
+          "characters_right": 55,
           "inertia": 154.86
         }
       },
-      "alphabet_k_by_truth": 5,
+      "alphabet_k_by_truth": 4,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -167,8 +167,8 @@
         "6": {
           "silhouette": 0.4077,
           "agrees_with_the_luma": true,
-          "characters_left": 63,
-          "characters_right": 67,
+          "characters_left": 49,
+          "characters_right": 58,
           "inertia": 714.18
         }
       },
@@ -207,50 +207,50 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 1,
-        "characteristic_glyph": "+",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 190,
-          "characters_right": 164,
-          "labels_left": 190,
-          "labels_right": 164,
+          "characters_left": 43,
+          "characters_right": 76,
+          "labels_left": 43,
+          "labels_right": 76,
           "n_answer_cells": 480
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": false,
+        "agrees_with_the_luma": true,
         "luma_half_ratio": 1.337
       },
       "grid": "+  +++++++++++++++++++++++++++++++++ +++\n +++++++++++++++++++++++++++++++++++++++\n++++++ +++++++++++++++++++++++++++++++++\n:       ++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++\n +++++++++++++++++@@@@@@@+++++++++++++++\n++ ++++++++++++++@@@@@@@@@++++++++++++++\n++++++++++++++++@@@@@@@@@@@+++++++++++++\n++ +++    ++++++@@@@@@@@@@@@++++++++++++\n+++++++++++++++@@@@@@@@@@@@@++++++++++++\n+++++++++++++++@@@@@@@@@@@@@@+++++++++++\n++++++++++++++++@@@@@@@@@@@@@+++++++++++\n++++++++++++++@@@@@@@@@@@@@@@@@@++++++++\n++++++++++++++++@@@@@@@@@@@@@@@@++++++++\n++++++++++++@+++@@@@@@@@@@@@@@@@++++++++\n+++++++++++++++++@@@@@@@@@@@@@@@++++++++\n++++++++++++++++@@@@@@@@@@@@@@@@++++++++\n+++++++++++++++@@@@@@@@@@@@@@@@@++++++++\n++++++++++++++@@@@@@@@@@@@@@@@@@++++++++\n++++++++++++@+@@@@@@@+++++@@@@@+++++++++\n++++++++++++@@++@@+@++++++@@@@++@@++++++\n++++++++++++@@@@@@++++++@@@@@@++++++++++\n++++++++++++++@@@@++++++@@@@@+++++++++++",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.3981,
-          "agrees_with_the_luma": false,
-          "characters_left": 190,
-          "characters_right": 164,
+          "agrees_with_the_luma": true,
+          "characters_left": 43,
+          "characters_right": 76,
           "inertia": 184.33
         },
         "4": {
           "silhouette": 0.3809,
           "agrees_with_the_luma": true,
-          "characters_left": 181,
-          "characters_right": 183,
+          "characters_left": 22,
+          "characters_right": 54,
           "inertia": 165.49
         },
         "5": {
           "silhouette": 0.3446,
           "agrees_with_the_luma": true,
-          "characters_left": 122,
-          "characters_right": 136,
+          "characters_left": 10,
+          "characters_right": 39,
           "inertia": 109.37
         },
         "6": {
           "silhouette": 0.3677,
           "agrees_with_the_luma": true,
-          "characters_left": 116,
-          "characters_right": 144,
+          "characters_left": 7,
+          "characters_right": 31,
           "inertia": 113.32
         }
       },
@@ -325,27 +325,27 @@
         },
         "4": {
           "silhouette": 0.44,
-          "agrees_with_the_luma": true,
-          "characters_left": 138,
-          "characters_right": 96,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 10,
           "inertia": 122.6
         },
         "5": {
           "silhouette": 0.4343,
-          "agrees_with_the_luma": true,
-          "characters_left": 123,
-          "characters_right": 74,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 8,
           "inertia": 103.47
         },
         "6": {
           "silhouette": 0.4057,
-          "agrees_with_the_luma": true,
-          "characters_left": 125,
-          "characters_right": 76,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 6,
           "inertia": 97.46
         }
       },
-      "alphabet_k_by_truth": 6,
+      "alphabet_k_by_truth": 3,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -382,16 +382,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 3,
-        "characteristic_glyph": "*",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "RIGHT",
         "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 141,
-          "characters_right": 147,
-          "labels_left": 141,
-          "labels_right": 147,
+          "characters_left": 68,
+          "characters_right": 75,
+          "labels_left": 68,
+          "labels_right": 75,
           "n_answer_cells": 472
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
@@ -403,33 +403,33 @@
         "3": {
           "silhouette": 0.3276,
           "agrees_with_the_luma": true,
-          "characters_left": 128,
-          "characters_right": 140,
+          "characters_left": 83,
+          "characters_right": 86,
           "inertia": 94.22
         },
         "4": {
           "silhouette": 0.3957,
           "agrees_with_the_luma": true,
-          "characters_left": 141,
-          "characters_right": 147,
+          "characters_left": 68,
+          "characters_right": 75,
           "inertia": 91.52
         },
         "5": {
           "silhouette": 0.3887,
-          "agrees_with_the_luma": false,
-          "characters_left": 103,
-          "characters_right": 96,
+          "agrees_with_the_luma": true,
+          "characters_left": 61,
+          "characters_right": 73,
           "inertia": 94.05
         },
         "6": {
           "silhouette": 0.3881,
-          "agrees_with_the_luma": false,
-          "characters_left": 113,
-          "characters_right": 95,
+          "agrees_with_the_luma": true,
+          "characters_left": 61,
+          "characters_right": 73,
           "inertia": 87.12
         }
       },
-      "alphabet_k_by_truth": 4,
+      "alphabet_k_by_truth": 6,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -492,22 +492,22 @@
         "4": {
           "silhouette": 0.3704,
           "agrees_with_the_luma": true,
-          "characters_left": 126,
-          "characters_right": 148,
+          "characters_left": 47,
+          "characters_right": 80,
           "inertia": 90.26
         },
         "5": {
           "silhouette": 0.3412,
           "agrees_with_the_luma": true,
-          "characters_left": 73,
-          "characters_right": 84,
+          "characters_left": 43,
+          "characters_right": 72,
           "inertia": 84.12
         },
         "6": {
           "silhouette": 0.3568,
           "agrees_with_the_luma": true,
-          "characters_left": 80,
-          "characters_right": 107,
+          "characters_left": 15,
+          "characters_right": 23,
           "inertia": 73.71
         }
       },
@@ -573,23 +573,23 @@
         },
         "4": {
           "silhouette": 0.4483,
-          "agrees_with_the_luma": false,
-          "characters_left": 100,
-          "characters_right": 78,
+          "agrees_with_the_luma": true,
+          "characters_left": 29,
+          "characters_right": 83,
           "inertia": 73.47
         },
         "5": {
           "silhouette": 0.4566,
           "agrees_with_the_luma": true,
-          "characters_left": 90,
-          "characters_right": 130,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 69.44
         },
         "6": {
           "silhouette": 0.4069,
           "agrees_with_the_luma": true,
-          "characters_left": 108,
-          "characters_right": 129,
+          "characters_left": 1,
+          "characters_right": 17,
           "inertia": 78.37
         }
       },
@@ -662,20 +662,20 @@
         },
         "5": {
           "silhouette": 0.4787,
-          "agrees_with_the_luma": true,
-          "characters_left": 118,
-          "characters_right": 100,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 2,
           "inertia": 82.12
         },
         "6": {
           "silhouette": 0.4117,
-          "agrees_with_the_luma": true,
-          "characters_left": 118,
-          "characters_right": 100,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 2,
           "inertia": 70.24
         }
       },
-      "alphabet_k_by_truth": 6,
+      "alphabet_k_by_truth": 4,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -719,55 +719,55 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "+",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 146,
-          "characters_right": 28,
-          "labels_left": 146,
-          "labels_right": 28,
+          "characters_left": 13,
+          "characters_right": 105,
+          "labels_left": 13,
+          "labels_right": 105,
           "n_answer_cells": 312
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": false,
+        "agrees_with_the_luma": true,
         "luma_half_ratio": 1.322
       },
       "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::+++++++:::::::::::::::::::::\n+++ +  +++++++++++++++ :::::::::::::::::\n++ +++   ++++++++++++++    :          +:\n++++++++++++++++++++++++   @@@@@@@@@@@@+\n+++++++++++++++++++++++++@@@@@@@@@@@@@@ \n+++++++++++++++++++++++++@@@@@@@@@@@@@@ \n++++++++++++++++++++++++@@@@@@@@@@@@@@@+\n++++++++++++++++++++++++@@@@@@@@@@@@@@@ \n+++++++++++++++++++++++@@@@@@@@@@@@@@@@ \n@@@@@@++++++++++++++++@@@@@@@@@@@@@@@@@@\n@@@@@@++++@@@@++++++@@@@@@@@@@@@@@@@@@@@\n@@@@@@+++++@@@+++++++@@@@@@@@ ++@@@@@@@@\n+++++++++++++++++++++@@@@@@@@ ++@+++@@@@\n++++++++++++++++++++++@@@+@@@ +@@@@@@@@@\n+++++++++++++++++++++++@@@@@@@@@@@@@@@@@\n++++++++++++++++++++++++@@@@@@@@@@@@@@@@\n++++++++++++  ++++++++++++@@@@@  @@@@@@@",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4307,
-          "agrees_with_the_luma": false,
-          "characters_left": 146,
-          "characters_right": 28,
+          "agrees_with_the_luma": true,
+          "characters_left": 13,
+          "characters_right": 105,
           "inertia": 168.38
         },
         "4": {
           "silhouette": 0.386,
-          "agrees_with_the_luma": false,
-          "characters_left": 137,
-          "characters_right": 26,
+          "agrees_with_the_luma": true,
+          "characters_left": 2,
+          "characters_right": 73,
           "inertia": 154.05
         },
         "5": {
           "silhouette": 0.3909,
-          "agrees_with_the_luma": false,
-          "characters_left": 157,
-          "characters_right": 52,
+          "agrees_with_the_luma": true,
+          "characters_left": 0,
+          "characters_right": 54,
           "inertia": 146.88
         },
         "6": {
           "silhouette": 0.3873,
-          "agrees_with_the_luma": false,
-          "characters_left": 152,
-          "characters_right": 46,
+          "agrees_with_the_luma": true,
+          "characters_left": 0,
+          "characters_right": 32,
           "inertia": 139.61
         }
       },
       "alphabet_k_by_truth": 6,
-      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
       "session": "1792553885",
@@ -801,50 +801,50 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "+",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 133,
-          "characters_right": 112,
-          "labels_left": 133,
-          "labels_right": 112,
+          "characters_left": 70,
+          "characters_right": 113,
+          "labels_left": 70,
+          "labels_right": 113,
           "n_answer_cells": 446
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": false,
+        "agrees_with_the_luma": true,
         "luma_half_ratio": 1.163
       },
       "grid": ":::::::::::::::::::::::::::::+     :  ++\n::::::::::::::::::::::+++++      +++++++\n+++:+:+:::::::::::+ + ++++++++++++++++++\n        ++        +++ ++++++++++++++@+@@\n++++++++++++++++++++++++++++++++@@@@@@@@\n+++++++++++++++++++++++++++++++@+++@+@@@\n+++++++++++++++++++++++++++@@+@@@@@@@@@@\n+++++++++++++++++++++++++++++@@@@+++++++\n++++++++++++++++++++++++++++@@@+@+++++++\n++++++++ ++++++++++++++++++@@@@@+++@++++\n@+@@+@@+@@+++++++@@@@@@@@@@+@+@@++++@+@@\n@@+@@@+++++++++++@@@++@+++++@+++++++@+++\n@+++@@++++++++@+++++++++@++@@++@++++++++\n+++++++++++++++++++@+@@@++@+@@@@++++++++\n+++@@+++++++@++++++++++@@@+@@@@@++++++++\n@@@@@++++@++++++++@+++@@@@@@@@@@+@+@++@@\n+@@@@@@@@++++++++++++ @@@@@@@@@@@@+@@@@@\n@+@@@@@@@++@@@+@+++++++@@@@@@@@@@@@@@@@@\n@@@@@@@@+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@+@@@@@@@@++@@+@++@@@@@@@@@@@@@@\n@@@@+@+++++++@+@+++++++++++@@@@@@@@@@@@@\n@@@@++@@++++ +++++++++++++++++++++@@@@+@",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4096,
-          "agrees_with_the_luma": false,
-          "characters_left": 133,
-          "characters_right": 112,
+          "agrees_with_the_luma": true,
+          "characters_left": 70,
+          "characters_right": 113,
           "inertia": 95.38
         },
         "4": {
           "silhouette": 0.3145,
           "agrees_with_the_luma": true,
-          "characters_left": 132,
-          "characters_right": 181,
+          "characters_left": 6,
+          "characters_right": 10,
           "inertia": 88.54
         },
         "5": {
           "silhouette": 0.3118,
           "agrees_with_the_luma": true,
-          "characters_left": 117,
-          "characters_right": 164,
+          "characters_left": 5,
+          "characters_right": 6,
           "inertia": 81.57
         },
         "6": {
           "silhouette": 0.2997,
           "agrees_with_the_luma": true,
-          "characters_left": 109,
-          "characters_right": 160,
+          "characters_left": 4,
+          "characters_right": 5,
           "inertia": 78.91
         }
       },
@@ -911,22 +911,22 @@
         "4": {
           "silhouette": 0.3756,
           "agrees_with_the_luma": true,
-          "characters_left": 162,
-          "characters_right": 186,
+          "characters_left": 6,
+          "characters_right": 16,
           "inertia": 162.39
         },
         "5": {
           "silhouette": 0.3659,
           "agrees_with_the_luma": true,
-          "characters_left": 134,
-          "characters_right": 155,
+          "characters_left": 4,
+          "characters_right": 13,
           "inertia": 161.32
         },
         "6": {
           "silhouette": 0.3643,
           "agrees_with_the_luma": true,
-          "characters_left": 127,
-          "characters_right": 157,
+          "characters_left": 4,
+          "characters_right": 12,
           "inertia": 153.7
         }
       },
@@ -1007,8 +1007,8 @@
         "6": {
           "silhouette": 0.3745,
           "agrees_with_the_luma": true,
-          "characters_left": 112,
-          "characters_right": 4,
+          "characters_left": 17,
+          "characters_right": 0,
           "inertia": 82.11
         }
       },
@@ -1049,55 +1049,55 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 0,
-        "characteristic_glyph": "*",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 154,
-          "characters_right": 101,
-          "labels_left": 154,
-          "labels_right": 101,
+          "characters_left": 0,
+          "characters_right": 31,
+          "labels_left": 0,
+          "labels_right": 31,
           "n_answer_cells": 296
         },
         "truth_from_the_full_resolution_luma": "LEFT",
-        "agrees_with_the_luma": true,
+        "agrees_with_the_luma": false,
         "luma_half_ratio": 1.024
       },
       "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n***:::::::::::::::::::::::::::::::::::::\n********  *::** **::::::::::::::::::::::\n*******===************=:::=*****::::::::\n************************===**==***:**:::\n*************************@@*@@********::\n************************@@@@@@@*******::\n************************@@*@@@@*******::\n*************************@@*@@@@******::\n*************************@@@@@@@********\n***********************@@*@@@@@@@*******\n**********************@@*@@*@@@@@@******\n**********************@**@**************\n*********************@@*@***************\n********************@@*@@***************\n*********************@*@@***************\n***********************@@**************=\n*************=**********@**********=*==:",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4175,
-          "agrees_with_the_luma": true,
-          "characters_left": 156,
-          "characters_right": 102,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 31,
           "inertia": 208.7
         },
         "4": {
           "silhouette": 0.4656,
-          "agrees_with_the_luma": true,
-          "characters_left": 154,
-          "characters_right": 101,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 31,
           "inertia": 194.7
         },
         "5": {
           "silhouette": 0.4504,
-          "agrees_with_the_luma": true,
-          "characters_left": 143,
-          "characters_right": 78,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 30,
           "inertia": 195.1
         },
         "6": {
           "silhouette": 0.4228,
-          "agrees_with_the_luma": true,
-          "characters_left": 121,
-          "characters_right": 55,
+          "agrees_with_the_luma": false,
+          "characters_left": 0,
+          "characters_right": 21,
           "inertia": 193.4
         }
       },
       "alphabet_k_by_truth": 6,
-      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
     },
     {
       "session": "1792554034",
@@ -1159,22 +1159,22 @@
         "4": {
           "silhouette": 0.4388,
           "agrees_with_the_luma": true,
-          "characters_left": 138,
-          "characters_right": 138,
+          "characters_left": 0,
+          "characters_right": 4,
           "inertia": 106.78
         },
         "5": {
           "silhouette": 0.4603,
           "agrees_with_the_luma": true,
-          "characters_left": 124,
-          "characters_right": 130,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 94.05
         },
         "6": {
           "silhouette": 0.4449,
           "agrees_with_the_luma": true,
-          "characters_left": 124,
-          "characters_right": 130,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 81.87
         }
       },
@@ -1215,16 +1215,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 1,
-        "characteristic_glyph": "*",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "RIGHT",
         "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 52,
-          "characters_right": 119,
-          "labels_left": 52,
-          "labels_right": 119,
+          "characters_left": 2,
+          "characters_right": 10,
+          "labels_left": 2,
+          "labels_right": 10,
           "n_answer_cells": 193
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
@@ -1243,22 +1243,22 @@
         "4": {
           "silhouette": 0.4431,
           "agrees_with_the_luma": true,
-          "characters_left": 52,
-          "characters_right": 119,
+          "characters_left": 2,
+          "characters_right": 10,
           "inertia": 132.21
         },
         "5": {
           "silhouette": 0.3677,
           "agrees_with_the_luma": true,
-          "characters_left": 52,
-          "characters_right": 119,
+          "characters_left": 2,
+          "characters_right": 10,
           "inertia": 120.27
         },
         "6": {
           "silhouette": 0.3803,
           "agrees_with_the_luma": true,
-          "characters_left": 40,
-          "characters_right": 102,
+          "characters_left": 2,
+          "characters_right": 6,
           "inertia": 115.63
         }
       },
@@ -1332,15 +1332,15 @@
         "5": {
           "silhouette": 0.3524,
           "agrees_with_the_luma": false,
-          "characters_left": 3,
-          "characters_right": 6,
+          "characters_left": 2,
+          "characters_right": 3,
           "inertia": 77.58
         },
         "6": {
           "silhouette": 0.3713,
           "agrees_with_the_luma": false,
           "characters_left": 2,
-          "characters_right": 6,
+          "characters_right": 3,
           "inertia": 77.87
         }
       },
@@ -1429,13 +1429,13 @@
         },
         "6": {
           "silhouette": 0.3456,
-          "agrees_with_the_luma": false,
-          "characters_left": 87,
-          "characters_right": 76,
+          "agrees_with_the_luma": true,
+          "characters_left": 73,
+          "characters_right": 81,
           "inertia": 72.3
         }
       },
-      "alphabet_k_by_truth": 5,
+      "alphabet_k_by_truth": 6,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -1472,20 +1472,20 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 3,
-        "characteristic_glyph": "*",
-        "answer_from_the_characters": "RIGHT",
-        "answer_from_the_labels": "RIGHT",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 99,
-          "characters_right": 157,
-          "labels_left": 99,
-          "labels_right": 157,
+          "characters_left": 69,
+          "characters_right": 25,
+          "labels_left": 69,
+          "labels_right": 25,
           "n_answer_cells": 431
         },
         "truth_from_the_full_resolution_luma": "LEFT",
-        "agrees_with_the_luma": false,
+        "agrees_with_the_luma": true,
         "luma_half_ratio": 1.248
       },
       "grid": ":::::::::::::::: = :*:::::::    =::::***\n:::::::::*::  ====*=* *=  =   ==*:: ***=\n:::::::=***=========*=*==*==  =***=     \n:::::===*********=*=*=*=======*=*=      \n::::::************@@**************      \n:::::   =*******@@@@@@************=  ==*\n::::: *******@@@@@@@@@@@****************\n::::: =**=*@@@@@@@@@@@@@************ =* \n::::::====*@@@@@@@@@@@@@*********** * **\n:::::::====@@@@@@@@@@@@@********* ******\n::::::*:***@@@@@@@@@@@@@****************\n=*:: *******@@@@@@@@@@@@*************  *\n*::*=*=******@@@@@@@@@@@@@***=**********\n:::=*********@@@@@@@@@@@@@@**=**********\n::==***********@@@@@@@@@@@@******* ***  \n= ==************@@*******@@@****** *****\n===***********************@@****** *****\n==************************@******* ** **\n=**************************************=\n**=*@@**@@@@@@************************* \n**=****@@@@@@@@@@***********************\n*******@@@@@@@@@*@*****************=    \n**=*****@@@@@@@@*@******************    \n*********@@@@@@@@@@@*****************   ",
@@ -1499,27 +1499,27 @@
         },
         "4": {
           "silhouette": 0.4315,
-          "agrees_with_the_luma": false,
-          "characters_left": 99,
-          "characters_right": 157,
+          "agrees_with_the_luma": true,
+          "characters_left": 69,
+          "characters_right": 25,
           "inertia": 115.2
         },
         "5": {
           "silhouette": 0.4248,
-          "agrees_with_the_luma": false,
-          "characters_left": 75,
-          "characters_right": 139,
+          "agrees_with_the_luma": true,
+          "characters_left": 63,
+          "characters_right": 22,
           "inertia": 122.71
         },
         "6": {
           "silhouette": 0.3659,
-          "agrees_with_the_luma": false,
-          "characters_left": 73,
-          "characters_right": 126,
+          "agrees_with_the_luma": true,
+          "characters_left": 61,
+          "characters_right": 21,
           "inertia": 115.05
         }
       },
-      "alphabet_k_by_truth": 3,
+      "alphabet_k_by_truth": 6,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -1582,8 +1582,8 @@
         "4": {
           "silhouette": 0.3975,
           "agrees_with_the_luma": true,
-          "characters_left": 108,
-          "characters_right": 109,
+          "characters_left": 74,
+          "characters_right": 103,
           "inertia": 520.81
         },
         "5": {
@@ -1595,13 +1595,13 @@
         },
         "6": {
           "silhouette": 0.3473,
-          "agrees_with_the_luma": true,
-          "characters_left": 48,
-          "characters_right": 148,
+          "agrees_with_the_luma": false,
+          "characters_left": 50,
+          "characters_right": 28,
           "inertia": 409.6
         }
       },
-      "alphabet_k_by_truth": 6,
+      "alphabet_k_by_truth": 3,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -1671,15 +1671,15 @@
         "5": {
           "silhouette": 0.3916,
           "agrees_with_the_luma": true,
-          "characters_left": 87,
-          "characters_right": 55,
+          "characters_left": 29,
+          "characters_right": 23,
           "inertia": 300.36
         },
         "6": {
           "silhouette": 0.3983,
           "agrees_with_the_luma": true,
-          "characters_left": 86,
-          "characters_right": 52,
+          "characters_left": 20,
+          "characters_right": 18,
           "inertia": 302.18
         }
       },
@@ -1802,55 +1802,55 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "*",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 168,
-          "characters_right": 93,
-          "labels_left": 168,
-          "labels_right": 93,
+          "characters_left": 7,
+          "characters_right": 11,
+          "labels_left": 7,
+          "labels_right": 11,
           "n_answer_cells": 290
         },
         "truth_from_the_full_resolution_luma": "LEFT",
-        "agrees_with_the_luma": true,
+        "agrees_with_the_luma": false,
         "luma_half_ratio": 1.153
       },
       "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::  :::::::::::::::\n::::::::::::::::::::::****::::::::::::::\n:::::::::::::::::===******=*::::::::::::\n::::::::::::: ==*************:::::::::::\n:::::::::::::*************@***::::::::::\n******** *********@***********::::::::::\n******************@@*****@@***::::::::::\n******************@@*@@@*@@*=:::::::::::\n*******************@@*@@**@*::::::::::::\n***********************@***=::::::::::::\n***********************@@@**=:::::::::::\n***********************@@@**==::::::::::\n***********************@@*****==::::::::\n*******************************=::::::::\n***********=:*******************=:::::::\n********************************=:::::::\n******=*************************::::::::\n********************************=:::::::\n******@*************************=:::::::\n*****@@***********=**************=::::::\n****@@****************************::::::\n***@@**@**************************::::::",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4229,
-          "agrees_with_the_luma": true,
-          "characters_left": 167,
-          "characters_right": 94,
+          "agrees_with_the_luma": false,
+          "characters_left": 7,
+          "characters_right": 11,
           "inertia": 179.84
         },
         "4": {
           "silhouette": 0.4975,
-          "agrees_with_the_luma": true,
-          "characters_left": 168,
-          "characters_right": 93,
+          "agrees_with_the_luma": false,
+          "characters_left": 7,
+          "characters_right": 11,
           "inertia": 151.77
         },
         "5": {
           "silhouette": 0.4489,
-          "agrees_with_the_luma": true,
-          "characters_left": 165,
-          "characters_right": 90,
+          "agrees_with_the_luma": false,
+          "characters_left": 7,
+          "characters_right": 11,
           "inertia": 135.03
         },
         "6": {
           "silhouette": 0.4684,
-          "agrees_with_the_luma": true,
-          "characters_left": 148,
-          "characters_right": 77,
+          "agrees_with_the_luma": false,
+          "characters_left": 6,
+          "characters_right": 11,
           "inertia": 134.87
         }
       },
       "alphabet_k_by_truth": 6,
-      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
     },
     {
       "session": "1792554659",
@@ -1918,20 +1918,20 @@
         },
         "5": {
           "silhouette": 0.4211,
-          "agrees_with_the_luma": true,
-          "characters_left": 79,
-          "characters_right": 189,
+          "agrees_with_the_luma": false,
+          "characters_left": 53,
+          "characters_right": 29,
           "inertia": 115.75
         },
         "6": {
           "silhouette": 0.3144,
-          "agrees_with_the_luma": true,
-          "characters_left": 67,
-          "characters_right": 176,
+          "agrees_with_the_luma": false,
+          "characters_left": 49,
+          "characters_right": 25,
           "inertia": 128.82
         }
       },
-      "alphabet_k_by_truth": 5,
+      "alphabet_k_by_truth": 4,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -2008,7 +2008,7 @@
         "6": {
           "silhouette": 0.3603,
           "agrees_with_the_luma": true,
-          "characters_left": 88,
+          "characters_left": 15,
           "characters_right": 0,
           "inertia": 121.01
         }
@@ -2085,26 +2085,26 @@
         "4": {
           "silhouette": 0.4648,
           "agrees_with_the_luma": true,
-          "characters_left": 119,
-          "characters_right": 121,
+          "characters_left": 0,
+          "characters_right": 6,
           "inertia": 97.27
         },
         "5": {
           "silhouette": 0.4992,
-          "agrees_with_the_luma": false,
-          "characters_left": 109,
-          "characters_right": 96,
+          "agrees_with_the_luma": true,
+          "characters_left": 0,
+          "characters_right": 5,
           "inertia": 93.77
         },
         "6": {
           "silhouette": 0.4211,
-          "agrees_with_the_luma": false,
-          "characters_left": 109,
-          "characters_right": 96,
+          "agrees_with_the_luma": true,
+          "characters_left": 0,
+          "characters_right": 5,
           "inertia": 78.22
         }
       },
-      "alphabet_k_by_truth": 3,
+      "alphabet_k_by_truth": 6,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -2141,20 +2141,20 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 1,
-        "characteristic_glyph": "*",
-        "answer_from_the_characters": "RIGHT",
-        "answer_from_the_labels": "RIGHT",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 90,
-          "characters_right": 106,
-          "labels_left": 90,
-          "labels_right": 106,
+          "characters_left": 50,
+          "characters_right": 39,
+          "labels_left": 50,
+          "labels_right": 39,
           "n_answer_cells": 285
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": true,
+        "agrees_with_the_luma": false,
         "luma_half_ratio": 1.002
       },
       "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::*:::::::::\n:::::::::::::::::::::::::::::::::::::***\n::::::::::::::::::::::::::::::=*********\n********************:::::******@***@@***\n*@**************************************\n@*@@@@**********************************\n@@@@@*@******@**@**@******************@@\n************@*****@@**********@@*****@@*\n@@@@@@@@*@*@@@@@@@@@@@*****@@@@@****@@@*\n@@@@@****@@@@**@@******@@@@@**@*@*******\n@@@@@******@@@*********@@***************\n@@@@@*@****@@*@@@*@***@**@@@@@@*@***@***\n@@@@*****@@@@@@@@@@***@@@@@@@@@******@**\n@@@@****@*****@@@@*@@@*@@@@*@****@**@@@@\n@@@@***@@************@*@@@@****@*@@*@@@@\n@@@@**********@*********@**@*@@***@*@@@@\n@@@@@*@*****************************@***",
@@ -2168,28 +2168,28 @@
         },
         "4": {
           "silhouette": 0.4049,
-          "agrees_with_the_luma": true,
-          "characters_left": 90,
-          "characters_right": 106,
+          "agrees_with_the_luma": false,
+          "characters_left": 50,
+          "characters_right": 39,
           "inertia": 96.0
         },
         "5": {
           "silhouette": 0.3922,
-          "agrees_with_the_luma": true,
-          "characters_left": 114,
-          "characters_right": 127,
+          "agrees_with_the_luma": false,
+          "characters_left": 13,
+          "characters_right": 1,
           "inertia": 97.4
         },
         "6": {
           "silhouette": 0.382,
-          "agrees_with_the_luma": true,
-          "characters_left": 110,
-          "characters_right": 130,
+          "agrees_with_the_luma": false,
+          "characters_left": 9,
+          "characters_right": 0,
           "inertia": 92.74
         }
       },
-      "alphabet_k_by_truth": 6,
-      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
     },
     {
       "session": "1792554791",
@@ -2258,15 +2258,15 @@
         "5": {
           "silhouette": 0.4448,
           "agrees_with_the_luma": true,
-          "characters_left": 85,
-          "characters_right": 5,
+          "characters_left": 52,
+          "characters_right": 0,
           "inertia": 151.74
         },
         "6": {
           "silhouette": 0.3647,
           "agrees_with_the_luma": true,
-          "characters_left": 85,
-          "characters_right": 5,
+          "characters_left": 50,
+          "characters_right": 0,
           "inertia": 147.32
         }
       },
@@ -2434,16 +2434,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "*",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "RIGHT",
         "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 4,
-          "characters_right": 4,
-          "labels_left": 4,
-          "labels_right": 4,
+          "characters_left": 0,
+          "characters_right": 1,
+          "labels_left": 0,
+          "labels_right": 1,
           "n_answer_cells": 9
         },
         "truth_from_the_full_resolution_luma": "LEFT",
@@ -2462,22 +2462,22 @@
         "4": {
           "silhouette": 0.4296,
           "agrees_with_the_luma": false,
-          "characters_left": 4,
-          "characters_right": 4,
+          "characters_left": 0,
+          "characters_right": 1,
           "inertia": 169.3
         },
         "5": {
           "silhouette": 0.3778,
           "agrees_with_the_luma": false,
-          "characters_left": 4,
-          "characters_right": 4,
+          "characters_left": 0,
+          "characters_right": 1,
           "inertia": 144.88
         },
         "6": {
           "silhouette": 0.3117,
           "agrees_with_the_luma": false,
-          "characters_left": 4,
-          "characters_right": 4,
+          "characters_left": 0,
+          "characters_right": 1,
           "inertia": 95.62
         }
       },
@@ -2518,16 +2518,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "*",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "RIGHT",
         "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
           "characters_left": 2,
-          "characters_right": 3,
+          "characters_right": 2,
           "labels_left": 2,
-          "labels_right": 3,
+          "labels_right": 2,
           "n_answer_cells": 9
         },
         "truth_from_the_full_resolution_luma": "LEFT",
@@ -2547,21 +2547,21 @@
           "silhouette": 0.4134,
           "agrees_with_the_luma": false,
           "characters_left": 2,
-          "characters_right": 3,
+          "characters_right": 2,
           "inertia": 139.26
         },
         "5": {
           "silhouette": 0.3204,
           "agrees_with_the_luma": false,
           "characters_left": 2,
-          "characters_right": 3,
+          "characters_right": 2,
           "inertia": 107.85
         },
         "6": {
           "silhouette": 0.3897,
           "agrees_with_the_luma": false,
           "characters_left": 2,
-          "characters_right": 3,
+          "characters_right": 2,
           "inertia": 112.49
         }
       },
@@ -2628,22 +2628,22 @@
         "4": {
           "silhouette": 0.3132,
           "agrees_with_the_luma": true,
-          "characters_left": 60,
-          "characters_right": 2,
+          "characters_left": 21,
+          "characters_right": 0,
           "inertia": 166.73
         },
         "5": {
           "silhouette": 0.3859,
           "agrees_with_the_luma": true,
-          "characters_left": 71,
-          "characters_right": 2,
+          "characters_left": 6,
+          "characters_right": 0,
           "inertia": 137.07
         },
         "6": {
           "silhouette": 0.3582,
           "agrees_with_the_luma": true,
-          "characters_left": 70,
-          "characters_right": 2,
+          "characters_left": 6,
+          "characters_right": 0,
           "inertia": 131.3
         }
       },
@@ -2684,16 +2684,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 0,
-        "characteristic_glyph": "*",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "LEFT",
         "answer_from_the_labels": "LEFT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 166,
-          "characters_right": 76,
-          "labels_left": 166,
-          "labels_right": 76,
+          "characters_left": 22,
+          "characters_right": 0,
+          "labels_left": 22,
+          "labels_right": 0,
           "n_answer_cells": 327
         },
         "truth_from_the_full_resolution_luma": "LEFT",
@@ -2705,29 +2705,29 @@
         "3": {
           "silhouette": 0.3932,
           "agrees_with_the_luma": true,
-          "characters_left": 161,
-          "characters_right": 76,
+          "characters_left": 24,
+          "characters_right": 0,
           "inertia": 100.76
         },
         "4": {
           "silhouette": 0.4579,
           "agrees_with_the_luma": true,
-          "characters_left": 166,
-          "characters_right": 76,
+          "characters_left": 22,
+          "characters_right": 0,
           "inertia": 88.67
         },
         "5": {
           "silhouette": 0.3943,
           "agrees_with_the_luma": true,
-          "characters_left": 162,
-          "characters_right": 75,
+          "characters_left": 24,
+          "characters_right": 0,
           "inertia": 84.3
         },
         "6": {
           "silhouette": 0.4126,
           "agrees_with_the_luma": true,
-          "characters_left": 159,
-          "characters_right": 66,
+          "characters_left": 16,
+          "characters_right": 0,
           "inertia": 77.77
         }
       },
@@ -2793,23 +2793,23 @@
         },
         "4": {
           "silhouette": 0.3908,
-          "agrees_with_the_luma": false,
-          "characters_left": 133,
-          "characters_right": 132,
+          "agrees_with_the_luma": true,
+          "characters_left": 32,
+          "characters_right": 50,
           "inertia": 127.56
         },
         "5": {
           "silhouette": 0.353,
           "agrees_with_the_luma": true,
-          "characters_left": 85,
-          "characters_right": 118,
+          "characters_left": 0,
+          "characters_right": 1,
           "inertia": 101.12
         },
         "6": {
           "silhouette": 0.3987,
           "agrees_with_the_luma": true,
-          "characters_left": 64,
-          "characters_right": 90,
+          "characters_left": 0,
+          "characters_right": 1,
           "inertia": 105.62
         }
       },
@@ -2884,27 +2884,27 @@
         },
         "4": {
           "silhouette": 0.4645,
-          "agrees_with_the_luma": false,
-          "characters_left": 140,
-          "characters_right": 127,
+          "agrees_with_the_luma": true,
+          "characters_left": 1,
+          "characters_right": 10,
           "inertia": 102.82
         },
         "5": {
           "silhouette": 0.457,
           "agrees_with_the_luma": true,
-          "characters_left": 98,
-          "characters_right": 100,
+          "characters_left": 0,
+          "characters_right": 5,
           "inertia": 80.69
         },
         "6": {
           "silhouette": 0.3955,
-          "agrees_with_the_luma": false,
-          "characters_left": 101,
-          "characters_right": 100,
+          "agrees_with_the_luma": true,
+          "characters_left": 0,
+          "characters_right": 5,
           "inertia": 72.25
         }
       },
-      "alphabet_k_by_truth": 5,
+      "alphabet_k_by_truth": 6,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -2967,8 +2967,8 @@
         "4": {
           "silhouette": 0.4229,
           "agrees_with_the_luma": true,
-          "characters_left": 133,
-          "characters_right": 143,
+          "characters_left": 31,
+          "characters_right": 51,
           "inertia": 58.86
         },
         "5": {
@@ -3062,14 +3062,14 @@
         },
         "6": {
           "silhouette": 0.3383,
-          "agrees_with_the_luma": true,
-          "characters_left": 72,
-          "characters_right": 88,
+          "agrees_with_the_luma": false,
+          "characters_left": 81,
+          "characters_right": 70,
           "inertia": 57.99
         }
       },
       "alphabet_k_by_truth": 6,
-      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
     },
     {
       "session": "1792560124",
@@ -3145,8 +3145,8 @@
         "6": {
           "silhouette": 0.3669,
           "agrees_with_the_luma": true,
-          "characters_left": 4,
-          "characters_right": 5,
+          "characters_left": 6,
+          "characters_right": 8,
           "inertia": 124.76
         }
       },
@@ -3212,27 +3212,27 @@
         },
         "4": {
           "silhouette": 0.4557,
-          "agrees_with_the_luma": false,
-          "characters_left": 86,
-          "characters_right": 77,
+          "agrees_with_the_luma": true,
+          "characters_left": 28,
+          "characters_right": 55,
           "inertia": 235.33
         },
         "5": {
           "silhouette": 0.3613,
-          "agrees_with_the_luma": false,
-          "characters_left": 85,
-          "characters_right": 73,
+          "agrees_with_the_luma": true,
+          "characters_left": 28,
+          "characters_right": 54,
           "inertia": 239.23
         },
         "6": {
           "silhouette": 0.357,
-          "agrees_with_the_luma": false,
-          "characters_left": 82,
-          "characters_right": 70,
+          "agrees_with_the_luma": true,
+          "characters_left": 28,
+          "characters_right": 54,
           "inertia": 240.37
         }
       },
-      "alphabet_k_by_truth": 3,
+      "alphabet_k_by_truth": 4,
       "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
     },
     {
@@ -3267,50 +3267,50 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 1,
-        "characteristic_glyph": "+",
-        "answer_from_the_characters": "LEFT",
-        "answer_from_the_labels": "LEFT",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 137,
-          "characters_right": 124,
-          "labels_left": 137,
-          "labels_right": 124,
+          "characters_left": 74,
+          "characters_right": 107,
+          "labels_left": 74,
+          "labels_right": 107,
           "n_answer_cells": 472
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": false,
+        "agrees_with_the_luma": true,
         "luma_half_ratio": 1.224
       },
       "grid": " ::++ ::::++ +++++  ++ +++++     + +++++\n+++++++++++++::+++ +++++++@++++++++++++ \n+++++++++++++    +  ++++++@+++++++++++++\n  ++++ ::++++++++++++++@@@@@@@+++ ++++++\n::+++ ++:+   +:+++++@@@@@@@@@@+@++++++++\n:: +++ +::   +++  @@@@@@@@@@@@++++++++++\n   + ++++    + @@@@@@@@@@@@@@@++++++++++\n+++@@++++++++++@@@@@@@@@@@@@@+++++++++++\n+++++++++ +++++ @@@@@@@@@@@@@@++++++++++\n++ ++++++++++++@@@@@@@@@@@@@@@@+++++++++\n+ +++ ++++++  @@@@@@@@@@@@@@@+++++++++++\n  ++ +++++++ @@@@@@@@@@@@@@@@+++++++++++\n++++++++++++ @@@@@@@@@@@@@@@@@++++++++++\n++++++++++++ @@@@@@@@@@@@@@@@@++++++++++\n+++++++++ ++@@@@@@@@@@@@@@@@@@++++++++++\n++++++ ++++@@@@@@@@@@@@@@@@@@@ +++++++++\n++++++++++@@@@@@@@@@@@@@@+@@@@@+++++++++\n++++++++++@@@@@@@@@@@@@@@@@@@@@+++++++++\n++++++++++@@@@@@@@@@@@@@@@@@@@@++++++ ++\n++++++++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n+++++++++++@@@@@@@@@@@@@@@@@@@@@@+++@@  \n + ++++++++++@@@@@@@@@@@@@@@@@@+++++   +\n+ +++++++++++@@@@@@@@@@@@@@@@@++++++ +++\n+++++++++++++@@@@@@@@@@@@@@@@@+++++ ++++",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4751,
-          "agrees_with_the_luma": false,
-          "characters_left": 137,
-          "characters_right": 124,
+          "agrees_with_the_luma": true,
+          "characters_left": 74,
+          "characters_right": 107,
           "inertia": 123.23
         },
         "4": {
           "silhouette": 0.4006,
           "agrees_with_the_luma": true,
-          "characters_left": 107,
-          "characters_right": 165,
+          "characters_left": 39,
+          "characters_right": 39,
           "inertia": 100.63
         },
         "5": {
           "silhouette": 0.3325,
           "agrees_with_the_luma": false,
-          "characters_left": 122,
-          "characters_right": 103,
+          "characters_left": 22,
+          "characters_right": 17,
           "inertia": 100.55
         },
         "6": {
           "silhouette": 0.3406,
           "agrees_with_the_luma": false,
-          "characters_left": 89,
-          "characters_right": 83,
+          "characters_left": 17,
+          "characters_right": 15,
           "inertia": 104.56
         }
       },
@@ -3355,16 +3355,16 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 2,
-        "characteristic_glyph": "#",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
         "answer_from_the_characters": "RIGHT",
         "answer_from_the_labels": "RIGHT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 7,
-          "characters_right": 27,
-          "labels_left": 7,
-          "labels_right": 27,
+          "characters_left": 0,
+          "characters_right": 3,
+          "labels_left": 0,
+          "labels_right": 3,
           "n_answer_cells": 42
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
@@ -3376,29 +3376,29 @@
         "3": {
           "silhouette": 0.4571,
           "agrees_with_the_luma": true,
-          "characters_left": 6,
-          "characters_right": 20,
+          "characters_left": 3,
+          "characters_right": 13,
           "inertia": 906.3
         },
         "4": {
           "silhouette": 0.4774,
           "agrees_with_the_luma": true,
-          "characters_left": 7,
-          "characters_right": 27,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 869.92
         },
         "5": {
           "silhouette": 0.5021,
           "agrees_with_the_luma": true,
-          "characters_left": 7,
-          "characters_right": 27,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 725.09
         },
         "6": {
           "silhouette": 0.5115,
           "agrees_with_the_luma": true,
-          "characters_left": 7,
-          "characters_right": 27,
+          "characters_left": 0,
+          "characters_right": 3,
           "inertia": 499.95
         }
       },
@@ -3437,50 +3437,50 @@
       },
       "question": {
         "question": "which half of the room holds more of the characteristic material?",
-        "characteristic_cluster": 1,
-        "characteristic_glyph": " ",
-        "answer_from_the_characters": "RIGHT",
-        "answer_from_the_labels": "RIGHT",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
         "agrees_with_the_labels": true,
         "counts": {
-          "characters_left": 109,
-          "characters_right": 121,
-          "labels_left": 109,
-          "labels_right": 121,
+          "characters_left": 53,
+          "characters_right": 51,
+          "labels_left": 53,
+          "labels_right": 51,
           "n_answer_cells": 467
         },
         "truth_from_the_full_resolution_luma": "RIGHT",
-        "agrees_with_the_luma": true,
+        "agrees_with_the_luma": false,
         "luma_half_ratio": 1.213
       },
       "grid": "++     + +  :   + ::  :::   ++   +++   +\n    +        + +   :   : +  +   +++     \n             ++    :     +      ++  +   \n++       +         ++  +     +++++ +    \n  ++++ ++           ++                  \n                ++++++                  \n+++    +     +     +++ ++     ++  +     \n++++ +      ++          ++  +++         \n  +   + +   + +++++++++ +++  +  +     + \n +++ +   +++++++@@@@@@++ +++++          \n++++         @@@@@@ @@@++++             \n         +++++@@@+  @@@@@@++++ ++++ ++  \n    +      ++@@@+++++@@@@@+++  +     +++\n  +++++     ++@@@@@@@@@@@@+++        ++ \n+++++++     ++@@@@@@@@@@@@+++        +++\n++ +++++++  ++@@@@@@@@@@@++++ ++   + +++\n::::::   ++ ++@@@@@@@@@@@++  +++++    ++\n:::::: :  ++++@@@@@@@@@@++ +++@+++  +++ \n         ++++@@@@@@@@@@@@+++@@@@@    +  \n      +  +++@@@@@@@@@@@@@@+@@@@@        \n    +++  ++@@@@@@@@@@@@@@@@@@@@         \n        +++@@@@@@@@@@@@@@@@@@@@       ++\n     +  +@@@@@@@@@@@@@@@@@@@@@+        +\n :  ++   @@@@@@@@@@@@@@@@@@@@@@@+     ++",
       "the_cardinality_curve": {
         "3": {
           "silhouette": 0.4476,
-          "agrees_with_the_luma": true,
-          "characters_left": 109,
-          "characters_right": 121,
+          "agrees_with_the_luma": false,
+          "characters_left": 53,
+          "characters_right": 51,
           "inertia": 172.14
         },
         "4": {
           "silhouette": 0.3476,
-          "agrees_with_the_luma": true,
-          "characters_left": 97,
-          "characters_right": 116,
+          "agrees_with_the_luma": false,
+          "characters_left": 48,
+          "characters_right": 47,
           "inertia": 163.28
         },
         "5": {
           "silhouette": 0.3732,
           "agrees_with_the_luma": true,
-          "characters_left": 82,
-          "characters_right": 116,
+          "characters_left": 33,
+          "characters_right": 35,
           "inertia": 122.66
         },
         "6": {
           "silhouette": 0.3543,
           "agrees_with_the_luma": true,
-          "characters_left": 80,
-          "characters_right": 102,
+          "characters_left": 12,
+          "characters_right": 27,
           "inertia": 97.42
         }
       },
@@ -3547,22 +3547,22 @@
         "4": {
           "silhouette": 0.4158,
           "agrees_with_the_luma": true,
-          "characters_left": 100,
-          "characters_right": 40,
+          "characters_left": 43,
+          "characters_right": 36,
           "inertia": 100.85
         },
         "5": {
           "silhouette": 0.3634,
           "agrees_with_the_luma": true,
-          "characters_left": 95,
-          "characters_right": 37,
+          "characters_left": 43,
+          "characters_right": 36,
           "inertia": 93.46
         },
         "6": {
           "silhouette": 0.3604,
           "agrees_with_the_luma": true,
-          "characters_left": 66,
-          "characters_right": 20,
+          "characters_left": 42,
+          "characters_right": 36,
           "inertia": 95.09
         }
       },
@@ -3970,40 +3970,24 @@
   "summary": {
     "n_sessions_with_a_grid": 43,
     "n_refused_as_synthetic": 35,
-    "held_out_question_agreement_with_the_luma": "33/43",
-    "agreement_rate_with_the_luma": 0.7674,
+    "held_out_question_agreement_with_the_luma": "34/43",
+    "agreement_rate_with_the_luma": 0.7907,
     "agreement_rate_with_the_labels": 1.0,
     "the_ties": {
       "tie_ratio_threshold": 1.1,
       "n_ties_in_the_truth": 12,
       "n_decisive": 31,
-      "agreement_over_the_decisive": "26/31",
-      "agreement_rate_over_the_decisive": 0.8387,
+      "agreement_over_the_decisive": "29/31",
+      "agreement_rate_over_the_decisive": 0.9355,
       "the_reading": "the truth is a NEAR-TIE in most sessions (the luma's per-half change energy has a median ratio of 1.17 and a minimum of 1.00), so the question is hard by construction and the raw agreement is not measuring much unless the ties are separated out.  Both numbers are reported."
     },
     "the_misses": [
       {
-        "session": "1792553152",
-        "characters_left": 190,
-        "characters_right": 164,
-        "luma_truth": "RIGHT",
-        "luma_half_ratio": 1.337,
-        "grid_count_is_tied": false
-      },
-      {
-        "session": "1792553852",
-        "characters_left": 146,
-        "characters_right": 28,
-        "luma_truth": "RIGHT",
-        "luma_half_ratio": 1.322,
-        "grid_count_is_tied": false
-      },
-      {
-        "session": "1792553885",
-        "characters_left": 133,
-        "characters_right": 112,
-        "luma_truth": "RIGHT",
-        "luma_half_ratio": 1.163,
+        "session": "1792554004",
+        "characters_left": 0,
+        "characters_right": 31,
+        "luma_truth": "LEFT",
+        "luma_half_ratio": 1.024,
         "grid_count_is_tied": false
       },
       {
@@ -4023,28 +4007,36 @@
         "grid_count_is_tied": false
       },
       {
-        "session": "1792554532",
-        "characters_left": 99,
-        "characters_right": 157,
+        "session": "1792554571",
+        "characters_left": 7,
+        "characters_right": 11,
         "luma_truth": "LEFT",
-        "luma_half_ratio": 1.248,
+        "luma_half_ratio": 1.153,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792554762",
+        "characters_left": 50,
+        "characters_right": 39,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.002,
         "grid_count_is_tied": false
       },
       {
         "session": "1792555166",
-        "characters_left": 4,
-        "characters_right": 4,
+        "characters_left": 0,
+        "characters_right": 1,
         "luma_truth": "LEFT",
         "luma_half_ratio": 1.082,
-        "grid_count_is_tied": true
+        "grid_count_is_tied": false
       },
       {
         "session": "1792555182",
         "characters_left": 2,
-        "characters_right": 3,
+        "characters_right": 2,
         "luma_truth": "LEFT",
         "luma_half_ratio": 1.094,
-        "grid_count_is_tied": false
+        "grid_count_is_tied": true
       },
       {
         "session": "1792555864",
@@ -4055,11 +4047,11 @@
         "grid_count_is_tied": false
       },
       {
-        "session": "1792560758",
-        "characters_left": 137,
-        "characters_right": 124,
+        "session": "1792596296",
+        "characters_left": 53,
+        "characters_right": 51,
         "luma_truth": "RIGHT",
-        "luma_half_ratio": 1.224,
+        "luma_half_ratio": 1.213,
         "grid_count_is_tied": false
       }
     ],
@@ -4068,19 +4060,19 @@
     "the_cardinality_rule": "k is chosen by the silhouette of the training descriptors, which never looks at the truth.  Had k been chosen by the agreement with the truth -- the first version's rule -- the number below would have been the optimistic bound instead",
     "the_cardinality_curve": {
       "3": {
-        "agree": 33,
+        "agree": 34,
         "of": 43,
-        "rate": 0.7674
+        "rate": 0.7907
       },
       "4": {
-        "agree": 31,
-        "of": 43,
-        "rate": 0.7209
-      },
-      "5": {
         "agree": 33,
         "of": 43,
         "rate": 0.7674
+      },
+      "5": {
+        "agree": 32,
+        "of": 43,
+        "rate": 0.7442
       },
       "6": {
         "agree": 31,
@@ -4089,9 +4081,9 @@
       }
     },
     "the_optimistic_bound": {
-      "agreement_if_k_were_chosen_by_the_truth": "39/43",
-      "rate": 0.907,
-      "n_sessions_where_the_truth_would_pick_a_different_k": 37,
+      "agreement_if_k_were_chosen_by_the_truth": "36/43",
+      "rate": 0.8372,
+      "n_sessions_where_the_truth_would_pick_a_different_k": 38,
       "the_reading": "the two rules disagree about the cardinality on some sessions, and where they disagree the truth-chosen k is the optimistic one by construction -- which is why it is the bound and not the headline"
     },
     "the_k_distribution": {

@@ -16,6 +16,25 @@ frames yet** (live captures, zero-byte luma), so **88 are usable**
 > present. The line is now precise, and the corpus is live, so it will
 > be out of date again by the next run.
 
+> **Dated correction, later on 2026-10-21 (after `64c898c`).** The
+> QUESTION was re-measured and it is now better: **34/43 (79.1 %)**
+> raw and **29/31 (93.6 %)** over the decisive sessions, against the
+> 33/43 (76.7 %) and 26/31 (83.9 %) recorded below. The cause is one
+> change: **the characteristic cluster is now elected by ACTIVITY — the
+> cluster that moves — instead of by CELL COUNT.** The grid itself did
+> not change: **983 bytes**, **18,470×**, 0.83 bytes per source frame,
+> the IoU median of 0.976 and every number about the bytes are exactly
+> as they were. **§1–§7 below are left as the record of the first
+> build, and §8 carries the revised measurement.** The old rows in
+> `EXPERIMENTS.md` are not edited; a new row states the revision and
+> refers to them.
+>
+> **And the revision refutes two claims this programme filed two days
+> ago** — that more symbols dilute a vocabulary, and that a new
+> cardinality rule beats the incumbent. Both were measured against the
+> cell-count election, and both dissolve once the election is fixed.
+> See `docs/GLYPH-TRANSFER.md` §9.
+
 ---
 
 ## 0. THE HEADLINE
@@ -446,5 +465,86 @@ The run writes `results/glyph_grid.json`, which carries every session's
 grid, its fitted alphabet, its fit scope, its question, its counts, the
 **whole per-k curve**, the optimistic bound, and the refusal reason for
 the ones that were refused.
+
+---
+
+## 8. THE REVISED MEASUREMENT — the question elected by activity
+
+**§1–§7 above are the first build's record. This is the same tool with
+one change, and the change is in the QUESTION, not in the grid.**
+
+### 8.1 The change
+
+The **characteristic material** — the cluster the question counts in
+each half — was elected by **cell count**: the cluster that owns the
+most cells. It is now elected by **activity**: the cluster with the
+highest mean activity, among the clusters that own any observed cell.
+**The moving material, not the biggest material.**
+
+The failure diagnosis (`docs/GLYPH-FAILURE.md`) is what asked for it:
+a session is read backwards when the biggest cluster sits on the other
+side from the change energy, and the biggest cluster is not necessarily
+the one that moves.
+
+**One definition, used by both tools.** The grid and the transfer study
+call the same `elect_characteristic`, so they are not measuring
+different vocabularies. It lives in `experiments/glyph_grid.py` for
+exactly that reason.
+
+### 8.2 What changed, and what did not
+
+| | the first build | **the revision** |
+|---|---|---|
+| the grid, in bytes | 983 | **983** — unchanged |
+| the compression | 18,470× | **18,470×** — unchanged |
+| bytes per source frame | 0.83 | **0.83** — unchanged |
+| the negative glyph's IoU, median | 0.976 | **0.976** — unchanged |
+| sessions refused | 45 of 88 | **45 of 88** — unchanged |
+| **the held-out question, raw** | 33/43 (76.7 %) | **34/43 (79.1 %)** |
+| **the held-out question, decisive** | 26/31 (83.9 %) | **29/31 (93.6 %)** |
+| the misses | 10 | **9** |
+| of those, the near-ties (ratio < 1.10) | 5 | **7** |
+| of those, the **decisive** misses | 5 | **2** |
+| the margin's correlation with the truth's | r = 0.840 | **r = 0.845** |
+| the grid's median margin | 1.300 | **1.360** (the truth's is 1.173) |
+| the per-k curve | 33, 31, 33, 31 | **34, 33, 32, 31** |
+| the optimistic bound (k chosen by the truth) | 39/43 | **36/43** |
+
+**The grid is byte-for-byte the same.** Everything that changed is the
+answer, and the answer got better.
+
+### 8.3 The two decisive misses
+
+| session | the grid's count | the truth | the truth's ratio |
+|---|---|---|---|
+| 1792554571 | 7 / 11 | LEFT | 1.153 |
+| 1792596296 | 53 / 51 | RIGHT | 1.213 |
+
+The other seven misses are near-ties: the truth's own ratio is 1.024,
+1.003, 1.004, 1.002, 1.082, 1.094 and 1.036, and four of them have
+grid counts of 0-31, 5-9, 0-1 and 2-2. **Two decisive misses out of 31
+decisive sessions**, against five before.
+
+### 8.4 The overconfidence got worse, and that is the honest cost
+
+The grid's median margin rose from 1.300 to **1.360** while the
+truth's is 1.173. **So the revised vocabulary is more confident than
+the room is, by more than it was.** The correlation with the truth's
+margin went up slightly (0.840 → 0.845), so the shape is better
+tracked, but the scale is over-stated.
+
+That is the kill in §5.4 restating itself, and it is now the sharpest
+remaining defect in the grid. The cause is probably the same thing that
+broke the cardinality sweep: a cluster elected by mean activity is
+elected by a quantity that is itself a mean over cells, and a small
+number of very active cells makes a cluster look decisive.
+
+### 8.5 The per-k curve is now clean
+
+The first build's curve was **33, 31, 33, 31** — flat, with a bump, and
+that flatness was read as "the answer barely depends on k". The
+revised curve is **34, 33, 32, 31**: a clean decline of one session per
+step. **The revised grid is best at three symbols and degrades
+gently, and the degradation is now visible instead of hidden.**
 
 *Committed for Muse to review; not merged.*
