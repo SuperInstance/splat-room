@@ -90,6 +90,12 @@ $VENV/bin/python src/train_lego.py --guided 1 \
   --out results/guided_lego.jsonl
 echo "$(date -u) autorun: guided rc=$?"
 
+# riff #2 sibling row: ascii-first loss schedule, same seed (runs last)
+echo "$(date -u) autorun: ascii-first run starting"
+$VENV/bin/python src/train_lego.py --guided 0 --ascii-first-iters 2000 \
+  --out results/asciifirst_lego.jsonl
+echo "$(date -u) autorun: ascii-first rc=$?"
+
 kill $WD $TS 2>/dev/null
 
 # bank the artifacts locally (publishing routes through the Oracle lane)

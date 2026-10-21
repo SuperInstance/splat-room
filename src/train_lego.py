@@ -50,7 +50,26 @@ def parse_args():
     p.add_argument("--edge-level", type=int, default=6, help="min ASCII ramp level (of 9)")
     p.add_argument("--alpha-weak", type=float, default=0.85)
     p.add_argument("--ssim-lambda", type=float, default=0.2)
+    # riff #2: supervise against the ASCII grid (cell-mean luma, ramp levels)
+    # for the first N iters, then switch to the pixel loss
+    p.add_argument("--ascii-first-iters", type=int, default=0)
+    p.add_argument("--ascii-cell", type=int, default=10, help="pixels per ASCII cell")
     return p.parse_args()
+
+
+def ascii_levels_luma(img, cell):
+    """img [H,W,3] float [0,1] -> cell-mean luma quantized to ramp levels [h',w']."""
+    h = img.shape[0] // cell * cell
+    w = img.shape[1] // cell * cell
+    luma = img[:h, :w, 0] * 0.299 + img[:h, :w, 1] * 0.587 + img[:h, :w, 2] * 0.114
+    pooled = luma.reshape(h // cell, cell, w // cell, cell).mean(dim=(1, 3))
+    return (pooled.clamp(0, 1) * (len(RAMP) - 1)).round()
+
+
+def ste_levels(pooled_luma):
+    """Straight-through ramp quantizer: gradient flows through the pre-quantized value."""
+    x = pooled_luma.clamp(0, 1) * (len(RAMP) - 1)
+    return x + (x.round() - x).detach()
 
 
 # ---------------- data ----------------
@@ -264,9 +283,16 @@ def main():
         strategy.step_pre_backward(params, optimizers, state, step, info)
 
         rgb = renders[0]
-        l1 = F.l1_loss(rgb, pixels)
-        s = ssim(rgb.permute(2, 0, 1)[None], pixels.permute(2, 0, 1)[None])
-        loss = torch.lerp(l1, 1 - s, args.ssim_lambda)
+        if args.ascii_first_iters > 0 and step <= args.ascii_first_iters:
+            # riff #2: fit in the middle layer — L1 on ramp levels of cell means
+            cell = args.ascii_cell
+            pred = ste_levels(ascii_levels_luma(rgb, cell))
+            tgt = ascii_levels_luma(pixels, cell)
+            loss = F.l1_loss(pred, tgt)
+        else:
+            l1 = F.l1_loss(rgb, pixels)
+            s = ssim(rgb.permute(2, 0, 1)[None], pixels.permute(2, 0, 1)[None])
+            loss = torch.lerp(l1, 1 - s, args.ssim_lambda)
         loss.backward()
 
         strategy.step_post_backward(params, optimizers, state, step, info, packed=False)
