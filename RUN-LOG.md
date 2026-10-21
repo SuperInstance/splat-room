@@ -86,7 +86,11 @@ forensics say (evidence in kernel journal + this session's probes):
 ## next
 
 - Casey: reboot (fixes GPU RM wedge) + `gh auth login` (token dead).
-- Then: baseline lego run → guided run → fill EXPERIMENTS rows with
-  measured iterations-to-quality + equal-gaussian-count tiebreak.
-- Sibling: idea #2 ASCII-first loss schedule row, same seed, if day allows.
+- Auto-runner armed: `src/run_when_gpu.sh` — cron `@reboot` + one
+  in-session waiter. It verifies CUDA+gsplat with a real render, waits
+  for memory to settle (≥2.5 GB), runs a 300-step guided smoke (must
+  inject), then baseline → guided full runs sequentially under a
+  MemAvailable<800 MB watchdog (no repeat of the 17:35 OOM), commits
+  the jsonl artifacts locally. tegrastats sampled throughout as GPU-work
+  proof. Rows get filled from those files when I read them.
 
