@@ -22,7 +22,7 @@ echo "$(date -u) autorun: waiting for CUDA + gsplat"
     avail=$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)
     if [ "${avail:-9999}" -lt 800 ]; then
       echo "$(date -u) WATCHDOG: MemAvailable ${avail}MB < 800MB, killing training"
-      pkill -9 -f train_lego.py
+      pkill -9 -f 'train_lego.py|train_walkabout.py'
     fi
     sleep 10
   done
@@ -96,9 +96,18 @@ $VENV/bin/python src/train_lego.py --guided 0 --ascii-first-iters 2000 \
   --out results/asciifirst_lego.jsonl
 echo "$(date -u) autorun: ascii-first rc=$?"
 
+# walkabout lane: first real-data fit (EXPERIMENTS row claimed open 2026-10-21)
+echo "$(date -u) autorun: walkabout fit starting"
+$VENV/bin/python src/train_walkabout.py --out results/walkabout_fit.jsonl
+echo "$(date -u) autorun: walkabout rc=$?"
+
 kill $WD $TS 2>/dev/null
 
+# crossings + tiebreaks from the jsonl logs, banked as a file
+$VENV/bin/python src/analyze_runs.py | tee results/analysis.txt
+
 # bank the artifacts locally (publishing routes through the Oracle lane)
-git add results/*.jsonl results/*_ascii_view0.txt 2>/dev/null
-git commit -q -m "lane-1 artifacts: baseline + guided lego runs (jsonl + ascii view; rows filled separately from these files)" 2>/dev/null
+git add results/*.jsonl results/*_ascii_view0.txt \
+        results/walkabout_fit_holdout*.png results/analysis.txt 2>/dev/null
+git commit -q -m "autorun artifacts: lego baseline/guided/ascii-first + first walkabout fit (jsonl, holdout strips, analysis; rows filled separately from these files)" 2>/dev/null
 echo "$(date -u) autorun: DONE — results committed locally, fill EXPERIMENTS rows from the jsonl"

@@ -74,6 +74,15 @@ def main(results_dir="results"):
         print(f"{name:11s} >=25dB: {first_cross(rows, 25)}   "
               f">=30dB: {first_cross(rows, 30)}")
 
+    wk = os.path.join(results_dir, "walkabout_fit.jsonl")
+    if os.path.exists(wk):
+        rows = load(wk)
+        print(f"\nwalkabout (real data, orientation-pivot): {len(rows)} eval rows, "
+              f"final psnr {rows[-1]['val_psnr']:.2f} dB, "
+              f"{rows[-1]['n_gs']} gs, {rows[-1]['elapsed_s']:.0f}s")
+        print(f"walkabout   >=20dB: {first_cross(rows, 20)}   "
+              f">=25dB: {first_cross(rows, 25)}   >=30dB: {first_cross(rows, 30)}")
+
     if "baseline" in arms and "guided" in arms:
         print("\n== equal-gaussian-count tiebreak (PSNR at matched n_gs) ==")
         for cpt in shared_checkpoints(arms["baseline"], arms["guided"]):
