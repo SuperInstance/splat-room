@@ -34,7 +34,59 @@ Chronological, everything, including failures. Times UTC.
     by adding splats (capacity), iterations-to-quality at equal
     gaussian-count checkpoints is the tiebreak.
 
+## 2026-10-21 ~18:50 — recovery seat: the GPU wedge (found, needs Casey)
+
+Seat process died ~17:35; recovery session resumed both lanes. What the
+forensics say (evidence in kernel journal + this session's probes):
+
+- **CUDA is system-wide dead since ≥17:08 UTC**: `cuInit` → 801
+  ("operation not supported") from torch, whisper-cli (CUDA build), and
+  bare ctypes into both libcuda copies on the box. Each attempt bursts
+  `NVRM: GPU0 rpcRmApiControl_dce ... NV_ERR_GENERIC` in the kernel log.
+  The whisper CUDA bench at 06:36 UTC worked (GR3D 38% mean / 80% max
+  in `tegrastats_run.log`), so the wedge began between 06:36 and 17:08 —
+  BEFORE the OOM storm, not caused by it.
+- Ruled out: wrong libcuda copy (both give 801), device-node permissions
+  (all match `/etc/udev/rules.d/99-tegra-devices.rules`; nvmap 0440 is
+  by design), sandbox, LD_LIBRARY_PATH (bench script's exact env fails
+  too).
+- Fix needs root (no passwordless sudo here): **reboot** (nvgpu.ko is
+  loadable but the display stack holds 35 refs; rmmod is not practical).
+  Note left for Casey at `~/GPU-BLOCKED-CASEY-READ.md`.
+- The 17:35:51–17:36:08 OOM storm (udev-worker invoked): killed
+  pipewire, gsd, snap, a python3, and `cudafe++` at 1.6 GB RSS — the
+  previous session was mid gsplat build when it died. Lesson banked:
+  **MAX_JOBS=1** for CUDA compiles on this box while the desktop lives.
+
+## 2026-10-21 ~19:00 — lane 1 prep done while GPU down
+
+- Dataset verified: lego+hotdog train/val/test on disk
+  (`~/work/build/data/nerf_synthetic_xh/`); loader smoke-tested on CPU
+  (100 train views @400×400 after factor-2, cams at r=4.03, focal 555.6).
+- Edge/ASCII maps: Sobel-magnitude → 10-level ramp, border artifacts
+  masked; lego view 0 has 614 structure pixels at level ≥6 (histogram in
+  smoke test). ASCII render of view 0 banked for the record.
+- Trainer written: `src/train_lego.py` — gsplat DefaultStrategy baseline
+  + guided variant that every refine step injects up to 500 small splats
+  at edge-pixel unprojections (expected depth via alpha-blended z-render,
+  current-model RGB → SH DC), gated to weak-coverage (alpha<0.85) edge
+  cells; per-splat state/optimizer append mirrors gsplat's own duplicate
+  ops. jsonl per 100 iters: step, val_psnr (first 10 val views),
+  n_gs, n_injected, elapsed, mem. Same seed/schedule both arms; L1+SSIM.
+- gsplat build: `~/work/build/build_gsplat.sh` (RAM watchdog kills
+  compilers below 700 MB available). Attempts: gcc-13 missing → system
+  gcc has no cc1plus → toolchain g++ for all of CC/CXX → MAX_JOBS=2
+  watchdog-killed at 428 MB avail → **attempt 4, MAX_JOBS=1, running**.
+- Run commands when GPU returns (after `sudo reboot`, venv
+  `~/venvs/splat`):
+  `python src/train_lego.py --out results/baseline_lego.jsonl --guided 0`
+  then `--guided 1 --out results/guided_lego.jsonl`; crossings print at
+  end. Bars: first step val PSNR ≥25 dB and ≥30 dB (EXPERIMENTS rows).
+
 ## next
 
-- verify torch CUDA on sm_87 → build gsplat (JIT, `MAX_JOBS=2`) →
-  baseline lego run → guided run → results.
+- Casey: reboot (fixes GPU RM wedge) + `gh auth login` (token dead).
+- Then: baseline lego run → guided run → fill EXPERIMENTS rows with
+  measured iterations-to-quality + equal-gaussian-count tiebreak.
+- Sibling: idea #2 ASCII-first loss schedule row, same seed, if day allows.
+

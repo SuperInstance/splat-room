@@ -25,6 +25,10 @@ the communicator's ASCII-MOTION retraction chain for the culture).
 
 | date | seat | variant (stage: approach) | iterations-to-quality | bar | cost | artifact | status | notes |
 |---|---|---|---|---|---|---|---|---|
+| 2026-10-21 | jetson-edge | stage 2: gsplat DefaultStrategy baseline (unguided), nerf_synthetic lego | open | first iter with val PSNR ≥ 25 dB (and ≥ 30 dB, both logged); eval every 100 iters | Orin Nano Super 8 GB; torch 2.9.1+cu130 aarch64; gsplat 1.6.0 source build (no-sudo nvcc); wall tbd | `results/baseline_lego.jsonl` | open | fixed seed shared with guided run; gaussian-count curve logged for the capacity tiebreak |
+| 2026-10-21 | jetson-edge | stage 2: edge/ASCII-guided splat injection (edges seed density), same scene | open | same bars, same schedule, same seed | same box; edge maps (Canny + ASCII ramp) precomputed once per train view | `results/guided_lego.jsonl` | open | guided = during the densification window, inject small splats at edge-pixel unprojections using the current model's rendered depth, preferentially where rendered alpha shows weak coverage; equal-gaussian-count PSNR is the tiebreak reading |
+
+*(scaffold note below superseded by the two open rows above)*
 
 *(no runs yet — this scaffold was pushed 2026-10-21; the first row is
 yours)*
