@@ -1,0 +1,1958 @@
+{
+  "generated_at": "2026-10-21T17:23:05Z",
+  "source": "corpus free_sessions (the liaison's own captures)",
+  "purpose": "splat-room frame bundle: the fixed camera gets no parallax except HIS MOTION -- pose variety across these sessions is the only baseline change the reconstruction gets",
+  "selection_rule": "measured motion richness = mean |dluma| between sampled luma frames, ranked; sessions >= 30 s for pose variety, plus the short top-motion session and the manual take. The brief's 'T-pose session' carries no marker in any metadata -- stated here rather than guessed",
+  "frame_rule": "every 50th frame of the native-res color webm (640x480 vp9, ~19.8 fps -> ~1 frame / 2.5 s), re-encoded jpeg q92; luma.raw was NOT used (160x96 grayscale -- the webm is the fidelity source)",
+  "sessions": [
+    {
+      "stamp": "1792553152",
+      "motion_metric": 0.79,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "quiet",
+      "wall_clock": "2026-10-21T03:24:02.117Z",
+      "webm_frames": 2179,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792553152_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792553152_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792553152_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792553152_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792553152_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792553152_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792553152_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792553152_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792553152_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792553152_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792553152_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792553152_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792553152_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792553152_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792553152_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792553152_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792553152_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792553152_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792553152_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792553152_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792553152_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792553152_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792553152_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792553152_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792553152_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792553152_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792553152_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792553152_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792553152_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792553152_f001450.jpg",
+          "frame_index": 1450
+        },
+        {
+          "file": "stills/1792553152_f001500.jpg",
+          "frame_index": 1500
+        },
+        {
+          "file": "stills/1792553152_f001550.jpg",
+          "frame_index": 1550
+        },
+        {
+          "file": "stills/1792553152_f001600.jpg",
+          "frame_index": 1600
+        },
+        {
+          "file": "stills/1792553152_f001650.jpg",
+          "frame_index": 1650
+        },
+        {
+          "file": "stills/1792553152_f001700.jpg",
+          "frame_index": 1700
+        },
+        {
+          "file": "stills/1792553152_f001750.jpg",
+          "frame_index": 1750
+        },
+        {
+          "file": "stills/1792553152_f001800.jpg",
+          "frame_index": 1800
+        },
+        {
+          "file": "stills/1792553152_f001850.jpg",
+          "frame_index": 1850
+        },
+        {
+          "file": "stills/1792553152_f001900.jpg",
+          "frame_index": 1900
+        },
+        {
+          "file": "stills/1792553152_f001950.jpg",
+          "frame_index": 1950
+        },
+        {
+          "file": "stills/1792553152_f002000.jpg",
+          "frame_index": 2000
+        },
+        {
+          "file": "stills/1792553152_f002050.jpg",
+          "frame_index": 2050
+        },
+        {
+          "file": "stills/1792553152_f002100.jpg",
+          "frame_index": 2100
+        },
+        {
+          "file": "stills/1792553152_f002150.jpg",
+          "frame_index": 2150
+        }
+      ]
+    },
+    {
+      "stamp": "1792596296",
+      "motion_metric": 0.75,
+      "mode": "auto",
+      "trigger": "speech",
+      "close_reason": "manual_stop",
+      "wall_clock": "2026-10-21T15:23:41.601Z",
+      "webm_frames": 1480,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792596296_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792596296_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792596296_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792596296_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792596296_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792596296_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792596296_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792596296_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792596296_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792596296_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792596296_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792596296_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792596296_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792596296_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792596296_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792596296_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792596296_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792596296_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792596296_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792596296_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792596296_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792596296_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792596296_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792596296_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792596296_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792596296_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792596296_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792596296_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792596296_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792596296_f001450.jpg",
+          "frame_index": 1450
+        }
+      ]
+    },
+    {
+      "stamp": "1792553518",
+      "motion_metric": 0.73,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "quiet",
+      "wall_clock": "2026-10-21T03:29:01.302Z",
+      "webm_frames": 3478,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792553518_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792553518_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792553518_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792553518_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792553518_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792553518_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792553518_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792553518_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792553518_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792553518_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792553518_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792553518_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792553518_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792553518_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792553518_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792553518_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792553518_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792553518_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792553518_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792553518_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792553518_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792553518_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792553518_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792553518_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792553518_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792553518_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792553518_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792553518_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792553518_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792553518_f001450.jpg",
+          "frame_index": 1450
+        },
+        {
+          "file": "stills/1792553518_f001500.jpg",
+          "frame_index": 1500
+        },
+        {
+          "file": "stills/1792553518_f001550.jpg",
+          "frame_index": 1550
+        },
+        {
+          "file": "stills/1792553518_f001600.jpg",
+          "frame_index": 1600
+        },
+        {
+          "file": "stills/1792553518_f001650.jpg",
+          "frame_index": 1650
+        },
+        {
+          "file": "stills/1792553518_f001700.jpg",
+          "frame_index": 1700
+        },
+        {
+          "file": "stills/1792553518_f001750.jpg",
+          "frame_index": 1750
+        },
+        {
+          "file": "stills/1792553518_f001800.jpg",
+          "frame_index": 1800
+        },
+        {
+          "file": "stills/1792553518_f001850.jpg",
+          "frame_index": 1850
+        },
+        {
+          "file": "stills/1792553518_f001900.jpg",
+          "frame_index": 1900
+        },
+        {
+          "file": "stills/1792553518_f001950.jpg",
+          "frame_index": 1950
+        },
+        {
+          "file": "stills/1792553518_f002000.jpg",
+          "frame_index": 2000
+        },
+        {
+          "file": "stills/1792553518_f002050.jpg",
+          "frame_index": 2050
+        },
+        {
+          "file": "stills/1792553518_f002100.jpg",
+          "frame_index": 2100
+        },
+        {
+          "file": "stills/1792553518_f002150.jpg",
+          "frame_index": 2150
+        },
+        {
+          "file": "stills/1792553518_f002200.jpg",
+          "frame_index": 2200
+        },
+        {
+          "file": "stills/1792553518_f002250.jpg",
+          "frame_index": 2250
+        },
+        {
+          "file": "stills/1792553518_f002300.jpg",
+          "frame_index": 2300
+        },
+        {
+          "file": "stills/1792553518_f002350.jpg",
+          "frame_index": 2350
+        },
+        {
+          "file": "stills/1792553518_f002400.jpg",
+          "frame_index": 2400
+        },
+        {
+          "file": "stills/1792553518_f002450.jpg",
+          "frame_index": 2450
+        },
+        {
+          "file": "stills/1792553518_f002500.jpg",
+          "frame_index": 2500
+        },
+        {
+          "file": "stills/1792553518_f002550.jpg",
+          "frame_index": 2550
+        },
+        {
+          "file": "stills/1792553518_f002600.jpg",
+          "frame_index": 2600
+        },
+        {
+          "file": "stills/1792553518_f002650.jpg",
+          "frame_index": 2650
+        },
+        {
+          "file": "stills/1792553518_f002700.jpg",
+          "frame_index": 2700
+        },
+        {
+          "file": "stills/1792553518_f002750.jpg",
+          "frame_index": 2750
+        },
+        {
+          "file": "stills/1792553518_f002800.jpg",
+          "frame_index": 2800
+        },
+        {
+          "file": "stills/1792553518_f002850.jpg",
+          "frame_index": 2850
+        },
+        {
+          "file": "stills/1792553518_f002900.jpg",
+          "frame_index": 2900
+        },
+        {
+          "file": "stills/1792553518_f002950.jpg",
+          "frame_index": 2950
+        },
+        {
+          "file": "stills/1792553518_f003000.jpg",
+          "frame_index": 3000
+        },
+        {
+          "file": "stills/1792553518_f003050.jpg",
+          "frame_index": 3050
+        },
+        {
+          "file": "stills/1792553518_f003100.jpg",
+          "frame_index": 3100
+        },
+        {
+          "file": "stills/1792553518_f003150.jpg",
+          "frame_index": 3150
+        },
+        {
+          "file": "stills/1792553518_f003200.jpg",
+          "frame_index": 3200
+        },
+        {
+          "file": "stills/1792553518_f003250.jpg",
+          "frame_index": 3250
+        },
+        {
+          "file": "stills/1792553518_f003300.jpg",
+          "frame_index": 3300
+        },
+        {
+          "file": "stills/1792553518_f003350.jpg",
+          "frame_index": 3350
+        },
+        {
+          "file": "stills/1792553518_f003400.jpg",
+          "frame_index": 3400
+        },
+        {
+          "file": "stills/1792553518_f003450.jpg",
+          "frame_index": 3450
+        }
+      ]
+    },
+    {
+      "stamp": "1792553925",
+      "motion_metric": 0.65,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "quiet",
+      "wall_clock": "2026-10-21T03:38:07.689Z",
+      "webm_frames": 715,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792553925_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792553925_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792553925_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792553925_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792553925_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792553925_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792553925_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792553925_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792553925_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792553925_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792553925_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792553925_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792553925_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792553925_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792553925_f000700.jpg",
+          "frame_index": 700
+        }
+      ]
+    },
+    {
+      "stamp": "1792553766",
+      "motion_metric": 0.56,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "quiet",
+      "wall_clock": "2026-10-21T03:32:01.170Z",
+      "webm_frames": 4805,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792553766_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792553766_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792553766_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792553766_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792553766_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792553766_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792553766_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792553766_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792553766_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792553766_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792553766_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792553766_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792553766_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792553766_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792553766_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792553766_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792553766_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792553766_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792553766_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792553766_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792553766_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792553766_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792553766_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792553766_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792553766_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792553766_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792553766_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792553766_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792553766_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792553766_f001450.jpg",
+          "frame_index": 1450
+        },
+        {
+          "file": "stills/1792553766_f001500.jpg",
+          "frame_index": 1500
+        },
+        {
+          "file": "stills/1792553766_f001550.jpg",
+          "frame_index": 1550
+        },
+        {
+          "file": "stills/1792553766_f001600.jpg",
+          "frame_index": 1600
+        },
+        {
+          "file": "stills/1792553766_f001650.jpg",
+          "frame_index": 1650
+        },
+        {
+          "file": "stills/1792553766_f001700.jpg",
+          "frame_index": 1700
+        },
+        {
+          "file": "stills/1792553766_f001750.jpg",
+          "frame_index": 1750
+        },
+        {
+          "file": "stills/1792553766_f001800.jpg",
+          "frame_index": 1800
+        },
+        {
+          "file": "stills/1792553766_f001850.jpg",
+          "frame_index": 1850
+        },
+        {
+          "file": "stills/1792553766_f001900.jpg",
+          "frame_index": 1900
+        },
+        {
+          "file": "stills/1792553766_f001950.jpg",
+          "frame_index": 1950
+        },
+        {
+          "file": "stills/1792553766_f002000.jpg",
+          "frame_index": 2000
+        },
+        {
+          "file": "stills/1792553766_f002050.jpg",
+          "frame_index": 2050
+        },
+        {
+          "file": "stills/1792553766_f002100.jpg",
+          "frame_index": 2100
+        },
+        {
+          "file": "stills/1792553766_f002150.jpg",
+          "frame_index": 2150
+        },
+        {
+          "file": "stills/1792553766_f002200.jpg",
+          "frame_index": 2200
+        },
+        {
+          "file": "stills/1792553766_f002250.jpg",
+          "frame_index": 2250
+        },
+        {
+          "file": "stills/1792553766_f002300.jpg",
+          "frame_index": 2300
+        },
+        {
+          "file": "stills/1792553766_f002350.jpg",
+          "frame_index": 2350
+        },
+        {
+          "file": "stills/1792553766_f002400.jpg",
+          "frame_index": 2400
+        },
+        {
+          "file": "stills/1792553766_f002450.jpg",
+          "frame_index": 2450
+        },
+        {
+          "file": "stills/1792553766_f002500.jpg",
+          "frame_index": 2500
+        },
+        {
+          "file": "stills/1792553766_f002550.jpg",
+          "frame_index": 2550
+        },
+        {
+          "file": "stills/1792553766_f002600.jpg",
+          "frame_index": 2600
+        },
+        {
+          "file": "stills/1792553766_f002650.jpg",
+          "frame_index": 2650
+        },
+        {
+          "file": "stills/1792553766_f002700.jpg",
+          "frame_index": 2700
+        },
+        {
+          "file": "stills/1792553766_f002750.jpg",
+          "frame_index": 2750
+        },
+        {
+          "file": "stills/1792553766_f002800.jpg",
+          "frame_index": 2800
+        },
+        {
+          "file": "stills/1792553766_f002850.jpg",
+          "frame_index": 2850
+        },
+        {
+          "file": "stills/1792553766_f002900.jpg",
+          "frame_index": 2900
+        },
+        {
+          "file": "stills/1792553766_f002950.jpg",
+          "frame_index": 2950
+        },
+        {
+          "file": "stills/1792553766_f003000.jpg",
+          "frame_index": 3000
+        },
+        {
+          "file": "stills/1792553766_f003050.jpg",
+          "frame_index": 3050
+        },
+        {
+          "file": "stills/1792553766_f003100.jpg",
+          "frame_index": 3100
+        },
+        {
+          "file": "stills/1792553766_f003150.jpg",
+          "frame_index": 3150
+        },
+        {
+          "file": "stills/1792553766_f003200.jpg",
+          "frame_index": 3200
+        },
+        {
+          "file": "stills/1792553766_f003250.jpg",
+          "frame_index": 3250
+        },
+        {
+          "file": "stills/1792553766_f003300.jpg",
+          "frame_index": 3300
+        },
+        {
+          "file": "stills/1792553766_f003350.jpg",
+          "frame_index": 3350
+        },
+        {
+          "file": "stills/1792553766_f003400.jpg",
+          "frame_index": 3400
+        },
+        {
+          "file": "stills/1792553766_f003450.jpg",
+          "frame_index": 3450
+        },
+        {
+          "file": "stills/1792553766_f003500.jpg",
+          "frame_index": 3500
+        },
+        {
+          "file": "stills/1792553766_f003550.jpg",
+          "frame_index": 3550
+        },
+        {
+          "file": "stills/1792553766_f003600.jpg",
+          "frame_index": 3600
+        },
+        {
+          "file": "stills/1792553766_f003650.jpg",
+          "frame_index": 3650
+        },
+        {
+          "file": "stills/1792553766_f003700.jpg",
+          "frame_index": 3700
+        },
+        {
+          "file": "stills/1792553766_f003750.jpg",
+          "frame_index": 3750
+        },
+        {
+          "file": "stills/1792553766_f003800.jpg",
+          "frame_index": 3800
+        },
+        {
+          "file": "stills/1792553766_f003850.jpg",
+          "frame_index": 3850
+        },
+        {
+          "file": "stills/1792553766_f003900.jpg",
+          "frame_index": 3900
+        },
+        {
+          "file": "stills/1792553766_f003950.jpg",
+          "frame_index": 3950
+        },
+        {
+          "file": "stills/1792553766_f004000.jpg",
+          "frame_index": 4000
+        },
+        {
+          "file": "stills/1792553766_f004050.jpg",
+          "frame_index": 4050
+        },
+        {
+          "file": "stills/1792553766_f004100.jpg",
+          "frame_index": 4100
+        },
+        {
+          "file": "stills/1792553766_f004150.jpg",
+          "frame_index": 4150
+        },
+        {
+          "file": "stills/1792553766_f004200.jpg",
+          "frame_index": 4200
+        },
+        {
+          "file": "stills/1792553766_f004250.jpg",
+          "frame_index": 4250
+        },
+        {
+          "file": "stills/1792553766_f004300.jpg",
+          "frame_index": 4300
+        },
+        {
+          "file": "stills/1792553766_f004350.jpg",
+          "frame_index": 4350
+        },
+        {
+          "file": "stills/1792553766_f004400.jpg",
+          "frame_index": 4400
+        },
+        {
+          "file": "stills/1792553766_f004450.jpg",
+          "frame_index": 4450
+        },
+        {
+          "file": "stills/1792553766_f004500.jpg",
+          "frame_index": 4500
+        },
+        {
+          "file": "stills/1792553766_f004550.jpg",
+          "frame_index": 4550
+        },
+        {
+          "file": "stills/1792553766_f004600.jpg",
+          "frame_index": 4600
+        },
+        {
+          "file": "stills/1792553766_f004650.jpg",
+          "frame_index": 4650
+        },
+        {
+          "file": "stills/1792553766_f004700.jpg",
+          "frame_index": 4700
+        },
+        {
+          "file": "stills/1792553766_f004750.jpg",
+          "frame_index": 4750
+        },
+        {
+          "file": "stills/1792553766_f004800.jpg",
+          "frame_index": 4800
+        }
+      ]
+    },
+    {
+      "stamp": "1792553040",
+      "motion_metric": 0.46,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "manual_stop",
+      "wall_clock": "2026-10-21T03:19:40.683Z",
+      "webm_frames": 5150,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792553040_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792553040_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792553040_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792553040_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792553040_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792553040_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792553040_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792553040_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792553040_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792553040_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792553040_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792553040_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792553040_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792553040_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792553040_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792553040_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792553040_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792553040_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792553040_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792553040_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792553040_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792553040_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792553040_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792553040_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792553040_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792553040_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792553040_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792553040_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792553040_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792553040_f001450.jpg",
+          "frame_index": 1450
+        },
+        {
+          "file": "stills/1792553040_f001500.jpg",
+          "frame_index": 1500
+        },
+        {
+          "file": "stills/1792553040_f001550.jpg",
+          "frame_index": 1550
+        },
+        {
+          "file": "stills/1792553040_f001600.jpg",
+          "frame_index": 1600
+        },
+        {
+          "file": "stills/1792553040_f001650.jpg",
+          "frame_index": 1650
+        },
+        {
+          "file": "stills/1792553040_f001700.jpg",
+          "frame_index": 1700
+        },
+        {
+          "file": "stills/1792553040_f001750.jpg",
+          "frame_index": 1750
+        },
+        {
+          "file": "stills/1792553040_f001800.jpg",
+          "frame_index": 1800
+        },
+        {
+          "file": "stills/1792553040_f001850.jpg",
+          "frame_index": 1850
+        },
+        {
+          "file": "stills/1792553040_f001900.jpg",
+          "frame_index": 1900
+        },
+        {
+          "file": "stills/1792553040_f001950.jpg",
+          "frame_index": 1950
+        },
+        {
+          "file": "stills/1792553040_f002000.jpg",
+          "frame_index": 2000
+        },
+        {
+          "file": "stills/1792553040_f002050.jpg",
+          "frame_index": 2050
+        },
+        {
+          "file": "stills/1792553040_f002100.jpg",
+          "frame_index": 2100
+        },
+        {
+          "file": "stills/1792553040_f002150.jpg",
+          "frame_index": 2150
+        },
+        {
+          "file": "stills/1792553040_f002200.jpg",
+          "frame_index": 2200
+        },
+        {
+          "file": "stills/1792553040_f002250.jpg",
+          "frame_index": 2250
+        },
+        {
+          "file": "stills/1792553040_f002300.jpg",
+          "frame_index": 2300
+        },
+        {
+          "file": "stills/1792553040_f002350.jpg",
+          "frame_index": 2350
+        },
+        {
+          "file": "stills/1792553040_f002400.jpg",
+          "frame_index": 2400
+        },
+        {
+          "file": "stills/1792553040_f002450.jpg",
+          "frame_index": 2450
+        },
+        {
+          "file": "stills/1792553040_f002500.jpg",
+          "frame_index": 2500
+        },
+        {
+          "file": "stills/1792553040_f002550.jpg",
+          "frame_index": 2550
+        },
+        {
+          "file": "stills/1792553040_f002600.jpg",
+          "frame_index": 2600
+        },
+        {
+          "file": "stills/1792553040_f002650.jpg",
+          "frame_index": 2650
+        },
+        {
+          "file": "stills/1792553040_f002700.jpg",
+          "frame_index": 2700
+        },
+        {
+          "file": "stills/1792553040_f002750.jpg",
+          "frame_index": 2750
+        },
+        {
+          "file": "stills/1792553040_f002800.jpg",
+          "frame_index": 2800
+        },
+        {
+          "file": "stills/1792553040_f002850.jpg",
+          "frame_index": 2850
+        },
+        {
+          "file": "stills/1792553040_f002900.jpg",
+          "frame_index": 2900
+        },
+        {
+          "file": "stills/1792553040_f002950.jpg",
+          "frame_index": 2950
+        },
+        {
+          "file": "stills/1792553040_f003000.jpg",
+          "frame_index": 3000
+        },
+        {
+          "file": "stills/1792553040_f003050.jpg",
+          "frame_index": 3050
+        },
+        {
+          "file": "stills/1792553040_f003100.jpg",
+          "frame_index": 3100
+        },
+        {
+          "file": "stills/1792553040_f003150.jpg",
+          "frame_index": 3150
+        },
+        {
+          "file": "stills/1792553040_f003200.jpg",
+          "frame_index": 3200
+        },
+        {
+          "file": "stills/1792553040_f003250.jpg",
+          "frame_index": 3250
+        },
+        {
+          "file": "stills/1792553040_f003300.jpg",
+          "frame_index": 3300
+        },
+        {
+          "file": "stills/1792553040_f003350.jpg",
+          "frame_index": 3350
+        },
+        {
+          "file": "stills/1792553040_f003400.jpg",
+          "frame_index": 3400
+        },
+        {
+          "file": "stills/1792553040_f003450.jpg",
+          "frame_index": 3450
+        },
+        {
+          "file": "stills/1792553040_f003500.jpg",
+          "frame_index": 3500
+        },
+        {
+          "file": "stills/1792553040_f003550.jpg",
+          "frame_index": 3550
+        },
+        {
+          "file": "stills/1792553040_f003600.jpg",
+          "frame_index": 3600
+        },
+        {
+          "file": "stills/1792553040_f003650.jpg",
+          "frame_index": 3650
+        },
+        {
+          "file": "stills/1792553040_f003700.jpg",
+          "frame_index": 3700
+        },
+        {
+          "file": "stills/1792553040_f003750.jpg",
+          "frame_index": 3750
+        },
+        {
+          "file": "stills/1792553040_f003800.jpg",
+          "frame_index": 3800
+        },
+        {
+          "file": "stills/1792553040_f003850.jpg",
+          "frame_index": 3850
+        },
+        {
+          "file": "stills/1792553040_f003900.jpg",
+          "frame_index": 3900
+        },
+        {
+          "file": "stills/1792553040_f003950.jpg",
+          "frame_index": 3950
+        },
+        {
+          "file": "stills/1792553040_f004000.jpg",
+          "frame_index": 4000
+        },
+        {
+          "file": "stills/1792553040_f004050.jpg",
+          "frame_index": 4050
+        },
+        {
+          "file": "stills/1792553040_f004100.jpg",
+          "frame_index": 4100
+        },
+        {
+          "file": "stills/1792553040_f004150.jpg",
+          "frame_index": 4150
+        },
+        {
+          "file": "stills/1792553040_f004200.jpg",
+          "frame_index": 4200
+        },
+        {
+          "file": "stills/1792553040_f004250.jpg",
+          "frame_index": 4250
+        },
+        {
+          "file": "stills/1792553040_f004300.jpg",
+          "frame_index": 4300
+        },
+        {
+          "file": "stills/1792553040_f004350.jpg",
+          "frame_index": 4350
+        },
+        {
+          "file": "stills/1792553040_f004400.jpg",
+          "frame_index": 4400
+        },
+        {
+          "file": "stills/1792553040_f004450.jpg",
+          "frame_index": 4450
+        },
+        {
+          "file": "stills/1792553040_f004500.jpg",
+          "frame_index": 4500
+        },
+        {
+          "file": "stills/1792553040_f004550.jpg",
+          "frame_index": 4550
+        },
+        {
+          "file": "stills/1792553040_f004600.jpg",
+          "frame_index": 4600
+        },
+        {
+          "file": "stills/1792553040_f004650.jpg",
+          "frame_index": 4650
+        },
+        {
+          "file": "stills/1792553040_f004700.jpg",
+          "frame_index": 4700
+        },
+        {
+          "file": "stills/1792553040_f004750.jpg",
+          "frame_index": 4750
+        },
+        {
+          "file": "stills/1792553040_f004800.jpg",
+          "frame_index": 4800
+        },
+        {
+          "file": "stills/1792553040_f004850.jpg",
+          "frame_index": 4850
+        },
+        {
+          "file": "stills/1792553040_f004900.jpg",
+          "frame_index": 4900
+        },
+        {
+          "file": "stills/1792553040_f004950.jpg",
+          "frame_index": 4950
+        },
+        {
+          "file": "stills/1792553040_f005000.jpg",
+          "frame_index": 5000
+        },
+        {
+          "file": "stills/1792553040_f005050.jpg",
+          "frame_index": 5050
+        },
+        {
+          "file": "stills/1792553040_f005100.jpg",
+          "frame_index": 5100
+        }
+      ]
+    },
+    {
+      "stamp": "1792554532",
+      "motion_metric": 0.45,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "quiet",
+      "wall_clock": "2026-10-21T03:45:19.225Z",
+      "webm_frames": 4175,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792554532_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792554532_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792554532_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792554532_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792554532_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792554532_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792554532_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792554532_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792554532_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792554532_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792554532_f000500.jpg",
+          "frame_index": 500
+        },
+        {
+          "file": "stills/1792554532_f000550.jpg",
+          "frame_index": 550
+        },
+        {
+          "file": "stills/1792554532_f000600.jpg",
+          "frame_index": 600
+        },
+        {
+          "file": "stills/1792554532_f000650.jpg",
+          "frame_index": 650
+        },
+        {
+          "file": "stills/1792554532_f000700.jpg",
+          "frame_index": 700
+        },
+        {
+          "file": "stills/1792554532_f000750.jpg",
+          "frame_index": 750
+        },
+        {
+          "file": "stills/1792554532_f000800.jpg",
+          "frame_index": 800
+        },
+        {
+          "file": "stills/1792554532_f000850.jpg",
+          "frame_index": 850
+        },
+        {
+          "file": "stills/1792554532_f000900.jpg",
+          "frame_index": 900
+        },
+        {
+          "file": "stills/1792554532_f000950.jpg",
+          "frame_index": 950
+        },
+        {
+          "file": "stills/1792554532_f001000.jpg",
+          "frame_index": 1000
+        },
+        {
+          "file": "stills/1792554532_f001050.jpg",
+          "frame_index": 1050
+        },
+        {
+          "file": "stills/1792554532_f001100.jpg",
+          "frame_index": 1100
+        },
+        {
+          "file": "stills/1792554532_f001150.jpg",
+          "frame_index": 1150
+        },
+        {
+          "file": "stills/1792554532_f001200.jpg",
+          "frame_index": 1200
+        },
+        {
+          "file": "stills/1792554532_f001250.jpg",
+          "frame_index": 1250
+        },
+        {
+          "file": "stills/1792554532_f001300.jpg",
+          "frame_index": 1300
+        },
+        {
+          "file": "stills/1792554532_f001350.jpg",
+          "frame_index": 1350
+        },
+        {
+          "file": "stills/1792554532_f001400.jpg",
+          "frame_index": 1400
+        },
+        {
+          "file": "stills/1792554532_f001450.jpg",
+          "frame_index": 1450
+        },
+        {
+          "file": "stills/1792554532_f001500.jpg",
+          "frame_index": 1500
+        },
+        {
+          "file": "stills/1792554532_f001550.jpg",
+          "frame_index": 1550
+        },
+        {
+          "file": "stills/1792554532_f001600.jpg",
+          "frame_index": 1600
+        },
+        {
+          "file": "stills/1792554532_f001650.jpg",
+          "frame_index": 1650
+        },
+        {
+          "file": "stills/1792554532_f001700.jpg",
+          "frame_index": 1700
+        },
+        {
+          "file": "stills/1792554532_f001750.jpg",
+          "frame_index": 1750
+        },
+        {
+          "file": "stills/1792554532_f001800.jpg",
+          "frame_index": 1800
+        },
+        {
+          "file": "stills/1792554532_f001850.jpg",
+          "frame_index": 1850
+        },
+        {
+          "file": "stills/1792554532_f001900.jpg",
+          "frame_index": 1900
+        },
+        {
+          "file": "stills/1792554532_f001950.jpg",
+          "frame_index": 1950
+        },
+        {
+          "file": "stills/1792554532_f002000.jpg",
+          "frame_index": 2000
+        },
+        {
+          "file": "stills/1792554532_f002050.jpg",
+          "frame_index": 2050
+        },
+        {
+          "file": "stills/1792554532_f002100.jpg",
+          "frame_index": 2100
+        },
+        {
+          "file": "stills/1792554532_f002150.jpg",
+          "frame_index": 2150
+        },
+        {
+          "file": "stills/1792554532_f002200.jpg",
+          "frame_index": 2200
+        },
+        {
+          "file": "stills/1792554532_f002250.jpg",
+          "frame_index": 2250
+        },
+        {
+          "file": "stills/1792554532_f002300.jpg",
+          "frame_index": 2300
+        },
+        {
+          "file": "stills/1792554532_f002350.jpg",
+          "frame_index": 2350
+        },
+        {
+          "file": "stills/1792554532_f002400.jpg",
+          "frame_index": 2400
+        },
+        {
+          "file": "stills/1792554532_f002450.jpg",
+          "frame_index": 2450
+        },
+        {
+          "file": "stills/1792554532_f002500.jpg",
+          "frame_index": 2500
+        },
+        {
+          "file": "stills/1792554532_f002550.jpg",
+          "frame_index": 2550
+        },
+        {
+          "file": "stills/1792554532_f002600.jpg",
+          "frame_index": 2600
+        },
+        {
+          "file": "stills/1792554532_f002650.jpg",
+          "frame_index": 2650
+        },
+        {
+          "file": "stills/1792554532_f002700.jpg",
+          "frame_index": 2700
+        },
+        {
+          "file": "stills/1792554532_f002750.jpg",
+          "frame_index": 2750
+        },
+        {
+          "file": "stills/1792554532_f002800.jpg",
+          "frame_index": 2800
+        },
+        {
+          "file": "stills/1792554532_f002850.jpg",
+          "frame_index": 2850
+        },
+        {
+          "file": "stills/1792554532_f002900.jpg",
+          "frame_index": 2900
+        },
+        {
+          "file": "stills/1792554532_f002950.jpg",
+          "frame_index": 2950
+        },
+        {
+          "file": "stills/1792554532_f003000.jpg",
+          "frame_index": 3000
+        },
+        {
+          "file": "stills/1792554532_f003050.jpg",
+          "frame_index": 3050
+        },
+        {
+          "file": "stills/1792554532_f003100.jpg",
+          "frame_index": 3100
+        },
+        {
+          "file": "stills/1792554532_f003150.jpg",
+          "frame_index": 3150
+        },
+        {
+          "file": "stills/1792554532_f003200.jpg",
+          "frame_index": 3200
+        },
+        {
+          "file": "stills/1792554532_f003250.jpg",
+          "frame_index": 3250
+        },
+        {
+          "file": "stills/1792554532_f003300.jpg",
+          "frame_index": 3300
+        },
+        {
+          "file": "stills/1792554532_f003350.jpg",
+          "frame_index": 3350
+        },
+        {
+          "file": "stills/1792554532_f003400.jpg",
+          "frame_index": 3400
+        },
+        {
+          "file": "stills/1792554532_f003450.jpg",
+          "frame_index": 3450
+        },
+        {
+          "file": "stills/1792554532_f003500.jpg",
+          "frame_index": 3500
+        },
+        {
+          "file": "stills/1792554532_f003550.jpg",
+          "frame_index": 3550
+        },
+        {
+          "file": "stills/1792554532_f003600.jpg",
+          "frame_index": 3600
+        },
+        {
+          "file": "stills/1792554532_f003650.jpg",
+          "frame_index": 3650
+        },
+        {
+          "file": "stills/1792554532_f003700.jpg",
+          "frame_index": 3700
+        },
+        {
+          "file": "stills/1792554532_f003750.jpg",
+          "frame_index": 3750
+        },
+        {
+          "file": "stills/1792554532_f003800.jpg",
+          "frame_index": 3800
+        },
+        {
+          "file": "stills/1792554532_f003850.jpg",
+          "frame_index": 3850
+        },
+        {
+          "file": "stills/1792554532_f003900.jpg",
+          "frame_index": 3900
+        },
+        {
+          "file": "stills/1792554532_f003950.jpg",
+          "frame_index": 3950
+        },
+        {
+          "file": "stills/1792554532_f004000.jpg",
+          "frame_index": 4000
+        },
+        {
+          "file": "stills/1792554532_f004050.jpg",
+          "frame_index": 4050
+        },
+        {
+          "file": "stills/1792554532_f004100.jpg",
+          "frame_index": 4100
+        },
+        {
+          "file": "stills/1792554532_f004150.jpg",
+          "frame_index": 4150
+        }
+      ]
+    },
+    {
+      "stamp": "1792596369",
+      "motion_metric": 0.91,
+      "mode": "auto",
+      "trigger": "motion",
+      "close_reason": "manual_stop",
+      "wall_clock": "2026-10-21T15:25:55.652Z",
+      "webm_frames": 269,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792596369_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792596369_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792596369_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792596369_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792596369_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792596369_f000250.jpg",
+          "frame_index": 250
+        }
+      ]
+    },
+    {
+      "stamp": "1792560597",
+      "motion_metric": 0.2,
+      "mode": "manual",
+      "trigger": "manual",
+      "close_reason": "manual_stop",
+      "wall_clock": "2026-10-21T05:29:30.527Z",
+      "webm_frames": 516,
+      "audio_measured_silent": false,
+      "frames": [
+        {
+          "file": "stills/1792560597_f000000.jpg",
+          "frame_index": 0
+        },
+        {
+          "file": "stills/1792560597_f000050.jpg",
+          "frame_index": 50
+        },
+        {
+          "file": "stills/1792560597_f000100.jpg",
+          "frame_index": 100
+        },
+        {
+          "file": "stills/1792560597_f000150.jpg",
+          "frame_index": 150
+        },
+        {
+          "file": "stills/1792560597_f000200.jpg",
+          "frame_index": 200
+        },
+        {
+          "file": "stills/1792560597_f000250.jpg",
+          "frame_index": 250
+        },
+        {
+          "file": "stills/1792560597_f000300.jpg",
+          "frame_index": 300
+        },
+        {
+          "file": "stills/1792560597_f000350.jpg",
+          "frame_index": 350
+        },
+        {
+          "file": "stills/1792560597_f000400.jpg",
+          "frame_index": 400
+        },
+        {
+          "file": "stills/1792560597_f000450.jpg",
+          "frame_index": 450
+        },
+        {
+          "file": "stills/1792560597_f000500.jpg",
+          "frame_index": 500
+        }
+      ]
+    }
+  ],
+  "total_frames": 460
+}
