@@ -106,10 +106,50 @@ gsplat source build, ten attempts, each failure banked:
   logs), riff #2 arm (`--ascii-first-iters`, third autorun), seed-level
   instrumentation riding the strategy state (mcode cross enabler).
 
+## 2026-10-21 ~22:10 — walkabout lane: bundle staged, first-fit trainer banked (GPU still wedged)
+
+- GPU probe at 22:05 UTC: `cuInit` → 801 — RM wedge persists (uptime 20 h,
+  no reboot). Everything below is CPU-side staging so the fit fires the
+  moment Casey reboots (cron autorun picks it up).
+- gsplat build relaunched (flock'd, self-gated at ≥4.3 GB avail; it polls
+  — was at [25/50] with no compiler running when found; 4.26 GB avail at
+  relaunch).
+- **Bundle staged + verified** (`src/stage_walkabout.py` →
+  `assets/walkabout-2026-10-21-1/`): 399 ASCII frames (STILL 110 / SLOW
+  280 / MOVING 9, span 176.5 s, pose on every frame), 80 keyframes all
+  exactly t-joined to frames, audio 2,850,757 B = meta claim, one RIR
+  sweep (20 Hz–16 kHz, 20 s + 4 s tail). Keyframes are 320×569 portrait,
+  no EXIF tag. sha256 in verify.json.
+- Pose read (measured, in verify.json + notebook): alpha wraps through N
+  (3.4→355.5°), beta 65–97°, gamma −49.5→88.5°; median rotation between
+  consecutive keyframes 7.1° (p90 29.7°, one 170° jump), median angular
+  speed 3.3°/s → orientation-pivot camera model is defensible for a
+  first attempt; walking parallax = expected, reported blur.
+- Grid note: frame grid dims VARY (mode 96×93; frame 0 was 128×125). Dot
+  pitch works out ~square (1.67×1.53 px) if cells are braille 2×4 —
+  consistent with the communicator's braille line; recorded, not relied
+  on by the fit.
+- **Trainer banked**: `src/train_walkabout.py` — inside-out shell init
+  (20k pts, r=3.5 m ± 0.15), W3C→OpenCV c2w (Rzα·Rxβ·Ryγ·diag(1,−1,−1),
+  orthonormality smoked on CPU), assumed 65° HFOV, L1+SSIM,
+  DefaultStrategy, 70 train / 10 holdout keyframes, jsonl schema shared
+  with lane 1. Bars: holdout PSNR ≥ 20 / 25 / 30 dB logged.
+- autorun extended: walkabout runs after the lego arms; watchdog pkill
+  covers it; analyze_runs.py reads walkabout bars (20/25); artifacts
+  (jsonl + holdout strips + analysis.txt) auto-commit locally.
+- EXPERIMENTS row claimed `open` before the run (protocol), assumptions
+  stated in-row.
+- RIR: `rir00.webm` + params staged for the deconvolution lane — opus
+  decode blocked on this box (no ffmpeg/scipy/torchaudio; numpy+Pillow
+  only). Queued, not attempted.
+
 ## next
 
 - Build completes when memory allows (in-session waiter) or post-reboot
-  (cron leg) → autorun: smoke, baseline, guided, ascii-first →
-  `src/analyze_runs.py` → EXPERIMENTS rows.
+  (cron leg) → autorun: smoke, baseline, guided, ascii-first, walkabout
+  → `src/analyze_runs.py` → EXPERIMENTS rows (walkabout row fills from
+  `results/walkabout_fit.jsonl` + per-view read).
 - Casey: reboot (fixes GPU RM wedge) + `gh auth login` (token dead).
+- Audio lane pickup: `assets/walkabout-2026-10-21-1/rir00.webm` awaits an
+  opus decoder (torchaudio wheel or ffmpeg) for Farina deconvolution.
 
