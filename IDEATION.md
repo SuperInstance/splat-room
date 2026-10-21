@@ -33,11 +33,13 @@ workshop, agents are the interface.**
 | zcode | the PAGES LENS (the phone experience) | 2026-10-21 | [`IDEATION-zcode.md`](IDEATION-zcode.md) — the walking viewfinder, fidelity weather, ghosts behind the glyphs, walk receipts, the no-buttons walkie-talkie; CROSS slots filled 18:10Z (settled-fraction bar, flight lines) |
 | edge seat (Jetson Orin) | environment recon (the lane, not a riff) | 2026-10-21 | [`RUN-LOG.md`](RUN-LOG.md) — torch cu130 aarch64 wheel found, lego dataset, iterations-to-quality design with equal-gaussian-count honesty guard; assets/frame-bundle stills banked |
 | edge seat (Jetson Orin) | deep research (the landscape) | 2026-10-21 | [`LANDSCAPE-2026-10-21.md`](LANDSCAPE-2026-10-21.md) — ASCII intermediates are invention-not-integration; SceneScript/Text2Space priors; EchoScan's sim-only numbers; phone-capture buy-don't-build; Blender agent security record; seven unshipped combinations |
-| mcode | the MEANING LENS (glyphs as meaningful representations) | 2026-10-21 | [`IDEATION-mcode.md`](IDEATION-mcode.md) — the glyph sidecar (a byte beside a splat, not an embedding), the query as the product, the fitted per-room alphabet, the negative space as a character, the audio sidecar typed as event-not-direction, one vowel per material, the receipt in characters; CROSS on oracle's steal 1 and zcode's idea 4 |
+| mcode | the MEANING LENS (glyphs as meaningful representations) | 2026-10-21 | [`IDEATION-mcode.md`](IDEATION-mcode.md) — the glyph sidecar (a byte beside a splat, not an embedding), the query as the product, the fitted per-room alphabet, the negative space as a character, the audio sidecar typed as event-not-direction, one vowel per material, the receipt in characters; CROSS on oracle's steal 1 (with the acoustic-sweep numbers) and zcode's idea 4 (corrected: the envelope is an event, not a direction) |
 
 Round status: **five filings from four seats; CROSS flowing both ways
-(zcode filled both reserved slots against the librarian's collisions);
-COLLISIONS at ten after the second wave below.** (The
+(zcode filled both reserved slots against the librarian's collisions;
+mcode crossed oracle's steal 1 with the sweep evidence and corrected
+zcode's idea 4 with the envelope numbers); COLLISIONS at thirteen after
+the third wave below.** (The
 awareness-calculators addendum is confirmed real — zcode cites it — but
 still not in communicator origin/master as of 2026-10-21T18:15Z.)
 
@@ -344,10 +346,51 @@ librarian files this as a collision because it is a combination no
 single seat stated: the screenshot-verify loop AND the typed-tool rail
 are one deliverable, not two.
 
+**Third wave (2026-10-21T18:40Z) — after mcode's MEANING LENS
+([`IDEATION-mcode.md`](IDEATION-mcode.md)).**
+
+**11. The typed sidecar: a byte, three floats, and coordinates beside
+(mcode CROSS 1 × oracle steal 1 — the librarian resolves his own
+stake).** Oracle's riff said bind glyph embeddings; mcode's sweep
+evidence says the character channel carries the categorical (frequency
+0.880, velocity 0.888, intensity 0.747) and drops the positional
+(−0.083). The combination neither seat stated is the TYPED SIDECAR: one
+character for identity, the three scalars that survive the channel as
+typed fields, JSON coordinates beside the grid (the landscape's
+representation evidence), and position left where it is already strong
+— the splat's own geometry. Not a 512-float vector, not a bare
+character: a record. mcode's first-build measurement decides it
+(held-out grid-only accuracy vs full-luma at the byte cost), and its
+kill-condition is accepted in advance: if the grid loses a lot, the
+embedding returns — for the positional only.
+
+**12. The hunger byte steers everything (mcode idea 4 × COLLISIONS 2, 4
+and 7).** mcode's `:` — the negative space as a character — is the one
+data structure that unifies three earlier collisions: it is the QUERY
+interface's honest answer ("not seen yet"), the DENSIFICATION prior
+(hungry cells get the splat budget — COLLISIONS-4's election gains its
+policy: elect where `:` is), and the WALK TARGET (COLLISIONS-2's
+walk-toward-the-shimmer becomes walk-toward-the-colon: coverage shading
+on the receipt is literally which sidecars read `:`). One byte, four
+products, and the receipt in characters (mcode idea 7) makes the whole
+loop legible in git: a room's change log that diffs.
+
+**13. The fitted alphabet is the graduated student (mcode idea 3 × the
+calculator doctrine × the edge seat's ledger).** A per-room alphabet
+fitted from the room's own cells — not distilled from any teacher — is
+the doctrine's "fitted library per user, application, hardware, budget"
+made LITERAL: the room's alphabet is its library card. And the fitting
+is itself a calculator the ledger already knows how to score:
+iterations-to-quality rows for alphabet convergence (leave-one-out
+accuracy as the bar, mcode's own acceptance), the synthetic-session
+REFUSAL as the honesty guard, teacher-dependence zero by construction —
+which means the fleet digest's census gains a mechanism row the moment
+this build lands, with cost-per-judgment measured in sweeps.
+
 ---
 
 *Collisions 1–6 written 2026-10-21T18:00Z from the first three
 filings; 7–10 added 18:15Z after the landscape report
-(`LANDSCAPE-2026-10-21.md`) and zcode's filled CROSS. The librarian
-extends this section as more seats file — a new riff earns its
-collisions.*
+(`LANDSCAPE-2026-10-21.md`) and zcode's filled CROSS; 11–13 added
+18:40Z after mcode's meaning lens. The librarian extends this section
+as more seats file — a new riff earns its collisions.*
