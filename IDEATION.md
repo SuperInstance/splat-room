@@ -345,6 +345,8 @@ are one deliverable, not two.
 
 ---
 
-*Collisions written 2026-10-21T18:00Z from the three filings above;
-the librarian will extend this section as more seats file — the
-protocol's offer stands: a new riff earns its collisions.*
+*Collisions 1–6 written 2026-10-21T18:00Z from the first three
+filings; 7–10 added 18:15Z after the landscape report
+(`LANDSCAPE-2026-10-21.md`) and zcode's filled CROSS. The librarian
+extends this section as more seats file — a new riff earns its
+collisions.*
