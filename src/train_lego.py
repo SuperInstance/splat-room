@@ -145,11 +145,15 @@ def inject_edge_splats(params, optimizers, state, step, viewmat, K, W, H,
 
     n = k
     jitter = 0.005
+    # noise from the numpy rng only: torch's RNG stream drives image order
+    # and must stay bit-identical between the guided and baseline arms.
+    def _noise(*shape):
+        return torch.from_numpy(rng.standard_normal(shape)).to(means.device).float()
     new_vals = {
-        "means": X_w + torch.randn_like(X_w) * jitter,
-        "scales": torch.full((n, 3), math.log(0.01)) + torch.randn(n, 3, device=means.device) * 0.2,
+        "means": X_w + _noise(n, 3) * jitter,
+        "scales": torch.full((n, 3), math.log(0.01)) + _noise(n, 3) * 0.2,
         "quats": torch.cat([torch.ones(n, 1), torch.zeros(n, 3)], dim=-1).to(means.device)
-                 + torch.randn(n, 4, device=means.device) * 0.01,
+                 + _noise(n, 4) * 0.01,
         "opacities": torch.full((n,), -2.2, device=means.device),
         # sh0 init from the current render color at the pixel: sh0 = rgb / 0.28209
         "sh0": (renders.new_zeros(0),),  # replaced below with rgb sample
