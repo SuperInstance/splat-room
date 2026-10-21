@@ -1,0 +1,4112 @@
+{
+  "study": "the glyph grid -- splat-room stage 1",
+  "generated_utc": "2026-10-21T19:56:54Z",
+  "method": {
+    "grid": "40x24 over the 160x96 luma, 4x4 px per cell",
+    "change_noise_floor_luma": 3.0,
+    "the_semantic_channel": "the cell's LOCAL GEOMETRY -- activity, log-change and edge gradient -- and NOT its brightness",
+    "the_alphabet": "fitted per room by k-means over that descriptor, with the characters assigned by the clusters' mean activity so the mapping is a function of the room's own data",
+    "the_cardinality": "chosen by the SILHOUETTE of the training descriptors -- a truth-blind rule.  The first version chose k by the agreement with the truth, which is a selection on the metric; the whole per-k curve is recorded so the effect is measured",
+    "the_negative_glyph": ":",
+    "the_refusal": "a synthetic-device session is computed and then refused, so the refusal is a decision"
+  },
+  "sessions": [
+    {
+      "session": "1792553040",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 15513,
+      "n_observed_cells": 960,
+      "fraction_observed": 1.0,
+      "observed_mask_iou_with_full_resolution": 1.0,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4434,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.08,
+        0.01,
+        0.01
+      ],
+      "inertia": 191.38,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 106,
+          "characters_right": 124,
+          "labels_left": 106,
+          "labels_right": 124,
+          "n_answer_cells": 480
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.358
+      },
+      "grid": " +++   +           +  +         +++++   \n+       +          +             + +   +\n      +            +              +     \n++++++++     ++                  +      \n+                                       \n     +                            ++++++\n                @@@@@@@@@@@@@@++        \n  +   +   +     @@@@@@@@@@@@@@@@+  + ++ \n   + +   ++  @@@@@@@@@@@@@@@@@+         \n +++ ++++++++@@@@@@@@@@@@@@@@@@ +       \n++    @@@@@@@@@@@@@@@@@@@@@@@@@@@  +    \n+@+   ++++@@@@@@@@@@@@@@@@@@@@@@  +@@   \n@+        @@@@@@@@@@@@@@@@@@@@@@  +     \n+++       @@@@@@@@@@@@@@@@@@@@@@+      @\n++       ++@@@@@@@@@@@@@@@@@@@@@+       \n+++       @@@@@@@@@@@@@@@@@@@@@@++ +@@@@\n ++      @@@@@@@@@@@@@@@@@@@@@@@@+ +@@@@\n        @@@@@@@@@@@@@@@@@@@@@@@@@@  @+++\n       @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@  +\n+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@+++    \n++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   \n@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++\n+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++\n   @@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@+",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4434,
+          "agrees_with_the_luma": true,
+          "characters_left": 106,
+          "characters_right": 124,
+          "inertia": 191.38
+        },
+        "4": {
+          "silhouette": 0.4132,
+          "agrees_with_the_luma": false,
+          "characters_left": 145,
+          "characters_right": 138,
+          "inertia": 143.04
+        },
+        "5": {
+          "silhouette": 0.3838,
+          "agrees_with_the_luma": true,
+          "characters_left": 131,
+          "characters_right": 132,
+          "inertia": 143.56
+        },
+        "6": {
+          "silhouette": 0.3745,
+          "agrees_with_the_luma": false,
+          "characters_left": 125,
+          "characters_right": 114,
+          "inertia": 154.86
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553042",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 137,
+      "n_observed_cells": 484,
+      "fraction_observed": 0.5042,
+      "observed_mask_iou_with_full_resolution": 0.8471,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.6074,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "inertia": 844.43,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 108,
+          "characters_right": 121,
+          "labels_left": 108,
+          "labels_right": 121,
+          "n_answer_cells": 241
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.421
+      },
+      "grid": "::::::::::::::::::::+::@+:::::::::::::::\n:::::::::::::+:::+@++::@@@++::::::::::::\n:::::::::::::@@@@@@@@:@@@@@@@:::::::::::\n::::::::::::+@@@@@@@@@@@@@@@@@::::::::::\n::::::::::::@@@@@@@@@@@@@@@@@+::::::::::\n:::::::::@@@@@@@@@@@@@@@@@@@@@::::::::::\n:::::::::+@@@@@@@@:::@@@@@@@@@::::::::::\n::::::::::+@@@@@::::::@@@@@@@@::::::::::\n:::::::::::@@@@@@@@@@@@@@@@@@@::::::::::\n::::::::::::@@@@@@@@@@@@@@@@@+::::::::::\n:::::::::::@@@@@@@@@@@@@@@@@@:::::::::::\n::::::::::::@@@@@@@@@@@@@@@@@:::::::::::\n::::::::::::@@@@@@@@@@@@@@@@@:::::::::::\n::::::::+@@@@@@@@@@@@@@@@@@@@@::::::::::\n:::::::@@@@@@@@@@@@@@@@@@@@@@@@ ::::::::\n:::::@@@@@@@@@@@@@@@@@@@@@@@@@@@ :::::::\n::: @@@@@@:++:@@@@@@@@@@@@@@@@@@@@::::::\n::@@@@@@@:::+::@@@@@@@@@@@::@@@@@@::::::\n @@@@@@::::::::@@@@@@@@@@@::+@@@@@::::::\n@@@@@@::::::::::@@@@@@@@@:::::+@@@@:::::\n@@@@@:::::::::::@@@@@@@@:: ++::@@@@@@:::\n@@@:::::::::::::@@@@@@@@@@@@@@::@@@@@@::\n@@::::::::::@@@@@@@@@@@@@@@@@@@@:@@@@@@:\n@::::::::+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.6074,
+          "agrees_with_the_luma": true,
+          "characters_left": 108,
+          "characters_right": 121,
+          "inertia": 844.43
+        },
+        "4": {
+          "silhouette": 0.3896,
+          "agrees_with_the_luma": true,
+          "characters_left": 103,
+          "characters_right": 112,
+          "inertia": 824.24
+        },
+        "5": {
+          "silhouette": 0.3882,
+          "agrees_with_the_luma": true,
+          "characters_left": 64,
+          "characters_right": 69,
+          "inertia": 740.23
+        },
+        "6": {
+          "silhouette": 0.4077,
+          "agrees_with_the_luma": true,
+          "characters_left": 63,
+          "characters_right": 67,
+          "inertia": 714.18
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553152",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 6592,
+      "n_observed_cells": 959,
+      "fraction_observed": 0.999,
+      "observed_mask_iou_with_full_resolution": 1.0,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.3981,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.09,
+        0.03,
+        0.01
+      ],
+      "inertia": 184.33,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "+",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 190,
+          "characters_right": 164,
+          "labels_left": 190,
+          "labels_right": 164,
+          "n_answer_cells": 480
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.337
+      },
+      "grid": "+  +++++++++++++++++++++++++++++++++ +++\n +++++++++++++++++++++++++++++++++++++++\n++++++ +++++++++++++++++++++++++++++++++\n:       ++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++\n++++++++++++++++++++++++++++++++++++++++\n +++++++++++++++++@@@@@@@+++++++++++++++\n++ ++++++++++++++@@@@@@@@@++++++++++++++\n++++++++++++++++@@@@@@@@@@@+++++++++++++\n++ +++    ++++++@@@@@@@@@@@@++++++++++++\n+++++++++++++++@@@@@@@@@@@@@++++++++++++\n+++++++++++++++@@@@@@@@@@@@@@+++++++++++\n++++++++++++++++@@@@@@@@@@@@@+++++++++++\n++++++++++++++@@@@@@@@@@@@@@@@@@++++++++\n++++++++++++++++@@@@@@@@@@@@@@@@++++++++\n++++++++++++@+++@@@@@@@@@@@@@@@@++++++++\n+++++++++++++++++@@@@@@@@@@@@@@@++++++++\n++++++++++++++++@@@@@@@@@@@@@@@@++++++++\n+++++++++++++++@@@@@@@@@@@@@@@@@++++++++\n++++++++++++++@@@@@@@@@@@@@@@@@@++++++++\n++++++++++++@+@@@@@@@+++++@@@@@+++++++++\n++++++++++++@@++@@+@++++++@@@@++@@++++++\n++++++++++++@@@@@@++++++@@@@@@++++++++++\n++++++++++++++@@@@++++++@@@@@+++++++++++",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3981,
+          "agrees_with_the_luma": false,
+          "characters_left": 190,
+          "characters_right": 164,
+          "inertia": 184.33
+        },
+        "4": {
+          "silhouette": 0.3809,
+          "agrees_with_the_luma": true,
+          "characters_left": 181,
+          "characters_right": 183,
+          "inertia": 165.49
+        },
+        "5": {
+          "silhouette": 0.3446,
+          "agrees_with_the_luma": true,
+          "characters_left": 122,
+          "characters_right": 136,
+          "inertia": 109.37
+        },
+        "6": {
+          "silhouette": 0.3677,
+          "agrees_with_the_luma": true,
+          "characters_left": 116,
+          "characters_right": 144,
+          "inertia": 113.32
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553234",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792553329",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1025,
+      "n_observed_cells": 614,
+      "fraction_observed": 0.6396,
+      "observed_mask_iou_with_full_resolution": 0.9788,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4766,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.02,
+        0.04,
+        0.0
+      ],
+      "inertia": 125.64,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 129,
+          "characters_right": 100,
+          "labels_left": 129,
+          "labels_right": 100,
+          "n_answer_cells": 303
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.012
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n+:++   :::::::::::::::::::::::::::::::::\n++@+++       :::::::::::::::::  ::::::::\n@@@@@++++     +        +++++::::::::::::\n@@@@@@+++++ +  ++ +++  ++++@++::::::::::\n@@@@@@@@@@@@@@++   @@ +++++@+++:::::::::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++:: :::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+@++:::::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+@@@++:::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+::\n@@@@@@@@@@@@@+@@@+@+@+@@@@@@@@@@@@@@@++:\n@@@@@@@@@@@  +  @+++ +@@@@+@@@@@@@@@@@@@\n@@@@@@@@@@+@+@++++++@+@@@+@@@@@@@@@@@@@+\n@@@@@@@@+@@@@@@@@@@@@+@@+@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@@@+@@@+@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@++@@+@@@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@+\n@@@@@@@@@@@+++@@@@@@@@+@@@@@@@@@++@@@@@+",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4766,
+          "agrees_with_the_luma": true,
+          "characters_left": 129,
+          "characters_right": 100,
+          "inertia": 125.64
+        },
+        "4": {
+          "silhouette": 0.44,
+          "agrees_with_the_luma": true,
+          "characters_left": 138,
+          "characters_right": 96,
+          "inertia": 122.6
+        },
+        "5": {
+          "silhouette": 0.4343,
+          "agrees_with_the_luma": true,
+          "characters_left": 123,
+          "characters_right": 74,
+          "inertia": 103.47
+        },
+        "6": {
+          "silhouette": 0.4057,
+          "agrees_with_the_luma": true,
+          "characters_left": 125,
+          "characters_right": 76,
+          "inertia": 97.46
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553518",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 10597,
+      "n_observed_cells": 941,
+      "fraction_observed": 0.9802,
+      "observed_mask_iou_with_full_resolution": 0.9957,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.3957,
+      "alphabet": {
+        "2": " ",
+        "1": "=",
+        "3": "*",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.07,
+        0.01,
+        0.01,
+        0.03
+      ],
+      "inertia": 91.52,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 141,
+          "characters_right": 147,
+          "labels_left": 141,
+          "labels_right": 147,
+          "n_answer_cells": 472
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.053
+      },
+      "grid": ":::::===********************    ===*=***\n::::    =*******************   ===* ***=\n::::: ==********************* =***=*    \n:::::===*************************=    *=\n ****** =*************************  *   \n        ==*****@@***@@@***********=***=*\n=**** *= *=****@@@@@@@@@@***************\n**=  =***=****@@@@@@@@@@@@**************\n** =*=*******@@@@@@@@@@@@***************\n *=***===****@@@@@@@@@@@@***************\n************@@@@@@@@@@@@@@**************\n************@@@@@@@@@@@@@@@*************\n*************@@@@@@@@@@@@@@@@***********\n*************@@@@@@@@@@@@@@@@***********\n*************@@@@@@@@@@@@@@@@@**********\n**************@@@@@@@@@@@@@@@@@*********\n*=************@@@@@@@@@@@@@@@@@*********\n**************@@@@@@@@@@@@@@@@@*********\n*************@@@@@@@@@@@@@@@@@@*********\n**************@@@@@@@@@@@@@@@@@*********\n*************@@@@@@@@@@@@@@@@@@*********\n***********@@@@@@@@@@@@@@@@@@@@@@*******\n**********@*@@@@@@@@@@@@@@@@@@@@@*******\n*************@@@@@@@@@@@@@@@@***********",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3276,
+          "agrees_with_the_luma": true,
+          "characters_left": 128,
+          "characters_right": 140,
+          "inertia": 94.22
+        },
+        "4": {
+          "silhouette": 0.3957,
+          "agrees_with_the_luma": true,
+          "characters_left": 141,
+          "characters_right": 147,
+          "inertia": 91.52
+        },
+        "5": {
+          "silhouette": 0.3887,
+          "agrees_with_the_luma": false,
+          "characters_left": 103,
+          "characters_right": 96,
+          "inertia": 94.05
+        },
+        "6": {
+          "silhouette": 0.3881,
+          "agrees_with_the_luma": false,
+          "characters_left": 113,
+          "characters_right": 95,
+          "inertia": 87.12
+        }
+      },
+      "alphabet_k_by_truth": 4,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553766",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 14603,
+      "n_observed_cells": 913,
+      "fraction_observed": 0.951,
+      "observed_mask_iou_with_full_resolution": 0.9901,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4208,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.06,
+        0.01,
+        0.01
+      ],
+      "inertia": 111.89,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 105,
+          "characters_right": 138,
+          "labels_left": 105,
+          "labels_right": 138,
+          "n_answer_cells": 457
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.325
+      },
+      "grid": "::::::::::+++ +++++++++++++++++++  + +++\n::::::::+++ +++++++ ++++++++++++++++++++\n::::::  +++++++++++ + ++++++++++++++++++\n:::::   ++++   ++++++ ++++++++++++++++++\n++++++:++++++++++++@@@@@++++++++++++++++\n::::+:++ +++++++@@@@@@@@@+++++++++++++++\n::::::++++++++@@@@@@@@@@@@@@@@++++++++++\n::::++ ++  ++@@@@@@@@@@@@@@@@@@@++++++++\n::+ +  ++  ++@@@@@@@@@@@@@@@@@@@@+++++++\n+  +++      @@@@@@@@@@@@@@@@@@@@++++++++\n++++++++++@@@@@@@@@@@@@@@@@@@@@@@+++++++\n++++++    @@@@@@@@@@@@@@@@@@@@@@@++@@+++\n++++++  ++@@@@@@@@@@@@@@@@@@@@@@+++@++++\n+++++++++++@@@@@@@@@@@@@@@@@@@@@@@+++++@\n+++++++++++@@@@@@@@@@@@@@@@@@@@@@@+@++++\n+++++++++++@@@@@@@@@@@@@@@@@@@@@@@+@@@@+\n+ ++++@++++@@@@@@@@@@@@@@@@@@@@@@@+@@@@@\n++++@@@+++@@@@@@@@@@@@@@@@@@@@@@@@+@++++\n++++@@@@++@@@@@@@@@@@@@@@@@@@@@@@@++@+++\n++++@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@++++\n++ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++\n+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++\n  ++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++\n++++++@@@@@@  @@@@@@@@@@@@@@@@@@@@@@@+++",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4208,
+          "agrees_with_the_luma": true,
+          "characters_left": 105,
+          "characters_right": 138,
+          "inertia": 111.89
+        },
+        "4": {
+          "silhouette": 0.3704,
+          "agrees_with_the_luma": true,
+          "characters_left": 126,
+          "characters_right": 148,
+          "inertia": 90.26
+        },
+        "5": {
+          "silhouette": 0.3412,
+          "agrees_with_the_luma": true,
+          "characters_left": 73,
+          "characters_right": 84,
+          "inertia": 84.12
+        },
+        "6": {
+          "silhouette": 0.3568,
+          "agrees_with_the_luma": true,
+          "characters_left": 80,
+          "characters_right": 107,
+          "inertia": 73.71
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553784",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 830,
+      "n_observed_cells": 593,
+      "fraction_observed": 0.6177,
+      "observed_mask_iou_with_full_resolution": 0.9831,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5789,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.03,
+        0.0
+      ],
+      "inertia": 73.77,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 124,
+          "characters_right": 160,
+          "labels_left": 124,
+          "labels_right": 160,
+          "n_answer_cells": 299
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.228
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::++\n::::::::::::::::::::::::::::::::::::+++@\n::::::::::::::::::::::::::::::::::+@@@@@\n:::::::::::::::::::::::::::::++@@@@@@@@@\n:::::::::::::::::::::::::++++@@@@@@@@@@@\n:::::::::::::::::::::::++++@@@@@@@@@@@@@\n:::::::: ::::::::::@:+++@@@@@@@@@@@@@@@@\n@@@@@@@@@@ ::++++@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@:+@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5789,
+          "agrees_with_the_luma": true,
+          "characters_left": 124,
+          "characters_right": 160,
+          "inertia": 73.77
+        },
+        "4": {
+          "silhouette": 0.4483,
+          "agrees_with_the_luma": false,
+          "characters_left": 100,
+          "characters_right": 78,
+          "inertia": 73.47
+        },
+        "5": {
+          "silhouette": 0.4566,
+          "agrees_with_the_luma": true,
+          "characters_left": 90,
+          "characters_right": 130,
+          "inertia": 69.44
+        },
+        "6": {
+          "silhouette": 0.4069,
+          "agrees_with_the_luma": true,
+          "characters_left": 108,
+          "characters_right": 129,
+          "inertia": 78.37
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553803",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 847,
+      "n_observed_cells": 509,
+      "fraction_observed": 0.5302,
+      "observed_mask_iou_with_full_resolution": 0.9764,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5937,
+      "alphabet": {
+        "0": " ",
+        "2": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.03,
+        0.01
+      ],
+      "inertia": 84.71,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 124,
+          "characters_right": 118,
+          "labels_left": 124,
+          "labels_right": 118,
+          "n_answer_cells": 254
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.01
+      },
+      "grid": ":::::::::::::::::::::::::::  ++@@ ::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n++@@ :::::::::::::::::::::::::::::::::::\n@@@@@@@@@    :+::::::::::::::::::::::++@\n@@@@@@@@@@@@@@@@@@@@@+@@@++@@+++@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5937,
+          "agrees_with_the_luma": true,
+          "characters_left": 124,
+          "characters_right": 118,
+          "inertia": 84.71
+        },
+        "4": {
+          "silhouette": 0.5138,
+          "agrees_with_the_luma": true,
+          "characters_left": 111,
+          "characters_right": 98,
+          "inertia": 75.51
+        },
+        "5": {
+          "silhouette": 0.4787,
+          "agrees_with_the_luma": true,
+          "characters_left": 118,
+          "characters_right": 100,
+          "inertia": 82.12
+        },
+        "6": {
+          "silhouette": 0.4117,
+          "agrees_with_the_luma": true,
+          "characters_left": 118,
+          "characters_right": 100,
+          "inertia": 70.24
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553812",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792553852",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1874,
+      "n_observed_cells": 628,
+      "fraction_observed": 0.6542,
+      "observed_mask_iou_with_full_resolution": 0.9761,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4307,
+      "alphabet": {
+        "0": " ",
+        "2": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.06,
+        0.01
+      ],
+      "inertia": 168.38,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "+",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 146,
+          "characters_right": 28,
+          "labels_left": 146,
+          "labels_right": 28,
+          "n_answer_cells": 312
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.322
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::+++++++:::::::::::::::::::::\n+++ +  +++++++++++++++ :::::::::::::::::\n++ +++   ++++++++++++++    :          +:\n++++++++++++++++++++++++   @@@@@@@@@@@@+\n+++++++++++++++++++++++++@@@@@@@@@@@@@@ \n+++++++++++++++++++++++++@@@@@@@@@@@@@@ \n++++++++++++++++++++++++@@@@@@@@@@@@@@@+\n++++++++++++++++++++++++@@@@@@@@@@@@@@@ \n+++++++++++++++++++++++@@@@@@@@@@@@@@@@ \n@@@@@@++++++++++++++++@@@@@@@@@@@@@@@@@@\n@@@@@@++++@@@@++++++@@@@@@@@@@@@@@@@@@@@\n@@@@@@+++++@@@+++++++@@@@@@@@ ++@@@@@@@@\n+++++++++++++++++++++@@@@@@@@ ++@+++@@@@\n++++++++++++++++++++++@@@+@@@ +@@@@@@@@@\n+++++++++++++++++++++++@@@@@@@@@@@@@@@@@\n++++++++++++++++++++++++@@@@@@@@@@@@@@@@\n++++++++++++  ++++++++++++@@@@@  @@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4307,
+          "agrees_with_the_luma": false,
+          "characters_left": 146,
+          "characters_right": 28,
+          "inertia": 168.38
+        },
+        "4": {
+          "silhouette": 0.386,
+          "agrees_with_the_luma": false,
+          "characters_left": 137,
+          "characters_right": 26,
+          "inertia": 154.05
+        },
+        "5": {
+          "silhouette": 0.3909,
+          "agrees_with_the_luma": false,
+          "characters_left": 157,
+          "characters_right": 52,
+          "inertia": 146.88
+        },
+        "6": {
+          "silhouette": 0.3873,
+          "agrees_with_the_luma": false,
+          "characters_left": 152,
+          "characters_right": 46,
+          "inertia": 139.61
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
+    },
+    {
+      "session": "1792553885",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1314,
+      "n_observed_cells": 895,
+      "fraction_observed": 0.9323,
+      "observed_mask_iou_with_full_resolution": 0.9877,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4096,
+      "alphabet": {
+        "0": " ",
+        "2": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.02,
+        0.01
+      ],
+      "inertia": 95.38,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "+",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 133,
+          "characters_right": 112,
+          "labels_left": 133,
+          "labels_right": 112,
+          "n_answer_cells": 446
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.163
+      },
+      "grid": ":::::::::::::::::::::::::::::+     :  ++\n::::::::::::::::::::::+++++      +++++++\n+++:+:+:::::::::::+ + ++++++++++++++++++\n        ++        +++ ++++++++++++++@+@@\n++++++++++++++++++++++++++++++++@@@@@@@@\n+++++++++++++++++++++++++++++++@+++@+@@@\n+++++++++++++++++++++++++++@@+@@@@@@@@@@\n+++++++++++++++++++++++++++++@@@@+++++++\n++++++++++++++++++++++++++++@@@+@+++++++\n++++++++ ++++++++++++++++++@@@@@+++@++++\n@+@@+@@+@@+++++++@@@@@@@@@@+@+@@++++@+@@\n@@+@@@+++++++++++@@@++@+++++@+++++++@+++\n@+++@@++++++++@+++++++++@++@@++@++++++++\n+++++++++++++++++++@+@@@++@+@@@@++++++++\n+++@@+++++++@++++++++++@@@+@@@@@++++++++\n@@@@@++++@++++++++@+++@@@@@@@@@@+@+@++@@\n+@@@@@@@@++++++++++++ @@@@@@@@@@@@+@@@@@\n@+@@@@@@@++@@@+@+++++++@@@@@@@@@@@@@@@@@\n@@@@@@@@+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@+@@@@@@@@++@@+@++@@@@@@@@@@@@@@\n@@@@+@+++++++@+@+++++++++++@@@@@@@@@@@@@\n@@@@++@@++++ +++++++++++++++++++++@@@@+@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4096,
+          "agrees_with_the_luma": false,
+          "characters_left": 133,
+          "characters_right": 112,
+          "inertia": 95.38
+        },
+        "4": {
+          "silhouette": 0.3145,
+          "agrees_with_the_luma": true,
+          "characters_left": 132,
+          "characters_right": 181,
+          "inertia": 88.54
+        },
+        "5": {
+          "silhouette": 0.3118,
+          "agrees_with_the_luma": true,
+          "characters_left": 117,
+          "characters_right": 164,
+          "inertia": 81.57
+        },
+        "6": {
+          "silhouette": 0.2997,
+          "agrees_with_the_luma": true,
+          "characters_left": 109,
+          "characters_right": 160,
+          "inertia": 78.91
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553925",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 2239,
+      "n_observed_cells": 874,
+      "fraction_observed": 0.9104,
+      "observed_mask_iou_with_full_resolution": 0.9908,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.447,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.07,
+        0.02,
+        0.01
+      ],
+      "inertia": 147.7,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 121,
+          "characters_right": 190,
+          "labels_left": 121,
+          "labels_right": 190,
+          "n_answer_cells": 436
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.238
+      },
+      "grid": ":::::::::::::::::+ + +++ @   @   ++ ::::\n::::::::::::::   + + ++@@@          ::::\n:::::::::::::   ++ +@+@@@@ @@@@@@   ::::\n++:+::::::::+++ +++@@@@@@@@@@@@@@    :::\n            +   @@@@@@@@@@@@@@@@@@ ++:::\n                @@@@@@@@@@@@@@@@@@++::::\n       +   ++@@@@@@@@@@@@@@@@@@@@  :::::\n           @@@@@@@@@@@@@@@@@@@@@     :::\n@@         @@@@@@@@@@@@@@@@@@@@@@    :::\n            @@@@@@@@@@@@@@@@@@@@@    +++\n             @@@@@@@@@@@@@@@@@@@@@  @@@+\n       +++    @@@@@@@@@@@@@@@@@@@@@@@@@@\n              @@@@@@@@@@@@@@@@@@@@@@@@@@\n            @@@@@@@@@@@@@@@@@@@@@@@@@@@@\n       ++  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n   @@@@@++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@ @@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@   @ +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@  @++++@@@@@+@++@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.447,
+          "agrees_with_the_luma": true,
+          "characters_left": 121,
+          "characters_right": 190,
+          "inertia": 147.7
+        },
+        "4": {
+          "silhouette": 0.3756,
+          "agrees_with_the_luma": true,
+          "characters_left": 162,
+          "characters_right": 186,
+          "inertia": 162.39
+        },
+        "5": {
+          "silhouette": 0.3659,
+          "agrees_with_the_luma": true,
+          "characters_left": 134,
+          "characters_right": 155,
+          "inertia": 161.32
+        },
+        "6": {
+          "silhouette": 0.3643,
+          "agrees_with_the_luma": true,
+          "characters_left": 127,
+          "characters_right": 157,
+          "inertia": 153.7
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792553975",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 2032,
+      "n_observed_cells": 288,
+      "fraction_observed": 0.3,
+      "observed_mask_iou_with_full_resolution": 0.8958,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4308,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.02,
+        0.0,
+        0.0
+      ],
+      "inertia": 96.16,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 129,
+          "characters_right": 4,
+          "labels_left": 129,
+          "labels_right": 4,
+          "n_answer_cells": 139
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.654
+      },
+      "grid": ":::::::::::::::: :::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n@@@:::::::::::::::::::::::::::::::::::::\n@@@@ ::::::::::::::::::::::::: :::::::::\n@@@@@@+:::::::::::::::::::::::::::::::::\n@@@@@@++::::::::::::::::::::::::::::::::\n@@@@@@@@@:::::::::::::::::::::::::::::::\n@@@@@@@@@@::::::::::::::::::::::::::::::\n@@@@@@@@@@@+::@:::::::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@::::::::::   ::::::::\n@@@@@@@@@@@@@@@@@@@:::::: :: :::::::::::\n@@@@@@@@@@@@@@@@@@@::::::::: ::::::::@::\n@@@@@@@@@@@@@@@@@@::::::::::: ::::::@@@@\n@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@@::::::@::::::::::::\n@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4308,
+          "agrees_with_the_luma": true,
+          "characters_left": 129,
+          "characters_right": 4,
+          "inertia": 96.16
+        },
+        "4": {
+          "silhouette": 0.3409,
+          "agrees_with_the_luma": true,
+          "characters_left": 121,
+          "characters_right": 2,
+          "inertia": 91.07
+        },
+        "5": {
+          "silhouette": 0.3255,
+          "agrees_with_the_luma": true,
+          "characters_left": 106,
+          "characters_right": 0,
+          "inertia": 84.71
+        },
+        "6": {
+          "silhouette": 0.3745,
+          "agrees_with_the_luma": true,
+          "characters_left": 112,
+          "characters_right": 4,
+          "inertia": 82.11
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554004",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1540,
+      "n_observed_cells": 595,
+      "fraction_observed": 0.6198,
+      "observed_mask_iou_with_full_resolution": 0.9714,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4656,
+      "alphabet": {
+        "3": " ",
+        "2": "=",
+        "0": "*",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.02,
+        0.07,
+        0.01,
+        0.0
+      ],
+      "inertia": 194.7,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 154,
+          "characters_right": 101,
+          "labels_left": 154,
+          "labels_right": 101,
+          "n_answer_cells": 296
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.024
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n***:::::::::::::::::::::::::::::::::::::\n********  *::** **::::::::::::::::::::::\n*******===************=:::=*****::::::::\n************************===**==***:**:::\n*************************@@*@@********::\n************************@@@@@@@*******::\n************************@@*@@@@*******::\n*************************@@*@@@@******::\n*************************@@@@@@@********\n***********************@@*@@@@@@@*******\n**********************@@*@@*@@@@@@******\n**********************@**@**************\n*********************@@*@***************\n********************@@*@@***************\n*********************@*@@***************\n***********************@@**************=\n*************=**********@**********=*==:",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4175,
+          "agrees_with_the_luma": true,
+          "characters_left": 156,
+          "characters_right": 102,
+          "inertia": 208.7
+        },
+        "4": {
+          "silhouette": 0.4656,
+          "agrees_with_the_luma": true,
+          "characters_left": 154,
+          "characters_right": 101,
+          "inertia": 194.7
+        },
+        "5": {
+          "silhouette": 0.4504,
+          "agrees_with_the_luma": true,
+          "characters_left": 143,
+          "characters_right": 78,
+          "inertia": 195.1
+        },
+        "6": {
+          "silhouette": 0.4228,
+          "agrees_with_the_luma": true,
+          "characters_left": 121,
+          "characters_right": 55,
+          "inertia": 193.4
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554034",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 926,
+      "n_observed_cells": 569,
+      "fraction_observed": 0.5927,
+      "observed_mask_iou_with_full_resolution": 0.9666,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5789,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.02,
+        0.0
+      ],
+      "inertia": 91.1,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 135,
+          "characters_right": 137,
+          "labels_left": 135,
+          "labels_right": 137,
+          "n_answer_cells": 285
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.064
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::  ::::::::\n@@+:::::::::::::::::::::::::::::::::::: \n@@+@+ :::::::::::::::::::::::::+ :+@@+@@\n@@@@@@@@@@+:::::::::: @+++@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@ : @@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@ @@@@@@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5789,
+          "agrees_with_the_luma": true,
+          "characters_left": 135,
+          "characters_right": 137,
+          "inertia": 91.1
+        },
+        "4": {
+          "silhouette": 0.4388,
+          "agrees_with_the_luma": true,
+          "characters_left": 138,
+          "characters_right": 138,
+          "inertia": 106.78
+        },
+        "5": {
+          "silhouette": 0.4603,
+          "agrees_with_the_luma": true,
+          "characters_left": 124,
+          "characters_right": 130,
+          "inertia": 94.05
+        },
+        "6": {
+          "silhouette": 0.4449,
+          "agrees_with_the_luma": true,
+          "characters_left": 124,
+          "characters_right": 130,
+          "inertia": 81.87
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554067",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1734,
+      "n_observed_cells": 371,
+      "fraction_observed": 0.3865,
+      "observed_mask_iou_with_full_resolution": 0.938,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4431,
+      "alphabet": {
+        "2": " ",
+        "0": "=",
+        "1": "*",
+        "3": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.02,
+        0.0,
+        0.05
+      ],
+      "inertia": 132.21,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 52,
+          "characters_right": 119,
+          "labels_left": 52,
+          "labels_right": 119,
+          "n_answer_cells": 193
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.233
+      },
+      "grid": ":::::::::::::::::::::::***::::::::::::::\n:::::::::::::::::::::::*=:::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::***\n::::::::::::::::::::::::::::::::::******\n::::::::::::::::::::::::::::: **********\n::::::::::::::::::*:*=====**************\n::::::::::::::********@*****************\n:::::::::::::::*****@*@@****************\n:::::::::::::::******@@@****************\n:::::  ::::::::*******@@****************\n:::::***:::*:*********@@=***************\n::::: **::**:******=@***@***************\n:::::***:::::*****@@@@@@****************\n::::****::********@@@@@@****************\n::::*****:********==@@=*****************\n::::**:*:::*******=====*****************\n::::**:*:::::::*************************",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4322,
+          "agrees_with_the_luma": true,
+          "characters_left": 50,
+          "characters_right": 127,
+          "inertia": 108.68
+        },
+        "4": {
+          "silhouette": 0.4431,
+          "agrees_with_the_luma": true,
+          "characters_left": 52,
+          "characters_right": 119,
+          "inertia": 132.21
+        },
+        "5": {
+          "silhouette": 0.3677,
+          "agrees_with_the_luma": true,
+          "characters_left": 52,
+          "characters_right": 119,
+          "inertia": 120.27
+        },
+        "6": {
+          "silhouette": 0.3803,
+          "agrees_with_the_luma": true,
+          "characters_left": 40,
+          "characters_right": 102,
+          "inertia": 115.63
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554097",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1792,
+      "n_observed_cells": 32,
+      "fraction_observed": 0.0333,
+      "observed_mask_iou_with_full_resolution": 0.25,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4104,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": 106.88,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 5,
+          "characters_right": 9,
+          "labels_left": 5,
+          "labels_right": 9,
+          "n_answer_cells": 15
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.003
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::@:::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n@@::::::::::::::::::::::::::::::::::@:::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::@:@@::::::::::::::::\n::::::::::::::::::::@@@:::::::::::::@@@@\n::::::::::::::::::::::@@::::::::::::::::\n::::::::::::::::::++@:::@:::::::::::::::\n:::::::::::::::::@@@@@::::::::::::::::::\n:::::::::::::::::::@@@@::@::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::@::::::::::::\n:::::::@::::::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4104,
+          "agrees_with_the_luma": false,
+          "characters_left": 5,
+          "characters_right": 9,
+          "inertia": 106.88
+        },
+        "4": {
+          "silhouette": 0.3209,
+          "agrees_with_the_luma": false,
+          "characters_left": 5,
+          "characters_right": 9,
+          "inertia": 75.09
+        },
+        "5": {
+          "silhouette": 0.3524,
+          "agrees_with_the_luma": false,
+          "characters_left": 3,
+          "characters_right": 6,
+          "inertia": 77.58
+        },
+        "6": {
+          "silhouette": 0.3713,
+          "agrees_with_the_luma": false,
+          "characters_left": 2,
+          "characters_right": 6,
+          "inertia": 77.87
+        }
+      },
+      "alphabet_k_by_truth": 4,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
+    },
+    {
+      "session": "1792554308",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792554309",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 12262,
+      "n_observed_cells": 904,
+      "fraction_observed": 0.9417,
+      "observed_mask_iou_with_full_resolution": 0.9867,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4719,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.04,
+        0.01,
+        0.0
+      ],
+      "inertia": 145.66,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 163,
+          "characters_right": 158,
+          "labels_left": 163,
+          "labels_right": 158,
+          "n_answer_cells": 449
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.004
+      },
+      "grid": "::::::::+++:++++++++++++++++++++   + :::\n::::::::++++++++++++++++++++++++++++::::\n:::::::::++++++++++ ++++++++++ +++ ++:::\n::::::::+++++  ++++@@ @++++  ++++++++:+:\n++++++::++++++@@@@@@@@@@+++++++++++++++:\n::::+::++++++@@@@@@@@@@@@@++++++++  +  +\n++++++++++++@@@@@@@@@@@@@@@@@@@@++++++++\n++ ++++++ +@@@@@@@@@@@@@@@@@@@@@@+@+++++\n+++++++++++@@@@@@@@@@@@@@@@@@@@@@@@+++++\n++ +++     @@@@@@@@@@@@@@@@@@@@@@@@++++:\n++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++\n@@+@@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++\n+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+\n+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4719,
+          "agrees_with_the_luma": false,
+          "characters_left": 163,
+          "characters_right": 158,
+          "inertia": 145.66
+        },
+        "4": {
+          "silhouette": 0.3988,
+          "agrees_with_the_luma": false,
+          "characters_left": 105,
+          "characters_right": 102,
+          "inertia": 81.06
+        },
+        "5": {
+          "silhouette": 0.3838,
+          "agrees_with_the_luma": true,
+          "characters_left": 82,
+          "characters_right": 90,
+          "inertia": 73.2
+        },
+        "6": {
+          "silhouette": 0.3456,
+          "agrees_with_the_luma": false,
+          "characters_left": 87,
+          "characters_right": 76,
+          "inertia": 72.3
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554532",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 12703,
+      "n_observed_cells": 857,
+      "fraction_observed": 0.8927,
+      "observed_mask_iou_with_full_resolution": 0.9767,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4315,
+      "alphabet": {
+        "2": " ",
+        "1": "=",
+        "3": "*",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.08,
+        0.01,
+        0.0,
+        0.03
+      ],
+      "inertia": 115.2,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 3,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 99,
+          "characters_right": 157,
+          "labels_left": 99,
+          "labels_right": 157,
+          "n_answer_cells": 431
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.248
+      },
+      "grid": ":::::::::::::::: = :*:::::::    =::::***\n:::::::::*::  ====*=* *=  =   ==*:: ***=\n:::::::=***=========*=*==*==  =***=     \n:::::===*********=*=*=*=======*=*=      \n::::::************@@**************      \n:::::   =*******@@@@@@************=  ==*\n::::: *******@@@@@@@@@@@****************\n::::: =**=*@@@@@@@@@@@@@************ =* \n::::::====*@@@@@@@@@@@@@*********** * **\n:::::::====@@@@@@@@@@@@@********* ******\n::::::*:***@@@@@@@@@@@@@****************\n=*:: *******@@@@@@@@@@@@*************  *\n*::*=*=******@@@@@@@@@@@@@***=**********\n:::=*********@@@@@@@@@@@@@@**=**********\n::==***********@@@@@@@@@@@@******* ***  \n= ==************@@*******@@@****** *****\n===***********************@@****** *****\n==************************@******* ** **\n=**************************************=\n**=*@@**@@@@@@************************* \n**=****@@@@@@@@@@***********************\n*******@@@@@@@@@*@*****************=    \n**=*****@@@@@@@@*@******************    \n*********@@@@@@@@@@@*****************   ",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4213,
+          "agrees_with_the_luma": true,
+          "characters_left": 156,
+          "characters_right": 118,
+          "inertia": 141.61
+        },
+        "4": {
+          "silhouette": 0.4315,
+          "agrees_with_the_luma": false,
+          "characters_left": 99,
+          "characters_right": 157,
+          "inertia": 115.2
+        },
+        "5": {
+          "silhouette": 0.4248,
+          "agrees_with_the_luma": false,
+          "characters_left": 75,
+          "characters_right": 139,
+          "inertia": 122.71
+        },
+        "6": {
+          "silhouette": 0.3659,
+          "agrees_with_the_luma": false,
+          "characters_left": 73,
+          "characters_right": 126,
+          "inertia": 115.05
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554540",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 425,
+      "n_observed_cells": 796,
+      "fraction_observed": 0.8292,
+      "observed_mask_iou_with_full_resolution": 0.9298,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4777,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.05,
+        0.01,
+        0.01
+      ],
+      "inertia": 464.77,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 140,
+          "characters_right": 201,
+          "labels_left": 140,
+          "labels_right": 201,
+          "n_answer_cells": 401
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.241
+      },
+      "grid": ":::::::::::::::::::: :::::::::::::::::::\n:::::+@:@@@+@@++++@@ :::::::::::::::::::\n:::: @@@@@@@@@@@@@@@@:    +++++ ::::::  \n:::::+@@@@@@@@@@@@@@@@@@@@++++++ :+++ @@\n::::::@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n:::: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n:::::+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n::::::+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n:::::::+: +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n:::::::::++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n:::::::++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n::::::@@@  ++@@@@@@@@@@@@@@@@@@@@@@@@@  \n::++@@@    ::+@@@@@@@@@@@@@@@@@@@@@@@@  \n:@@@@@  ::  : ++@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@    :: ::: @@@@@@@@@@@@@@@@@@@@@@@\n@@@   @   :  :: :@@@@@@@@@@@@@@@@@@@@@@@\n@@    @@   ::  ::  @@@@@@@@@@@@@@@@@@@@@\n@@  @@@@      : :::@@@@@@@@@@@@@@@@@@@@@\n@    @@@   :::: :: @@@@@@@@@@@@@@@@@@@@@\n@@@@ @@@    @@@@ @ @@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@++@@+ :@@@@@@@@@+@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4777,
+          "agrees_with_the_luma": true,
+          "characters_left": 140,
+          "characters_right": 201,
+          "inertia": 464.77
+        },
+        "4": {
+          "silhouette": 0.3975,
+          "agrees_with_the_luma": true,
+          "characters_left": 108,
+          "characters_right": 109,
+          "inertia": 520.81
+        },
+        "5": {
+          "silhouette": 0.4022,
+          "agrees_with_the_luma": true,
+          "characters_left": 68,
+          "characters_right": 101,
+          "inertia": 524.12
+        },
+        "6": {
+          "silhouette": 0.3473,
+          "agrees_with_the_luma": true,
+          "characters_left": 48,
+          "characters_right": 148,
+          "inertia": 409.6
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554549",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 519,
+      "n_observed_cells": 398,
+      "fraction_observed": 0.4146,
+      "observed_mask_iou_with_full_resolution": 0.7714,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5881,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.06,
+        0.01,
+        0.0
+      ],
+      "inertia": 365.41,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 108,
+          "characters_right": 75,
+          "labels_left": 108,
+          "labels_right": 75,
+          "n_answer_cells": 198
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.122
+      },
+      "grid": ":::::::::::::::: :::::::::::::::::::::::\n:::::::::::::@@@@ @@@ ::::::::::::::::::\n:::::::::::: @@@ @@@@@@@::::::::::::::::\n:::::::::::@@@@@@@@@@@@:::::::::::::::::\n:::::::::::@@@@@@@@@@@@@@@::::::::::::::\n::::::::::@@@@@@@@@@@@@@@@@@@:::::::::::\n::::::::::@@@@@@@@@@@@@@@@@@@@::::::::::\n:::::::::::@@@@@@@@@@@@@@@@@ :::::::::::\n:::::::::::@@@@@@@@@@@@@@@@@@:::::::::::\n::::::::::::@@@@@@@@@@@@@@@@::::::::::::\n::::::::::: @@@@@@@@@@@@@@@@::::::::::::\n::::::::@@@  @@@@@@@@@@@@:::::::::::::::\n::::::@@@@@:::@@@@@@@@@@@@@:::::::::::::\n::::+@@@@@@::::+@@@@@@@@@@@:::::::::::::\n:::@@@@@@@::::::@@@@@@@@@@@@::::::::::::\n::@@@@@@@ :::::  @@@@@@@@@@@::::::::::::\n:@@@@@@@@@ ::::::: @@@@@@@@@::::::::::::\n@@@@@@@@@@@ ::::::  @@@@@@@@::::::::::::\n@@@@@@@@@@:::::::: @@@@@@@@@::::::::::::\n@@@@@@   @::::::: : @@@@@@@+::::::::::::\n@@@@@ @@@@:::::::::: @@@@@@:::::::::::::\n@@@@@@@@ :::::::::::: @@@@@:::::::::::::\n@@@@@@@@@::::::::::: @@@@@@@::::::::::::\n@@@@@@@@@::::::::::::@@@@@@@::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5881,
+          "agrees_with_the_luma": true,
+          "characters_left": 108,
+          "characters_right": 75,
+          "inertia": 365.41
+        },
+        "4": {
+          "silhouette": 0.3396,
+          "agrees_with_the_luma": true,
+          "characters_left": 92,
+          "characters_right": 69,
+          "inertia": 354.36
+        },
+        "5": {
+          "silhouette": 0.3916,
+          "agrees_with_the_luma": true,
+          "characters_left": 87,
+          "characters_right": 55,
+          "inertia": 300.36
+        },
+        "6": {
+          "silhouette": 0.3983,
+          "agrees_with_the_luma": true,
+          "characters_left": 86,
+          "characters_right": 52,
+          "inertia": 302.18
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554557",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 175,
+      "n_observed_cells": 118,
+      "fraction_observed": 0.1229,
+      "observed_mask_iou_with_full_resolution": 0.3051,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.6714,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.04,
+        0.0,
+        0.0
+      ],
+      "inertia": 259.73,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 25,
+          "characters_right": 34,
+          "labels_left": 25,
+          "labels_right": 34,
+          "n_answer_cells": 60
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.173
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::@@::::::::::::::::::::::\n:::::::::::::::::@@@::::::::::::::::::::\n::::::::::::::::@@@:::::@@@:::::::::::::\n::::::::::::::::@@::::::@@@:::::::::::::\n:::::::::::::::::@:::::::@@:::::::::::::\n::::::::::::::::@@@::@::@@@:::::::::::::\n::::::::::::::::@@@@@@@@@@@:::::::::::::\n::::::::::::::::@@@@@@@@@@::::::::::::::\n:::::::::::::::::@@::@@@@@::::::::::::::\n::::::::::::@:::::@@::@@@@@:::::::::::::\n:::::::::::::::::::@::@@:@@@::::::::::::\n::::::::::::::::::::::@@::@@::::::::::::\n::::::@@::::::::::::::@@@:@@::::::::::::\n:::::@@+:::::::::::::::@@@@@::::::::::::\n::::@@@::::::::::::::::::@@@::::::::::::\n::::@@@:::@@::::::::::::::@@::::::::::::\n:::@@@::::::::::::::::::::@@::::::::::::\n:::@@::::::::::::::::::::@@@::::::::::::\n::@@@::::::::::::::::::::::@::::::::::::\n:@@@:::::::::::::::::::::::@::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.6714,
+          "agrees_with_the_luma": true,
+          "characters_left": 25,
+          "characters_right": 34,
+          "inertia": 259.73
+        },
+        "4": {
+          "silhouette": 0.412,
+          "agrees_with_the_luma": true,
+          "characters_left": 25,
+          "characters_right": 34,
+          "inertia": 224.05
+        },
+        "5": {
+          "silhouette": 0.4235,
+          "agrees_with_the_luma": true,
+          "characters_left": 25,
+          "characters_right": 34,
+          "inertia": 210.37
+        },
+        "6": {
+          "silhouette": 0.3823,
+          "agrees_with_the_luma": true,
+          "characters_left": 23,
+          "characters_right": 30,
+          "inertia": 184.94
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554571",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 843,
+      "n_observed_cells": 583,
+      "fraction_observed": 0.6073,
+      "observed_mask_iou_with_full_resolution": 0.9811,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4975,
+      "alphabet": {
+        "3": " ",
+        "1": "=",
+        "2": "*",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.07,
+        0.02,
+        0.03,
+        0.0
+      ],
+      "inertia": 151.77,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 168,
+          "characters_right": 93,
+          "labels_left": 168,
+          "labels_right": 93,
+          "n_answer_cells": 290
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.153
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::  :::::::::::::::\n::::::::::::::::::::::****::::::::::::::\n:::::::::::::::::===******=*::::::::::::\n::::::::::::: ==*************:::::::::::\n:::::::::::::*************@***::::::::::\n******** *********@***********::::::::::\n******************@@*****@@***::::::::::\n******************@@*@@@*@@*=:::::::::::\n*******************@@*@@**@*::::::::::::\n***********************@***=::::::::::::\n***********************@@@**=:::::::::::\n***********************@@@**==::::::::::\n***********************@@*****==::::::::\n*******************************=::::::::\n***********=:*******************=:::::::\n********************************=:::::::\n******=*************************::::::::\n********************************=:::::::\n******@*************************=:::::::\n*****@@***********=**************=::::::\n****@@****************************::::::\n***@@**@**************************::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4229,
+          "agrees_with_the_luma": true,
+          "characters_left": 167,
+          "characters_right": 94,
+          "inertia": 179.84
+        },
+        "4": {
+          "silhouette": 0.4975,
+          "agrees_with_the_luma": true,
+          "characters_left": 168,
+          "characters_right": 93,
+          "inertia": 151.77
+        },
+        "5": {
+          "silhouette": 0.4489,
+          "agrees_with_the_luma": true,
+          "characters_left": 165,
+          "characters_right": 90,
+          "inertia": 135.03
+        },
+        "6": {
+          "silhouette": 0.4684,
+          "agrees_with_the_luma": true,
+          "characters_left": 148,
+          "characters_right": 77,
+          "inertia": 134.87
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554659",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 4666,
+      "n_observed_cells": 784,
+      "fraction_observed": 0.8167,
+      "observed_mask_iou_with_full_resolution": 0.9834,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4716,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.04,
+        0.01,
+        0.0
+      ],
+      "inertia": 229.94,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 96,
+          "characters_right": 195,
+          "labels_left": 96,
+          "labels_right": 195,
+          "n_answer_cells": 394
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.221
+      },
+      "grid": ":::::::: ::::+     :::::::::    +++ +   \n::::::::::::::::  ::::::::    ++@@@     \n::::::::::::::::::::::::      +@@@      \n::::::::::::::::::::::: +     @@@@@@@@@@\n::::::::::::::::::::::     @@@@@@@@@@@@ \n:::::::::::::::::::+  +  @@@@@@@@@@@@@@@\n::::::::::::::::::++ @@@@@@@@@@@@@@@@@@@\n:::::::::::     +++@@@@@@@@@@@@@@@@@@@@@\n:::::::   +  ++++@@@@@@@@@@@@@@@@@@@@@@ \n::::: +++++++@@@@@@@@@@@@@@@@@@@@@@@@@@@\n::        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n @    ++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@    +  + @@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n        ++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n          +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n  @    @@ @ +@@@@@@@@@@@@@@@@@@@@@@@@@@@\n         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@      @ +@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n     @@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \n   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    \n   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n   +  @@@@@+++@@@@@@@@@@@@@@@@@@@@@@@@@ ",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4716,
+          "agrees_with_the_luma": true,
+          "characters_left": 96,
+          "characters_right": 195,
+          "inertia": 229.94
+        },
+        "4": {
+          "silhouette": 0.4345,
+          "agrees_with_the_luma": true,
+          "characters_left": 79,
+          "characters_right": 175,
+          "inertia": 225.95
+        },
+        "5": {
+          "silhouette": 0.4211,
+          "agrees_with_the_luma": true,
+          "characters_left": 79,
+          "characters_right": 189,
+          "inertia": 115.75
+        },
+        "6": {
+          "silhouette": 0.3144,
+          "agrees_with_the_luma": true,
+          "characters_left": 67,
+          "characters_right": 176,
+          "inertia": 128.82
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554677",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 917,
+      "n_observed_cells": 231,
+      "fraction_observed": 0.2406,
+      "observed_mask_iou_with_full_resolution": 0.9134,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5914,
+      "alphabet": {
+        "1": " ",
+        "0": "+",
+        "2": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.0,
+        0.05
+      ],
+      "inertia": 140.97,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 96,
+          "characters_right": 0,
+          "labels_left": 96,
+          "labels_right": 0,
+          "n_answer_cells": 110
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.998
+      },
+      "grid": "::::::::::::::::  ::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n@@+:+++++ ::::::::::::::::::::::::::::::\n@@@@@@@@@@+:+:::::::::::::::::::::::::::\n@@@@@@@@@@@@@@@@ :::::::::::::::::::::::\n@@@@@@@@@@@@@@@@@ ::::::::::::::::::::::\n@@@@@@@@@@@@@@@@@:::::::::::::::::::::::\n@@@@@@@@@@@      :::::::::::::::::::::::\n@@@@@@@@@@@@@@@@  +:::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@::::::::::::::::::::\n@@@@@@@@@@@@@@@  @  @:::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@@:::::::::::::::::::\n@@@@@@@@@@@@@@@@@@:+ :::::::::::::::::::\n@@@@@@@@@@@@@@@@@@+:::::::::::::::::::::\n@@@@@@@@@@+  +@@@@@:::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5914,
+          "agrees_with_the_luma": true,
+          "characters_left": 96,
+          "characters_right": 0,
+          "inertia": 140.97
+        },
+        "4": {
+          "silhouette": 0.4108,
+          "agrees_with_the_luma": true,
+          "characters_left": 94,
+          "characters_right": 0,
+          "inertia": 136.84
+        },
+        "5": {
+          "silhouette": 0.3364,
+          "agrees_with_the_luma": true,
+          "characters_left": 72,
+          "characters_right": 0,
+          "inertia": 154.79
+        },
+        "6": {
+          "silhouette": 0.3603,
+          "agrees_with_the_luma": true,
+          "characters_left": 88,
+          "characters_right": 0,
+          "inertia": 121.01
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554689",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 6,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792554738",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 978,
+      "n_observed_cells": 502,
+      "fraction_observed": 0.5229,
+      "observed_mask_iou_with_full_resolution": 0.9841,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.6004,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.03,
+        0.0
+      ],
+      "inertia": 91.75,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 119,
+          "characters_right": 126,
+          "labels_left": 119,
+          "labels_right": 126,
+          "n_answer_cells": 250
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.155
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n+:::::::::::::::::::::::::::::::::++@@@@\n@@@@@@+:::::::::::::::::::::::++@@@@@@@@\n@@@@@@@@@@@+::@+@++@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.6004,
+          "agrees_with_the_luma": true,
+          "characters_left": 119,
+          "characters_right": 126,
+          "inertia": 91.75
+        },
+        "4": {
+          "silhouette": 0.4648,
+          "agrees_with_the_luma": true,
+          "characters_left": 119,
+          "characters_right": 121,
+          "inertia": 97.27
+        },
+        "5": {
+          "silhouette": 0.4992,
+          "agrees_with_the_luma": false,
+          "characters_left": 109,
+          "characters_right": 96,
+          "inertia": 93.77
+        },
+        "6": {
+          "silhouette": 0.4211,
+          "agrees_with_the_luma": false,
+          "characters_left": 109,
+          "characters_right": 96,
+          "inertia": 78.22
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554762",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1182,
+      "n_observed_cells": 569,
+      "fraction_observed": 0.5927,
+      "observed_mask_iou_with_full_resolution": 0.9772,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4049,
+      "alphabet": {
+        "2": " ",
+        "0": "=",
+        "1": "*",
+        "3": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.01,
+        0.0,
+        0.02
+      ],
+      "inertia": 96.0,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 90,
+          "characters_right": 106,
+          "labels_left": 90,
+          "labels_right": 106,
+          "n_answer_cells": 285
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.002
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::*:::::::::\n:::::::::::::::::::::::::::::::::::::***\n::::::::::::::::::::::::::::::=*********\n********************:::::******@***@@***\n*@**************************************\n@*@@@@**********************************\n@@@@@*@******@**@**@******************@@\n************@*****@@**********@@*****@@*\n@@@@@@@@*@*@@@@@@@@@@@*****@@@@@****@@@*\n@@@@@****@@@@**@@******@@@@@**@*@*******\n@@@@@******@@@*********@@***************\n@@@@@*@****@@*@@@*@***@**@@@@@@*@***@***\n@@@@*****@@@@@@@@@@***@@@@@@@@@******@**\n@@@@****@*****@@@@*@@@*@@@@*@****@**@@@@\n@@@@***@@************@*@@@@****@*@@*@@@@\n@@@@**********@*********@**@*@@***@*@@@@\n@@@@@*@*****************************@***",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.389,
+          "agrees_with_the_luma": false,
+          "characters_left": 102,
+          "characters_right": 96,
+          "inertia": 86.55
+        },
+        "4": {
+          "silhouette": 0.4049,
+          "agrees_with_the_luma": true,
+          "characters_left": 90,
+          "characters_right": 106,
+          "inertia": 96.0
+        },
+        "5": {
+          "silhouette": 0.3922,
+          "agrees_with_the_luma": true,
+          "characters_left": 114,
+          "characters_right": 127,
+          "inertia": 97.4
+        },
+        "6": {
+          "silhouette": 0.382,
+          "agrees_with_the_luma": true,
+          "characters_left": 110,
+          "characters_right": 130,
+          "inertia": 92.74
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554791",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 901,
+      "n_observed_cells": 299,
+      "fraction_observed": 0.3115,
+      "observed_mask_iou_with_full_resolution": 0.9431,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5745,
+      "alphabet": {
+        "1": " ",
+        "0": "+",
+        "2": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.0,
+        0.06
+      ],
+      "inertia": 203.26,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 115,
+          "characters_right": 1,
+          "labels_left": 115,
+          "labels_right": 1,
+          "n_answer_cells": 146
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 2.376
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n  ::::::::::::::::::::::::::::::::::::::\n@@   :::::::::::::::::::::::::::::::::::\n@@ @  ++::::::::::::::::::::::::::::::::\n@@@@@@@@++++:+::::::::::::::::::::::::::\n@@@@@@@@@@@@@@@@@ ::::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@ :::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@ :::::::::::::::::::::\n@@@@@@@@@@@@@@@@@+  ::::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@ :::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@  :::::::::::::::::::\n@@@@@@@@@@@@@@@@@@   :::::::::::::::::::\n@@@@@@@@@@@@@@@@@@@@   :::::::::::::::::\n@@@@@@@@@        @@    +::::::::::::::::\n@@@@@@@@@  @ @@@@@@@@@ +::::::::::::::::\n@@@@@@@@@ @@ @@@@@ @+  :::::::::::::::::\n@@@@@@@@@@@@ @@@    ::::::::::::::::::::\n@@@@@@@@@@  ::      ::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5745,
+          "agrees_with_the_luma": true,
+          "characters_left": 115,
+          "characters_right": 1,
+          "inertia": 203.26
+        },
+        "4": {
+          "silhouette": 0.4044,
+          "agrees_with_the_luma": true,
+          "characters_left": 95,
+          "characters_right": 0,
+          "inertia": 200.81
+        },
+        "5": {
+          "silhouette": 0.4448,
+          "agrees_with_the_luma": true,
+          "characters_left": 85,
+          "characters_right": 5,
+          "inertia": 151.74
+        },
+        "6": {
+          "silhouette": 0.3647,
+          "agrees_with_the_luma": true,
+          "characters_left": 85,
+          "characters_right": 5,
+          "inertia": 147.32
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792554809",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792554841",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792554906",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792555007",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 2169,
+      "n_observed_cells": 585,
+      "fraction_observed": 0.6094,
+      "observed_mask_iou_with_full_resolution": 0.9624,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4696,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.03,
+        0.0
+      ],
+      "inertia": 115.33,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 123,
+          "characters_right": 119,
+          "labels_left": 123,
+          "labels_right": 119,
+          "n_answer_cells": 294
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.121
+      },
+      "grid": "::::: :::::::::::  ::::  :         ::   \n:::::::::::::::::::::::+          ::: ::\n::::::::::::::::::::::::::::  +:::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n +:::::::::::::::::::::++++@ +::::::::::\n++@@@@@+++++::::::::       @       :::::\n@@@@@@@@@@@@@@+ :::         @           \n@@@@@@@@@@@@@@@+ +++++@@   @@@@@@@@@@@+ \n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@+ @@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@+++@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4696,
+          "agrees_with_the_luma": true,
+          "characters_left": 123,
+          "characters_right": 119,
+          "inertia": 115.33
+        },
+        "4": {
+          "silhouette": 0.3995,
+          "agrees_with_the_luma": true,
+          "characters_left": 89,
+          "characters_right": 60,
+          "inertia": 135.96
+        },
+        "5": {
+          "silhouette": 0.394,
+          "agrees_with_the_luma": true,
+          "characters_left": 83,
+          "characters_right": 54,
+          "inertia": 128.95
+        },
+        "6": {
+          "silhouette": 0.3875,
+          "agrees_with_the_luma": true,
+          "characters_left": 79,
+          "characters_right": 43,
+          "inertia": 150.97
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555048",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 15,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792555105",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 3,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792555166",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1043,
+      "n_observed_cells": 17,
+      "fraction_observed": 0.0177,
+      "observed_mask_iou_with_full_resolution": 0.6111,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4296,
+      "alphabet": {
+        "0": " ",
+        "1": "=",
+        "2": "*",
+        "3": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.0,
+        0.0,
+        0.04
+      ],
+      "inertia": 169.3,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 4,
+          "characters_right": 4,
+          "labels_left": 4,
+          "labels_right": 4,
+          "n_answer_cells": 9
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.082
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::@*::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::***:::::::::::::::::::::::::::::\n**::::::::::::::::::::::::::::::::::*:::\n@:::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::*\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::*@:\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:**:::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::@:::*::::::::\n:::::::*::::::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4026,
+          "agrees_with_the_luma": false,
+          "characters_left": 4,
+          "characters_right": 5,
+          "inertia": 169.02
+        },
+        "4": {
+          "silhouette": 0.4296,
+          "agrees_with_the_luma": false,
+          "characters_left": 4,
+          "characters_right": 4,
+          "inertia": 169.3
+        },
+        "5": {
+          "silhouette": 0.3778,
+          "agrees_with_the_luma": false,
+          "characters_left": 4,
+          "characters_right": 4,
+          "inertia": 144.88
+        },
+        "6": {
+          "silhouette": 0.3117,
+          "agrees_with_the_luma": false,
+          "characters_left": 4,
+          "characters_right": 4,
+          "inertia": 95.62
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
+    },
+    {
+      "session": "1792555182",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 895,
+      "n_observed_cells": 20,
+      "fraction_observed": 0.0208,
+      "observed_mask_iou_with_full_resolution": 0.5238,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4134,
+      "alphabet": {
+        "0": " ",
+        "1": "=",
+        "2": "*",
+        "3": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.0,
+        0.0,
+        0.01
+      ],
+      "inertia": 139.26,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 2,
+          "characters_right": 3,
+          "labels_left": 2,
+          "labels_right": 3,
+          "n_answer_cells": 9
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.094
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::@*::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::@@*:::::::::::::::::::::::::::::\n*@:::::::::::::::::::::::::::::::::**:::\n@:::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::*::\n::::::::::::::::::::::::::::::::::::*@@:\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n***:::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::@::::::::::::\n**::::::::::::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3678,
+          "agrees_with_the_luma": false,
+          "characters_left": 4,
+          "characters_right": 5,
+          "inertia": 139.81
+        },
+        "4": {
+          "silhouette": 0.4134,
+          "agrees_with_the_luma": false,
+          "characters_left": 2,
+          "characters_right": 3,
+          "inertia": 139.26
+        },
+        "5": {
+          "silhouette": 0.3204,
+          "agrees_with_the_luma": false,
+          "characters_left": 2,
+          "characters_right": 3,
+          "inertia": 107.85
+        },
+        "6": {
+          "silhouette": 0.3897,
+          "agrees_with_the_luma": false,
+          "characters_left": 2,
+          "characters_right": 3,
+          "inertia": 112.49
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": false
+    },
+    {
+      "session": "1792555203",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1067,
+      "n_observed_cells": 178,
+      "fraction_observed": 0.1854,
+      "observed_mask_iou_with_full_resolution": 0.9274,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5152,
+      "alphabet": {
+        "0": " ",
+        "1": "+",
+        "2": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.0,
+        0.03
+      ],
+      "inertia": 187.52,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 41,
+          "characters_right": 0,
+          "labels_left": 41,
+          "labels_right": 0,
+          "n_answer_cells": 85
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.61
+      },
+      "grid": "++::::::::::::::::::::::::::::::::::::::\n++::::::::::::::::::::::::::::::::::::::\n++::::::::::::::::::::::::::::::::::::::\n++::::::::::::::::::::::::::::::::::::::\n@++:::::::::::::::::::::::::::::::::::::\n@++:::::::::::::::::::::::::::::::::::::\n@+::::::::::::::::::::::::::::::::::::::\n@+::::::::::::::::::::::::::::+:::::::::\n+:::::::::::::::::::::::::::::::::::::::\n@+::::::::::::::::::::::::::::::::::::::\n@@++::::::::::::::::::::::::::::::::::::\n@@@+@++:::::::::::::::::::::::::::::::::\n@@+@@++ ::::::::::::::::::::::::::::::::\n@@@@@+++ :::::::::::::::::::::::::::::::\n@@@@@@++ :::::::::::::::::::::::::::::::\n@@@@@++++++:::::::::::::::::::::::::::::\n@@@@@@+++++::::::::::::::::::::::::::++:\n@@@@@@@++++@::::::::::::::::::::::::::::\n@@@@@@@+++++++::::::::::::::::::::::::::\n@@@@@@++++++++::::::::::::::::::::::::::\n@@@@@@@+@+++++::::::::::::::::::::::::::\n@@@@@@@@@+@+++::::::::::::::::::::::::::\n@@@@@@@@@@@@++:::::::::::::+::::::::::::\n@@@@@@@@++++::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5152,
+          "agrees_with_the_luma": true,
+          "characters_left": 41,
+          "characters_right": 0,
+          "inertia": 187.52
+        },
+        "4": {
+          "silhouette": 0.3132,
+          "agrees_with_the_luma": true,
+          "characters_left": 60,
+          "characters_right": 2,
+          "inertia": 166.73
+        },
+        "5": {
+          "silhouette": 0.3859,
+          "agrees_with_the_luma": true,
+          "characters_left": 71,
+          "characters_right": 2,
+          "inertia": 137.07
+        },
+        "6": {
+          "silhouette": 0.3582,
+          "agrees_with_the_luma": true,
+          "characters_left": 70,
+          "characters_right": 2,
+          "inertia": 131.3
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555235",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1116,
+      "n_observed_cells": 659,
+      "fraction_observed": 0.6865,
+      "observed_mask_iou_with_full_resolution": 0.9332,
+      "alphabet_k": 4,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4579,
+      "alphabet": {
+        "3": " ",
+        "1": "=",
+        "0": "*",
+        "2": "@"
+      },
+      "cluster_mean_activity": [
+        0.04,
+        0.01,
+        0.06,
+        0.0
+      ],
+      "inertia": 88.67,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "*",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 166,
+          "characters_right": 76,
+          "labels_left": 166,
+          "labels_right": 76,
+          "n_answer_cells": 327
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.789
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n ::   ::::::::::::::::::::::::::::::::::\n=      :::::::::::::::::::::::::::::::::\n======== ::::::::::::::      :::::::::::\n**=******  == ::::::::::::::::::::::::::\n************= ====== ===  ::::::::::::::\n@***************======** ==     :   :  :\n@@@*************************  * ::::::::\n@@@@************************* ::::::::::\n@***************************==::::::::::\n@@@@************************* ::::::::::\n@@@@@*****************=**   =::::::  :::\n@@*********************==== == :::::::::\n@@@@@**********************==   ::::::::\n@@@***********=*************==  ::::::::\n@****************************== ::::: * \n******************************==:::: ** \n******************************==::::::::\n**@@@@@************************=::::::::\n@******************************==:::::::\n@@******************************=:   :  \n@@@@@@*****@********************==::::::\n@@@*@@**@*************************::::::\n@**@@*@@*********************=**=:::: ::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3932,
+          "agrees_with_the_luma": true,
+          "characters_left": 161,
+          "characters_right": 76,
+          "inertia": 100.76
+        },
+        "4": {
+          "silhouette": 0.4579,
+          "agrees_with_the_luma": true,
+          "characters_left": 166,
+          "characters_right": 76,
+          "inertia": 88.67
+        },
+        "5": {
+          "silhouette": 0.3943,
+          "agrees_with_the_luma": true,
+          "characters_left": 162,
+          "characters_right": 75,
+          "inertia": 84.3
+        },
+        "6": {
+          "silhouette": 0.4126,
+          "agrees_with_the_luma": true,
+          "characters_left": 159,
+          "characters_right": 66,
+          "inertia": 77.77
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555374",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1262,
+      "n_observed_cells": 737,
+      "fraction_observed": 0.7677,
+      "observed_mask_iou_with_full_resolution": 0.9905,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5272,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.02,
+        0.0
+      ],
+      "inertia": 124.17,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 155,
+          "characters_right": 179,
+          "labels_left": 155,
+          "labels_right": 179,
+          "n_answer_cells": 369
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.114
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::@++++@@\n::::::::::::  ++++++ +++::+:++++@@+@@++@\n::::::::::++++@@@@@@@@+++++++@@@@@@@@@@@\n:::::++ +++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n+++++++@+@@@@@+++@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@+++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@+@+@@@+++@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@+++@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@+@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5272,
+          "agrees_with_the_luma": true,
+          "characters_left": 155,
+          "characters_right": 179,
+          "inertia": 124.17
+        },
+        "4": {
+          "silhouette": 0.3908,
+          "agrees_with_the_luma": false,
+          "characters_left": 133,
+          "characters_right": 132,
+          "inertia": 127.56
+        },
+        "5": {
+          "silhouette": 0.353,
+          "agrees_with_the_luma": true,
+          "characters_left": 85,
+          "characters_right": 118,
+          "inertia": 101.12
+        },
+        "6": {
+          "silhouette": 0.3987,
+          "agrees_with_the_luma": true,
+          "characters_left": 64,
+          "characters_right": 90,
+          "inertia": 105.62
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555390",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_observed_cells": 2,
+      "refused": true,
+      "why": "too few observed cells to fit an alphabet"
+    },
+    {
+      "session": "1792555570",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 882,
+      "n_observed_cells": 586,
+      "fraction_observed": 0.6104,
+      "observed_mask_iou_with_full_resolution": 0.9829,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5838,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.01,
+        0.02,
+        0.0
+      ],
+      "inertia": 81.87,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 132,
+          "characters_right": 136,
+          "labels_left": 132,
+          "labels_right": 136,
+          "n_answer_cells": 292
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.083
+      },
+      "grid": "::::::::::::::::::::::::::   :: ::::::::\n::::::::::::::::::::::::::: :: :::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::: :::::::::\n:::::::::::::::::::::::::::::@::::::::::\n ++@  ++++:::::: ++ +@+++++:::::::::::::\n@@@@@@@@@@+++@+++@@@@@@@@@@@@@@@+++++:::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@    @@    +@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.5838,
+          "agrees_with_the_luma": true,
+          "characters_left": 132,
+          "characters_right": 136,
+          "inertia": 81.87
+        },
+        "4": {
+          "silhouette": 0.4645,
+          "agrees_with_the_luma": false,
+          "characters_left": 140,
+          "characters_right": 127,
+          "inertia": 102.82
+        },
+        "5": {
+          "silhouette": 0.457,
+          "agrees_with_the_luma": true,
+          "characters_left": 98,
+          "characters_right": 100,
+          "inertia": 80.69
+        },
+        "6": {
+          "silhouette": 0.3955,
+          "agrees_with_the_luma": false,
+          "characters_left": 101,
+          "characters_right": 100,
+          "inertia": 72.25
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555610",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 797,
+      "n_observed_cells": 734,
+      "fraction_observed": 0.7646,
+      "observed_mask_iou_with_full_resolution": 0.9891,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.619,
+      "alphabet": {
+        "0": " ",
+        "2": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.02,
+        0.01
+      ],
+      "inertia": 62.74,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 162,
+          "characters_right": 191,
+          "labels_left": 162,
+          "labels_right": 191,
+          "n_answer_cells": 368
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.125
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::@@@\n::::::::::::::::::::::::::::::::::::@@@@\n::::::::::::::::::::::::::::::::::+@@@@@\n::::::::::::::::::::::::::::::::@@@@@@@@\n:::::::::::::::::::::::::::+++++@@@@@@@@\n:::::  :::::::::::::::++++@@@@@@@@@@@@@@\n+@@@++@@+++@@++    +@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@++@@+@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@++@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.619,
+          "agrees_with_the_luma": true,
+          "characters_left": 162,
+          "characters_right": 191,
+          "inertia": 62.74
+        },
+        "4": {
+          "silhouette": 0.4229,
+          "agrees_with_the_luma": true,
+          "characters_left": 133,
+          "characters_right": 143,
+          "inertia": 58.86
+        },
+        "5": {
+          "silhouette": 0.4268,
+          "agrees_with_the_luma": true,
+          "characters_left": 131,
+          "characters_right": 139,
+          "inertia": 58.53
+        },
+        "6": {
+          "silhouette": 0.3786,
+          "agrees_with_the_luma": true,
+          "characters_left": 103,
+          "characters_right": 105,
+          "inertia": 54.2
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792555864",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 12671,
+      "n_observed_cells": 953,
+      "fraction_observed": 0.9927,
+      "observed_mask_iou_with_full_resolution": 0.9979,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.3895,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.03,
+        0.01,
+        0.01
+      ],
+      "inertia": 86.81,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 164,
+          "characters_right": 163,
+          "labels_left": 164,
+          "labels_right": 163,
+          "n_answer_cells": 477
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.036
+      },
+      "grid": "+   + ::::+++++++ + ++ +++++++++      ++\n +  +++::++ ++    + @+@++@+++++++ +++++ \n++++++  :++++   @@@ @ @@@@@+++ +++++++++\n        +++    @@@@@@@@@@@@+ +++++++++++\n+++++++++++  @@@@@@@@@@@@@@@@+++++++++++\n+++++ +++  @@@@@@@@@@@@@@@@@++++++ ++ ++\n++++++++++ @@@@@@@@@@@@@@@@@@++@++++++++\n++ +++ ++  @@@@@@@@@@@@@@@@@@@+@+++ + ++\n+ + +  ++  @@@@@@@@@@@@@@@@@@@++++++++++\n+   ++     @@@@@@@@@@@@@@@@@@@@@++++++++\n   ++++@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++\n@@++++@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++\n@@+++@@@@@@+@@@@@@@@@@@@@@@@@@@@@@@@@+  \n++@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@@@@@@@@@+\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @@@@@+\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3895,
+          "agrees_with_the_luma": false,
+          "characters_left": 164,
+          "characters_right": 163,
+          "inertia": 86.81
+        },
+        "4": {
+          "silhouette": 0.3539,
+          "agrees_with_the_luma": false,
+          "characters_left": 132,
+          "characters_right": 121,
+          "inertia": 66.98
+        },
+        "5": {
+          "silhouette": 0.3433,
+          "agrees_with_the_luma": false,
+          "characters_left": 109,
+          "characters_right": 98,
+          "inertia": 58.18
+        },
+        "6": {
+          "silhouette": 0.3383,
+          "agrees_with_the_luma": true,
+          "characters_left": 72,
+          "characters_right": 88,
+          "inertia": 57.99
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792560124",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 121,
+      "n_observed_cells": 49,
+      "fraction_observed": 0.051,
+      "observed_mask_iou_with_full_resolution": 0.2857,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.6671,
+      "alphabet": {
+        "2": " ",
+        "0": "+",
+        "1": "@"
+      },
+      "cluster_mean_activity": [
+        0.0,
+        0.05,
+        0.0
+      ],
+      "inertia": 146.45,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 10,
+          "characters_right": 13,
+          "labels_left": 10,
+          "labels_right": 13,
+          "n_answer_cells": 23
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.126
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::@:::::::::::::::::\n:::::::::::::::@::::::@@@:::::::::::::::\n:::::::::::::::@:::::::@::@:::::::::::::\n:::::::::::::::@:::::@@@::@:::::::::::::\n::::::::::::::@@::@@@:@@::@:::::::::::::\n::::::::::::::@@::@@@:@@:@@:::::::::::::\n::::::::::::::::::::::::@@::::::::::::::\n:::::::::::::::::::@@:@:@@::::::::::::::\n:::::::::::::::::::@@@@@@:::::::::::::::\n::::::::::::::::::::@@:@::::::::::::::::\n::::::::::::::::::@@::@:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.6671,
+          "agrees_with_the_luma": true,
+          "characters_left": 10,
+          "characters_right": 13,
+          "inertia": 146.45
+        },
+        "4": {
+          "silhouette": 0.3689,
+          "agrees_with_the_luma": true,
+          "characters_left": 10,
+          "characters_right": 13,
+          "inertia": 159.27
+        },
+        "5": {
+          "silhouette": 0.3561,
+          "agrees_with_the_luma": true,
+          "characters_left": 7,
+          "characters_right": 10,
+          "inertia": 144.23
+        },
+        "6": {
+          "silhouette": 0.3669,
+          "agrees_with_the_luma": true,
+          "characters_left": 4,
+          "characters_right": 5,
+          "inertia": 124.76
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792560597",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 1625,
+      "n_observed_cells": 501,
+      "fraction_observed": 0.5219,
+      "observed_mask_iou_with_full_resolution": 0.8902,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4757,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.03,
+        0.0,
+        0.0
+      ],
+      "inertia": 273.4,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 88,
+          "characters_right": 103,
+          "labels_left": 88,
+          "labels_right": 103,
+          "n_answer_cells": 251
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.241
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n:::::+::::::::::::::::::::::::::::::::++\n::::::::::::::::::::::+:::::::++::::::::\n:::::::::::::::::+:::++:++++:+:+++::::::\n::::::::::::+::+++++++++@@+ ::::::::::::\n:::::::::++@++@@@@@@@@@@@@@+::::::::::::\n:+@@@::+::+++@@@@@@@@@@@@@@@@@+:::::+++:\n::+++:::::: @@@@@@@@@@@@@@@@@@ :::::::::\n::::::+::::+@@@@@@@@@@@@@@@@@@@ ::::::::\n:::::::::::: @@@@@@@@@@@@@@@@@@ ::::@+@@\n:::::::::::: @@@@@@@@@@@@@@@@@@::::::@@@\n:::::::::::::@@@@@@@@@@@@@@@@@+::::::@@@\n::::::::::::::++@@@@@@@@@@@@@ ::::::::::\n::::::::::::::@@@@@@@@@@@@@@@+::::::::::\n:::::::::: @@++@@@@@@@@@@@@@@@@  :::::::\n::::::::+@@@+@@@@@@@@@@@@@@@@@@@@@+:::::\n:::::::@@@+@+@@@@@@@@@@@@@@@@@@@+@@:::::\n::::::@@@+@+@@@@@@@@@@@@@@@@@@@@++@@::::\n::::: @@@@+@@@@@@@@@@@@@@ :+@@@@@@@@@@+:\n:::::@@@@@+@@@@@@@@@@@@@@++++@@@@@+@@@@:\n::::@@@@@+++@@@@@@@@@@@@@++++@@@@@+@+:::\n::: @@@@@+++@@@@@+@@@@@@@++++@@@@@+++:::\n:: @@@@@+++@@@@@++++@@@@@@++++@@@@++++::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4757,
+          "agrees_with_the_luma": true,
+          "characters_left": 88,
+          "characters_right": 103,
+          "inertia": 273.4
+        },
+        "4": {
+          "silhouette": 0.4557,
+          "agrees_with_the_luma": false,
+          "characters_left": 86,
+          "characters_right": 77,
+          "inertia": 235.33
+        },
+        "5": {
+          "silhouette": 0.3613,
+          "agrees_with_the_luma": false,
+          "characters_left": 85,
+          "characters_right": 73,
+          "inertia": 239.23
+        },
+        "6": {
+          "silhouette": 0.357,
+          "agrees_with_the_luma": false,
+          "characters_left": 82,
+          "characters_right": 70,
+          "inertia": 240.37
+        }
+      },
+      "alphabet_k_by_truth": 3,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792560758",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 9259,
+      "n_observed_cells": 942,
+      "fraction_observed": 0.9812,
+      "observed_mask_iou_with_full_resolution": 0.9936,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4751,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.05,
+        0.01,
+        0.01
+      ],
+      "inertia": 123.23,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": "+",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 137,
+          "characters_right": 124,
+          "labels_left": 137,
+          "labels_right": 124,
+          "n_answer_cells": 472
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": false,
+        "luma_half_ratio": 1.224
+      },
+      "grid": " ::++ ::::++ +++++  ++ +++++     + +++++\n+++++++++++++::+++ +++++++@++++++++++++ \n+++++++++++++    +  ++++++@+++++++++++++\n  ++++ ::++++++++++++++@@@@@@@+++ ++++++\n::+++ ++:+   +:+++++@@@@@@@@@@+@++++++++\n:: +++ +::   +++  @@@@@@@@@@@@++++++++++\n   + ++++    + @@@@@@@@@@@@@@@++++++++++\n+++@@++++++++++@@@@@@@@@@@@@@+++++++++++\n+++++++++ +++++ @@@@@@@@@@@@@@++++++++++\n++ ++++++++++++@@@@@@@@@@@@@@@@+++++++++\n+ +++ ++++++  @@@@@@@@@@@@@@@+++++++++++\n  ++ +++++++ @@@@@@@@@@@@@@@@+++++++++++\n++++++++++++ @@@@@@@@@@@@@@@@@++++++++++\n++++++++++++ @@@@@@@@@@@@@@@@@++++++++++\n+++++++++ ++@@@@@@@@@@@@@@@@@@++++++++++\n++++++ ++++@@@@@@@@@@@@@@@@@@@ +++++++++\n++++++++++@@@@@@@@@@@@@@@+@@@@@+++++++++\n++++++++++@@@@@@@@@@@@@@@@@@@@@+++++++++\n++++++++++@@@@@@@@@@@@@@@@@@@@@++++++ ++\n++++++++++@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n+++++++++++@@@@@@@@@@@@@@@@@@@@@@+++@@  \n + ++++++++++@@@@@@@@@@@@@@@@@@+++++   +\n+ +++++++++++@@@@@@@@@@@@@@@@@++++++ +++\n+++++++++++++@@@@@@@@@@@@@@@@@+++++ ++++",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4751,
+          "agrees_with_the_luma": false,
+          "characters_left": 137,
+          "characters_right": 124,
+          "inertia": 123.23
+        },
+        "4": {
+          "silhouette": 0.4006,
+          "agrees_with_the_luma": true,
+          "characters_left": 107,
+          "characters_right": 165,
+          "inertia": 100.63
+        },
+        "5": {
+          "silhouette": 0.3325,
+          "agrees_with_the_luma": false,
+          "characters_left": 122,
+          "characters_right": 103,
+          "inertia": 100.55
+        },
+        "6": {
+          "silhouette": 0.3406,
+          "agrees_with_the_luma": false,
+          "characters_left": 89,
+          "characters_right": 83,
+          "inertia": 104.56
+        }
+      },
+      "alphabet_k_by_truth": 4,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792560773",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 933,
+      "n_observed_cells": 89,
+      "fraction_observed": 0.0927,
+      "observed_mask_iou_with_full_resolution": 0.6292,
+      "alphabet_k": 6,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.5115,
+      "alphabet": {
+        "3": " ",
+        "5": "-",
+        "4": "=",
+        "1": "*",
+        "2": "#",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.06,
+        0.0,
+        0.02,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "inertia": 499.95,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 2,
+        "characteristic_glyph": "#",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 7,
+          "characters_right": 27,
+          "labels_left": 7,
+          "labels_right": 27,
+          "n_answer_cells": 42
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.239
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::**:###::::::::::::\n::::::::::::::::::::::***###::::::::::::\n::::::::::::::::::#:::::*###::::::::::::\n::::::::::::::::::#:##**####::::::::::::\n:::::::::::::::::*##########*:::::::::::\n:::::::::::::::::#####@##@@:*:::::::::::\n::::::::::::::::::###@@##@@#::::::::::::\n::::::::::::::::::#########:::::::::::::\n::::::::::::::::::*#######::::::::::::::\n:::::::::::::::::::######:::::::::::::::\n::::::::::::::::::::####*:::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::*:::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::*:::::::::::\n:::::::*::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4571,
+          "agrees_with_the_luma": true,
+          "characters_left": 6,
+          "characters_right": 20,
+          "inertia": 906.3
+        },
+        "4": {
+          "silhouette": 0.4774,
+          "agrees_with_the_luma": true,
+          "characters_left": 7,
+          "characters_right": 27,
+          "inertia": 869.92
+        },
+        "5": {
+          "silhouette": 0.5021,
+          "agrees_with_the_luma": true,
+          "characters_left": 7,
+          "characters_right": 27,
+          "inertia": 725.09
+        },
+        "6": {
+          "silhouette": 0.5115,
+          "agrees_with_the_luma": true,
+          "characters_left": 7,
+          "characters_right": 27,
+          "inertia": 499.95
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792596296",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 4411,
+      "n_observed_cells": 937,
+      "fraction_observed": 0.976,
+      "observed_mask_iou_with_full_resolution": 0.9851,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4476,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.11,
+        0.01,
+        0.02
+      ],
+      "inertia": 172.14,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 1,
+        "characteristic_glyph": " ",
+        "answer_from_the_characters": "RIGHT",
+        "answer_from_the_labels": "RIGHT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 109,
+          "characters_right": 121,
+          "labels_left": 109,
+          "labels_right": 121,
+          "n_answer_cells": 467
+        },
+        "truth_from_the_full_resolution_luma": "RIGHT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.213
+      },
+      "grid": "++     + +  :   + ::  :::   ++   +++   +\n    +        + +   :   : +  +   +++     \n             ++    :     +      ++  +   \n++       +         ++  +     +++++ +    \n  ++++ ++           ++                  \n                ++++++                  \n+++    +     +     +++ ++     ++  +     \n++++ +      ++          ++  +++         \n  +   + +   + +++++++++ +++  +  +     + \n +++ +   +++++++@@@@@@++ +++++          \n++++         @@@@@@ @@@++++             \n         +++++@@@+  @@@@@@++++ ++++ ++  \n    +      ++@@@+++++@@@@@+++  +     +++\n  +++++     ++@@@@@@@@@@@@+++        ++ \n+++++++     ++@@@@@@@@@@@@+++        +++\n++ +++++++  ++@@@@@@@@@@@++++ ++   + +++\n::::::   ++ ++@@@@@@@@@@@++  +++++    ++\n:::::: :  ++++@@@@@@@@@@++ +++@+++  +++ \n         ++++@@@@@@@@@@@@+++@@@@@    +  \n      +  +++@@@@@@@@@@@@@@+@@@@@        \n    +++  ++@@@@@@@@@@@@@@@@@@@@         \n        +++@@@@@@@@@@@@@@@@@@@@       ++\n     +  +@@@@@@@@@@@@@@@@@@@@@+        +\n :  ++   @@@@@@@@@@@@@@@@@@@@@@@+     ++",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4476,
+          "agrees_with_the_luma": true,
+          "characters_left": 109,
+          "characters_right": 121,
+          "inertia": 172.14
+        },
+        "4": {
+          "silhouette": 0.3476,
+          "agrees_with_the_luma": true,
+          "characters_left": 97,
+          "characters_right": 116,
+          "inertia": 163.28
+        },
+        "5": {
+          "silhouette": 0.3732,
+          "agrees_with_the_luma": true,
+          "characters_left": 82,
+          "characters_right": 116,
+          "inertia": 122.66
+        },
+        "6": {
+          "silhouette": 0.3543,
+          "agrees_with_the_luma": true,
+          "characters_left": 80,
+          "characters_right": 102,
+          "inertia": 97.42
+        }
+      },
+      "alphabet_k_by_truth": 6,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792596354",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 3524,
+      "n_observed_cells": 520,
+      "fraction_observed": 0.5417,
+      "observed_mask_iou_with_full_resolution": 0.9712,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.4213,
+      "alphabet": {
+        "2": " ",
+        "1": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.07,
+        0.01,
+        0.0
+      ],
+      "inertia": 135.2,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 97,
+          "characters_right": 54,
+          "labels_left": 97,
+          "labels_right": 54,
+          "n_answer_cells": 258
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.17
+      },
+      "grid": "::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::  :   ++::::::: ::::::\n::::::::::::+: ++++      ++:::: ::::::::\n+::: +::+++++++++++++@+++++++:::::::::::\n++:::+    +++++@@@@@@@@@@@++  ::::::::::\n+           @@@@@@@@@@@@@@@+++ +::::::::\n         ++ @@@@@@@@@@@@@@@+++ +  ::::::\n           @@@@@@@@@@@@@@@@@++++  ::::::\n       @  @@+@@@@@@@@@@@@@@@@+  + ::::::\n     +@@ @@@@@@@@@@@@@@@@@@@++    :::::@\n   @@@@@@@@@@@@@@@@@@@@@@@@+++     :::::\n  @@@@@@  @@@@@@@@@@@@@@@@++       :::::\n   @@@@@  +@@@@@@@@@@@@@@@++     +::::::\n      @@@@@@@@@@@@@@@@@@@@++++   +::::::\n     @@@@@@@@@@@@@@@@@@@@@@@+++  :::::::\n   @@@@@@@@@@@@@@@@@@@@@@@@@@+++ :::: ::\n  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++:::::\n @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++@+  :::",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.4213,
+          "agrees_with_the_luma": true,
+          "characters_left": 97,
+          "characters_right": 54,
+          "inertia": 135.2
+        },
+        "4": {
+          "silhouette": 0.4158,
+          "agrees_with_the_luma": true,
+          "characters_left": 100,
+          "characters_right": 40,
+          "inertia": 100.85
+        },
+        "5": {
+          "silhouette": 0.3634,
+          "agrees_with_the_luma": true,
+          "characters_left": 95,
+          "characters_right": 37,
+          "inertia": 93.46
+        },
+        "6": {
+          "silhouette": 0.3604,
+          "agrees_with_the_luma": true,
+          "characters_left": 66,
+          "characters_right": 20,
+          "inertia": 95.09
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792596369",
+      "input_device": "Microphone Array (Realtek(R) Audio)",
+      "camera": "ASUS FHD webcam (3277:0059)",
+      "synthetic": false,
+      "n_frames": 806,
+      "n_observed_cells": 859,
+      "fraction_observed": 0.8948,
+      "observed_mask_iou_with_full_resolution": 0.9895,
+      "alphabet_k": 3,
+      "alphabet_k_selected_by": "the silhouette of the training descriptors (truth-blind)",
+      "alphabet_silhouette": 0.3958,
+      "alphabet": {
+        "1": " ",
+        "2": "+",
+        "0": "@"
+      },
+      "cluster_mean_activity": [
+        0.06,
+        0.0,
+        0.03
+      ],
+      "inertia": 308.77,
+      "grid_chars": 960,
+      "grid_bytes_utf8": 983,
+      "fit_scope": {
+        "frames": "the first half of the session",
+        "cells": "the even columns",
+        "answered_over": "the odd columns, the whole session"
+      },
+      "question": {
+        "question": "which half of the room holds more of the characteristic material?",
+        "characteristic_cluster": 0,
+        "characteristic_glyph": "@",
+        "answer_from_the_characters": "LEFT",
+        "answer_from_the_labels": "LEFT",
+        "agrees_with_the_labels": true,
+        "counts": {
+          "characters_left": 167,
+          "characters_right": 104,
+          "labels_left": 167,
+          "labels_right": 104,
+          "n_answer_cells": 426
+        },
+        "truth_from_the_full_resolution_luma": "LEFT",
+        "agrees_with_the_luma": true,
+        "luma_half_ratio": 1.495
+      },
+      "grid": "@@+++++++++++++++++++++ ::::::::::::::::\n++@+++++++++++++++++++++::::::::::::::::\n++++++++++++++++++++++++::::::::::::::::\n+++++++++++++++++++++++ ::::::::::::::::\n++++++++++++++++++++++++::::::::::::::::\n++@@@@@@+++++++++++++++      +++++:::+++\n+++++++++@++++@++++++++ +++++++ ++ :::::\n+++++@@+@@+++@@@@@@@+++++++++++@+@++++::\n+++@@@@@@@@@@@@@@@@@@@@@@@@+++@++++++:::\n+++@@@@@@@@@@@@@@@@@@@@@@@@++++++++++++:\n@++@@@@@@@@@@@@@@@@@@@@@@@@@@@++++++++++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++++\n+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++:\n+@@+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++@@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++:\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++@\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++++ ::\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++:\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+++++++:\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@++  ++:\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+@@+ ++\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  \n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+  \n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@+ ",
+      "the_cardinality_curve": {
+        "3": {
+          "silhouette": 0.3958,
+          "agrees_with_the_luma": true,
+          "characters_left": 167,
+          "characters_right": 104,
+          "inertia": 308.77
+        },
+        "4": {
+          "silhouette": 0.3167,
+          "agrees_with_the_luma": true,
+          "characters_left": 144,
+          "characters_right": 77,
+          "inertia": 294.07
+        },
+        "5": {
+          "silhouette": 0.3577,
+          "agrees_with_the_luma": true,
+          "characters_left": 120,
+          "characters_right": 69,
+          "inertia": 207.07
+        },
+        "6": {
+          "silhouette": 0.3486,
+          "agrees_with_the_luma": true,
+          "characters_left": 144,
+          "characters_right": 77,
+          "inertia": 276.31
+        }
+      },
+      "alphabet_k_by_truth": 5,
+      "agrees_with_the_luma_if_k_were_chosen_by_the_truth": true
+    },
+    {
+      "session": "1792600782",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600836",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600866",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600896",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600915",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600927",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600945",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600957",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792600975",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601183",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601235",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601265",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601295",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601314",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601327",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601344",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601356",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601374",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601451",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601504",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601534",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601564",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601583",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601595",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601613",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601625",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792601643",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608460",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608490",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608612",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608642",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608750",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608780",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608899",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    },
+    {
+      "session": "1792608929",
+      "input_device": "Fake Default Audio Input",
+      "camera": "C:\\Users\\casey\\AppData\\Local\\Temp\\over_e2e\\static.y4m",
+      "synthetic": true,
+      "n_observed_cells": 0,
+      "refused": true,
+      "why": "the input device is synthetic (an end-to-end test rig), so this is not a room"
+    }
+  ],
+  "summary": {
+    "n_sessions_with_a_grid": 43,
+    "n_refused_as_synthetic": 35,
+    "held_out_question_agreement_with_the_luma": "33/43",
+    "agreement_rate_with_the_luma": 0.7674,
+    "agreement_rate_with_the_labels": 1.0,
+    "the_ties": {
+      "tie_ratio_threshold": 1.1,
+      "n_ties_in_the_truth": 12,
+      "n_decisive": 31,
+      "agreement_over_the_decisive": "26/31",
+      "agreement_rate_over_the_decisive": 0.8387,
+      "the_reading": "the truth is a NEAR-TIE in most sessions (the luma's per-half change energy has a median ratio of 1.17 and a minimum of 1.00), so the question is hard by construction and the raw agreement is not measuring much unless the ties are separated out.  Both numbers are reported."
+    },
+    "the_misses": [
+      {
+        "session": "1792553152",
+        "characters_left": 190,
+        "characters_right": 164,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.337,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792553852",
+        "characters_left": 146,
+        "characters_right": 28,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.322,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792553885",
+        "characters_left": 133,
+        "characters_right": 112,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.163,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792554097",
+        "characters_left": 5,
+        "characters_right": 9,
+        "luma_truth": "LEFT",
+        "luma_half_ratio": 1.003,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792554309",
+        "characters_left": 163,
+        "characters_right": 158,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.004,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792554532",
+        "characters_left": 99,
+        "characters_right": 157,
+        "luma_truth": "LEFT",
+        "luma_half_ratio": 1.248,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792555166",
+        "characters_left": 4,
+        "characters_right": 4,
+        "luma_truth": "LEFT",
+        "luma_half_ratio": 1.082,
+        "grid_count_is_tied": true
+      },
+      {
+        "session": "1792555182",
+        "characters_left": 2,
+        "characters_right": 3,
+        "luma_truth": "LEFT",
+        "luma_half_ratio": 1.094,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792555864",
+        "characters_left": 164,
+        "characters_right": 163,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.036,
+        "grid_count_is_tied": false
+      },
+      {
+        "session": "1792560758",
+        "characters_left": 137,
+        "characters_right": 124,
+        "luma_truth": "RIGHT",
+        "luma_half_ratio": 1.224,
+        "grid_count_is_tied": false
+      }
+    ],
+    "the_luma_half_ratio_median": 1.173,
+    "the_holdout": "the alphabet is fitted on the first half of the frames and the even columns; the question is answered over the odd columns, and graded against the FULL-RESOLUTION luma so the agreement is not a tautology",
+    "the_cardinality_rule": "k is chosen by the silhouette of the training descriptors, which never looks at the truth.  Had k been chosen by the agreement with the truth -- the first version's rule -- the number below would have been the optimistic bound instead",
+    "the_cardinality_curve": {
+      "3": {
+        "agree": 33,
+        "of": 43,
+        "rate": 0.7674
+      },
+      "4": {
+        "agree": 31,
+        "of": 43,
+        "rate": 0.7209
+      },
+      "5": {
+        "agree": 33,
+        "of": 43,
+        "rate": 0.7674
+      },
+      "6": {
+        "agree": 31,
+        "of": 43,
+        "rate": 0.7209
+      }
+    },
+    "the_optimistic_bound": {
+      "agreement_if_k_were_chosen_by_the_truth": "39/43",
+      "rate": 0.907,
+      "n_sessions_where_the_truth_would_pick_a_different_k": 37,
+      "the_reading": "the two rules disagree about the cardinality on some sessions, and where they disagree the truth-chosen k is the optimistic one by construction -- which is why it is the bound and not the headline"
+    },
+    "the_k_distribution": {
+      "3": 33,
+      "4": 9,
+      "5": 0,
+      "6": 1
+    },
+    "the_negative_glyph_iou": {
+      "what": "the grid's observed mask against the PIXEL-LEVEL coverage -- the majority of a cell's pixels changed above the noise floor.  The grid pools the change first and this pools the votes, so the IoU is what the 4x4 pooling costs",
+      "median": 0.9764,
+      "min": 0.25
+    },
+    "grid_bytes_median": 983,
+    "grid_bytes_max": 983,
+    "bytes_per_frame_of_source": 0.8316
+  }
+}

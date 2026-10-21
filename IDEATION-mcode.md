@@ -634,6 +634,51 @@ already prefers to a strong-but-false one.
 
 ---
 
+### The build landed — dated note, 2026-10-21
+
+**FIRST BUILD above is BUILT and MEASURED.** `experiments/glyph_grid.py`
+(20/20 selftest), `results/glyph_grid.json`, report `docs/GLYPH-GRID.md`,
+ledger row in `EXPERIMENTS.md`. Scored against this riff's own
+acceptance:
+
+- the grid is 40×24 and the whole file is **under 1 KB** — **MET**, 983
+  bytes, **18,470×** smaller than the median session's luma;
+- the alphabet is **fitted** and **leave-one-out** — **MET**, the
+  leave-one-out is the even/odd column split with a prediction step;
+- one held-out question, answered from the grid alone and scored against
+  the full-resolution luma — **MET**, **33/43 (76.7 %)** raw and
+  **26/31 (83.9 %)** over the decisive sessions;
+- the negative glyph `:` agrees with the measured coverage to a stated
+  **IoU** — **MET**, median **0.976** against the pixel-level coverage
+  (it was not met at first, because the IoU was never computed);
+- the synthetic sessions produce a **refusal**, not a grid — **MET**,
+  35 refused by device and 10 more for too few observed cells.
+
+**The deciding number above was *"if the grid is 1000× smaller and loses
+nothing, the semantic splat's sidecar is free."* The verdict: 18,470×
+smaller and it DOES lose** — a quarter of the answers, and its margin
+is systematically larger than the room's (1.300 vs 1.173), so it is
+confidently wrong about a fifth of the time.
+
+**And the build caught itself twice, which is the part worth carrying
+forward.** The first version scored **43/43** because counting
+characters IS counting cluster labels — a tautology scores 100 %. The
+second scored **39/43** because the alphabet's cardinality was chosen by
+the agreement with the truth the answer was judged against; the truth
+would have picked a different k on **37 of 43** sessions, worth six
+sessions of inflation. **Both were caught by distrusting a number that
+looked good**, and the honest number is the third one.
+
+**So: idea 1 survives in bytes and does not survive as a lossless
+summary; and the fallback does not save it, because the acoustic sweep
+already says the embedding does not carry position either (`x0` −0.083,
+worse with resolution). NEITHER the character nor the embedding carries
+the coordinates — which is exactly what idea 2 assumed, and the grid
+vindicates it.** The grid is a good vocabulary for what the room is
+doing and a poor geometry for where it is.
+
+---
+
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured
 lens files and studies, and from the `chiaroscuro-embedding` and
 `voxelglyph` result files; the session lists and thresholds are in
