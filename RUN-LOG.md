@@ -83,14 +83,33 @@ forensics say (evidence in kernel journal + this session's probes):
   then `--guided 1 --out results/guided_lego.jsonl`; crossings print at
   end. Bars: first step val PSNR ≥25 dB and ≥30 dB (EXPERIMENTS rows).
 
+## 2026-10-21 ~19:40 — the build saga (missing-header dominoes + memory)
+
+gsplat source build, ten attempts, each failure banked:
+- `gcc-13` absent in toolchain (broken symlink) → system gcc (no
+  cc1plus) → **toolchain g++-13 for CC/CXX/CUDAHOSTCXX**.
+- torch headers pulled in a missing-system-deps chain, fixed by deb
+  downloads into `~/opt` (no sudo): libcusparse-dev-13-2,
+  libcusolver-dev-13-2, libpython3.12-dev (exposed via `CPATH`;
+  `cudss.h` was a red herring — guarded by USE_CUDSS).
+- MAX_JOBS=2 OOM'd at 428 MB avail (watchdog kill); MAX_JOBS=1 survived
+  34/50 files until the peak template file dipped avail to 453 MB with
+  a heavier evening desktop (another agent seat, `minimax-code`, shares
+  this box). Watchdog killed ninja/nvcc but orphaned a **2.1 GB ptxas**
+  at 99% CPU (now in the kill list).
+- Final form (`tools/build_gsplat.sh`, versioned): wait for ≥4.3 GB
+  avail before compiling, MAX_JOBS=1, 2s-poll watchdog at 350 MB.
+  Waiting as of 19:36 UTC — after a reboot it will have ~6.5 GB and
+  should clear the last 16 files without drama.
+- Results tooling banked meanwhile: `src/analyze_runs.py` (crossings,
+  equal-gaussian-count tiebreak, seed-join read — tested on synthetic
+  logs), riff #2 arm (`--ascii-first-iters`, third autorun), seed-level
+  instrumentation riding the strategy state (mcode cross enabler).
+
 ## next
 
+- Build completes when memory allows (in-session waiter) or post-reboot
+  (cron leg) → autorun: smoke, baseline, guided, ascii-first →
+  `src/analyze_runs.py` → EXPERIMENTS rows.
 - Casey: reboot (fixes GPU RM wedge) + `gh auth login` (token dead).
-- Auto-runner armed: `src/run_when_gpu.sh` — cron `@reboot` + one
-  in-session waiter. It verifies CUDA+gsplat with a real render, waits
-  for memory to settle (≥2.5 GB), runs a 300-step guided smoke (must
-  inject), then baseline → guided full runs sequentially under a
-  MemAvailable<800 MB watchdog (no repeat of the 17:35 OOM), commits
-  the jsonl artifacts locally. tegrastats sampled throughout as GPU-work
-  proof. Rows get filled from those files when I read them.
 
