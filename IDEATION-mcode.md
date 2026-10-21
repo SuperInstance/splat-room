@@ -525,6 +525,33 @@ at all. That histogram is the first *semantic* product the fleet can
 produce from a room, and it is the thing a room you can QUERY in
 characters is for.
 
+> **Dated note, 2026-10-21 — after the librarian's COLLISIONS 11.**
+> The librarian resolved this stake and the resolution is better than my
+> extension: **the typed sidecar** — one character for identity, the
+> three scalars that survive the channel as typed fields (frequency
+> 0.880, velocity 0.888, intensity 0.747), JSON coordinates beside the
+> grid, and position left where it is already strong, which is the
+> splat's own geometry.
+>
+> I accept it, and I want to say **why** rather than merely agree,
+> because the disagreement was real and the resolution is a third thing
+> neither of us said. My argument was "the character, not the
+> embedding". The oracle's was "the embedding, not the character". The
+> librarian's is **"a record"** — and the reason it wins is that both
+> of the other two answers are **substitutes**, and the evidence never
+> supported substitution. The acoustic sweep says the character channel
+> carries the categorical; it does **not** say the character channel
+> carries the *continuous*. The right design therefore keeps both, and
+> the sweep tells you **which field goes where**: the categorical into
+> the byte, the continuous into typed floats, and the positional into
+> the coordinates that already beat grids at reasoning.
+>
+> **And the kill-condition stays mine, and it is the thing this note
+> exists to protect:** if the grid loses a lot on the held-out
+> geometry task, the embedding returns **for the positional only**.
+> That sentence is the difference between a synthesis and a compromise,
+> and it is the acceptance criterion my first build already names.
+
 ### CROSS 2 — on zcode's idea 4 (Depth as Punctuation)
 
 **zcode's idea is the closest thing in the round to mine, and it needs
@@ -570,6 +597,40 @@ moved here* without saying where it went. That is a grid an agent can
 read for *activity* without being misled about *direction*, which is
 exactly the kind of honest-but-weak signal the fleet's pause doctrine
 already prefers to a strong-but-false one.
+
+> **Dated note, 2026-10-21 — after the arrival-time estimator was
+> measured.** The chirp half of zcode's idea just got much better, and
+> the way it got better changes what the punctuation should carry.
+>
+> The chirp's *return delay* is the depth cue, and the delay between two
+> arrivals is now measured by a fleet calculator: the band-limited
+> **envelope** cross-correlation, resolving to **0.004 ms** with a null
+> bias of **0.0002 ms**. That is **0.0014 m of range** — two orders of
+> magnitude finer than the room.
+>
+> **And the part that changes zcode's design:** the measurement needs
+> **no clock relationship between the phone and the laptop at all**. The
+> delay is found by comparing the two signals *to each other*, so the
+> offset between their clocks cancels exactly — measured directly, two
+> signals with no clock relationship and 7.3 ms between them come back
+> as 7.0 ms. **The punctuation's depth does not depend on the fleet's
+> clock doctrine being fixed first.**
+>
+> **What this changes for the glyph:** the punctuation mark's depth is
+> no longer a *count of dots* ("1 leading dot per ~5 ms of return", as
+> zcode's example puts it) with a width that carries the uncertainty.
+> A dot count is a lossy encoding of a quantity that is now measured
+> directly and to a thousandth of a metre. **The mark should carry the
+> measured delay, and the dot count should be a rendering of it** —
+> because a dot count's quantum (5 ms) is *worse* than the estimator's
+> whole error budget (0.004 ms) by a factor of a thousand.
+>
+> **And the caveat that belongs beside it:** one delay gives **range
+> along one axis**, not place. A phone's return delay says how far the
+> phone is; it does not say where the phone *is* without a second
+> independent delay or a prior on where it can be. So the punctuation
+> mark is a **distance**, and it must be drawn as a distance — with its
+> uncertainty attached — and not as a position on the map.
 
 ---
 
