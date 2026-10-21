@@ -1,0 +1,58 @@
+{
+ "bundle_sha256": "96de5d6d0e20fe9e2204988ef0de8db8ecca1a658a4c7b130f2cce0de26b5f86",
+ "session": "roomlens-2026-10-21T21-56-59-651Z-6ddlos",
+ "startedAt": "2026-10-21T21:56:59.656Z",
+ "endedAt": "2026-10-21T22:01:01.532Z",
+ "n_frames": 399,
+ "tier_hist": {
+  "STILL": 110,
+  "SLOW": 280,
+  "MOVING": 9
+ },
+ "frame_t_ms": {
+  "min": 126,
+  "max": 176667,
+  "span_s": 176.5
+ },
+ "grid_most_common": {
+  "cols": 96,
+  "rows": 93
+ },
+ "pose_missing_frames": 0,
+ "n_keyframes": 80,
+ "exact_t_joins": 80,
+ "jpeg_dims_hist": {
+  "320x569": 80
+ },
+ "jpeg_exif_orientation_hist": {
+  "None": 80
+ },
+ "implied_cell_px": {
+  "w": 3.33,
+  "h": 6.12
+ },
+ "kf_pose_ranges_deg": {
+  "alpha": [
+   3.4,
+   355.5
+  ],
+  "beta": [
+   65.2,
+   97.1
+  ],
+  "gamma": [
+   -49.5,
+   88.5
+  ]
+ },
+ "kf_t_ms": {
+  "min": 126,
+  "max": 175497
+ },
+ "heading_present": 0,
+ "audio_bytes": 2850757,
+ "audio_meta_bytes": 2850757,
+ "rir_measures": [
+  "rir00.webm"
+ ]
+}

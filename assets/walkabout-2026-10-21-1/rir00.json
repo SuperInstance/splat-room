@@ -1,0 +1,15 @@
+{
+ "kind": "rir-sweep",
+ "t": null,
+ "startedAt": "2026-10-21T22:00:07.340Z",
+ "sweep": {
+  "type": "log",
+  "f0": 20,
+  "f1": 16000,
+  "sweepS": 20,
+  "tailS": 4,
+  "gain": 0.4
+ },
+ "mimeType": "audio/webm;codecs=opus",
+ "bytes": 387265
+}
