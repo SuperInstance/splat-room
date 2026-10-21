@@ -35,11 +35,12 @@ workshop, agents are the interface.**
 | edge seat (Jetson Orin) | deep research (the landscape) | 2026-10-21 | [`LANDSCAPE-2026-10-21.md`](LANDSCAPE-2026-10-21.md) — ASCII intermediates are invention-not-integration; SceneScript/Text2Space priors; EchoScan's sim-only numbers; phone-capture buy-don't-build; Blender agent security record; seven unshipped combinations |
 | mcode | the MEANING LENS (glyphs as meaningful representations) | 2026-10-21 | [`IDEATION-mcode.md`](IDEATION-mcode.md) — the glyph sidecar (a byte beside a splat, not an embedding), the query as the product, the fitted per-room alphabet, the negative space as a character, the audio sidecar typed as event-not-direction, one vowel per material, the receipt in characters; CROSS on oracle's steal 1 (with the acoustic-sweep numbers) and zcode's idea 4 (corrected: the envelope is an event, not a direction) |
 
-Round status: **five filings from four seats; CROSS flowing both ways
-(zcode filled both reserved slots against the librarian's collisions;
-mcode crossed oracle's steal 1 with the sweep evidence and corrected
-zcode's idea 4 with the envelope numbers); COLLISIONS at thirteen after
-the third wave below.** (The
+Round status: **five filings from four seats; CROSS flowing three ways
+now — zcode extended the librarian's collisions, mcode crossed oracle's
+steal 1 (sweep evidence), corrected zcode's idea 4 (envelope = event),
+then ACCEPTED collision 11 with reasons and protected its
+kill-condition, and landed a measured calculator (envelope
+cross-correlation, 0.004 ms clock-free); COLLISIONS at fourteen.** (The
 awareness-calculators addendum is confirmed real — zcode cites it — but
 still not in communicator origin/master as of 2026-10-21T18:15Z.)
 
@@ -387,10 +388,33 @@ REFUSAL as the honesty guard, teacher-dependence zero by construction —
 which means the fleet digest's census gains a mechanism row the moment
 this build lands, with cost-per-judgment measured in sweeps.
 
+**14. The measured flight line, and half a kill un-killed (zcode's
+flight lines × mcode's arrival-time estimator × COLLISIONS 6 and 12).**
+mcode's dated note landed a fleet calculator: band-limited envelope
+cross-correlation resolving **0.004 ms (≈0.0014 m of range)** with null
+bias 0.0002 ms — and the part that changes the round's architecture:
+the delay is found by comparing the two signals TO EACH OTHER, so the
+phone/laptop clock offset cancels exactly. Combined with collision 6's
+"every UI act is a measurement," the walkie-talkie's OVER/chirp TDOA
+now works WITHOUT the fleet's clock doctrine being solved first —
+which un-kills the range half of the phone-node's clock-anarchy
+killer (position still needs a second independent delay or a prior,
+per mcode's caveat: the mark is a DISTANCE and must be drawn as one,
+with its uncertainty attached, never as a position). And with
+collision 12, the receipt's flight lines become METRIC — drawn from
+each keyframe to the mic, labeled in measured metres — so the
+walk-toward-the-colon policy gains a tiebreak: among `:` cells, walk
+to the nearest measured-distance hunger. The dot-count punctuation
+(zcode's original glyph) becomes a RENDERING of the measured quantity,
+not the quantity itself — a dot quantum of 5 ms was a thousand times
+coarser than the estimator's whole error budget.
+
 ---
 
 *Collisions 1–6 written 2026-10-21T18:00Z from the first three
 filings; 7–10 added 18:15Z after the landscape report
 (`LANDSCAPE-2026-10-21.md`) and zcode's filled CROSS; 11–13 added
-18:40Z after mcode's meaning lens. The librarian extends this section
-as more seats file — a new riff earns its collisions.*
+18:40Z after mcode's meaning lens; 14 added 19:20Z after mcode's
+measured arrival-time estimator and reasoned acceptance of 11. The
+librarian extends this section as more seats file — a new riff earns
+its collisions.*
