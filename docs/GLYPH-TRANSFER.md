@@ -227,6 +227,14 @@ ours.
    and a transfer that only works at one cardinality is a caption with a
    particular font.
 
+   > **Dated note, later on 2026-10-21: this kill FIRED, and §6 has
+   > the numbers.** The transfer does not survive a finer cardinality:
+   > 79.3 % at k=3 against 69.9 % at k=6, and the gap over the control
+   > collapses from 14.7 points to 2.5. **So the kill was right, and
+   > the thing that survives is not the vocabulary at an arbitrary k but
+   > the vocabulary at a COARSE one** — which is a different and better
+   > answer than "the transfer is a caption".
+
 ---
 
 ## 5. THE NEXT MEASUREMENT
@@ -245,6 +253,10 @@ k = 4, 5 and 6.** The tool takes the cardinality as a constant; the
 whole question "does a vocabulary transfer, or does a *particular*
 vocabulary transfer?" is unanswered until it is run at more than one k.
 
+> **Dated note, later on 2026-10-21: the first of those three is now
+> MEASURED — see §6.** It turned out to be the most consequential
+> number in this study, and it changed the reading of §2.
+
 And a third, from the systematic errors: **why are three sessions read
 backwards?** They are missed by the grid study too, so the failure
 belongs to the vocabulary and not to the transfer. That is the next
@@ -253,7 +265,93 @@ transfer curve.
 
 ---
 
-## 6. HOW TO REPRODUCE
+## 6. THE CARDINALITY SWEEP — the vocabulary's meaningfulness is concentrated at low k
+
+**The first of the three numbers above, measured. And it is the most
+consequential thing in this study: the cardinality is not a free
+parameter, and more symbols is not a richer vocabulary — it is a
+diluted one.**
+
+The tool now takes the cardinality as an argument and fits every
+alphabet at k = 3, 4, 5 and 6 over the same corpus, so the whole table
+is one run.
+
+| k | the transfer (decisive) | the control (decisive) | **the gap** | follows the TARGET | the characteristic cluster is the MOST active one |
+|---|---|---|---|---|---|
+| **3** | 1,032/1,302 (79.3 %) | 840/1,302 (64.5 %) | **14.74 pts** | 80.0 % | **24 / 43** |
+| 4 | 936/1,302 (71.9 %) | 870/1,302 (66.8 %) | **5.07 pts** | 73.2 % | 14 / 43 |
+| 5 | 909/1,302 (69.8 %) | 884/1,302 (67.9 %) | **1.92 pts** | 70.3 % | 8 / 43 |
+| 6 | 910/1,302 (69.9 %) | 878/1,302 (67.4 %) | **2.46 pts** | 69.3 % | 7 / 43 |
+
+**Two things happen at once, and both are real.**
+
+**The raw transfer falls** — 79.3 % at k=3 to 69.9 % at k=6, and the
+"follows the target" measure falls with it, 80.0 % to 69.3 %. A
+finer vocabulary is a more **session-specific** vocabulary: the extra
+symbols carve the room into finer and more particular pieces, and those
+pieces do not carry to another session.
+
+**And the characteristic material stops being a choice.** At k=3 the
+cluster that owns the most cells is the **most active** cluster in 24 of
+43 sessions, and it beats a random cluster of the same alphabet by
+14.7 points. At k=5 it is the most active one in 8 of 43, and it beats
+a random cluster by **1.9 points** — which is to say it barely beats
+one at all. **At a fine cardinality, "the cluster with the most cells"
+and "the material that moves" stop being the same thing**, and the
+question has nothing left to ask.
+
+**The mechanism is in the descriptors.** A cell's descriptor is
+activity, log-change and edge gradient. At k=3 the partition is coarse
+enough to be {the thing that moves, the thing that barely moves, the
+thing that does not move}, and the biggest cluster is the material. At
+k=6 it is a finer cut along the same axis, so the biggest cluster is
+whichever slice of the descriptor space happens to hold the most cells,
+and that slice is not the active material.
+
+**So the rule the grid study used was right for a reason it did not
+know.** The silhouette — a truth-blind rule — chose k=3 for 33 of 43
+sessions, and k=3 is exactly where the vocabulary still has a
+distinction to make. **The right cardinality is not a matter of
+alignment, as the riff guessed; it is a matter of the alphabet staying
+coarse enough that "the biggest material" and "the moving material"
+are the same thing.**
+
+### 6.1 What this does NOT say
+
+- **It does not say k=3 is optimal.** It says k=3 is where the
+  vocabulary is *meaningful* on this corpus, on this question, with
+  this descriptor. A different question might want a different k.
+- **It does not say more symbols never help.** It says that on the
+  question measured here, the extra symbols cost 9.4 points of
+  transfer and 12.8 points of the gap over the control.
+- **It does not say the grid study's headline is wrong.** The grid
+  study's own per-k curve was flat (33, 31, 33, 31), and that remains
+  true: the grid's SELF-answer barely depends on k. What depends on k
+  is the **transfer** — whether the vocabulary means the same thing in
+  another session. That is a different question and the flat curve
+  could not see it.
+- **It does not replace the across-room test.** It makes it sharper:
+  the second room's test should be run at k=3, and the sweep says why
+  a vocabulary fitted at k=6 would fail it for a reason that has
+  nothing to do with the room.
+
+### 6.2 The next measurement this suggests
+
+**The cardinality rule is wrong in the same way the first rule was.**
+The silhouette measures how well separated the clusters are, and it
+knows nothing about whether the biggest one is the material. **A rule
+that keeps "the biggest cluster is the moving material" would be
+better, and it is measurable today:** the candidate rule is the one
+that maximises the gap between the characteristic cluster and a random
+cluster of the same alphabet, with the truth never consulted. That is
+a rule about the ALPHABET's structure rather than its separation, and
+it is the natural successor to the silhouette.
+
+It is stated here before it is measured, so that it can be.
+
+---
+
+## 7. HOW TO REPRODUCE
 
 ```sh
 # the selftest: 8 checks

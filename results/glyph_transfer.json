@@ -1,6 +1,6 @@
 {
   "study": "the glyph grid transfer test -- is the vocabulary the room's or the capture's?",
-  "generated_utc": "2026-10-21T20:13:49Z",
+  "generated_utc": "2026-10-21T20:44:04Z",
   "method": {
     "k": 3,
     "k_why": "FIXED, so two alphabets can be compared at all; k=3 is the silhouette's own modal choice over the corpus",
@@ -871,6 +871,13 @@
         }
       ],
       "the_reading": "the transfer reads the TARGET, not the source: it follows the target even when the two sessions disagree.  The raw decay curve is CONFOUNDED -- similar sessions tend to agree about the room anyway, so a copier is not punished in that band, which is why the raw curve inverts"
+    },
+    "the_characteristic_cluster_is_active": {
+      "n_sessions": 43,
+      "n_where_it_is_the_MOST_active_cluster": 24,
+      "n_where_it_is_the_LEAST_active_cluster": 4,
+      "mean_activity_rank": 1.465,
+      "the_reading": "the confound check: the characteristic cluster is the one that owns the most CELLS, and a cluster that owns the most cells is not necessarily the one that MOVES.  If the extra symbols at a higher cardinality carve off the inert background, the characteristic cluster stops meaning anything and the transfer collapses for a reason that has nothing to do with the vocabulary"
     },
     "the_per_session_consistency": {
       "mean_left_rate_when_the_truth_is_LEFT": 0.6457,
@@ -28537,5 +28544,608 @@
       "similarity": 0.8802,
       "same_truth": true
     }
-  ]
+  ],
+  "the_cardinality_sweep": {
+    "the_k_values": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "the_question": "does a vocabulary transfer, or does a PARTICULAR vocabulary transfer?  A vocabulary with three symbols and one with four have no correspondence, so the sweep is the only way to tell",
+    "by_k": {
+      "3": {
+        "n_sessions": 43,
+        "n_pairs": 1806,
+        "the_self_case": {
+          "agree": [
+            30,
+            43,
+            0.6977
+          ],
+          "decisive": [
+            22,
+            31,
+            0.7097
+          ],
+          "the_reading": "the ceiling of the transfer: what an alphabet achieves on the session it was fitted on, under this study's own rule"
+        },
+        "the_transfer": {
+          "agree_all": [
+            1372,
+            1806,
+            0.7597
+          ],
+          "agree_decisive": [
+            1032,
+            1302,
+            0.7926
+          ],
+          "the_reading": "A's alphabet answering B's question, over every ordered pair of distinct sessions"
+        },
+        "the_control": {
+          "agree_all": [
+            1053,
+            1806,
+            0.5831
+          ],
+          "agree_decisive": [
+            840,
+            1302,
+            0.6452
+          ],
+          "the_reading": "the same transfer with a random non-characteristic cluster: the floor the transfer must beat to mean anything"
+        },
+        "the_decay_curve": [
+          {
+            "similarity_low": -0.3032,
+            "similarity_high": 0.0459,
+            "n_pairs": 256,
+            "agree": 215,
+            "rate": 0.8398,
+            "the_two_sessions_share_the_truth": 0.2852
+          },
+          {
+            "similarity_low": 0.0459,
+            "similarity_high": 0.2097,
+            "n_pairs": 255,
+            "agree": 201,
+            "rate": 0.7882,
+            "the_two_sessions_share_the_truth": 0.4784
+          },
+          {
+            "similarity_low": 0.2097,
+            "similarity_high": 0.3784,
+            "n_pairs": 271,
+            "agree": 226,
+            "rate": 0.8339,
+            "the_two_sessions_share_the_truth": 0.5904
+          },
+          {
+            "similarity_low": 0.3784,
+            "similarity_high": 0.5658,
+            "n_pairs": 277,
+            "agree": 229,
+            "rate": 0.8267,
+            "the_two_sessions_share_the_truth": 0.574
+          },
+          {
+            "similarity_low": 0.5658,
+            "similarity_high": 0.9337,
+            "n_pairs": 247,
+            "agree": 163,
+            "rate": 0.6599,
+            "the_two_sessions_share_the_truth": 0.6599
+          }
+        ],
+        "the_mechanism": {
+          "the_clean_measure": "among the decisive pairs where the SOURCE and the TARGET disagree about the room, whose answer does the transfer follow?  A copier is punished here and nowhere else",
+          "n_pairs": 626,
+          "follows_the_target": 0.8003,
+          "follows_the_source": 0.1997,
+          "by_similarity": [
+            {
+              "similarity_low": -0.3032,
+              "similarity_high": -0.0199,
+              "n_pairs": 128,
+              "follows_the_target": 0.8828,
+              "follows_the_source": 0.1172
+            },
+            {
+              "similarity_low": -0.0199,
+              "similarity_high": 0.129,
+              "n_pairs": 128,
+              "follows_the_target": 0.75,
+              "follows_the_source": 0.25
+            },
+            {
+              "similarity_low": 0.129,
+              "similarity_high": 0.2844,
+              "n_pairs": 126,
+              "follows_the_target": 0.8333,
+              "follows_the_source": 0.1667
+            },
+            {
+              "similarity_low": 0.2844,
+              "similarity_high": 0.5012,
+              "n_pairs": 126,
+              "follows_the_target": 0.8413,
+              "follows_the_source": 0.1587
+            },
+            {
+              "similarity_low": 0.5012,
+              "similarity_high": 0.9077,
+              "n_pairs": 127,
+              "follows_the_target": 0.6772,
+              "follows_the_source": 0.3228
+            }
+          ],
+          "the_reading": "the transfer reads the TARGET, not the source: it follows the target even when the two sessions disagree.  The raw decay curve is CONFOUNDED -- similar sessions tend to agree about the room anyway, so a copier is not punished in that band, which is why the raw curve inverts"
+        },
+        "the_characteristic_cluster_is_active": {
+          "n_sessions": 43,
+          "n_where_it_is_the_MOST_active_cluster": 24,
+          "n_where_it_is_the_LEAST_active_cluster": 4,
+          "mean_activity_rank": 1.465,
+          "the_reading": "the confound check: the characteristic cluster is the one that owns the most CELLS, and a cluster that owns the most cells is not necessarily the one that MOVES.  If the extra symbols at a higher cardinality carve off the inert background, the characteristic cluster stops meaning anything and the transfer collapses for a reason that has nothing to do with the vocabulary"
+        },
+        "the_per_session_consistency": {
+          "mean_left_rate_when_the_truth_is_LEFT": 0.6457,
+          "mean_left_rate_when_the_truth_is_RIGHT": 0.1658,
+          "n_sessions_answered_consistently_by_at_least_90_percent_of_partners": 22,
+          "n_sessions": 43,
+          "the_reading": "each session is answered the SAME WAY by nearly every partner, and the side the partners agree on is the side the truth is on -- so the transfer is a detector, not a guesser, and its errors are SYSTEMATIC rather than random"
+        },
+        "the_similarity": {
+          "mean": 0.3097,
+          "min": -0.3032,
+          "max": 0.9337
+        }
+      },
+      "4": {
+        "n_sessions": 43,
+        "n_pairs": 1806,
+        "the_self_case": {
+          "agree": [
+            29,
+            43,
+            0.6744
+          ],
+          "decisive": [
+            23,
+            31,
+            0.7419
+          ],
+          "the_reading": "the ceiling of the transfer: what an alphabet achieves on the session it was fitted on, under this study's own rule"
+        },
+        "the_transfer": {
+          "agree_all": [
+            1255,
+            1806,
+            0.6949
+          ],
+          "agree_decisive": [
+            936,
+            1302,
+            0.7189
+          ],
+          "the_reading": "A's alphabet answering B's question, over every ordered pair of distinct sessions"
+        },
+        "the_control": {
+          "agree_all": [
+            1090,
+            1806,
+            0.6035
+          ],
+          "agree_decisive": [
+            870,
+            1302,
+            0.6682
+          ],
+          "the_reading": "the same transfer with a random non-characteristic cluster: the floor the transfer must beat to mean anything"
+        },
+        "the_decay_curve": [
+          {
+            "similarity_low": -0.3032,
+            "similarity_high": 0.0459,
+            "n_pairs": 256,
+            "agree": 200,
+            "rate": 0.7812,
+            "the_two_sessions_share_the_truth": 0.2852
+          },
+          {
+            "similarity_low": 0.0459,
+            "similarity_high": 0.2097,
+            "n_pairs": 255,
+            "agree": 179,
+            "rate": 0.702,
+            "the_two_sessions_share_the_truth": 0.4784
+          },
+          {
+            "similarity_low": 0.2097,
+            "similarity_high": 0.3784,
+            "n_pairs": 271,
+            "agree": 209,
+            "rate": 0.7712,
+            "the_two_sessions_share_the_truth": 0.5904
+          },
+          {
+            "similarity_low": 0.3784,
+            "similarity_high": 0.5658,
+            "n_pairs": 277,
+            "agree": 201,
+            "rate": 0.7256,
+            "the_two_sessions_share_the_truth": 0.574
+          },
+          {
+            "similarity_low": 0.5658,
+            "similarity_high": 0.9337,
+            "n_pairs": 247,
+            "agree": 148,
+            "rate": 0.5992,
+            "the_two_sessions_share_the_truth": 0.6599
+          }
+        ],
+        "the_mechanism": {
+          "the_clean_measure": "among the decisive pairs where the SOURCE and the TARGET disagree about the room, whose answer does the transfer follow?  A copier is punished here and nowhere else",
+          "n_pairs": 626,
+          "follows_the_target": 0.7316,
+          "follows_the_source": 0.2684,
+          "by_similarity": [
+            {
+              "similarity_low": -0.3032,
+              "similarity_high": -0.0199,
+              "n_pairs": 128,
+              "follows_the_target": 0.7969,
+              "follows_the_source": 0.2031
+            },
+            {
+              "similarity_low": -0.0199,
+              "similarity_high": 0.129,
+              "n_pairs": 128,
+              "follows_the_target": 0.7109,
+              "follows_the_source": 0.2891
+            },
+            {
+              "similarity_low": 0.129,
+              "similarity_high": 0.2844,
+              "n_pairs": 126,
+              "follows_the_target": 0.7619,
+              "follows_the_source": 0.2381
+            },
+            {
+              "similarity_low": 0.2844,
+              "similarity_high": 0.5012,
+              "n_pairs": 126,
+              "follows_the_target": 0.754,
+              "follows_the_source": 0.246
+            },
+            {
+              "similarity_low": 0.5012,
+              "similarity_high": 0.9077,
+              "n_pairs": 127,
+              "follows_the_target": 0.6299,
+              "follows_the_source": 0.3701
+            }
+          ],
+          "the_reading": "the transfer reads the TARGET, not the source: it follows the target even when the two sessions disagree.  The raw decay curve is CONFOUNDED -- similar sessions tend to agree about the room anyway, so a copier is not punished in that band, which is why the raw curve inverts"
+        },
+        "the_characteristic_cluster_is_active": {
+          "n_sessions": 43,
+          "n_where_it_is_the_MOST_active_cluster": 14,
+          "n_where_it_is_the_LEAST_active_cluster": 5,
+          "mean_activity_rank": 1.953,
+          "the_reading": "the confound check: the characteristic cluster is the one that owns the most CELLS, and a cluster that owns the most cells is not necessarily the one that MOVES.  If the extra symbols at a higher cardinality carve off the inert background, the characteristic cluster stops meaning anything and the transfer collapses for a reason that has nothing to do with the vocabulary"
+        },
+        "the_per_session_consistency": {
+          "mean_left_rate_when_the_truth_is_LEFT": 0.6261,
+          "mean_left_rate_when_the_truth_is_RIGHT": 0.2601,
+          "n_sessions_answered_consistently_by_at_least_90_percent_of_partners": 14,
+          "n_sessions": 43,
+          "the_reading": "each session is answered the SAME WAY by nearly every partner, and the side the partners agree on is the side the truth is on -- so the transfer is a detector, not a guesser, and its errors are SYSTEMATIC rather than random"
+        },
+        "the_similarity": {
+          "mean": 0.3097,
+          "min": -0.3032,
+          "max": 0.9337
+        }
+      },
+      "5": {
+        "n_sessions": 43,
+        "n_pairs": 1806,
+        "the_self_case": {
+          "agree": [
+            27,
+            43,
+            0.6279
+          ],
+          "decisive": [
+            20,
+            31,
+            0.6452
+          ],
+          "the_reading": "the ceiling of the transfer: what an alphabet achieves on the session it was fitted on, under this study's own rule"
+        },
+        "the_transfer": {
+          "agree_all": [
+            1232,
+            1806,
+            0.6822
+          ],
+          "agree_decisive": [
+            909,
+            1302,
+            0.6982
+          ],
+          "the_reading": "A's alphabet answering B's question, over every ordered pair of distinct sessions"
+        },
+        "the_control": {
+          "agree_all": [
+            1116,
+            1806,
+            0.6179
+          ],
+          "agree_decisive": [
+            884,
+            1302,
+            0.679
+          ],
+          "the_reading": "the same transfer with a random non-characteristic cluster: the floor the transfer must beat to mean anything"
+        },
+        "the_decay_curve": [
+          {
+            "similarity_low": -0.3032,
+            "similarity_high": 0.0459,
+            "n_pairs": 256,
+            "agree": 201,
+            "rate": 0.7852,
+            "the_two_sessions_share_the_truth": 0.2852
+          },
+          {
+            "similarity_low": 0.0459,
+            "similarity_high": 0.2097,
+            "n_pairs": 255,
+            "agree": 169,
+            "rate": 0.6627,
+            "the_two_sessions_share_the_truth": 0.4784
+          },
+          {
+            "similarity_low": 0.2097,
+            "similarity_high": 0.3784,
+            "n_pairs": 271,
+            "agree": 198,
+            "rate": 0.7306,
+            "the_two_sessions_share_the_truth": 0.5904
+          },
+          {
+            "similarity_low": 0.3784,
+            "similarity_high": 0.5658,
+            "n_pairs": 277,
+            "agree": 196,
+            "rate": 0.7076,
+            "the_two_sessions_share_the_truth": 0.574
+          },
+          {
+            "similarity_low": 0.5658,
+            "similarity_high": 0.9337,
+            "n_pairs": 247,
+            "agree": 146,
+            "rate": 0.5911,
+            "the_two_sessions_share_the_truth": 0.6599
+          }
+        ],
+        "the_mechanism": {
+          "the_clean_measure": "among the decisive pairs where the SOURCE and the TARGET disagree about the room, whose answer does the transfer follow?  A copier is punished here and nowhere else",
+          "n_pairs": 626,
+          "follows_the_target": 0.7029,
+          "follows_the_source": 0.2971,
+          "by_similarity": [
+            {
+              "similarity_low": -0.3032,
+              "similarity_high": -0.0199,
+              "n_pairs": 128,
+              "follows_the_target": 0.8281,
+              "follows_the_source": 0.1719
+            },
+            {
+              "similarity_low": -0.0199,
+              "similarity_high": 0.129,
+              "n_pairs": 128,
+              "follows_the_target": 0.6406,
+              "follows_the_source": 0.3594
+            },
+            {
+              "similarity_low": 0.129,
+              "similarity_high": 0.2844,
+              "n_pairs": 126,
+              "follows_the_target": 0.746,
+              "follows_the_source": 0.254
+            },
+            {
+              "similarity_low": 0.2844,
+              "similarity_high": 0.5012,
+              "n_pairs": 126,
+              "follows_the_target": 0.754,
+              "follows_the_source": 0.246
+            },
+            {
+              "similarity_low": 0.5012,
+              "similarity_high": 0.9077,
+              "n_pairs": 127,
+              "follows_the_target": 0.5354,
+              "follows_the_source": 0.4646
+            }
+          ],
+          "the_reading": "the transfer reads the TARGET, not the source: it follows the target even when the two sessions disagree.  The raw decay curve is CONFOUNDED -- similar sessions tend to agree about the room anyway, so a copier is not punished in that band, which is why the raw curve inverts"
+        },
+        "the_characteristic_cluster_is_active": {
+          "n_sessions": 43,
+          "n_where_it_is_the_MOST_active_cluster": 8,
+          "n_where_it_is_the_LEAST_active_cluster": 5,
+          "mean_activity_rank": 2.465,
+          "the_reading": "the confound check: the characteristic cluster is the one that owns the most CELLS, and a cluster that owns the most cells is not necessarily the one that MOVES.  If the extra symbols at a higher cardinality carve off the inert background, the characteristic cluster stops meaning anything and the transfer collapses for a reason that has nothing to do with the vocabulary"
+        },
+        "the_per_session_consistency": {
+          "mean_left_rate_when_the_truth_is_LEFT": 0.6261,
+          "mean_left_rate_when_the_truth_is_RIGHT": 0.2811,
+          "n_sessions_answered_consistently_by_at_least_90_percent_of_partners": 14,
+          "n_sessions": 43,
+          "the_reading": "each session is answered the SAME WAY by nearly every partner, and the side the partners agree on is the side the truth is on -- so the transfer is a detector, not a guesser, and its errors are SYSTEMATIC rather than random"
+        },
+        "the_similarity": {
+          "mean": 0.3097,
+          "min": -0.3032,
+          "max": 0.9337
+        }
+      },
+      "6": {
+        "n_sessions": 43,
+        "n_pairs": 1806,
+        "the_self_case": {
+          "agree": [
+            27,
+            43,
+            0.6279
+          ],
+          "decisive": [
+            21,
+            31,
+            0.6774
+          ],
+          "the_reading": "the ceiling of the transfer: what an alphabet achieves on the session it was fitted on, under this study's own rule"
+        },
+        "the_transfer": {
+          "agree_all": [
+            1218,
+            1806,
+            0.6744
+          ],
+          "agree_decisive": [
+            910,
+            1302,
+            0.6989
+          ],
+          "the_reading": "A's alphabet answering B's question, over every ordered pair of distinct sessions"
+        },
+        "the_control": {
+          "agree_all": [
+            1117,
+            1806,
+            0.6185
+          ],
+          "agree_decisive": [
+            878,
+            1302,
+            0.6743
+          ],
+          "the_reading": "the same transfer with a random non-characteristic cluster: the floor the transfer must beat to mean anything"
+        },
+        "the_decay_curve": [
+          {
+            "similarity_low": -0.3032,
+            "similarity_high": 0.0459,
+            "n_pairs": 256,
+            "agree": 185,
+            "rate": 0.7227,
+            "the_two_sessions_share_the_truth": 0.2852
+          },
+          {
+            "similarity_low": 0.0459,
+            "similarity_high": 0.2097,
+            "n_pairs": 255,
+            "agree": 175,
+            "rate": 0.6863,
+            "the_two_sessions_share_the_truth": 0.4784
+          },
+          {
+            "similarity_low": 0.2097,
+            "similarity_high": 0.3784,
+            "n_pairs": 271,
+            "agree": 201,
+            "rate": 0.7417,
+            "the_two_sessions_share_the_truth": 0.5904
+          },
+          {
+            "similarity_low": 0.3784,
+            "similarity_high": 0.5658,
+            "n_pairs": 277,
+            "agree": 192,
+            "rate": 0.6931,
+            "the_two_sessions_share_the_truth": 0.574
+          },
+          {
+            "similarity_low": 0.5658,
+            "similarity_high": 0.9337,
+            "n_pairs": 247,
+            "agree": 160,
+            "rate": 0.6478,
+            "the_two_sessions_share_the_truth": 0.6599
+          }
+        ],
+        "the_mechanism": {
+          "the_clean_measure": "among the decisive pairs where the SOURCE and the TARGET disagree about the room, whose answer does the transfer follow?  A copier is punished here and nowhere else",
+          "n_pairs": 626,
+          "follows_the_target": 0.6933,
+          "follows_the_source": 0.3067,
+          "by_similarity": [
+            {
+              "similarity_low": -0.3032,
+              "similarity_high": -0.0199,
+              "n_pairs": 128,
+              "follows_the_target": 0.7344,
+              "follows_the_source": 0.2656
+            },
+            {
+              "similarity_low": -0.0199,
+              "similarity_high": 0.129,
+              "n_pairs": 128,
+              "follows_the_target": 0.6484,
+              "follows_the_source": 0.3516
+            },
+            {
+              "similarity_low": 0.129,
+              "similarity_high": 0.2844,
+              "n_pairs": 126,
+              "follows_the_target": 0.7778,
+              "follows_the_source": 0.2222
+            },
+            {
+              "similarity_low": 0.2844,
+              "similarity_high": 0.5012,
+              "n_pairs": 126,
+              "follows_the_target": 0.7381,
+              "follows_the_source": 0.2619
+            },
+            {
+              "similarity_low": 0.5012,
+              "similarity_high": 0.9077,
+              "n_pairs": 127,
+              "follows_the_target": 0.5591,
+              "follows_the_source": 0.4409
+            }
+          ],
+          "the_reading": "the transfer reads the TARGET, not the source: it follows the target even when the two sessions disagree.  The raw decay curve is CONFOUNDED -- similar sessions tend to agree about the room anyway, so a copier is not punished in that band, which is why the raw curve inverts"
+        },
+        "the_characteristic_cluster_is_active": {
+          "n_sessions": 43,
+          "n_where_it_is_the_MOST_active_cluster": 7,
+          "n_where_it_is_the_LEAST_active_cluster": 1,
+          "mean_activity_rank": 3.442,
+          "the_reading": "the confound check: the characteristic cluster is the one that owns the most CELLS, and a cluster that owns the most cells is not necessarily the one that MOVES.  If the extra symbols at a higher cardinality carve off the inert background, the characteristic cluster stops meaning anything and the transfer collapses for a reason that has nothing to do with the vocabulary"
+        },
+        "the_per_session_consistency": {
+          "mean_left_rate_when_the_truth_is_LEFT": 0.5868,
+          "mean_left_rate_when_the_truth_is_RIGHT": 0.2683,
+          "n_sessions_answered_consistently_by_at_least_90_percent_of_partners": 8,
+          "n_sessions": 43,
+          "the_reading": "each session is answered the SAME WAY by nearly every partner, and the side the partners agree on is the side the truth is on -- so the transfer is a detector, not a guesser, and its errors are SYSTEMATIC rather than random"
+        },
+        "the_similarity": {
+          "mean": 0.3097,
+          "min": -0.3032,
+          "max": 0.9337
+        }
+      }
+    }
+  }
 }

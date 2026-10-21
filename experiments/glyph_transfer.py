@@ -58,16 +58,22 @@ import glyph_grid as gg  # noqa: E402  (same repository, same stage)
 #: session.
 K = 3
 
+#: The cardinalities the sweep runs.  The question the transfer study
+#: has to answer is not "does a vocabulary transfer" but "does A
+#: vocabulary transfer", and only more than one cardinality can tell
+#: the difference.
+K_SWEEP = (3, 4, 5, 6)
+
 #: The tie threshold, the same 1.10 the grid study used.
 TIE_RATIO = 1.10
 
 
-def session_model(session_dir: Path):
-    """Fit ONE session's alphabet, and return the model plus its truth.
+def session_material(session_dir: Path):
+    """The part of a session that does NOT depend on the cardinality:
+    the change map, the descriptors, the observed mask, and the truth.
 
-    Returns None for a session that cannot be used: no frames, a
-    synthetic device (a test rig is not a room), too few observed cells
-    to fit anything on, or no truth to grade against.
+    It is separated from the fit so that a sweep over cardinalities
+    reads the corpus once instead of once per cardinality.
     """
     meta_path = session_dir / 'meta.json'
     if not meta_path.is_file():
@@ -98,16 +104,6 @@ def session_model(session_dir: Path):
     even[:, ::2] = True
     odd = ~even
 
-    labels, char_for, centres, means, scale = gg.fit_alphabet(
-        train_desc, K, seed=11, cell_mask=even)
-    lab = labels.reshape(-1)
-    valid = observed.reshape(-1) & (lab >= 0)
-    counts = np.bincount(lab[valid])
-    if counts.size < 2:
-        return None
-    # the characteristic material: the cluster that owns the most cells
-    characteristic = int(np.argmax(counts))
-
     truth = gg.full_resolution_half_energy(luma)
     if truth is None:
         return None
@@ -116,23 +112,51 @@ def session_model(session_dir: Path):
         'session': session_dir.name,
         'n_frames': n_frames,
         'n_observed_cells': int(observed.sum()),
-        'centres': centres,
-        'scale': scale,
-        'char_for': char_for,
-        'characteristic': characteristic,
-        'cluster_mean_activity': means,
         'observed': observed,
+        'even': even,
         'odd': odd,
+        'train_desc': train_desc,
         'full_desc': full_desc,
-        # the training-half labels, which is what the grid study's own
-        # question used
-        'train_labels': labels,
         'truth': truth,
         # how much of the room moved, per cell: the sessions' visual
         # similarity, used to ask whether the transfer decays with
         # distance
         'activity': full_desc[..., 0].reshape(-1).astype(np.float64),
     }
+
+
+def session_model(material: dict, k: int) -> dict:
+    """FIT ONE session's alphabet at ONE cardinality, and return the
+    model plus its truth.
+
+    Returns None for a session that cannot be used: no frames, a
+    synthetic device (a test rig is not a room), too few observed cells
+    to fit anything on, or no truth to grade against.
+    """
+    observed = material['observed']
+    labels, char_for, centres, means, scale = gg.fit_alphabet(
+        material['train_desc'], k, seed=11, cell_mask=material['even'])
+    lab = labels.reshape(-1)
+    valid = observed.reshape(-1) & (lab >= 0)
+    counts = np.bincount(lab[valid])
+    if counts.size < 2:
+        return None
+    # the characteristic material: the cluster that owns the most cells
+    characteristic = int(np.argmax(counts))
+
+    model = dict(material)
+    model.update({
+        'k': k,
+        'centres': centres,
+        'scale': scale,
+        'char_for': char_for,
+        'characteristic': characteristic,
+        'cluster_mean_activity': means,
+        # the training-half labels, which is what the grid study's own
+        # question used
+        'train_labels': labels,
+    })
+    return model
 
 
 def answer_with(alphabet: dict, other: dict, cluster: int) -> dict:
@@ -193,24 +217,24 @@ def similarity(a: dict, b: dict) -> float:
     return float(np.corrcoef(va, vb)[0, 1])
 
 
-def measure(corpus: Path, out_dir: Path) -> dict:
-    models = []
-    skipped = {'no_model': 0}
-    for d in sorted(corpus.iterdir()):
-        if not d.is_dir():
-            continue
-        m = session_model(d)
-        if m is None:
-            skipped['no_model'] += 1
-            continue
-        models.append(m)
-        print('  %-14s cells %3d  characteristic cluster %d  truth %s %.3f' % (
-            m['session'], m['n_observed_cells'], m['characteristic'],
-            m['truth']['half'], m['truth']['ratio']))
+def study_k(materials: list[dict], k: int) -> dict:
+    """The whole study at ONE cardinality.
 
+    The corpus is read ONCE by the caller and the alphabets are refitted
+    per cardinality, because a vocabulary with three symbols and one
+    with four have no correspondence -- and because the question the
+    sweep exists to answer is whether a vocabulary transfers or a
+    PARTICULAR vocabulary transfers."""
+    models = []
+    for m in materials:
+        model = session_model(m, k)
+        if model is None:
+            continue
+        models.append(model)
     n = len(models)
     if not n:
         raise SystemExit('no usable sessions')
+    print('  k=%d: %d sessions' % (k, n))
 
     # the truth side of every session, for the conditional analysis
     truths = {m['session']: m['truth']['half'] for m in models}
@@ -234,7 +258,7 @@ def measure(corpus: Path, out_dir: Path) -> dict:
             r = answer_with(a, b, a['characteristic'])
             # the control: a cluster of A that is NOT the characteristic
             # one.  If the transfer is real, the control must be worse.
-            others = [c for c in range(K) if c != a['characteristic']]
+            others = [c for c in range(k) if c != a['characteristic']]
             control_cluster = int(others[rng.integers(len(others))]) if others \
                 else a['characteristic']
             c = answer_with(a, b, control_cluster)
@@ -333,6 +357,16 @@ def measure(corpus: Path, out_dir: Path) -> dict:
     left_rate_when_left = []
     left_rate_when_right = []
     n_consistent = 0
+    # the CONFOUND CHECK: at a higher cardinality, is the
+    # "characteristic" cluster still the ACTIVE material, or has it
+    # become the inert background?  A cluster that owns the most cells
+    # is not necessarily the one that moves, and if the extra symbols
+    # carve off the background then the characteristic cluster stops
+    # meaning anything -- which would explain the transfer's collapse
+    # without saying anything about the vocabulary.
+    characteristic_is_most_active = 0
+    characteristic_is_least_active = 0
+    characteristic_activity_ranks = []
     for j, b in enumerate(models):
         rows = [p for p in off if p['to'] == b['session']]
         if not rows:
@@ -342,6 +376,15 @@ def measure(corpus: Path, out_dir: Path) -> dict:
          else left_rate_when_right).append(lf)
         if lf <= 0.10 or lf >= 0.90:
             n_consistent += 1
+        means = list(b['cluster_mean_activity'])
+        if means:
+            order = sorted(range(len(means)), key=lambda c: means[c])
+            rank = order.index(b['characteristic'])
+            characteristic_activity_ranks.append(rank)
+            if rank == len(means) - 1:
+                characteristic_is_most_active += 1
+            if rank == 0:
+                characteristic_is_least_active += 1
 
     # per-session: how often is THIS session's question answered right
     # by SOME other session's alphabet (the best partner), and by the
@@ -372,7 +415,7 @@ def measure(corpus: Path, out_dir: Path) -> dict:
         'study': 'the glyph grid transfer test -- is the vocabulary the room\'s or the capture\'s?',
         'generated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
         'method': {
-            'k': K,
+            'k': k,
             'k_why': ('FIXED, so two alphabets can be compared at all; k=3 is the '
                       'silhouette\'s own modal choice over the corpus'),
             'the_transfer': ('A\'s alphabet, fitted on A, answers B\'s question: A\'s '
@@ -443,6 +486,22 @@ def measure(corpus: Path, out_dir: Path) -> dict:
                                 'anyway, so a copier is not punished in that band, '
                                 'which is why the raw curve inverts'),
             },
+            'the_characteristic_cluster_is_active': {
+                'n_sessions': len(models),
+                'n_where_it_is_the_MOST_active_cluster': characteristic_is_most_active,
+                'n_where_it_is_the_LEAST_active_cluster': characteristic_is_least_active,
+                'mean_activity_rank': (round(float(np.mean(characteristic_activity_ranks)), 3)
+                                       if characteristic_activity_ranks else None),
+                'the_reading': ('the confound check: the characteristic cluster '
+                                'is the one that owns the most CELLS, and a '
+                                'cluster that owns the most cells is not '
+                                'necessarily the one that MOVES.  If the extra '
+                                'symbols at a higher cardinality carve off the '
+                                'inert background, the characteristic cluster '
+                                'stops meaning anything and the transfer '
+                                'collapses for a reason that has nothing to do '
+                                'with the vocabulary'),
+            },
             'the_per_session_consistency': {
                 'mean_left_rate_when_the_truth_is_LEFT': (round(float(np.mean(left_rate_when_left)), 4)
                                                           if left_rate_when_left else None),
@@ -465,6 +524,47 @@ def measure(corpus: Path, out_dir: Path) -> dict:
         },
         'per_session': per_to,
         'pairs': pairs,
+    }
+    return {'out': out, 'summary': out['summary'], 'pairs': pairs,
+            'per_session': per_to}
+
+
+def measure(corpus: Path, out_dir: Path, ks=K_SWEEP) -> dict:
+    """The measurement over the corpus, at every cardinality.
+
+    The corpus is read once and the alphabets are refitted per k, so
+    the sweep costs one pass over the luma and four fits per session.
+    """
+    materials = []
+    for d in sorted(corpus.iterdir()):
+        if not d.is_dir():
+            continue
+        m = session_material(d)
+        if m is None:
+            continue
+        materials.append(m)
+    if not materials:
+        raise SystemExit('no usable sessions')
+    print(f'loaded {len(materials)} usable sessions')
+
+    by_k = {}
+    primary = None
+    for k in ks:
+        res = study_k(materials, k)
+        by_k[str(k)] = res['summary']
+        if k == K:
+            primary = res
+    if primary is None:
+        primary = res
+
+    out = primary['out']
+    out['the_cardinality_sweep'] = {
+        'the_k_values': list(ks),
+        'the_question': ('does a vocabulary transfer, or does a PARTICULAR '
+                         'vocabulary transfer?  A vocabulary with three '
+                         'symbols and one with four have no correspondence, '
+                         'so the sweep is the only way to tell'),
+        'by_k': by_k,
     }
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / 'glyph_transfer.json').write_text(json.dumps(out, indent=2))

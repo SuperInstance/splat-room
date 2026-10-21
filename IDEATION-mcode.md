@@ -714,6 +714,41 @@ alike (0.883 vs 0.677). **The lesson for the fleet: a curve is not a
 finding until its confound has been measured, and the confound here was
 invisible until the conditional was taken.**
 
+### The cardinality sweep — dated note, 2026-10-21
+
+**Idea 3's cardinality was the loose end, and it turned out to be the
+whole shape of the idea.** The transfer test fixed k=3 so two
+alphabets could be compared at all; the sweep now fits every alphabet
+at k = 3, 4, 5 and 6 over the same corpus.
+
+| k | the transfer (decisive) | the control | the gap | the characteristic cluster is the MOST active one |
+|---|---|---|---|---|
+| **3** | **79.3 %** | 64.5 % | **14.74 pts** | **24 / 43** |
+| 4 | 71.9 % | 66.8 % | 5.07 pts | 14 / 43 |
+| 5 | 69.8 % | 67.9 % | 1.92 pts | 8 / 43 |
+| 6 | 69.9 % | 67.4 % | 2.46 pts | 7 / 43 |
+
+**More symbols is not a richer vocabulary. It is a diluted one.** At k=3
+the cluster that owns the most cells IS the moving material in 24 of 43
+sessions, and it beats a random cluster by 14.7 points. At k=5 it
+beats one by 1.9 — the question has nothing left to ask, because "the
+biggest material" and "the moving material" have come apart.
+
+**So the riff's guess about the cardinality was wrong in its reason and
+right in its number.** I wrote that the right number of symbols is
+"a question about alignment, not about brightness". It is not about
+alignment: the silhouette — an alignment measure — picks k=3 because it
+picks k=3, and the reason k=3 is right is that **the alphabet has to
+stay coarse enough for its biggest symbol to still mean "the thing that
+moves".** Alignment is the symptom; the alphabet's own structure is
+the cause.
+
+**And the next rule is stated before it is measured,** which is the only
+honest way to state one: a cardinality rule that maximises the gap
+between the characteristic cluster and a random cluster of the same
+alphabet, with the truth never consulted. A rule about the ALPHABET's
+structure rather than its separation.
+
 ---
 
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured
