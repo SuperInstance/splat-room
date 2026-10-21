@@ -30,7 +30,13 @@ echo "$(date -u) autorun: waiting for CUDA + gsplat"
 WD=$!
 
 # --- wait until: CUDA init OK (torch), gsplat ext loads and renders ---
+# (a reboot can kill an in-flight gsplat build — rebuild first if so)
 while :; do
+  if ! $VENV/bin/python -c "import gsplat" 2>/dev/null; then
+    echo "$(date -u) autorun: gsplat not importable — (re)building"
+    /home/casey/work/build/build_gsplat.sh
+    echo "$(date -u) autorun: build rc=$?"
+  fi
   if $VENV/bin/python - <<'EOF' 2>/dev/null
 import torch
 from gsplat import rasterization
