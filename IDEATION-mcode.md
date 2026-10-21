@@ -677,6 +677,43 @@ the coordinates — which is exactly what idea 2 assumed, and the grid
 vindicates it.** The grid is a good vocabulary for what the room is
 doing and a poor geometry for where it is.
 
+### The transfer test — dated note, 2026-10-21
+
+**Idea 3's acceptance criterion was *"a vocabulary that only works on the
+cells it was fitted on is a caption, not a language."* That is now
+MEASURED, in one room.** `experiments/glyph_transfer.py` (8/8 selftest),
+`results/glyph_transfer.json`, report `docs/GLYPH-TRANSFER.md`, ledger row
+in `EXPERIMENTS.md`.
+
+**A vocabulary fitted on ONE session answers a DIFFERENT session's
+question at 1,372/1,806 pairs = 76.0 %** — against the **76.7 %** it
+reaches on its own session — while a random non-characteristic cluster of
+the same alphabet gets **58.3 %**. And it is not a copier: on the 626
+decisive pairs where the source and the target disagree about the room,
+the transfer follows the **target** 80.0 % of the time.
+
+**So the vocabulary is a property of the ROOM, not of the capture, as
+far as one room can show it.** The caption worry does not fire across
+sessions.
+
+**But the room-level criterion is STILL OPEN**, and the note has to say
+so plainly: every session here is the same room from nearly the same
+viewpoint (5 px in x), so this is a *session*-transfer test. The riff's
+criterion was about *rooms*. One room cannot answer a question about
+rooms.
+
+**And the curve nearly lied.** The first version of the decay curve —
+transfer accuracy against how alike the two sessions look — came out
+INVERTED, with the most similar pairs transferring worst. The reason is
+a confound: in the most similar band the transfer's rate (0.660) is
+*the same number* as the rate at which the two sessions share an answer
+anyway (0.660), which is the signature of a copier that nobody
+punishes. Conditioned on the two sessions disagreeing, the ordering
+inverts back and the vocabulary transfers BEST where the two look least
+alike (0.883 vs 0.677). **The lesson for the fleet: a curve is not a
+finding until its confound has been measured, and the confound here was
+invisible until the conditional was taken.**
+
 ---
 
 *Filed 2026-10-21. Numbers are from the communicator lanes' measured
