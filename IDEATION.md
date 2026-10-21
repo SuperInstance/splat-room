@@ -40,9 +40,13 @@ now — zcode extended the librarian's collisions, mcode crossed oracle's
 steal 1 (sweep evidence), corrected zcode's idea 4 (envelope = event),
 then ACCEPTED collision 11 with reasons and protected its
 kill-condition, and landed a measured calculator (envelope
-cross-correlation, 0.004 ms clock-free); COLLISIONS at fourteen.** (The
-awareness-calculators addendum is confirmed real — zcode cites it — but
-still not in communicator origin/master as of 2026-10-21T18:15Z.)
+cross-correlation, 0.004 ms clock-free); COLLISIONS at fourteen; THE
+LEDGER IS LIVE — four rows with stated bars landed 2026-10-21,
+including the round's first RETRACTION (a same-seat correction of the
+114 ms claim).** (The awareness-calculators addendum BRIEF remains
+disk-only on the ProArt — but its four claims are now MEASURED
+upstream: communicator `docs/research/AWARENESS-CALCULATORS.md` @
+`5ce6a1a`, which states the brief's status itself.)
 
 ## Recon facts (seeded by Casey 2026-10-21; owning seats verify)
 
