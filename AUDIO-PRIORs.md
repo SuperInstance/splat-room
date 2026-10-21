@@ -4,7 +4,7 @@
 **Branch:** `audio-priors`
 **Measured from:** `/mnt/c/proart_capture/corpus/free_sessions` — 97 session bundles
 **Device:** CPU, numpy + scipy, the repository's own `src/energy.py` envelope and `src/pitch.py` tracker
-**Sources:** the communicator lanes' lens files (`docs/research/lens/*.json`) and the walk-by study (`docs/research/walk_by_envelope.json`)
+**Sources:** the communicator lanes' lens files (`docs/research/lens/*.json`), the walk-by study (`docs/research/walk_by_envelope.json`) and the arrival-null study (`docs/research/ARRIVAL-NULL.md`)
 
 ---
 
@@ -321,6 +321,51 @@ sound source with a known position. Those are the same phone and the
 same walk, which is why the phone is the standing answer to three
 different unblocks in this spec.
 
+### 5.5 WHAT A SECOND DEVICE WOULD BUY, AND IT IS MORE THAN METRES
+
+**This section was written before the arrival-time estimator was
+measured, and the measurement changes the answer.** The companion study
+(`SuperInstance/communicator`, `docs/research/ARRIVAL-NULL.md`) built
+the estimator and measured it:
+
+| | |
+|---|---|
+| the delay between two arrivals is measured by | the band-limited **envelope** cross-correlation, 300–3400 Hz |
+| the null's bias (a signal against a gain-shifted copy of itself) | **0.0002 ms** |
+| the delay-recovery error, injected delays 0–80 ms | **0.004 ms** max, **0.001 ms** median |
+| **so the range resolution** | **0.0014 m** |
+
+**And the part that matters for this spec's geometry problem: the
+estimator needs NO clock relationship between the two devices.** The
+delay is found by comparing the two signals *to each other*, so the
+offset between their clocks cancels exactly. Measured directly: two
+signals with no clock relationship and 7.3 ms between them come back as
+7.0 ms, and the same pair on their own drifting clocks (0.03 % and
+0.07 % fast) come back as 8.0 ms against a true 7.3 ms.
+
+**So a second device would not need the fleet's clock doctrine fixed
+first — which reverses the phone-node brief's stated order.** The
+phone-node brief says the first build should be "the two-device time
+base, and nothing else", because the second clock is what makes the
+geometry possible. **The measurement says the time base is necessary but
+not sufficient, and that the *precision* was never the problem.** What
+a second device adds is:
+
+1. **A range along one axis**, from the delay, at **0.0014 m**
+   resolution — two orders of magnitude finer than the room.
+2. **A metric position, if there is a second independent delay.** One
+   delay gives range along one axis. *Place* needs either a third
+   arrival or a prior on where the source is. This is the geometry the
+   splat field actually needs, and one delay does not give it.
+3. **A device-to-device latency bias**, which is a *constant* and is
+   calibrated once per device pair by putting both devices at one point.
+
+**The honest correction to this spec's §5.2:** the blocker is not
+"there is no metric anchor in the corpus". It is "the corpus has one
+device, so there is no delay to measure, and one delay would give range
+but not place." **The second device is worth more than this spec said,
+and it is worth more for the ROOM MODEL than for the acoustic prior.**
+
 ---
 
 ## 6. WHAT THE SPEC ASSUMES, AND WHAT IT MUST NOT ASSUME
@@ -396,14 +441,26 @@ Stated plainly, because a prior that cannot be killed is a belief.
 2. **The speaker's own voice kills the mover-direction prior** until
    the capture mutes the speaker or moves the person. 74.5 % is not a
    margin.
-3. **The fixed camera kills the metric-anchor prior** outright, and no
-   amount of audio repairs it. Only a moving seat does.
+3. **The fixed camera kills the metric-anchor prior** — no parallax, so
+   no metric geometry from vision. **But a second AUDIO device repairs
+   it**, at 0.0014 m of range resolution and with no clock relationship
+   required (§5.5). The kill is on *vision alone*, not on the room.
+3b. **One delay gives range, not place.** A single arrival-time
+   difference gives distance along one axis. The room model needs a
+   position, which needs a second independent delay — a third device,
+   or a prior on where the source is. **A phone node alone does not give
+   a position.** That is the strongest form of this kill and it is new.
 4. **The synthetic rig kills any statistic that does not filter by
    device**, and it is 45.4 % of the corpus. This one has already
    happened once, in this document's own first draft.
 5. **The absent actuator kills the impulse-response line.** The laptop
    speaker's band verdict is NONE and the corpus has no chirp of its
    own. The phone reopen is the only path, and it is not yet captured.
+6. **The marker's identity kills the ultrasonic beacon.** The arrival
+   survives the resampler's fold — a 12 kHz tone that aliased to 4 kHz
+   was still timed to 0.1 ms — but the *identity* does not: the
+   receiver cannot tell a 20 kHz sweep from a 4 kHz one. So the beacon
+   is a voice-band **voxel**, and the chain must carry it honestly.
 
 ---
 
