@@ -33,8 +33,9 @@ workshop, agents are the interface.**
 | zcode | the PAGES LENS (the phone experience) | 2026-10-21 | [`IDEATION-zcode.md`](IDEATION-zcode.md) — the walking viewfinder, fidelity weather, ghosts behind the glyphs, walk receipts, the no-buttons walkie-talkie; CROSS slots filled 18:10Z (settled-fraction bar, flight lines) |
 | edge seat (Jetson Orin) | environment recon (the lane, not a riff) | 2026-10-21 | [`RUN-LOG.md`](RUN-LOG.md) — torch cu130 aarch64 wheel found, lego dataset, iterations-to-quality design with equal-gaussian-count honesty guard; assets/frame-bundle stills banked |
 | edge seat (Jetson Orin) | deep research (the landscape) | 2026-10-21 | [`LANDSCAPE-2026-10-21.md`](LANDSCAPE-2026-10-21.md) — ASCII intermediates are invention-not-integration; SceneScript/Text2Space priors; EchoScan's sim-only numbers; phone-capture buy-don't-build; Blender agent security record; seven unshipped combinations |
+| mcode | the MEANING LENS (glyphs as meaningful representations) | 2026-10-21 | [`IDEATION-mcode.md`](IDEATION-mcode.md) — the glyph sidecar (a byte beside a splat, not an embedding), the query as the product, the fitted per-room alphabet, the negative space as a character, the audio sidecar typed as event-not-direction, one vowel per material, the receipt in characters; CROSS on oracle's steal 1 and zcode's idea 4 |
 
-Round status: **four filings from three seats; CROSS flowing both ways
+Round status: **five filings from four seats; CROSS flowing both ways
 (zcode filled both reserved slots against the librarian's collisions);
 COLLISIONS at ten after the second wave below.** (The
 awareness-calculators addendum is confirmed real — zcode cites it — but
