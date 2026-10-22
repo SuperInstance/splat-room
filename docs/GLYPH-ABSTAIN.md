@@ -3,7 +3,7 @@
 **Tool:** `experiments/glyph_abstain.py` (15/15 selftest green)
 **Results:** `results/glyph_abstain.json`
 **Device:** CPU (AMD Ryzen AI 9 HX 370, 24 cores), numpy, no GPU, no network
-**Corpus:** 121 sessions, 47 with a fitted vocabulary, 33 decisive — **a live corpus**: four sessions are newer than the grid study, which saw 43
+**Corpus:** 139 session directories, 56 with a fitted vocabulary, 41 decisive — **a live corpus**: this study has been re-run twice, and see the dated notes in §3 and §7
 
 ---
 
@@ -11,16 +11,20 @@
 
 **The rule that works is the COUNT MARGIN, and the rule the failure
 diagnosis suggested — abstain when the evidence is thin — does not work
-at all. It catches none of the vocabulary's own remaining failures, and
-in the transfer it makes the answer slightly WORSE than not answering.**
+at all. It catches almost none of the vocabulary's own remaining failures,
+and in the transfer it makes the answer slightly WORSE than not answering.**
+
+**ON THE CORPUS AS IT NOW STANDS** (56 sessions with a fitted vocabulary,
+41 decisive — this study has been re-run; the figures this study was
+first filed with are in brackets in §3):
 
 | | |
 |---|---|
-| the declared rule's accuracy among the ANSWERED, self case | **16/16 = 100.0 %**, against 31/33 = 93.9 % over all |
-| the declared rule's accuracy among the ANSWERED, transfer | **92.8 %**, against 84.7 % over all |
-| decisive errors caught, self case | **2 of 2** |
-| decisive errors caught, transfer | **202 of 233 = 86.7 %** |
-| right answers lost, self case | **15 of 31 = 48.4 %** — the bar's cost limit was 25 % |
+| the declared rule's accuracy among the ANSWERED, self case | **19/19 = 100.0 %**, against 38/41 = 92.7 % over all (16/16 against 31/33) |
+| the declared rule's accuracy among the ANSWERED, transfer | **93.8 %**, against 86.0 % over all (92.8 % against 84.7 %) |
+| decisive errors caught, self case | **3 of 3** (2 of 2) |
+| decisive errors caught, transfer | **281 of 316 = 88.9 %** (202 of 233 = 86.7 %) |
+| right answers lost, self case | **19 of 38 = 50.0 %** — the bar's cost limit was 25 % (15 of 31 = 48.4 %) |
 | **bars met** | **3 of 4** — the COST bar failed, and it failed on the cost |
 
 ---
@@ -102,6 +106,47 @@ decisive sessions and **430 of 1518** decisive pairs. A rule that
 reaches 100 % accuracy by answering half the questions is not a
 vocabulary any more; it is a filter with a 100 % score.
 
+**NOTE, 2026-10-22 — THE CORPUS GREW AGAIN AND THE STUDY WAS RE-RUN, AND
+THE VERDICT DID NOT CHANGE.** This study's corpus was **121 directories,
+47 with a fitted vocabulary, 33 decisive**. It is now **139 directories,
+56 with a fitted vocabulary, 41 decisive**: nine sessions arrived, eight
+of them decisive and one not. The rule, the bar and the whole curve were
+declared before this run and are untouched; only the material grew.
+
+**Self case — 56 sessions, 41 decisive** (the old figures in brackets):
+
+| | coverage | accuracy over all | accuracy among the answered | errors caught | right answers lost |
+|---|---|---|---|---|---|
+| the declared rule | **46.3 %** (48.5 %) | 92.7 % (93.9 %) | **100.0 %** (100.0 %) | **3 of 3** (2 of 2) | **50.0 %** (48.4 %) |
+| the count rule alone (K = 2) | 61.0 % (63.6 %) | 92.7 % (93.9 %) | **100.0 %** (100.0 %) | **3 of 3** (2 of 2) | 34.2 % (32.3 %) |
+| the evidence rule alone (cells < 300) | 75.6 % (75.8 %) | 92.7 % (93.9 %) | 93.6 % (92.0 %) | **1 of 3** (0 of 2) | 23.7 % (25.8 %) |
+
+**Transfer case — 3080 pairs, 2255 decisive** (2162 / 1518 before):
+
+| | coverage | accuracy over all | accuracy among the answered | errors caught | right answers lost |
+|---|---|---|---|---|---|
+| the declared rule | **24.9 %** (28.3 %) | 86.0 % (84.7 %) | **93.8 %** (92.8 %) | **88.9 %** (86.7 %) | 72.8 % (69.0 %) |
+| the count rule alone (K = 2) | 38.6 % (41.0 %) | 86.0 % (84.7 %) | **96.0 %** (95.0 %) | **88.9 %** (86.7 %) | 56.9 % (53.9 %) |
+| the evidence rule alone (cells < 300) | 75.6 % (75.8 %) | 86.0 % (84.7 %) | 85.9 % (84.0 %) | 24.1 % (21.0 %) | 24.5 % (24.8 %) |
+
+**THE BARS ARE UNCHANGED: 2, 3 AND 4 ARE MET AND BAR 1 IS NOT.** The
+declared rule now abstains from **50.0 %** of the decisive right answers
+where the bar allowed 25 %, so the cost bar still fails, and it fails by
+more than before. The accuracy among the answered is +7.3 points over all
+in the self case and +9.8 in the transfer.
+
+**THE COUNT RULE'S ACCURACY AMONG THE ANSWERED IS STILL EXACTLY 100 %,
+AT EVERY K ON THE CURVE, ON THE GROWN CORPUS.** Thirty-four of the
+thirty-four sessions it answers are right, and it catches all three of
+the corpus's errors. That is the property the scorecard found on the
+held-out eight, and it survives the corpus growing by eight decisive
+sessions. **The coverage curve moved down by one to three points at every
+K** — 82.9 / 68.3 / 61.0 / 46.3 / 43.9 / 26.8 / 22.0 / 17.1 / 9.8 % on
+the self case, and 58.2 / 45.5 / 38.6 / 32.2 / 27.0 / 16.9 / 11.2 /
+8.3 / 5.2 % on the transfer — so **the curve a coverage contract would
+be argued from is now a different curve**, and the contract's number
+cannot be written by this session either way.
+
 ## 4. THE SIGNAL THAT WORKS, AND THE SIGNAL THAT DOES NOT
 
 Look at the two errors, and look at what each rule says about them:
@@ -134,6 +179,32 @@ truth ratios are **1.082 and 1.094**, under the shared 1.10 tie
 threshold, so the truth itself says those sessions are ties and they
 sit outside the decisive measurement. The rule catches them; the
 decisive numbers cannot show it.
+
+**NOTE, 2026-10-22 — THERE ARE THREE ERRORS NOW, AND THE THIRD ONE IS
+THE ONE THE EVIDENCE RULE WAS BUILT FOR.** The two above are unchanged.
+The third is **1792656155**, which arrived after this study's last look —
+it is one of the scorecard's held-out eight — and it is decisive at a
+truth ratio of **1.259**:
+
+| session | observed cells | z | truth | the grid said |
+|---|---|---|---|---|
+| 1792656155 | **35** | **0.00** | LEFT | RIGHT (wrong) |
+
+**IT HAS NO COUNTED MATERIAL AT ALL: left 0, right 0, and a z of exactly
+zero.** The count rule fires on it because a count of nothing is a count
+of nothing, and **the evidence rule fires on it too**, because 35 cells
+is under its 300 floor — so the evidence rule now catches **1 of 3**
+where it caught **0 of 2**.
+
+**AND THAT IS A CAUTION, NOT A VINDICATION.** The evidence rule still
+misses both of the thick, tied errors that the count rule catches, and
+its accuracy among the answered is still barely above the base rate
+(93.6 % against 92.7 % over all in the self case, 85.9 % against 86.0 %
+in the transfer, where it is still anti-informative). **A rule that
+catches one error because that error had 35 cells is not a rule that
+knows about thin evidence; it is a rule that happened to meet one.** The
+count margin caught all three, and it caught the third one for a reason
+the evidence rule cannot imitate: there was nothing to count.
 
 ## 5. THE CORRECTION
 
@@ -220,6 +291,42 @@ been measured.
   is 31/33 = 93.9 % here against the filed 29/31 = 93.6 %, with the
   same two misses. The transfer's decisive accuracy over all is
   84.7 % here against the filed 86.3 %.
+
+**NOTE, 2026-10-22 — THE REFRESH CONSUMED THE HELD-OUT SPLIT, AND THE
+SPLIT IS A CONSUMABLE.** The re-run above pulled the scorecard's
+held-out eight into this study's own rows: they are nine sessions newer
+than this study's last look, and this study measures over the whole
+corpus. So the eight sessions that the scorecard held out are now
+**inside `results/glyph_abstain.json`**, with their counts and their
+truth labels.
+
+**AND THE SPLIT IS NOT A PROPERTY OF THE CORPUS BUT A PROPERTY OF WHAT
+THE ARC HAS LOOKED AT, SO A REFRESH SPENDS IT.** The geometry null
+study, the truncated null study and the scorecard all define their
+corpora by ARRIVAL — "the sessions the arc's last look had not seen" —
+and that definition is anchored to the upstream study's filed file. **A
+refresh of an upstream study therefore consumes the split, because the
+upstream study would then have seen the held-out sessions.** That is why
+the geometry null, the truncated null and the scorecard are NOT re-run
+here, even though their denominators are now behind the abstention
+study's: re-running the geometry null on the grown corpus would leave
+the truncated null and the scorecard with **no held-out set at all** and
+would make their filed held-out results unreproducible.
+
+**THE ABSTENTION STUDY AND THE EFFECTIVE-N STUDY ARE THE TWO THAT CAN BE
+REFRESHED, BECAUSE THEIR CORPORA ARE THE WHOLE CORPUS.** Their refresh
+is what found this note.
+
+**WHAT THIS COSTS THE SCORECARD.** Its cross-reference — "the seen-set
+numbers are the abstention study's filed sweep reproduced EXACTLY" —
+**no longer holds against the refreshed file**, because the refreshed
+file now carries the held-out sessions inside it. The scorecard's own
+measurement is unaffected: it recomputes the candidates itself, its rule
+never consults the truth, and its three truth-blind bars carry the
+weight. **But the eight can no longer be described as unseen by the
+arc's abstention study**, and they were already spent by the truncated
+null study's filed per-session rows. **They are spent twice over now, and
+the next batch of sessions is the only honest test left.**
 
 ## 8. THE FILES
 

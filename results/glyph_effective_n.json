@@ -1,6 +1,6 @@
 {
  "study": "the effective sample size",
- "generated_utc": "2026-10-22T04:04:06Z",
+ "generated_utc": "2026-10-22T17:34:46Z",
  "the_method": {
   "the_vif": "VIF = 1 + 2 * sum_over_offsets w(offset) * rho(offset), over the observed cells of the session's own activity map, to a reach of 3 cells",
   "the_effective_z": "(n_left - n_right) / sqrt(n_count / VIF)",
@@ -15,13 +15,13 @@
  "the_vif_summary": {
   "the_median_vif": 44.421,
   "the_min_vif": -0.1891,
-  "the_max_vif": 77.5665,
-  "the_mean_vif": 45.1606,
+  "the_max_vif": 78.1022,
+  "the_mean_vif": 44.1347,
   "the_effective_sample_size_of_the_median_session": 21.6,
   "the_binomial_equivalent_threshold": {
    "the_median": 13.3298,
    "the_min": 2.0,
-   "the_max": 17.6144
+   "the_max": 17.6751
   },
   "the_abstention_study_hindsight_point": 1.0,
   "the_note": "the calibrated rule abstains when |z_binom| < K_EFF * sqrt(VIF), so the binomial-equivalent threshold is K_EFF * sqrt(VIF). The abstention study found by hindsight that the self case meets all four bars at a binomial K of 1.0. The VIF here is the correlation of the ACTIVITY map, which is a proxy for the correlation of the cluster's membership -- and the proxy says the threshold should be far HIGHER than 1.0, not lower."
@@ -13192,36 +13192,2646 @@
     }
    },
    "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792655768": {
+   "the_vif": 78.1022,
+   "the_vif_raw": 78.1022,
+   "the_n_effective": 12.29,
+   "n_cells": 960,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.8317,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 1.346319
+    },
+    "-3,-2": {
+     "rho": 0.864,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.436439
+    },
+    "-3,-1": {
+     "rho": 0.8851,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.510269
+    },
+    "-3,0": {
+     "rho": 0.8927,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 1.56218
+    },
+    "-3,1": {
+     "rho": 0.8853,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.510509
+    },
+    "-3,2": {
+     "rho": 0.8636,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.435777
+    },
+    "-3,3": {
+     "rho": 0.8302,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 1.343923
+    },
+    "-2,-3": {
+     "rho": 0.8657,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.468039
+    },
+    "-2,-2": {
+     "rho": 0.899,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.565689
+    },
+    "-2,-1": {
+     "rho": 0.9223,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.648653
+    },
+    "-2,0": {
+     "rho": 0.9318,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.70831
+    },
+    "-2,1": {
+     "rho": 0.9225,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.648924
+    },
+    "-2,2": {
+     "rho": 0.898,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.564034
+    },
+    "-2,3": {
+     "rho": 0.8625,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.462653
+    },
+    "-1,-3": {
+     "rho": 0.8935,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.584173
+    },
+    "-1,-2": {
+     "rho": 0.9275,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.688902
+    },
+    "-1,-1": {
+     "rho": 0.9533,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.781425
+    },
+    "-1,0": {
+     "rho": 0.967,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.853344
+    },
+    "-1,1": {
+     "rho": 0.9546,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.783844
+    },
+    "-1,2": {
+     "rho": 0.926,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.686013
+    },
+    "-1,3": {
+     "rho": 0.8893,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.576658
+    },
+    "0,-3": {
+     "rho": 0.9083,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.680346
+    },
+    "0,-2": {
+     "rho": 0.9458,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.796991
+    },
+    "0,-1": {
+     "rho": 0.9783,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.907674
+    },
+    "0,1": {
+     "rho": 0.9783,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.907674
+    },
+    "0,2": {
+     "rho": 0.9458,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.796991
+    },
+    "0,3": {
+     "rho": 0.9083,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.680346
+    },
+    "1,-3": {
+     "rho": 0.8893,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.576658
+    },
+    "1,-2": {
+     "rho": 0.926,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.686013
+    },
+    "1,-1": {
+     "rho": 0.9546,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.783844
+    },
+    "1,0": {
+     "rho": 0.967,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.853344
+    },
+    "1,1": {
+     "rho": 0.9533,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.781425
+    },
+    "1,2": {
+     "rho": 0.9275,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.688902
+    },
+    "1,3": {
+     "rho": 0.8935,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.584173
+    },
+    "2,-3": {
+     "rho": 0.8625,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.462653
+    },
+    "2,-2": {
+     "rho": 0.898,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.564034
+    },
+    "2,-1": {
+     "rho": 0.9225,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.648924
+    },
+    "2,0": {
+     "rho": 0.9318,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.70831
+    },
+    "2,1": {
+     "rho": 0.9223,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.648653
+    },
+    "2,2": {
+     "rho": 0.899,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.565689
+    },
+    "2,3": {
+     "rho": 0.8657,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.468039
+    },
+    "3,-3": {
+     "rho": 0.8302,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 1.343923
+    },
+    "3,-2": {
+     "rho": 0.8636,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.435777
+    },
+    "3,-1": {
+     "rho": 0.8853,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.510509
+    },
+    "3,0": {
+     "rho": 0.8927,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 1.56218
+    },
+    "3,1": {
+     "rho": 0.8851,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.510269
+    },
+    "3,2": {
+     "rho": 0.864,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.436439
+    },
+    "3,3": {
+     "rho": 0.8317,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 1.346319
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656069": {
+   "the_vif": 59.1713,
+   "the_vif_raw": 59.1713,
+   "the_n_effective": 16.22,
+   "n_cells": 960,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.5117,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.828367
+    },
+    "-3,-2": {
+     "rho": 0.5303,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 0.881586
+    },
+    "-3,-1": {
+     "rho": 0.5537,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 0.944723
+    },
+    "-3,0": {
+     "rho": 0.5664,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 0.991174
+    },
+    "-3,1": {
+     "rho": 0.5688,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 0.970443
+    },
+    "-3,2": {
+     "rho": 0.5623,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 0.934808
+    },
+    "-3,3": {
+     "rho": 0.5455,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.883027
+    },
+    "-2,-3": {
+     "rho": 0.6097,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.034003
+    },
+    "-2,-2": {
+     "rho": 0.6456,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.124417
+    },
+    "-2,-1": {
+     "rho": 0.6829,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.220728
+    },
+    "-2,0": {
+     "rho": 0.7064,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.295021
+    },
+    "-2,1": {
+     "rho": 0.6916,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.236323
+    },
+    "-2,2": {
+     "rho": 0.6655,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.159091
+    },
+    "-2,3": {
+     "rho": 0.6358,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.078261
+    },
+    "-1,-3": {
+     "rho": 0.6918,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.226553
+    },
+    "-1,-2": {
+     "rho": 0.7485,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.362956
+    },
+    "-1,-1": {
+     "rho": 0.8107,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.514996
+    },
+    "-1,0": {
+     "rho": 0.8543,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.637329
+    },
+    "-1,1": {
+     "rho": 0.8059,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.506051
+    },
+    "-1,2": {
+     "rho": 0.7428,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.352507
+    },
+    "-1,3": {
+     "rho": 0.6974,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.236431
+    },
+    "0,-3": {
+     "rho": 0.7451,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.378414
+    },
+    "0,-2": {
+     "rho": 0.808,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.535144
+    },
+    "0,-1": {
+     "rho": 0.8991,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.753282
+    },
+    "0,1": {
+     "rho": 0.8991,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.753282
+    },
+    "0,2": {
+     "rho": 0.808,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.535144
+    },
+    "0,3": {
+     "rho": 0.7451,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.378414
+    },
+    "1,-3": {
+     "rho": 0.6974,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.236431
+    },
+    "1,-2": {
+     "rho": 0.7428,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.352507
+    },
+    "1,-1": {
+     "rho": 0.8059,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.506051
+    },
+    "1,0": {
+     "rho": 0.8543,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.637329
+    },
+    "1,1": {
+     "rho": 0.8107,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.514996
+    },
+    "1,2": {
+     "rho": 0.7485,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.362956
+    },
+    "1,3": {
+     "rho": 0.6918,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.226553
+    },
+    "2,-3": {
+     "rho": 0.6358,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.078261
+    },
+    "2,-2": {
+     "rho": 0.6655,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.159091
+    },
+    "2,-1": {
+     "rho": 0.6916,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.236323
+    },
+    "2,0": {
+     "rho": 0.7064,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.295021
+    },
+    "2,1": {
+     "rho": 0.6829,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.220728
+    },
+    "2,2": {
+     "rho": 0.6456,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.124417
+    },
+    "2,3": {
+     "rho": 0.6097,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.034003
+    },
+    "3,-3": {
+     "rho": 0.5455,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.883027
+    },
+    "3,-2": {
+     "rho": 0.5623,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 0.934808
+    },
+    "3,-1": {
+     "rho": 0.5688,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 0.970443
+    },
+    "3,0": {
+     "rho": 0.5664,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 0.991174
+    },
+    "3,1": {
+     "rho": 0.5537,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 0.944723
+    },
+    "3,2": {
+     "rho": 0.5303,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 0.881586
+    },
+    "3,3": {
+     "rho": 0.5117,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.828367
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656155": {
+   "the_vif": 3.3446,
+   "the_vif_raw": 3.3446,
+   "the_n_effective": 10.46,
+   "n_cells": 35,
+   "the_correlations": {
+    "-3,-2": {
+     "rho": 0.6371,
+     "n_pairs": 10,
+     "weight": 0.285714,
+     "contribution": 0.364032
+    },
+    "-3,-1": {
+     "rho": 0.1908,
+     "n_pairs": 16,
+     "weight": 0.457143,
+     "contribution": 0.174441
+    },
+    "-3,0": {
+     "rho": -0.2896,
+     "n_pairs": 20,
+     "weight": 0.571429,
+     "contribution": -0.33095
+    },
+    "-3,1": {
+     "rho": 0.2918,
+     "n_pairs": 12,
+     "weight": 0.342857,
+     "contribution": 0.200058
+    },
+    "-2,-2": {
+     "rho": 0.4333,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.222857
+    },
+    "-2,-1": {
+     "rho": -0.1224,
+     "n_pairs": 18,
+     "weight": 0.514286,
+     "contribution": -0.12594
+    },
+    "-2,0": {
+     "rho": -0.0017,
+     "n_pairs": 23,
+     "weight": 0.657143,
+     "contribution": -0.002191
+    },
+    "-2,1": {
+     "rho": 0.2297,
+     "n_pairs": 14,
+     "weight": 0.4,
+     "contribution": 0.183775
+    },
+    "-1,-2": {
+     "rho": 0.3407,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.175213
+    },
+    "-1,-1": {
+     "rho": -0.4062,
+     "n_pairs": 19,
+     "weight": 0.542857,
+     "contribution": -0.440978
+    },
+    "-1,0": {
+     "rho": 0.5325,
+     "n_pairs": 27,
+     "weight": 0.771429,
+     "contribution": 0.82155
+    },
+    "-1,1": {
+     "rho": 0.0436,
+     "n_pairs": 16,
+     "weight": 0.457143,
+     "contribution": 0.03989
+    },
+    "0,-2": {
+     "rho": 0.1878,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.096603
+    },
+    "0,-1": {
+     "rho": -0.1898,
+     "n_pairs": 19,
+     "weight": 0.542857,
+     "contribution": -0.206044
+    },
+    "0,1": {
+     "rho": -0.1898,
+     "n_pairs": 19,
+     "weight": 0.542857,
+     "contribution": -0.206044
+    },
+    "0,2": {
+     "rho": 0.1878,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.096603
+    },
+    "1,-1": {
+     "rho": 0.0436,
+     "n_pairs": 16,
+     "weight": 0.457143,
+     "contribution": 0.03989
+    },
+    "1,0": {
+     "rho": 0.5325,
+     "n_pairs": 27,
+     "weight": 0.771429,
+     "contribution": 0.82155
+    },
+    "1,1": {
+     "rho": -0.4062,
+     "n_pairs": 19,
+     "weight": 0.542857,
+     "contribution": -0.440978
+    },
+    "1,2": {
+     "rho": 0.3407,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.175213
+    },
+    "2,-1": {
+     "rho": 0.2297,
+     "n_pairs": 14,
+     "weight": 0.4,
+     "contribution": 0.183775
+    },
+    "2,0": {
+     "rho": -0.0017,
+     "n_pairs": 23,
+     "weight": 0.657143,
+     "contribution": -0.002191
+    },
+    "2,1": {
+     "rho": -0.1224,
+     "n_pairs": 18,
+     "weight": 0.514286,
+     "contribution": -0.12594
+    },
+    "2,2": {
+     "rho": 0.4333,
+     "n_pairs": 9,
+     "weight": 0.257143,
+     "contribution": 0.222857
+    },
+    "3,-1": {
+     "rho": 0.2918,
+     "n_pairs": 12,
+     "weight": 0.342857,
+     "contribution": 0.200058
+    },
+    "3,0": {
+     "rho": -0.2896,
+     "n_pairs": 20,
+     "weight": 0.571429,
+     "contribution": -0.33095
+    },
+    "3,1": {
+     "rho": 0.1908,
+     "n_pairs": 16,
+     "weight": 0.457143,
+     "contribution": 0.174441
+    },
+    "3,2": {
+     "rho": 0.6371,
+     "n_pairs": 10,
+     "weight": 0.285714,
+     "contribution": 0.364032
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656183": {
+   "the_vif": 40.5451,
+   "the_vif_raw": 40.5451,
+   "the_n_effective": 16.57,
+   "n_cells": 672,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.4405,
+     "n_pairs": 396,
+     "weight": 0.589286,
+     "contribution": 0.519149
+    },
+    "-3,-2": {
+     "rho": 0.4782,
+     "n_pairs": 411,
+     "weight": 0.611607,
+     "contribution": 0.584893
+    },
+    "-3,-1": {
+     "rho": 0.5218,
+     "n_pairs": 426,
+     "weight": 0.633929,
+     "contribution": 0.661584
+    },
+    "-3,0": {
+     "rho": 0.5677,
+     "n_pairs": 435,
+     "weight": 0.647321,
+     "contribution": 0.734967
+    },
+    "-3,1": {
+     "rho": 0.5925,
+     "n_pairs": 424,
+     "weight": 0.630952,
+     "contribution": 0.747643
+    },
+    "-3,2": {
+     "rho": 0.5507,
+     "n_pairs": 402,
+     "weight": 0.598214,
+     "contribution": 0.65883
+    },
+    "-3,3": {
+     "rho": 0.4561,
+     "n_pairs": 387,
+     "weight": 0.575893,
+     "contribution": 0.525387
+    },
+    "-2,-3": {
+     "rho": 0.4793,
+     "n_pairs": 429,
+     "weight": 0.638393,
+     "contribution": 0.611996
+    },
+    "-2,-2": {
+     "rho": 0.5456,
+     "n_pairs": 447,
+     "weight": 0.665179,
+     "contribution": 0.725848
+    },
+    "-2,-1": {
+     "rho": 0.604,
+     "n_pairs": 461,
+     "weight": 0.686012,
+     "contribution": 0.82877
+    },
+    "-2,0": {
+     "rho": 0.6622,
+     "n_pairs": 472,
+     "weight": 0.702381,
+     "contribution": 0.930264
+    },
+    "-2,1": {
+     "rho": 0.6603,
+     "n_pairs": 456,
+     "weight": 0.678571,
+     "contribution": 0.896064
+    },
+    "-2,2": {
+     "rho": 0.5825,
+     "n_pairs": 440,
+     "weight": 0.654762,
+     "contribution": 0.76285
+    },
+    "-2,3": {
+     "rho": 0.4876,
+     "n_pairs": 427,
+     "weight": 0.635417,
+     "contribution": 0.619668
+    },
+    "-1,-3": {
+     "rho": 0.5219,
+     "n_pairs": 476,
+     "weight": 0.708333,
+     "contribution": 0.739381
+    },
+    "-1,-2": {
+     "rho": 0.6085,
+     "n_pairs": 490,
+     "weight": 0.729167,
+     "contribution": 0.887335
+    },
+    "-1,-1": {
+     "rho": 0.6959,
+     "n_pairs": 506,
+     "weight": 0.752976,
+     "contribution": 1.048037
+    },
+    "-1,0": {
+     "rho": 0.8102,
+     "n_pairs": 527,
+     "weight": 0.784226,
+     "contribution": 1.270692
+    },
+    "-1,1": {
+     "rho": 0.7312,
+     "n_pairs": 497,
+     "weight": 0.739583,
+     "contribution": 1.081624
+    },
+    "-1,2": {
+     "rho": 0.6183,
+     "n_pairs": 489,
+     "weight": 0.727679,
+     "contribution": 0.899828
+    },
+    "-1,3": {
+     "rho": 0.5228,
+     "n_pairs": 476,
+     "weight": 0.708333,
+     "contribution": 0.740694
+    },
+    "0,-3": {
+     "rho": 0.5677,
+     "n_pairs": 512,
+     "weight": 0.761905,
+     "contribution": 0.865037
+    },
+    "0,-2": {
+     "rho": 0.6717,
+     "n_pairs": 531,
+     "weight": 0.790179,
+     "contribution": 1.061543
+    },
+    "0,-1": {
+     "rho": 0.8267,
+     "n_pairs": 557,
+     "weight": 0.828869,
+     "contribution": 1.370459
+    },
+    "0,1": {
+     "rho": 0.8267,
+     "n_pairs": 557,
+     "weight": 0.828869,
+     "contribution": 1.370459
+    },
+    "0,2": {
+     "rho": 0.6717,
+     "n_pairs": 531,
+     "weight": 0.790179,
+     "contribution": 1.061543
+    },
+    "0,3": {
+     "rho": 0.5677,
+     "n_pairs": 512,
+     "weight": 0.761905,
+     "contribution": 0.865037
+    },
+    "1,-3": {
+     "rho": 0.5228,
+     "n_pairs": 476,
+     "weight": 0.708333,
+     "contribution": 0.740694
+    },
+    "1,-2": {
+     "rho": 0.6183,
+     "n_pairs": 489,
+     "weight": 0.727679,
+     "contribution": 0.899828
+    },
+    "1,-1": {
+     "rho": 0.7312,
+     "n_pairs": 497,
+     "weight": 0.739583,
+     "contribution": 1.081624
+    },
+    "1,0": {
+     "rho": 0.8102,
+     "n_pairs": 527,
+     "weight": 0.784226,
+     "contribution": 1.270692
+    },
+    "1,1": {
+     "rho": 0.6959,
+     "n_pairs": 506,
+     "weight": 0.752976,
+     "contribution": 1.048037
+    },
+    "1,2": {
+     "rho": 0.6085,
+     "n_pairs": 490,
+     "weight": 0.729167,
+     "contribution": 0.887335
+    },
+    "1,3": {
+     "rho": 0.5219,
+     "n_pairs": 476,
+     "weight": 0.708333,
+     "contribution": 0.739381
+    },
+    "2,-3": {
+     "rho": 0.4876,
+     "n_pairs": 427,
+     "weight": 0.635417,
+     "contribution": 0.619668
+    },
+    "2,-2": {
+     "rho": 0.5825,
+     "n_pairs": 440,
+     "weight": 0.654762,
+     "contribution": 0.76285
+    },
+    "2,-1": {
+     "rho": 0.6603,
+     "n_pairs": 456,
+     "weight": 0.678571,
+     "contribution": 0.896064
+    },
+    "2,0": {
+     "rho": 0.6622,
+     "n_pairs": 472,
+     "weight": 0.702381,
+     "contribution": 0.930264
+    },
+    "2,1": {
+     "rho": 0.604,
+     "n_pairs": 461,
+     "weight": 0.686012,
+     "contribution": 0.82877
+    },
+    "2,2": {
+     "rho": 0.5456,
+     "n_pairs": 447,
+     "weight": 0.665179,
+     "contribution": 0.725848
+    },
+    "2,3": {
+     "rho": 0.4793,
+     "n_pairs": 429,
+     "weight": 0.638393,
+     "contribution": 0.611996
+    },
+    "3,-3": {
+     "rho": 0.4561,
+     "n_pairs": 387,
+     "weight": 0.575893,
+     "contribution": 0.525387
+    },
+    "3,-2": {
+     "rho": 0.5507,
+     "n_pairs": 402,
+     "weight": 0.598214,
+     "contribution": 0.65883
+    },
+    "3,-1": {
+     "rho": 0.5925,
+     "n_pairs": 424,
+     "weight": 0.630952,
+     "contribution": 0.747643
+    },
+    "3,0": {
+     "rho": 0.5677,
+     "n_pairs": 435,
+     "weight": 0.647321,
+     "contribution": 0.734967
+    },
+    "3,1": {
+     "rho": 0.5218,
+     "n_pairs": 426,
+     "weight": 0.633929,
+     "contribution": 0.661584
+    },
+    "3,2": {
+     "rho": 0.4782,
+     "n_pairs": 411,
+     "weight": 0.611607,
+     "contribution": 0.584893
+    },
+    "3,3": {
+     "rho": 0.4405,
+     "n_pairs": 396,
+     "weight": 0.589286,
+     "contribution": 0.519149
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656235": {
+   "the_vif": 65.2963,
+   "the_vif_raw": 65.2963,
+   "the_n_effective": 14.64,
+   "n_cells": 956,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.6119,
+     "n_pairs": 772,
+     "weight": 0.807531,
+     "contribution": 0.98818
+    },
+    "-3,-2": {
+     "rho": 0.6467,
+     "n_pairs": 791,
+     "weight": 0.827406,
+     "contribution": 1.070125
+    },
+    "-3,-1": {
+     "rho": 0.6926,
+     "n_pairs": 811,
+     "weight": 0.848326,
+     "contribution": 1.175133
+    },
+    "-3,0": {
+     "rho": 0.735,
+     "n_pairs": 833,
+     "weight": 0.871339,
+     "contribution": 1.280928
+    },
+    "-3,1": {
+     "rho": 0.7368,
+     "n_pairs": 812,
+     "weight": 0.849372,
+     "contribution": 1.251639
+    },
+    "-3,2": {
+     "rho": 0.7178,
+     "n_pairs": 791,
+     "weight": 0.827406,
+     "contribution": 1.187873
+    },
+    "-3,3": {
+     "rho": 0.676,
+     "n_pairs": 772,
+     "weight": 0.807531,
+     "contribution": 1.091747
+    },
+    "-2,-3": {
+     "rho": 0.6397,
+     "n_pairs": 809,
+     "weight": 0.846234,
+     "contribution": 1.08259
+    },
+    "-2,-2": {
+     "rho": 0.7017,
+     "n_pairs": 829,
+     "weight": 0.867155,
+     "contribution": 1.216983
+    },
+    "-2,-1": {
+     "rho": 0.767,
+     "n_pairs": 850,
+     "weight": 0.889121,
+     "contribution": 1.363928
+    },
+    "-2,0": {
+     "rho": 0.8129,
+     "n_pairs": 872,
+     "weight": 0.912134,
+     "contribution": 1.482963
+    },
+    "-2,1": {
+     "rho": 0.8119,
+     "n_pairs": 850,
+     "weight": 0.889121,
+     "contribution": 1.443701
+    },
+    "-2,2": {
+     "rho": 0.7774,
+     "n_pairs": 829,
+     "weight": 0.867155,
+     "contribution": 1.348302
+    },
+    "-2,3": {
+     "rho": 0.7186,
+     "n_pairs": 809,
+     "weight": 0.846234,
+     "contribution": 1.216162
+    },
+    "-1,-3": {
+     "rho": 0.6899,
+     "n_pairs": 846,
+     "weight": 0.884937,
+     "contribution": 1.22095
+    },
+    "-1,-2": {
+     "rho": 0.7675,
+     "n_pairs": 867,
+     "weight": 0.906904,
+     "contribution": 1.392053
+    },
+    "-1,-1": {
+     "rho": 0.8468,
+     "n_pairs": 889,
+     "weight": 0.929916,
+     "contribution": 1.574948
+    },
+    "-1,0": {
+     "rho": 0.9061,
+     "n_pairs": 912,
+     "weight": 0.953975,
+     "contribution": 1.728753
+    },
+    "-1,1": {
+     "rho": 0.8717,
+     "n_pairs": 889,
+     "weight": 0.929916,
+     "contribution": 1.621216
+    },
+    "-1,2": {
+     "rho": 0.8038,
+     "n_pairs": 867,
+     "weight": 0.906904,
+     "contribution": 1.458024
+    },
+    "-1,3": {
+     "rho": 0.73,
+     "n_pairs": 846,
+     "weight": 0.884937,
+     "contribution": 1.291942
+    },
+    "0,-3": {
+     "rho": 0.7315,
+     "n_pairs": 883,
+     "weight": 0.92364,
+     "contribution": 1.351235
+    },
+    "0,-2": {
+     "rho": 0.8165,
+     "n_pairs": 905,
+     "weight": 0.946653,
+     "contribution": 1.545975
+    },
+    "0,-1": {
+     "rho": 0.907,
+     "n_pairs": 929,
+     "weight": 0.971757,
+     "contribution": 1.762781
+    },
+    "0,1": {
+     "rho": 0.907,
+     "n_pairs": 929,
+     "weight": 0.971757,
+     "contribution": 1.762781
+    },
+    "0,2": {
+     "rho": 0.8165,
+     "n_pairs": 905,
+     "weight": 0.946653,
+     "contribution": 1.545975
+    },
+    "0,3": {
+     "rho": 0.7315,
+     "n_pairs": 883,
+     "weight": 0.92364,
+     "contribution": 1.351235
+    },
+    "1,-3": {
+     "rho": 0.73,
+     "n_pairs": 846,
+     "weight": 0.884937,
+     "contribution": 1.291942
+    },
+    "1,-2": {
+     "rho": 0.8038,
+     "n_pairs": 867,
+     "weight": 0.906904,
+     "contribution": 1.458024
+    },
+    "1,-1": {
+     "rho": 0.8717,
+     "n_pairs": 889,
+     "weight": 0.929916,
+     "contribution": 1.621216
+    },
+    "1,0": {
+     "rho": 0.9061,
+     "n_pairs": 912,
+     "weight": 0.953975,
+     "contribution": 1.728753
+    },
+    "1,1": {
+     "rho": 0.8468,
+     "n_pairs": 889,
+     "weight": 0.929916,
+     "contribution": 1.574948
+    },
+    "1,2": {
+     "rho": 0.7675,
+     "n_pairs": 867,
+     "weight": 0.906904,
+     "contribution": 1.392053
+    },
+    "1,3": {
+     "rho": 0.6899,
+     "n_pairs": 846,
+     "weight": 0.884937,
+     "contribution": 1.22095
+    },
+    "2,-3": {
+     "rho": 0.7186,
+     "n_pairs": 809,
+     "weight": 0.846234,
+     "contribution": 1.216162
+    },
+    "2,-2": {
+     "rho": 0.7774,
+     "n_pairs": 829,
+     "weight": 0.867155,
+     "contribution": 1.348302
+    },
+    "2,-1": {
+     "rho": 0.8119,
+     "n_pairs": 850,
+     "weight": 0.889121,
+     "contribution": 1.443701
+    },
+    "2,0": {
+     "rho": 0.8129,
+     "n_pairs": 872,
+     "weight": 0.912134,
+     "contribution": 1.482963
+    },
+    "2,1": {
+     "rho": 0.767,
+     "n_pairs": 850,
+     "weight": 0.889121,
+     "contribution": 1.363928
+    },
+    "2,2": {
+     "rho": 0.7017,
+     "n_pairs": 829,
+     "weight": 0.867155,
+     "contribution": 1.216983
+    },
+    "2,3": {
+     "rho": 0.6397,
+     "n_pairs": 809,
+     "weight": 0.846234,
+     "contribution": 1.08259
+    },
+    "3,-3": {
+     "rho": 0.676,
+     "n_pairs": 772,
+     "weight": 0.807531,
+     "contribution": 1.091747
+    },
+    "3,-2": {
+     "rho": 0.7178,
+     "n_pairs": 791,
+     "weight": 0.827406,
+     "contribution": 1.187873
+    },
+    "3,-1": {
+     "rho": 0.7368,
+     "n_pairs": 812,
+     "weight": 0.849372,
+     "contribution": 1.251639
+    },
+    "3,0": {
+     "rho": 0.735,
+     "n_pairs": 833,
+     "weight": 0.871339,
+     "contribution": 1.280928
+    },
+    "3,1": {
+     "rho": 0.6926,
+     "n_pairs": 811,
+     "weight": 0.848326,
+     "contribution": 1.175133
+    },
+    "3,2": {
+     "rho": 0.6467,
+     "n_pairs": 791,
+     "weight": 0.827406,
+     "contribution": 1.070125
+    },
+    "3,3": {
+     "rho": 0.6119,
+     "n_pairs": 772,
+     "weight": 0.807531,
+     "contribution": 0.98818
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656319": {
+   "the_vif": 14.6236,
+   "the_vif_raw": 14.6236,
+   "the_n_effective": 5.54,
+   "n_cells": 81,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": -0.0289,
+     "n_pairs": 24,
+     "weight": 0.296296,
+     "contribution": -0.017134
+    },
+    "-3,-2": {
+     "rho": 0.4159,
+     "n_pairs": 32,
+     "weight": 0.395062,
+     "contribution": 0.328588
+    },
+    "-3,-1": {
+     "rho": 0.7924,
+     "n_pairs": 39,
+     "weight": 0.481481,
+     "contribution": 0.763098
+    },
+    "-3,0": {
+     "rho": 0.5811,
+     "n_pairs": 47,
+     "weight": 0.580247,
+     "contribution": 0.674418
+    },
+    "-3,1": {
+     "rho": 0.2054,
+     "n_pairs": 35,
+     "weight": 0.432099,
+     "contribution": 0.177483
+    },
+    "-3,2": {
+     "rho": -0.1069,
+     "n_pairs": 26,
+     "weight": 0.320988,
+     "contribution": -0.068605
+    },
+    "-3,3": {
+     "rho": 0.1874,
+     "n_pairs": 17,
+     "weight": 0.209877,
+     "contribution": 0.078641
+    },
+    "-2,-3": {
+     "rho": -0.2079,
+     "n_pairs": 26,
+     "weight": 0.320988,
+     "contribution": -0.133475
+    },
+    "-2,-2": {
+     "rho": 0.2573,
+     "n_pairs": 34,
+     "weight": 0.419753,
+     "contribution": 0.216018
+    },
+    "-2,-1": {
+     "rho": 0.7555,
+     "n_pairs": 44,
+     "weight": 0.54321,
+     "contribution": 0.820781
+    },
+    "-2,0": {
+     "rho": 0.6995,
+     "n_pairs": 52,
+     "weight": 0.641975,
+     "contribution": 0.898097
+    },
+    "-2,1": {
+     "rho": 0.3018,
+     "n_pairs": 40,
+     "weight": 0.493827,
+     "contribution": 0.298107
+    },
+    "-2,2": {
+     "rho": -0.0737,
+     "n_pairs": 30,
+     "weight": 0.37037,
+     "contribution": -0.054559
+    },
+    "-2,3": {
+     "rho": -0.142,
+     "n_pairs": 20,
+     "weight": 0.246914,
+     "contribution": -0.070111
+    },
+    "-1,-3": {
+     "rho": -0.3517,
+     "n_pairs": 25,
+     "weight": 0.308642,
+     "contribution": -0.21708
+    },
+    "-1,-2": {
+     "rho": 0.0746,
+     "n_pairs": 36,
+     "weight": 0.444444,
+     "contribution": 0.066335
+    },
+    "-1,-1": {
+     "rho": 0.6862,
+     "n_pairs": 49,
+     "weight": 0.604938,
+     "contribution": 0.830196
+    },
+    "-1,0": {
+     "rho": 0.8919,
+     "n_pairs": 59,
+     "weight": 0.728395,
+     "contribution": 1.299291
+    },
+    "-1,1": {
+     "rho": 0.4026,
+     "n_pairs": 46,
+     "weight": 0.567901,
+     "contribution": 0.457322
+    },
+    "-1,2": {
+     "rho": -0.0795,
+     "n_pairs": 33,
+     "weight": 0.407407,
+     "contribution": -0.064799
+    },
+    "-1,3": {
+     "rho": -0.2576,
+     "n_pairs": 23,
+     "weight": 0.283951,
+     "contribution": -0.146274
+    },
+    "0,-3": {
+     "rho": -0.1371,
+     "n_pairs": 28,
+     "weight": 0.345679,
+     "contribution": -0.094751
+    },
+    "0,-2": {
+     "rho": 0.0324,
+     "n_pairs": 38,
+     "weight": 0.469136,
+     "contribution": 0.030362
+    },
+    "0,-1": {
+     "rho": 0.5762,
+     "n_pairs": 52,
+     "weight": 0.641975,
+     "contribution": 0.739872
+    },
+    "0,1": {
+     "rho": 0.5762,
+     "n_pairs": 52,
+     "weight": 0.641975,
+     "contribution": 0.739872
+    },
+    "0,2": {
+     "rho": 0.0324,
+     "n_pairs": 38,
+     "weight": 0.469136,
+     "contribution": 0.030362
+    },
+    "0,3": {
+     "rho": -0.1371,
+     "n_pairs": 28,
+     "weight": 0.345679,
+     "contribution": -0.094751
+    },
+    "1,-3": {
+     "rho": -0.2576,
+     "n_pairs": 23,
+     "weight": 0.283951,
+     "contribution": -0.146274
+    },
+    "1,-2": {
+     "rho": -0.0795,
+     "n_pairs": 33,
+     "weight": 0.407407,
+     "contribution": -0.064799
+    },
+    "1,-1": {
+     "rho": 0.4026,
+     "n_pairs": 46,
+     "weight": 0.567901,
+     "contribution": 0.457322
+    },
+    "1,0": {
+     "rho": 0.8919,
+     "n_pairs": 59,
+     "weight": 0.728395,
+     "contribution": 1.299291
+    },
+    "1,1": {
+     "rho": 0.6862,
+     "n_pairs": 49,
+     "weight": 0.604938,
+     "contribution": 0.830196
+    },
+    "1,2": {
+     "rho": 0.0746,
+     "n_pairs": 36,
+     "weight": 0.444444,
+     "contribution": 0.066335
+    },
+    "1,3": {
+     "rho": -0.3517,
+     "n_pairs": 25,
+     "weight": 0.308642,
+     "contribution": -0.21708
+    },
+    "2,-3": {
+     "rho": -0.142,
+     "n_pairs": 20,
+     "weight": 0.246914,
+     "contribution": -0.070111
+    },
+    "2,-2": {
+     "rho": -0.0737,
+     "n_pairs": 30,
+     "weight": 0.37037,
+     "contribution": -0.054559
+    },
+    "2,-1": {
+     "rho": 0.3018,
+     "n_pairs": 40,
+     "weight": 0.493827,
+     "contribution": 0.298107
+    },
+    "2,0": {
+     "rho": 0.6995,
+     "n_pairs": 52,
+     "weight": 0.641975,
+     "contribution": 0.898097
+    },
+    "2,1": {
+     "rho": 0.7555,
+     "n_pairs": 44,
+     "weight": 0.54321,
+     "contribution": 0.820781
+    },
+    "2,2": {
+     "rho": 0.2573,
+     "n_pairs": 34,
+     "weight": 0.419753,
+     "contribution": 0.216018
+    },
+    "2,3": {
+     "rho": -0.2079,
+     "n_pairs": 26,
+     "weight": 0.320988,
+     "contribution": -0.133475
+    },
+    "3,-3": {
+     "rho": 0.1874,
+     "n_pairs": 17,
+     "weight": 0.209877,
+     "contribution": 0.078641
+    },
+    "3,-2": {
+     "rho": -0.1069,
+     "n_pairs": 26,
+     "weight": 0.320988,
+     "contribution": -0.068605
+    },
+    "3,-1": {
+     "rho": 0.2054,
+     "n_pairs": 35,
+     "weight": 0.432099,
+     "contribution": 0.177483
+    },
+    "3,0": {
+     "rho": 0.5811,
+     "n_pairs": 47,
+     "weight": 0.580247,
+     "contribution": 0.674418
+    },
+    "3,1": {
+     "rho": 0.7924,
+     "n_pairs": 39,
+     "weight": 0.481481,
+     "contribution": 0.763098
+    },
+    "3,2": {
+     "rho": 0.4159,
+     "n_pairs": 32,
+     "weight": 0.395062,
+     "contribution": 0.328588
+    },
+    "3,3": {
+     "rho": -0.0289,
+     "n_pairs": 24,
+     "weight": 0.296296,
+     "contribution": -0.017134
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656368": {
+   "the_vif": 63.9543,
+   "the_vif_raw": 63.9543,
+   "the_n_effective": 14.65,
+   "n_cells": 937,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.6837,
+     "n_pairs": 743,
+     "weight": 0.792956,
+     "contribution": 1.08422
+    },
+    "-3,-2": {
+     "rho": 0.7709,
+     "n_pairs": 762,
+     "weight": 0.813234,
+     "contribution": 1.253923
+    },
+    "-3,-1": {
+     "rho": 0.8051,
+     "n_pairs": 779,
+     "weight": 0.831377,
+     "contribution": 1.338648
+    },
+    "-3,0": {
+     "rho": 0.7787,
+     "n_pairs": 797,
+     "weight": 0.850587,
+     "contribution": 1.324691
+    },
+    "-3,1": {
+     "rho": 0.7333,
+     "n_pairs": 780,
+     "weight": 0.832444,
+     "contribution": 1.220789
+    },
+    "-3,2": {
+     "rho": 0.6417,
+     "n_pairs": 761,
+     "weight": 0.812166,
+     "contribution": 1.042367
+    },
+    "-3,3": {
+     "rho": 0.4945,
+     "n_pairs": 741,
+     "weight": 0.790822,
+     "contribution": 0.782111
+    },
+    "-2,-3": {
+     "rho": 0.6945,
+     "n_pairs": 781,
+     "weight": 0.833511,
+     "contribution": 1.157788
+    },
+    "-2,-2": {
+     "rho": 0.7924,
+     "n_pairs": 798,
+     "weight": 0.851654,
+     "contribution": 1.349639
+    },
+    "-2,-1": {
+     "rho": 0.8536,
+     "n_pairs": 820,
+     "weight": 0.875133,
+     "contribution": 1.494091
+    },
+    "-2,0": {
+     "rho": 0.8461,
+     "n_pairs": 836,
+     "weight": 0.892209,
+     "contribution": 1.509807
+    },
+    "-2,1": {
+     "rho": 0.7975,
+     "n_pairs": 820,
+     "weight": 0.875133,
+     "contribution": 1.395921
+    },
+    "-2,2": {
+     "rho": 0.6969,
+     "n_pairs": 798,
+     "weight": 0.851654,
+     "contribution": 1.187072
+    },
+    "-2,3": {
+     "rho": 0.5574,
+     "n_pairs": 778,
+     "weight": 0.830309,
+     "contribution": 0.925669
+    },
+    "-1,-3": {
+     "rho": 0.6848,
+     "n_pairs": 817,
+     "weight": 0.871932,
+     "contribution": 1.194238
+    },
+    "-1,-2": {
+     "rho": 0.797,
+     "n_pairs": 839,
+     "weight": 0.895411,
+     "contribution": 1.42732
+    },
+    "-1,-1": {
+     "rho": 0.8859,
+     "n_pairs": 859,
+     "weight": 0.916756,
+     "contribution": 1.624395
+    },
+    "-1,0": {
+     "rho": 0.9242,
+     "n_pairs": 877,
+     "weight": 0.935966,
+     "contribution": 1.730123
+    },
+    "-1,1": {
+     "rho": 0.8602,
+     "n_pairs": 862,
+     "weight": 0.919957,
+     "contribution": 1.582723
+    },
+    "-1,2": {
+     "rho": 0.7518,
+     "n_pairs": 839,
+     "weight": 0.895411,
+     "contribution": 1.346336
+    },
+    "-1,3": {
+     "rho": 0.6169,
+     "n_pairs": 817,
+     "weight": 0.871932,
+     "contribution": 1.075845
+    },
+    "0,-3": {
+     "rho": 0.666,
+     "n_pairs": 858,
+     "weight": 0.915688,
+     "contribution": 1.219679
+    },
+    "0,-2": {
+     "rho": 0.7873,
+     "n_pairs": 881,
+     "weight": 0.940235,
+     "contribution": 1.480467
+    },
+    "0,-1": {
+     "rho": 0.8982,
+     "n_pairs": 902,
+     "weight": 0.962647,
+     "contribution": 1.7293
+    },
+    "0,1": {
+     "rho": 0.8982,
+     "n_pairs": 902,
+     "weight": 0.962647,
+     "contribution": 1.7293
+    },
+    "0,2": {
+     "rho": 0.7873,
+     "n_pairs": 881,
+     "weight": 0.940235,
+     "contribution": 1.480467
+    },
+    "0,3": {
+     "rho": 0.666,
+     "n_pairs": 858,
+     "weight": 0.915688,
+     "contribution": 1.219679
+    },
+    "1,-3": {
+     "rho": 0.6169,
+     "n_pairs": 817,
+     "weight": 0.871932,
+     "contribution": 1.075845
+    },
+    "1,-2": {
+     "rho": 0.7518,
+     "n_pairs": 839,
+     "weight": 0.895411,
+     "contribution": 1.346336
+    },
+    "1,-1": {
+     "rho": 0.8602,
+     "n_pairs": 862,
+     "weight": 0.919957,
+     "contribution": 1.582723
+    },
+    "1,0": {
+     "rho": 0.9242,
+     "n_pairs": 877,
+     "weight": 0.935966,
+     "contribution": 1.730123
+    },
+    "1,1": {
+     "rho": 0.8859,
+     "n_pairs": 859,
+     "weight": 0.916756,
+     "contribution": 1.624395
+    },
+    "1,2": {
+     "rho": 0.797,
+     "n_pairs": 839,
+     "weight": 0.895411,
+     "contribution": 1.42732
+    },
+    "1,3": {
+     "rho": 0.6848,
+     "n_pairs": 817,
+     "weight": 0.871932,
+     "contribution": 1.194238
+    },
+    "2,-3": {
+     "rho": 0.5574,
+     "n_pairs": 778,
+     "weight": 0.830309,
+     "contribution": 0.925669
+    },
+    "2,-2": {
+     "rho": 0.6969,
+     "n_pairs": 798,
+     "weight": 0.851654,
+     "contribution": 1.187072
+    },
+    "2,-1": {
+     "rho": 0.7975,
+     "n_pairs": 820,
+     "weight": 0.875133,
+     "contribution": 1.395921
+    },
+    "2,0": {
+     "rho": 0.8461,
+     "n_pairs": 836,
+     "weight": 0.892209,
+     "contribution": 1.509807
+    },
+    "2,1": {
+     "rho": 0.8536,
+     "n_pairs": 820,
+     "weight": 0.875133,
+     "contribution": 1.494091
+    },
+    "2,2": {
+     "rho": 0.7924,
+     "n_pairs": 798,
+     "weight": 0.851654,
+     "contribution": 1.349639
+    },
+    "2,3": {
+     "rho": 0.6945,
+     "n_pairs": 781,
+     "weight": 0.833511,
+     "contribution": 1.157788
+    },
+    "3,-3": {
+     "rho": 0.4945,
+     "n_pairs": 741,
+     "weight": 0.790822,
+     "contribution": 0.782111
+    },
+    "3,-2": {
+     "rho": 0.6417,
+     "n_pairs": 761,
+     "weight": 0.812166,
+     "contribution": 1.042367
+    },
+    "3,-1": {
+     "rho": 0.7333,
+     "n_pairs": 780,
+     "weight": 0.832444,
+     "contribution": 1.220789
+    },
+    "3,0": {
+     "rho": 0.7787,
+     "n_pairs": 797,
+     "weight": 0.850587,
+     "contribution": 1.324691
+    },
+    "3,1": {
+     "rho": 0.8051,
+     "n_pairs": 779,
+     "weight": 0.831377,
+     "contribution": 1.338648
+    },
+    "3,2": {
+     "rho": 0.7709,
+     "n_pairs": 762,
+     "weight": 0.813234,
+     "contribution": 1.253923
+    },
+    "3,3": {
+     "rho": 0.6837,
+     "n_pairs": 743,
+     "weight": 0.792956,
+     "contribution": 1.08422
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792656431": {
+   "the_vif": 63.6898,
+   "the_vif_raw": 63.6898,
+   "the_n_effective": 15.07,
+   "n_cells": 960,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": 0.6009,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.972696
+    },
+    "-3,-2": {
+     "rho": 0.6838,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.136834
+    },
+    "-3,-1": {
+     "rho": 0.7477,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.275687
+    },
+    "-3,0": {
+     "rho": 0.7639,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 1.336771
+    },
+    "-3,1": {
+     "rho": 0.7487,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.277394
+    },
+    "-3,2": {
+     "rho": 0.696,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.157166
+    },
+    "-3,3": {
+     "rho": 0.6036,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.977135
+    },
+    "-2,-3": {
+     "rho": 0.6282,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.065314
+    },
+    "-2,-2": {
+     "rho": 0.7206,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.255061
+    },
+    "-2,-1": {
+     "rho": 0.8007,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.431219
+    },
+    "-2,0": {
+     "rho": 0.8267,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.515657
+    },
+    "-2,1": {
+     "rho": 0.7966,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.423921
+    },
+    "-2,2": {
+     "rho": 0.7248,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.262384
+    },
+    "-2,3": {
+     "rho": 0.6267,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.062745
+    },
+    "-1,-3": {
+     "rho": 0.636,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.127487
+    },
+    "-1,-2": {
+     "rho": 0.7451,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.356789
+    },
+    "-1,-1": {
+     "rho": 0.8479,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.584442
+    },
+    "-1,0": {
+     "rho": 0.9088,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.741803
+    },
+    "-1,1": {
+     "rho": 0.8438,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.576803
+    },
+    "-1,2": {
+     "rho": 0.7404,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.348134
+    },
+    "-1,3": {
+     "rho": 0.6325,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.121438
+    },
+    "0,-3": {
+     "rho": 0.6385,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.181218
+    },
+    "0,-2": {
+     "rho": 0.7572,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.438602
+    },
+    "0,-1": {
+     "rho": 0.8811,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.718218
+    },
+    "0,1": {
+     "rho": 0.8811,
+     "n_pairs": 936,
+     "weight": 0.975,
+     "contribution": 1.718218
+    },
+    "0,2": {
+     "rho": 0.7572,
+     "n_pairs": 912,
+     "weight": 0.95,
+     "contribution": 1.438602
+    },
+    "0,3": {
+     "rho": 0.6385,
+     "n_pairs": 888,
+     "weight": 0.925,
+     "contribution": 1.181218
+    },
+    "1,-3": {
+     "rho": 0.6325,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.121438
+    },
+    "1,-2": {
+     "rho": 0.7404,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.348134
+    },
+    "1,-1": {
+     "rho": 0.8438,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.576803
+    },
+    "1,0": {
+     "rho": 0.9088,
+     "n_pairs": 920,
+     "weight": 0.958333,
+     "contribution": 1.741803
+    },
+    "1,1": {
+     "rho": 0.8479,
+     "n_pairs": 897,
+     "weight": 0.934375,
+     "contribution": 1.584442
+    },
+    "1,2": {
+     "rho": 0.7451,
+     "n_pairs": 874,
+     "weight": 0.910417,
+     "contribution": 1.356789
+    },
+    "1,3": {
+     "rho": 0.636,
+     "n_pairs": 851,
+     "weight": 0.886458,
+     "contribution": 1.127487
+    },
+    "2,-3": {
+     "rho": 0.6267,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.062745
+    },
+    "2,-2": {
+     "rho": 0.7248,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.262384
+    },
+    "2,-1": {
+     "rho": 0.7966,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.423921
+    },
+    "2,0": {
+     "rho": 0.8267,
+     "n_pairs": 880,
+     "weight": 0.916667,
+     "contribution": 1.515657
+    },
+    "2,1": {
+     "rho": 0.8007,
+     "n_pairs": 858,
+     "weight": 0.89375,
+     "contribution": 1.431219
+    },
+    "2,2": {
+     "rho": 0.7206,
+     "n_pairs": 836,
+     "weight": 0.870833,
+     "contribution": 1.255061
+    },
+    "2,3": {
+     "rho": 0.6282,
+     "n_pairs": 814,
+     "weight": 0.847917,
+     "contribution": 1.065314
+    },
+    "3,-3": {
+     "rho": 0.6036,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.977135
+    },
+    "3,-2": {
+     "rho": 0.696,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.157166
+    },
+    "3,-1": {
+     "rho": 0.7487,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.277394
+    },
+    "3,0": {
+     "rho": 0.7639,
+     "n_pairs": 840,
+     "weight": 0.875,
+     "contribution": 1.336771
+    },
+    "3,1": {
+     "rho": 0.7477,
+     "n_pairs": 819,
+     "weight": 0.853125,
+     "contribution": 1.275687
+    },
+    "3,2": {
+     "rho": 0.6838,
+     "n_pairs": 798,
+     "weight": 0.83125,
+     "contribution": 1.136834
+    },
+    "3,3": {
+     "rho": 0.6009,
+     "n_pairs": 777,
+     "weight": 0.809375,
+     "contribution": 0.972696
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792689884": {
+   "the_vif": 2.365,
+   "the_vif_raw": 2.365,
+   "the_n_effective": 49.89,
+   "n_cells": 118,
+   "the_correlations": {
+    "-3,-3": {
+     "rho": -0.3345,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": -0.068035
+    },
+    "-3,-2": {
+     "rho": 0.2003,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": 0.033944
+    },
+    "-3,-1": {
+     "rho": -0.0881,
+     "n_pairs": 14,
+     "weight": 0.118644,
+     "contribution": -0.020895
+    },
+    "-3,0": {
+     "rho": -0.316,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": -0.064277
+    },
+    "-3,1": {
+     "rho": -0.4079,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": -0.089869
+    },
+    "-3,2": {
+     "rho": -0.2867,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": -0.048594
+    },
+    "-3,3": {
+     "rho": -0.1861,
+     "n_pairs": 8,
+     "weight": 0.067797,
+     "contribution": -0.025232
+    },
+    "-2,-3": {
+     "rho": -0.2515,
+     "n_pairs": 8,
+     "weight": 0.067797,
+     "contribution": -0.034096
+    },
+    "-2,-2": {
+     "rho": 0.8426,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": 0.14282
+    },
+    "-2,-1": {
+     "rho": 0.0831,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": 0.018318
+    },
+    "-2,0": {
+     "rho": 0.2608,
+     "n_pairs": 17,
+     "weight": 0.144068,
+     "contribution": 0.075152
+    },
+    "-2,1": {
+     "rho": -0.0773,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": -0.017023
+    },
+    "-2,2": {
+     "rho": 0.0494,
+     "n_pairs": 11,
+     "weight": 0.09322,
+     "contribution": 0.009219
+    },
+    "-1,-3": {
+     "rho": 0.3086,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": 0.062766
+    },
+    "-1,-2": {
+     "rho": 0.4794,
+     "n_pairs": 16,
+     "weight": 0.135593,
+     "contribution": 0.130002
+    },
+    "-1,-1": {
+     "rho": 0.3747,
+     "n_pairs": 23,
+     "weight": 0.194915,
+     "contribution": 0.14606
+    },
+    "-1,0": {
+     "rho": -0.0783,
+     "n_pairs": 25,
+     "weight": 0.211864,
+     "contribution": -0.033164
+    },
+    "-1,1": {
+     "rho": 0.0576,
+     "n_pairs": 25,
+     "weight": 0.211864,
+     "contribution": 0.024392
+    },
+    "-1,2": {
+     "rho": 0.0338,
+     "n_pairs": 16,
+     "weight": 0.135593,
+     "contribution": 0.009167
+    },
+    "-1,3": {
+     "rho": 0.6627,
+     "n_pairs": 17,
+     "weight": 0.144068,
+     "contribution": 0.190944
+    },
+    "0,-3": {
+     "rho": -0.3413,
+     "n_pairs": 33,
+     "weight": 0.279661,
+     "contribution": -0.190919
+    },
+    "0,-2": {
+     "rho": 0.1301,
+     "n_pairs": 48,
+     "weight": 0.40678,
+     "contribution": 0.105835
+    },
+    "0,-1": {
+     "rho": 0.3005,
+     "n_pairs": 64,
+     "weight": 0.542373,
+     "contribution": 0.325982
+    },
+    "0,1": {
+     "rho": 0.3005,
+     "n_pairs": 64,
+     "weight": 0.542373,
+     "contribution": 0.325982
+    },
+    "0,2": {
+     "rho": 0.1301,
+     "n_pairs": 48,
+     "weight": 0.40678,
+     "contribution": 0.105835
+    },
+    "0,3": {
+     "rho": -0.3413,
+     "n_pairs": 33,
+     "weight": 0.279661,
+     "contribution": -0.190919
+    },
+    "1,-3": {
+     "rho": 0.6627,
+     "n_pairs": 17,
+     "weight": 0.144068,
+     "contribution": 0.190944
+    },
+    "1,-2": {
+     "rho": 0.0338,
+     "n_pairs": 16,
+     "weight": 0.135593,
+     "contribution": 0.009167
+    },
+    "1,-1": {
+     "rho": 0.0576,
+     "n_pairs": 25,
+     "weight": 0.211864,
+     "contribution": 0.024392
+    },
+    "1,0": {
+     "rho": -0.0783,
+     "n_pairs": 25,
+     "weight": 0.211864,
+     "contribution": -0.033164
+    },
+    "1,1": {
+     "rho": 0.3747,
+     "n_pairs": 23,
+     "weight": 0.194915,
+     "contribution": 0.14606
+    },
+    "1,2": {
+     "rho": 0.4794,
+     "n_pairs": 16,
+     "weight": 0.135593,
+     "contribution": 0.130002
+    },
+    "1,3": {
+     "rho": 0.3086,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": 0.062766
+    },
+    "2,-2": {
+     "rho": 0.0494,
+     "n_pairs": 11,
+     "weight": 0.09322,
+     "contribution": 0.009219
+    },
+    "2,-1": {
+     "rho": -0.0773,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": -0.017023
+    },
+    "2,0": {
+     "rho": 0.2608,
+     "n_pairs": 17,
+     "weight": 0.144068,
+     "contribution": 0.075152
+    },
+    "2,1": {
+     "rho": 0.0831,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": 0.018318
+    },
+    "2,2": {
+     "rho": 0.8426,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": 0.14282
+    },
+    "2,3": {
+     "rho": -0.2515,
+     "n_pairs": 8,
+     "weight": 0.067797,
+     "contribution": -0.034096
+    },
+    "3,-3": {
+     "rho": -0.1861,
+     "n_pairs": 8,
+     "weight": 0.067797,
+     "contribution": -0.025232
+    },
+    "3,-2": {
+     "rho": -0.2867,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": -0.048594
+    },
+    "3,-1": {
+     "rho": -0.4079,
+     "n_pairs": 13,
+     "weight": 0.110169,
+     "contribution": -0.089869
+    },
+    "3,0": {
+     "rho": -0.316,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": -0.064277
+    },
+    "3,1": {
+     "rho": -0.0881,
+     "n_pairs": 14,
+     "weight": 0.118644,
+     "contribution": -0.020895
+    },
+    "3,2": {
+     "rho": 0.2003,
+     "n_pairs": 10,
+     "weight": 0.084746,
+     "contribution": 0.033944
+    },
+    "3,3": {
+     "rho": -0.3345,
+     "n_pairs": 12,
+     "weight": 0.101695,
+     "contribution": -0.068035
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
+  },
+  "1792690326": {
+   "the_vif": 2.0341,
+   "the_vif_raw": 2.0341,
+   "the_n_effective": 26.06,
+   "n_cells": 53,
+   "the_correlations": {
+    "-1,-2": {
+     "rho": 0.498,
+     "n_pairs": 10,
+     "weight": 0.188679,
+     "contribution": 0.18793
+    },
+    "-1,0": {
+     "rho": 0.0283,
+     "n_pairs": 8,
+     "weight": 0.150943,
+     "contribution": 0.008539
+    },
+    "0,-3": {
+     "rho": -0.0576,
+     "n_pairs": 10,
+     "weight": 0.188679,
+     "contribution": -0.02174
+    },
+    "0,-2": {
+     "rho": 0.2122,
+     "n_pairs": 20,
+     "weight": 0.377358,
+     "contribution": 0.160126
+    },
+    "0,-1": {
+     "rho": 0.2012,
+     "n_pairs": 24,
+     "weight": 0.45283,
+     "contribution": 0.182195
+    },
+    "0,1": {
+     "rho": 0.2012,
+     "n_pairs": 24,
+     "weight": 0.45283,
+     "contribution": 0.182195
+    },
+    "0,2": {
+     "rho": 0.2122,
+     "n_pairs": 20,
+     "weight": 0.377358,
+     "contribution": 0.160126
+    },
+    "0,3": {
+     "rho": -0.0576,
+     "n_pairs": 10,
+     "weight": 0.188679,
+     "contribution": -0.02174
+    },
+    "1,0": {
+     "rho": 0.0283,
+     "n_pairs": 8,
+     "weight": 0.150943,
+     "contribution": 0.008539
+    },
+    "1,2": {
+     "rho": 0.498,
+     "n_pairs": 10,
+     "weight": 0.188679,
+     "contribution": 0.18793
+    }
+   },
+   "the_note": "the VIF is clipped at 1.0 for the rule: a VIF below 1 would mean the field is anti-correlated, which is not a thing a body does"
   }
  },
  "the_self_case": {
-  "n_sessions": 47,
-  "n_decisive": 33,
+  "n_sessions": 57,
+  "n_decisive": 41,
   "the_calibrated_rule": {
-   "n": 33,
+   "n": 41,
    "n_answered": 1,
-   "coverage": 0.0303,
-   "accuracy_over_all": 0.9394,
+   "coverage": 0.0244,
+   "accuracy_over_all": 0.9268,
    "accuracy_among_the_answered": 1.0,
-   "n_wrong": 2,
-   "n_wrong_caught": 2,
+   "n_wrong": 3,
+   "n_wrong_caught": 3,
    "the_errors_caught": 1.0,
-   "n_right": 31,
-   "n_right_lost_to_abstention": 30,
-   "the_right_answers_lost": 0.9677
+   "n_right": 38,
+   "n_right_lost_to_abstention": 37,
+   "the_right_answers_lost": 0.9737
   },
   "the_binomial_rule_k2": {
-   "n": 33,
-   "n_answered": 21,
-   "coverage": 0.6364,
-   "accuracy_over_all": 0.9394,
+   "n": 41,
+   "n_answered": 25,
+   "coverage": 0.6098,
+   "accuracy_over_all": 0.9268,
    "accuracy_among_the_answered": 1.0,
-   "n_wrong": 2,
-   "n_wrong_caught": 2,
+   "n_wrong": 3,
+   "n_wrong_caught": 3,
    "the_errors_caught": 1.0,
-   "n_right": 31,
-   "n_right_lost_to_abstention": 10,
-   "the_right_answers_lost": 0.3226
+   "n_right": 38,
+   "n_right_lost_to_abstention": 13,
+   "the_right_answers_lost": 0.3421
   },
   "the_rows": [
    {
@@ -14022,37 +16632,207 @@
     "the_effective_z": -1.3891,
     "abstain": true,
     "abstain_binomial_k2": false
+   },
+   {
+    "session": "1792655768",
+    "left": 114,
+    "right": 132,
+    "answer": "RIGHT",
+    "truth": "RIGHT",
+    "truth_ratio": 1.251,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 960,
+    "the_vif": 78.1022,
+    "the_n_effective": 12.29,
+    "the_binomial_z": -1.1476,
+    "the_effective_z": -0.1299,
+    "abstain": true,
+    "abstain_binomial_k2": true
+   },
+   {
+    "session": "1792656069",
+    "left": 81,
+    "right": 104,
+    "answer": "RIGHT",
+    "truth": "RIGHT",
+    "truth_ratio": 1.107,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 960,
+    "the_vif": 59.1713,
+    "the_n_effective": 16.22,
+    "the_binomial_z": -1.691,
+    "the_effective_z": -0.2198,
+    "abstain": true,
+    "abstain_binomial_k2": true
+   },
+   {
+    "session": "1792656155",
+    "left": 0,
+    "right": 0,
+    "answer": "RIGHT",
+    "truth": "LEFT",
+    "truth_ratio": 1.259,
+    "agrees": false,
+    "decisive": true,
+    "n_observed_cells": 35,
+    "the_vif": 3.3446,
+    "the_n_effective": 10.46,
+    "the_binomial_z": 0.0,
+    "the_effective_z": 0.0,
+    "abstain": true,
+    "abstain_binomial_k2": true
+   },
+   {
+    "session": "1792656183",
+    "left": 105,
+    "right": 127,
+    "answer": "RIGHT",
+    "truth": "RIGHT",
+    "truth_ratio": 1.608,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 672,
+    "the_vif": 40.5451,
+    "the_n_effective": 16.57,
+    "the_binomial_z": -1.4444,
+    "the_effective_z": -0.2268,
+    "abstain": true,
+    "abstain_binomial_k2": true
+   },
+   {
+    "session": "1792656235",
+    "left": 229,
+    "right": 91,
+    "answer": "LEFT",
+    "truth": "LEFT",
+    "truth_ratio": 1.759,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 956,
+    "the_vif": 65.2963,
+    "the_n_effective": 14.64,
+    "the_binomial_z": 7.7144,
+    "the_effective_z": 0.9547,
+    "abstain": true,
+    "abstain_binomial_k2": false
+   },
+   {
+    "session": "1792656319",
+    "left": 28,
+    "right": 0,
+    "answer": "LEFT",
+    "truth": "LEFT",
+    "truth_ratio": 2.812,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 81,
+    "the_vif": 14.6236,
+    "the_n_effective": 5.54,
+    "the_binomial_z": 5.2915,
+    "the_effective_z": 1.3837,
+    "abstain": true,
+    "abstain_binomial_k2": false
+   },
+   {
+    "session": "1792656368",
+    "left": 113,
+    "right": 80,
+    "answer": "LEFT",
+    "truth": "LEFT",
+    "truth_ratio": 1.244,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 937,
+    "the_vif": 63.9543,
+    "the_n_effective": 14.65,
+    "the_binomial_z": 2.3754,
+    "the_effective_z": 0.297,
+    "abstain": true,
+    "abstain_binomial_k2": false
+   },
+   {
+    "session": "1792656431",
+    "left": 86,
+    "right": 123,
+    "answer": "RIGHT",
+    "truth": "RIGHT",
+    "truth_ratio": 1.388,
+    "agrees": true,
+    "decisive": true,
+    "n_observed_cells": 960,
+    "the_vif": 63.6898,
+    "the_n_effective": 15.07,
+    "the_binomial_z": -2.5593,
+    "the_effective_z": -0.3207,
+    "abstain": true,
+    "abstain_binomial_k2": false
+   },
+   {
+    "session": "1792689884",
+    "left": 8,
+    "right": 15,
+    "answer": "RIGHT",
+    "truth": "LEFT",
+    "truth_ratio": 1.07,
+    "agrees": false,
+    "decisive": false,
+    "n_observed_cells": 118,
+    "the_vif": 2.365,
+    "the_n_effective": 49.89,
+    "the_binomial_z": -1.4596,
+    "the_effective_z": -0.9491,
+    "abstain": true,
+    "abstain_binomial_k2": true
+   },
+   {
+    "session": "1792690326",
+    "left": 14,
+    "right": 17,
+    "answer": "RIGHT",
+    "truth": "LEFT",
+    "truth_ratio": 1.069,
+    "agrees": false,
+    "decisive": false,
+    "n_observed_cells": 53,
+    "the_vif": 2.0341,
+    "the_n_effective": 26.06,
+    "the_binomial_z": -0.5388,
+    "the_effective_z": -0.3778,
+    "abstain": true,
+    "abstain_binomial_k2": true
    }
   ]
  },
  "the_transfer_case": {
-  "n_pairs": 2162,
-  "n_decisive": 1518,
+  "n_pairs": 3192,
+  "n_decisive": 2296,
   "the_calibrated_rule": {
-   "n": 1518,
-   "n_answered": 22,
-   "coverage": 0.0145,
-   "accuracy_over_all": 0.8465,
+   "n": 2296,
+   "n_answered": 27,
+   "coverage": 0.0118,
+   "accuracy_over_all": 0.8606,
    "accuracy_among_the_answered": 1.0,
-   "n_wrong": 233,
-   "n_wrong_caught": 233,
+   "n_wrong": 320,
+   "n_wrong_caught": 320,
    "the_errors_caught": 1.0,
-   "n_right": 1285,
-   "n_right_lost_to_abstention": 1263,
-   "the_right_answers_lost": 0.9829
+   "n_right": 1976,
+   "n_right_lost_to_abstention": 1949,
+   "the_right_answers_lost": 0.9863
   },
   "the_binomial_rule_k2": {
-   "n": 1518,
-   "n_answered": 623,
-   "coverage": 0.4104,
-   "accuracy_over_all": 0.8465,
-   "accuracy_among_the_answered": 0.9502,
-   "n_wrong": 233,
-   "n_wrong_caught": 202,
-   "the_errors_caught": 0.867,
-   "n_right": 1285,
-   "n_right_lost_to_abstention": 693,
-   "the_right_answers_lost": 0.5393
+   "n": 2296,
+   "n_answered": 889,
+   "coverage": 0.3872,
+   "accuracy_over_all": 0.8606,
+   "accuracy_among_the_answered": 0.9606,
+   "n_wrong": 320,
+   "n_wrong_caught": 285,
+   "the_errors_caught": 0.8906,
+   "n_right": 1976,
+   "n_right_lost_to_abstention": 1122,
+   "the_right_answers_lost": 0.5678
   }
  },
  "the_bar": {

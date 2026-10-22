@@ -90,6 +90,35 @@ the errors; the geometry null costs 71 % of the right answers for the same
 catch; the truncated null costs all of them. On the held-out set the count
 rule at K = 1 costs **nothing**.
 
+**NOTE, 2026-10-22 — THE REFRESH OF THE ABSTENTION STUDY HAS BROKEN THE
+CROSS-REFERENCE ABOVE, AND THE SPLIT IS A CONSUMABLE.** The abstention
+study was re-run on the grown corpus (56 sessions with a fitted
+vocabulary, 41 decisive), and **the eight held-out sessions are now inside
+`results/glyph_abstain.json`** — they arrived after that study's last
+look and it measures over the whole corpus. So the reproduction claimed
+above no longer holds *against that file*, because that file now carries
+the held-out sessions inside it.
+
+**THE SCORECARD'S OWN MEASUREMENT IS UNAFFECTED.** It recomputes the four
+candidates itself, its rule never consults the truth, and the three
+truth-blind bars carry the weight; the rows on both sides of the split
+are still in `results/glyph_holdout_scorecard.json` and are unchanged.
+**What changed is the status of the eight: they can no longer be described
+as unseen by the arc's abstention study**, on top of already being spent
+by the truncated null study's filed per-session rows.
+
+**AND THE GENERAL LESSON IS WORTH MORE THAN THE NUMBER.** A held-out
+split is not a property of the corpus but a property of **what the arc
+has already looked at**, so **a refresh of an upstream study spends it**.
+That is why the geometry null, the truncated null and this scorecard are
+NOT re-run on the grown corpus even though their denominators are now
+behind the abstention study's: re-running the geometry null would leave
+the truncated null and this scorecard with **no held-out set at all** and
+would make their filed held-out results unreproducible. **The two studies
+whose corpora are the whole corpus — the abstention study and the
+effective-N study — are the two that can be refreshed, and their refresh
+is what found this note.**
+
 ## 4. THE BARS
 
 | bar | met | the numbers |

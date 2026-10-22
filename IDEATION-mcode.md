@@ -1215,3 +1215,60 @@ every null in this family is a statement about one room's geometry.
 *Filed 2026-10-22. Full measurement: `docs/GLYPH-HELDOUT-SCORECARD.md`,
 `experiments/glyph_holdout_scorecard.py`,
 `results/glyph_holdout_scorecard.json`.*
+
+### The refresh, and the split it spent — dated note, 2026-10-22
+
+**THE ABSTENTION STUDY AND THE EFFECTIVE-N STUDY WERE RE-RUN ON THE GROWN
+CORPUS, AND NEITHER VERDICT MOVED.** The abstention study's corpus was 121
+directories, 47 with a fitted vocabulary, 33 decisive. It is now 139
+directories, 56 usable, 41 decisive: nine sessions arrived, eight of them
+decisive. The rule, the bar and the whole curve were declared before this
+run and are untouched.
+
+**THE COUNT RULE'S ACCURACY AMONG THE ANSWERED IS STILL EXACTLY 100 % AT
+EVERY K, ON 41 DECISIVE SESSIONS, AND IT NOW CATCHES THREE OF THE CORPUS'S
+THREE ERRORS.** Thirty-four of the thirty-four sessions it answers are
+right. The declared rule still fails the cost bar and now fails it by
+more: it abstains from 50.0 % of the decisive right answers against a
+quarter's bar. **The coverage curve moved down by one to three points at
+every K** — 82.9 / 68.3 / 61.0 / 46.3 / 43.9 / 26.8 / 22.0 / 17.1 / 9.8 %
+on the self case — so the curve a coverage contract would be argued from is
+a different curve, and the contract's number still cannot be written by
+this session.
+
+**THE EFFECTIVE-N STUDY'S HEADLINE HOLDS TO THREE DECIMAL PLACES.** The
+median VIF is **44.421**, unchanged; the effective sample size of the
+median session is **21.6**, unchanged; the bars are the same three of
+six. Only the max VIF moved (77.57 to 78.10) and the mean (45.16 to
+44.13). The corrected rule is still degenerate — 2.44 % coverage on the
+self case and 1.18 % on the transfer.
+
+**AND THE REFRESH FOUND SOMETHING BIGGER THAN A NUMBER: A HELD-OUT SPLIT
+IS A CONSUMABLE, AND REFRESHING AN UPSTREAM STUDY SPENDS IT.** The eight
+sessions the scorecard held out are now inside `results/glyph_abstain.json`,
+because they arrived after the abstention study's last look and that study
+measures over the whole corpus. So the scorecard's cross-reference — "the
+seen-set numbers are the abstention study's filed sweep reproduced exactly"
+— no longer holds against that file, and the eight can no longer be called
+unseen by the arc's abstention study.
+
+**THE SPLIT IS NOT A PROPERTY OF THE CORPUS BUT A PROPERTY OF WHAT THE ARC
+HAS ALREADY LOOKED AT.** The geometry null, the truncated null and the
+scorecard all define their corpora by ARRIVAL, anchored to the upstream
+study's filed file. **Re-running the geometry null on the grown corpus
+would leave the truncated null and the scorecard with no held-out set at
+all**, and would make their filed held-out results unreproducible. So they
+are not re-run, even though their denominators are now behind the
+abstention study's. The two studies whose corpora are the whole corpus are
+the two that can be refreshed, and their refresh is what found this.
+
+**THE ARC'S STATE IS UNCHANGED IN KIND.** No abstention rule has shipped.
+The cheap rule is still the only candidate that works on sessions it was
+not chosen on, its threshold still has a curve's peak behind it, and the
+contract's number is still a question for the house. The material is still
+a field, a field has a balance and no centre, and **the next measurement
+is still a SECOND ROOM**.
+
+*Filed 2026-10-22. Full measurement: `docs/GLYPH-ABSTAIN.md`,
+`docs/GLYPH-EFFECTIVE-N.md`, `docs/GLYPH-HELDOUT-SCORECARD.md`,
+`results/glyph_abstain.json`, `results/glyph_effective_n.json`.*

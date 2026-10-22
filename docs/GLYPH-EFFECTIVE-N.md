@@ -3,7 +3,7 @@
 **Tool:** `experiments/glyph_effective_n.py` (7/7 selftest green)
 **Results:** `results/glyph_effective_n.json`
 **Device:** CPU (AMD Ryzen AI 9 HX 370, 24 cores), numpy, no GPU, no network
-**Corpus:** the same live corpus the abstention study used — 121 sessions, 47 with a fitted vocabulary, 33 decisive
+**Corpus:** the same live corpus the abstention study used — 139 session directories, 57 with material, 41 decisive — **re-run on the grown corpus; see the dated note in §3**
 
 ---
 
@@ -113,6 +113,33 @@ verdict.
 hindsight point; it lands at a binomial threshold of **13.33** against
 the hindsight point of **1.0**, an order of magnitude away, on the
 other side.
+
+**NOTE, 2026-10-22 — THE STUDY WAS RE-RUN ON THE GROWN CORPUS AND THE
+HEADLINE HOLDS TO THREE DECIMAL PLACES.** This study's corpus was 121
+directories, 47 with a fitted vocabulary, 33 decisive. It is now 139
+directories, 57 with material, 41 decisive. The rule and the bars are
+untouched; only the material grew.
+
+| | before | after |
+|---|---|---|
+| the median session's variance inflation factor | **44.421** | **44.421** — unchanged |
+| the min VIF | −0.1891 | −0.1891 — unchanged |
+| the max VIF | 77.5665 | 78.1022 |
+| the mean VIF | 45.1606 | 44.1347 |
+| the effective sample size of the median session | **21.6** | **21.6** — unchanged |
+| the binomial-equivalent threshold, median | **13.3298** | **13.3298** — unchanged |
+| the binomial-equivalent threshold, max | 17.6144 | 17.6751 |
+| the corrected rule's coverage, self case | 3.0 % (1 of 33) | **2.4 %** (1 of 41) |
+| the corrected rule's coverage, transfer | 1.5 % (22 of 1518) | **1.2 %** (27 of 2296) |
+| the corrected rule's right answers lost, self | 96.8 % | **97.4 %** |
+| the corrected rule's right answers lost, transfer | 98.3 % | **98.6 %** |
+| **the bars** | 3 of 6 met | **the same 3 of 6 met, and the same three not** |
+
+**THE CORRECTION STILL DESTROYS THE RULE, AND IT STILL DOES SO FOR THE
+SAME REASON.** The median VIF did not move at all, the effective sample
+size did not move at all, and the calibration still lands an order of
+magnitude away from the hindsight point. The nine new sessions moved the
+max and the mean a little and moved nothing that the verdict rests on.
 
 ## 4. WHY: THE Z-SCORE WAS NEVER A SIGNIFICANCE TEST
 
