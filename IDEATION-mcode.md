@@ -1150,3 +1150,68 @@ with a balance and no centre.
 
 *Filed 2026-10-22. Full measurement: `docs/GLYPH-TRUNCATED-NULL.md`,
 `experiments/glyph_truncated_null.py`, `results/glyph_truncated_null.json`.*
+
+### The held-out scorecard — dated note, 2026-10-22
+
+**The abstention study's last checklist item can now be closed with a
+number, and the number is that the CHEAP rule is the only one that works
+on sessions it was not chosen on.**
+
+The corpus grew, so the held-out split exists: eight sessions that arrived
+after the arc's last look, all eight decisive, the split by **arrival** and
+not by outcome. The four candidates are the arc's own and were all fixed
+before the measurement that used them — the count rule at K = 1, the count
+rule at K = 2, the geometry null, and the truncated null — one pass, one
+material, no truth consulted by any of them.
+
+**ON THE HELD-OUT EIGHT THE COUNT RULE AT K = 1 ANSWERS 7 OF 8, CATCHES
+THE ONE ERROR, AND LOSES NONE OF THE SEVEN RIGHT ANSWERS.** The geometry
+null answers 2 of 8 and loses 5 of the 7; the truncated null answers
+**none** and loses all 7. The ordering is the same on both sides of the
+split, and it is the ordering the arc already had. The scorecard's
+seen-set numbers are the abstention study's filed sweep reproduced
+**exactly** — n, n_answered, coverage, accuracy among the answered, errors
+caught and right answers lost all agree — so the new thing here is only
+the held-out set.
+
+**ALL FOUR BARS PASS, AND ONE OF THEM IS CONTAMINATED, WHICH IS WHY THE
+DECLARATION SAYS SO.** The held-out sessions' counts and truth labels were
+already visible in the truncated null study's per-session rows, because
+that study filed them, so the trade-off bar is arithmetic on inputs this
+analysis has already seen. **The three truth-blind bars are the ones that
+carry the weight**: the coverage is stable across the split (the worst
+candidate moves 13.64 points against a 25-point band) and nothing that
+worked on the seen set collapsed on the held-out one. This is the same
+species of error as the false freshness caveat, and it belongs in the
+declaration rather than in a footnote: **a bar that quietly relies on what
+the analyst has already seen is a caveat written from memory.**
+
+**AND THE COUNT RULE'S COVERAGE IS THE TRUTH-BLIND ROUTE TO A THRESHOLD
+THE ARC HAD NOT TOLD ITSELF ABOUT.** Coverage as a function of K never
+consults the truth — it is a property of the counts alone — so a threshold
+fixed by a **stated coverage contract** ("the vocabulary may decline at
+most one session in five") is fixed by argument rather than by the peak of
+a curve. On the seen 33 the coverage runs 81.8 % at K = 1, 69.7 % at 1.5,
+63.6 % at 2, 48.5 % at 3 and 21.2 % at 5.
+
+**BUT THE CONTRACT'S NUMBER CANNOT BE WRITTEN BY ME NOW.** This session
+knows what K = 1 does on the held-out eight, so a contract written today is
+a policy choice informed by a result. **A CONTRACT STATED WITHOUT THE
+CURVE AND WITHOUT THE HELD-OUT NUMBERS — a house rule about how much of a
+room a vocabulary may decline to read — would be innocent, and that is a
+thing to ask of the house rather than to manufacture.** What the arc CAN
+do is declare the threshold and the contract **now**, before the next batch
+of sessions arrives, and treat that batch as the test. The eight are spent
+and should be said to be spent rather than spent twice.
+
+**THE ARC'S STATE AFTER SIX STUDIES.** No abstention rule has shipped, and
+the scorecard says why the arc has been circling: of four candidates,
+exactly one answers usefully on unseen sessions, and it is the cheap one,
+and its threshold still has a curve's peak behind it. The material is
+still a field, a field has a balance and no centre, and the undecidability
+was never in the null. **The next measurement is still a SECOND ROOM**, and
+every null in this family is a statement about one room's geometry.
+
+*Filed 2026-10-22. Full measurement: `docs/GLYPH-HELDOUT-SCORECARD.md`,
+`experiments/glyph_holdout_scorecard.py`,
+`results/glyph_holdout_scorecard.json`.*
