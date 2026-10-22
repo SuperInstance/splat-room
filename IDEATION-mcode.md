@@ -940,3 +940,68 @@ snapshot of it.
 
 *Filed 2026-10-21. Full measurement: `docs/GLYPH-ABSTAIN.md`,
 `experiments/glyph_abstain.py`, `results/glyph_abstain.json`.*
+
+### The effective sample size — dated note, 2026-10-21
+
+**The corpus's cells are not independent, and correcting for that
+DESTROYS the abstention rule instead of calibrating it.** The next
+measurement the last note named has been run, and it refuted its own
+hope.
+
+**WHAT WAS MEASURED, AND IT IS A FACT ABOUT THE CORPUS.** Each
+session's activity map has a variance inflation factor — its own
+spatial correlation, over a three-cell reach. The median is **44.42**
+(min −0.19, max 77.57). **The grid's 960 cells are worth about 22
+independent samples.** The rooms are not speckled: a person walks a
+path, and the path is a contiguous stripe of changed cells.
+
+**WHAT THE CORRECTION DID.** Applied in its standard direction — a
+correlated count is LESS decisive — the corrected rule abstains on
+**32 of 33** decisive sessions and **1496 of 1518** decisive pairs.
+Coverage **3.0 %**. The right answers lost, **96.8 %**. Bars 2 and 3
+pass VACUOUSLY, because the accuracy among the answered is 100 % when
+one session is answered and it is answered right. **The hypothesis is
+refuted**: the calibrated binomial-equivalent threshold is **13.33**
+against the abstention study's hindsight point of **1.0**.
+
+**WHY, and this is the part worth keeping.** The z-score was never a
+significance test. The count is over a **blob**; the question is
+whether the blob sits left or right of the room's centre, not whether
+960 independent coins came up even. So the binomial's null — the cells
+scattered at random — is not the null the count is testing, and
+dividing out the correlation inverts the rule instead of calibrating
+it. **The measured VIF is the evidence FOR the right null rather than
+against it**: a VIF of 44 says the material is a stripe, not a
+scatter, and the right way to ask "is this stripe offset?" is to ask
+what a stripe of THIS SHAPE would look like at a random position.
+
+**THE LESSON, and it is the sharpest one this seat has filed: A
+SELFTEST THAT ASSERTS A DIRECTION LOCKS THE DIRECTION IN.** My first
+version of this tool multiplied the binomial z by √VIF instead of
+dividing by it, and the selftest ASSERTED that wrong direction. The
+inverted rule looked BETTER: it abstained on 12 % of the sessions
+instead of 97 %, caught half the errors, and lost 9.7 % of the right
+answers, where the correct rule loses 96.8 %. By the abstention
+study's first bar the bug was a near-success. The second and third
+bars caught it. **The judge was a test that agreed with the bug** —
+which is the fleet's own law, a judge cannot certify itself, applied
+to me.
+
+**THE NEXT MEASUREMENT: THE GEOMETRY NULL.** Take the session's
+characteristic cluster — its actual cells, its actual shape —
+**translate it by a random column offset**, and ask how far the
+left/right imbalance of a randomly placed blob of that shape sits from
+the observed one. It is built from the session's own material, it
+**never consults the truth**, and it has **no knob**: the threshold is
+a quantile of the null's own distribution. It is also what the VIF
+points at, because the VIF *is* the blob's spatial extent.
+
+**AND THE VIF IS NOT CONFINED TO THE RULE.** Every statistic in this
+lane that treats the grid's cells as independent inherits it: the
+transfer's 1806 pairs are not 1806 independent observations, the
+per-cell IoU is not a per-cell quantity, and the corpus's margins are
+wider than a binomial says. The abstention rule is simply the first
+place in the lane where the assumption had to be priced.
+
+*Filed 2026-10-21. Full measurement: `docs/GLYPH-EFFECTIVE-N.md`,
+`experiments/glyph_effective_n.py`, `results/glyph_effective_n.json`.*

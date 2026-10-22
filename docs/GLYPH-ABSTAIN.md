@@ -197,6 +197,18 @@ been measured.
   nominal one. That is a principled reason for a looser K that does
   not consult the truth, and it is the only route to a shipped rule
   that this run does not contaminate.
+  **IT HAS BEEN RUN, AND IT REFUTED THE HOPE — see
+  `docs/GLYPH-EFFECTIVE-N.md`.** The corpus's activity maps have a
+  median variance inflation factor of **44.42**, so the grid's 960
+  cells are worth about **22 independent samples**; applying the
+  correction in its standard direction makes the rule answer **1
+  decisive session of 33**. The reason is not the arithmetic: the
+  z-score was never a significance test, because the count is over a
+  **blob** and the question is whether the blob sits left or right,
+  not whether 960 independent coins came up even. The next measurement
+  is therefore **the geometry null** — the session's own cluster
+  translated to a random column offset, which is built from the
+  session's own material, never consults the truth, and has no knob.
 - **One room, one viewpoint.** The margin's relationship to the truth
   is a property of this room's geometry, at 5 px in x and 3 px in y.
 - **The systematic failures are not repaired.** The rule stops the
