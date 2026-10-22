@@ -1005,3 +1005,65 @@ place in the lane where the assumption had to be priced.
 
 *Filed 2026-10-21. Full measurement: `docs/GLYPH-EFFECTIVE-N.md`,
 `experiments/glyph_effective_n.py`, `results/glyph_effective_n.json`.*
+
+### The geometry null — dated note, 2026-10-21
+
+**The strongest abstention signal this lane has measured, and a corpus
+fact worth having on its own: the grid's characteristic material is
+usually NOT a blob. It spans the room.**
+
+The rule replaces the binomial's null with the room's own geometry: take
+the session's cluster, its actual cells and its actual column profile,
+and ask what the left/right split would be if the blob were placed
+elsewhere in the room. Abstain when the observed placement is not
+distinguishable from the typical one. **Z_NULL = 1, declared, and the
+only number in the rule** — the threshold comes from the session's own
+material, so the rule cannot be fitted to the truth even by accident.
+
+**In the TRANSFER it is the strongest signal measured here: 94.9 % of the
+answered right against 84.7 % over all, catching 94.0 % of the decisive
+errors where the binomial at the same confidence catches 57.9 %.** It is
+also the most expensive: 79.8 % of the right answers go.
+
+**In the SELF case it is anti-informative — 87.5 % among the answered
+against a 93.9 % base rate — and the reason is the corpus.** The
+profile widths: the median cluster spans **12 of the 20** answer
+columns, and **12 clusters span all 20**. The characteristic material
+is not a blob in a room; it is the room. A person walking a room for
+four minutes leaves changed cells in every column, and the vocabulary's
+"characteristic cluster" is the material that moves, which is
+everywhere.
+
+**And that explains the whole arc from the other end.** For a
+room-wide profile the placement null is DEGENERATE — translating it
+changes nothing, so there is no spread — so the rule abstains, on **15
+of the 33** decisive sessions, and **all 15 are right answers**. So the
+material is a FIELD and not a blob: **a field has a balance and no
+centre.** That is why the count's MARGIN identifies the failures and
+the cluster's POSITION cannot: there is no position to find.
+
+**There is another reading and I am not taking it.** The degenerate
+case could abstain (the null says nothing, so the rule cannot justify
+an answer) or answer (the null says nothing, so there is no evidence
+against the answer). The permissive reading is better on this corpus —
+69.7 % coverage, 95.7 % among the answered, half the errors caught,
+29.0 % of the right answers lost — **and it is not taken, because I have
+already seen the split.** A reading adopted after the data is hindsight
+wearing a rule's clothes, and the whole point of this study was to
+avoid that. It does not meet the bars either.
+
+**THE NEXT MEASUREMENT: a null that handles the room-wide case.** The
+candidate is the truncated placement null — the room has walls, so a
+blob may be placed partly out of frame, and the spread is non-zero even
+for a room-wide profile — with the degenerate case's reading DECLARED
+before the run, because this session has now seen the split.
+
+**AND THE HONEST SUMMARY OF THE ARC: no abstention rule has shipped.**
+The count's margin is the best signal found and no calibration of it is
+both cheap and truth-blind yet. Four studies, four ways of learning
+that the vocabulary does not know what it does not know — and one
+strong result about what the corpus IS: a room-sized field with a
+balance and no centre.
+
+*Filed 2026-10-21. Full measurement: `docs/GLYPH-GEOMETRY-NULL.md`,
+`experiments/glyph_geometry_null.py`, `results/glyph_geometry_null.json`.*
