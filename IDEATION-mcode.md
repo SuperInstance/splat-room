@@ -871,3 +871,72 @@ observed cells in the same voice it uses when it is right.
 lens files and studies, and from the `chiaroscuro-embedding` and
 `voxelglyph` result files; the session lists and thresholds are in
 those files. Cross-extends oracle's steal 1 and zcode's idea 4.*
+
+### The abstention rule — dated note, 2026-10-21
+
+**The rule works, and the signal the failure diagnosis suggested does
+not.** The vocabulary can say "I do not know" — and the way it says it
+is by the MARGIN of its count, not by the size of its evidence.
+
+**The count margin is the signal.** A count of `n` cells split
+`n_left`/`n_right` is a binomial proportion, so the z-score for "the
+halves are equal" is `(n_left − n_right)/sqrt(n)`. Abstain when that
+is small. The rule takes the grid's own decisive answers to **16/16 =
+100 %** against **31/33 = 93.9 %** over all, catching **2 of 2** of the
+grid's remaining decisive misses; in the transfer it takes the decisive
+accuracy to **92.8 %** against **84.7 %** over all and catches **86.7 %
+of the decisive errors**.
+
+**The evidence count is NOT the signal, and my failure diagnosis was
+wrong to make it one.** Abstaining when the session is thin (fewer than
+300 observed cells) catches **none** of the grid's two remaining
+misses, and makes the answer slightly WORSE than answering everything:
+92.0 % against a 93.9 % base rate in the self case, and **84.0 % against
+84.7 %** in the transfer — anti-informative, a filter that behaves like
+a coin. **The two failures have THICK evidence and TIED COUNTS**: 583
+and 937 observed cells, z = −0.94 and +0.20. A vocabulary that answers
+by counting cells is unsure exactly when the counts do not separate the
+halves. That is what a near-tied count IS.
+
+**So §0's "three of the four failures have under 300 observed cells" was
+a true statement about those four sessions and a false rule.** It is
+corrected, in place, in `docs/GLYPH-FAILURE.md` §9. **What survives:**
+the abstention itself, and my own prediction from the last note — the
+two remaining *systematic* failures (17 and 20 observed cells) are
+abstained on by BOTH rules. But their truth ratios are 1.082 and 1.094,
+under the shared 1.10 tie threshold, so the truth itself calls them
+ties and they sit outside the decisive measurement.
+
+**And the cost bar FAILED, which is the finding I did not want.** The
+declared rule loses **48.4 %** of the decisive right answers where the
+bar allowed 25 %, and answers only **16 of 33** decisive sessions and
+**430 of 1518** decisive pairs. A rule that reaches 100 % accuracy by
+answering half the questions is not a vocabulary; it is a filter with a
+perfect score. **3 of 4 bars met.**
+
+**The curve says a looser rule would have been cheaper — and I am NOT
+shipping it.** At K = 1 the self case meets all four bars at 81.8 %
+coverage. That point is **HINDSIGHT**: a threshold chosen by looking at
+where the curve peaks is the cardinality mistake, and this lane has
+already paid for it once (the cardinality that inflated 33/43 to 39/43).
+It is recorded because knowing where the curve peaks after the fact is
+worth having.
+
+**The next measurement is the EFFECTIVE sample size, and it is
+truth-blind.** The cells are not independent — a body spans cells — so
+the true variance of the count difference is larger than the binomial's,
+so the binomial z **overstates** the significance and the rule should
+abstain MORE, not less. Measuring the spatial correlation of the cells'
+own activity gives a threshold that no hindsight has touched. That is
+the next thing to build, and it is the first rule in this lane that
+would not have to be declared twice.
+
+**And the corpus moved under the other studies.** 47 sessions here
+against the grid study's 43: the grid's decisive accuracy over all is
+31/33 = 93.9 % against the filed 29/31 = 93.6 %, with the same two
+misses, and the transfer's decisive accuracy over all is 84.7 % against
+the filed 86.3 %. The corpus is live and every number here is a
+snapshot of it.
+
+*Filed 2026-10-21. Full measurement: `docs/GLYPH-ABSTAIN.md`,
+`experiments/glyph_abstain.py`, `results/glyph_abstain.json`.*

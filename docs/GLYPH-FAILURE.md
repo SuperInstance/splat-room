@@ -304,4 +304,49 @@ already knows both numbers.** What is missing is a rule for saying
 "I do not know", and the two failures above are exactly the sessions
 where it should say it.
 
+## 9. THE CORRECTION — the failures are failures of MARGIN, not of EVIDENCE
+
+*Filed 2026-10-21, after the abstention study. Full measurement:
+`docs/GLYPH-ABSTAIN.md` + `experiments/glyph_abstain.py`.*
+
+**This section's §0 and §3 say "the failures concentrate where the
+evidence is thin: three of the four have under 300 observed cells". That
+was a true statement about those four sessions. It does not survive
+being turned into a RULE, and the rule it suggested does not work.**
+
+The abstention rule was built on both numbers this section named — the
+observed-cell count and the count margin — and the two of them are not
+equal in value:
+
+| the rule | errors caught (self) | accuracy among the answered | the verdict |
+|---|---|---|---|
+| abstain when the evidence is thin (cells < 300) | **0 of 2** | **92.0 %** against a 93.9 % base rate | it makes the answer slightly WORSE than answering everything |
+| abstain when the COUNT MARGIN is thin (\|z\| < 2) | **2 of 2** | **100 %** | it catches both |
+
+The reason is visible in the two sessions the grid still gets wrong:
+
+| session | observed cells | z | the grid said | the truth said |
+|---|---|---|---|---|
+| 1792554571 | **583** | −0.94 | RIGHT | LEFT |
+| 1792596296 | **937** | +0.20 | LEFT | RIGHT |
+
+**Both have THICK evidence and a TIED COUNT.** A vocabulary that answers
+by counting cells is unsure exactly when the counts do not separate the
+halves — which is what a near-tied count IS. The evidence count is the
+denominator's size; it is not the confidence.
+
+**What survives from this section:** the abstention itself, and the
+prediction that §8 made — that the grid answers on 17 observed cells in
+the same voice it uses when it is right. That is still true of the two
+remaining *systematic* failures (1792555166 and 1792555182, 17 and 20
+observed cells), and the rule abstains on **both** of them, on both
+rules. But their truth ratios are 1.082 and 1.094, under the shared
+1.10 tie threshold, so the truth itself says those sessions are ties
+and they sit outside the decisive measurement.
+
+**What does not survive:** thinness as the signal. It was measured on
+the failures that happened to be thin, and generalised from four
+sessions to a rule that catches none of the vocabulary's own two
+remaining failures.
+
 *Committed for Muse to review; not merged.*
