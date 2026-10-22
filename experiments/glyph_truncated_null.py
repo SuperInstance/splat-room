@@ -60,6 +60,30 @@ is chosen after seeing an answer.
      already seen.  The rule is truth-blind and declared in advance, and
      that is the only protection there is.
 
+     *** DATED CORRECTION, 2026-10-22, AFTER THE RUN.  ITEM 6 WAS
+     FALSE, AND IT WAS FALSE BECAUSE IT WAS NOT MEASURED.  The corpus
+     was counted instead of taken from the previous session's notes, and
+     it had grown: 139 session directories where the notes said 121,
+     and 55 sessions with a fitted vocabulary where the geometry null
+     study saw 47.  EIGHT sessions had landed after the arc's last look
+     and BEFORE this declaration was written, so they were already on
+     disk when the rule was fixed.
+
+     The rule is untouched by this: it is truth-blind, it was fixed
+     before the run, and nothing in it changed.  What was wrong is the
+     CAVEAT, and the lesson is the one this seat keeps learning: A
+     FRESHNESS CAVEAT IS A MEASUREMENT AND NOT A FOOTNOTE.  A number
+     carried forward in prose is a number nobody checked, and it was
+     wrong by 18 directories and 8 usable sessions.
+
+     The correction has a consequence worth having, and it is the one
+     the geometry study asked for: the corpus HAS grown, so the held-out
+     set exists.  The eight sessions that arrived after the arc's last
+     look are reported separately, under the same unchanged rule, as
+     THE HELD-OUT SET.  The split is by ARRIVAL, not by outcome, so it
+     is not a hindsight choice; it was also not in the declaration, and
+     that is said rather than hidden.
+
 The rule uses no truth information: it sees the session's own cluster
 cells and nothing else.
 """
@@ -175,7 +199,7 @@ def _cluster_profile(labels: np.ndarray, characteristic: int,
     return ggn.cluster_profile(labels, characteristic, answer_cells)
 
 
-def measure(corpus: Path, out_dir: Path) -> dict:
+def measure(corpus: Path, out_dir: Path, prior: Path | None = None) -> dict:
     """The whole study: the truncated null beside the geometry null."""
     materials = []
     for d in sorted(p for p in corpus.iterdir() if p.is_dir()):
@@ -324,6 +348,48 @@ def measure(corpus: Path, out_dir: Path) -> dict:
                            1e-9) - 1.0) <= 0.25),
     }
 
+    # --- THE HELD-OUT SET -------------------------------------------------
+    # The sessions that arrived AFTER the previous study saw the corpus.
+    # The split is by ARRIVAL, not by outcome, so it cannot be a
+    # hindsight choice; and the rule is the same unchanged rule.
+    held_out = None
+    if prior is not None and prior.is_file():
+        prev = json.loads(prior.read_text())
+        seen = {r['session'] for r in prev['the_self_case']['the_rows']}
+        held_rows = [r for r in self_rows if r['session'] not in seen]
+        seen_rows = [r for r in self_rows if r['session'] in seen]
+        h_dec = [r for r in held_rows if r['decisive']]
+        s_dec = [r for r in seen_rows if r['decisive']]
+        h_pairs = [p for p in pairs if p['to'] not in seen]
+        held_out = {
+            'the_prior_study': prior.name,
+            'the_prior_study_sessions': len(seen),
+            'the_sessions_the_prior_study_had_seen': len(seen_rows),
+            'the_held_out_sessions': len(held_rows),
+            'the_held_out_decisive': len(h_dec),
+            'the_held_out_session_names': [r['session'] for r in held_rows],
+            'the_truncated_null_on_the_held_out': ga.grade(h_dec),
+            'the_geometry_null_on_the_held_out': ga.grade(
+                [{**r, 'abstain': r['the_geometry_abstain']} for r in h_dec]),
+            'the_truncated_null_on_the_seen': ga.grade(s_dec),
+            'the_geometry_null_on_the_seen': ga.grade(
+                [{**r, 'abstain': r['the_geometry_abstain']} for r in s_dec]),
+            'the_held_out_transfer_pairs': len(h_pairs),
+            'the_truncated_null_on_the_held_out_pairs': ga.grade(
+                [p for p in h_pairs if p['decisive']]),
+            'the_geometry_null_on_the_held_out_pairs': ga.grade(
+                [{**p, 'abstain': p['the_geometry_abstain']}
+                 for p in h_pairs if p['decisive']]),
+            'the_rows': held_rows,
+            'the_note': ('the split is by ARRIVAL, not by outcome: these '
+                         'sessions landed after the prior study ran and are '
+                         'reported under the same unchanged, truth-blind '
+                         'rule. The split was NOT in the declaration -- the '
+                         'declaration said the corpus had not grown, which '
+                         'was false -- and the correction is dated in the '
+                         'module docstring.'),
+        }
+
     out = {
         'study': 'the truncated placement null',
         'generated_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
@@ -363,6 +429,7 @@ def measure(corpus: Path, out_dir: Path) -> dict:
             'the_binomial_k2': binom2_pairs,
         },
         'the_room_wide_case': wide_summary,
+        'the_held_out_set': held_out,
         'the_bar': bar,
         'the_bar_is_met': all(bar.values()),
     }
@@ -455,16 +522,25 @@ def main() -> int:
     ap.add_argument('--out', default=str(ROOT / 'results'))
     ap.add_argument('--corpus',
                     default='/mnt/c/proart_capture/corpus/free_sessions')
+    ap.add_argument('--prior', default=None,
+                    help='a prior study json: the sessions it had seen are '
+                         'the SEEN set, and everything else is the HELD-OUT '
+                         'set. The split is by arrival, not by outcome.')
     args = ap.parse_args()
     if args.selftest:
         return selftest()
-    out = measure(Path(args.corpus), Path(args.out))
+    out = measure(Path(args.corpus), Path(args.out),
+                  Path(args.prior) if args.prior else None)
     print(json.dumps({
         'the_self_case': out['the_self_case']['the_truncated_null'],
         'the_geometry_null': out['the_self_case']['the_geometry_null'],
         'the_room_wide_case': {k: v for k, v in
                                out['the_room_wide_case'].items()
                                if k != 'the_rows'},
+        'the_held_out_set': ({k: v for k, v in
+                              out['the_held_out_set'].items()
+                              if k not in ('the_rows', 'the_note')}
+                             if out['the_held_out_set'] else None),
         'the_transfer_case': out['the_transfer_case']['the_truncated_null'],
         'the_bar': out['the_bar'],
         'the_bar_is_met': out['the_bar_is_met'],

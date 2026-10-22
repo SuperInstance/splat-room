@@ -1067,3 +1067,86 @@ balance and no centre.
 
 *Filed 2026-10-21. Full measurement: `docs/GLYPH-GEOMETRY-NULL.md`,
 `experiments/glyph_geometry_null.py`, `results/glyph_geometry_null.json`.*
+
+### The truncated placement null — dated note, 2026-10-22
+
+**The null that was supposed to rescue the room-wide case reaches the same
+verdict for a worse price, and the reason it fails is not about nulls.**
+
+The rule: the session's own characteristic cluster is translated to
+**every** position leaving some of it inside the frame, including the
+positions that push part of it out; the statistic is the left fraction of
+the material that remains inside; abstain when the observed value is
+within `Z_NULL = 1` null standard deviations of **the null's own
+centre** (the null is not symmetric, so 0.5 would be the wrong
+reference). The degenerate reading was declared before the run as the
+**conservative** one — abstain — because the permissive one was already
+measured and seen and adopting it now would be hindsight wearing a rule's
+clothes. Teacher dependence 0.000, one declared knob.
+
+**IT DOES WHAT IT WAS BUILT TO DO, AND IT CHANGES NOTHING.** On one real
+room-wide profile the geometry null has **1** placement and no spread;
+the truncated null has **39** and a spread of **0.4347**, with the left
+fraction running the whole way from 0.0 to 1.0. Across the room-wide
+set the truncated null finds a non-degenerate null on **15 of 15** where
+the geometry null is degenerate on all 15. **And it abstains on 15 of 15
+anyway** — all 15 of them right answers. The route to abstention changed;
+the verdict did not. The geometry null says *the material has nowhere
+else to be*; the truncated null says *the material could be anywhere, so
+its balance means nothing*. Both are the same statement about the same
+material: **a field has a balance and no centre**, and the
+undecidability was never in the null.
+
+**AND IT IS FOUR TIMES AS EXPENSIVE EVERYWHERE ELSE**, because
+truncation inflates every null: the truncated null's spread is larger on
+**21 of 21** sessions where both exist (median **0.4340** against
+**0.3160**). Coverage **4.88 %** against the geometry null's **24.39 %**
+in the self case, **4.88 %** against **17.75 %** in the transfer, and in
+the transfer its accuracy among the answered (**94.44 %**) is *below* the
+geometry null's (**96.18 %**). **2 of 4 bars**: bar 2 passes vacuously
+on two answered sessions, bars 1 and 4 fail, and bar 4 fails by a factor
+of seventeen against the binomial's K = 1.
+
+**THE FRESHNESS CAVEAT WAS WRONG, AND THAT IS THE OTHER HALF OF THIS
+NOTE.** The declaration said the corpus had not grown, so the freshness
+mitigation was unavailable. **It had grown: 139 session directories where
+the notes said 121**, and **55** sessions with a fitted vocabulary where
+the arc had seen **47**, and **41** decisive where it had seen **33**.
+Eight
+sessions had landed after the arc's last look and *before* the rule was
+fixed. The caveat was false because it was **carried forward in prose
+instead of being counted**, and that is a new kind of hindsight in this
+lane: not a rule adopted after the data, but a **licence** adopted after
+the data. **A FRESHNESS CAVEAT IS A MEASUREMENT AND NOT A FOOTNOTE.**
+The rule is untouched — truth-blind, fixed before the run — and the
+correction has a consequence worth having, because the held-out set now
+exists: on those **8 sessions, all 8 decisive**, the truncated null
+answers **0 of 8** and the geometry null answers 2 of 8, and on the
+**432** held-out pairs the truncated null answers **0** and the geometry
+null answers 98. The geometry null recomputed on the 33 seen sessions
+reproduces the filed geometry study to the digit (coverage **0.2424**,
+errors caught **0.5**, right answers lost **0.7742**), so the arc's
+filed numbers do not move.
+
+**AND THE GEOMETRY-NULL FAMILY IS EXHAUSTED AS FAR AS THIS CORPUS CAN
+SAY.** Two nulls built from this room's own geometry — its shape and its
+walls — and both abstain on the field, the second strictly more
+expensive. Every null in this family is a statement about **one room's**
+geometry at 5 px in x and 3 px in y, where the room's half is 20 answer
+columns of a 40×24 grid. A rule that is right about one room's field is
+not yet a rule about fields, and the corpus holds 139 sessions of the
+same room and the same viewpoint. **THE NEXT MEASUREMENT IS NOT ANOTHER
+NULL FROM THIS ROOM. IT IS A SECOND ROOM**, or a second viewpoint,
+because a null built from one room's geometry cannot be checked against
+one — and that capture would close the across-room vocabulary test and
+the between-room spread at the same time.
+
+**THE HONEST SUMMARY OF THE ARC, AFTER FIVE STUDIES.** No abstention
+rule has shipped. The count's margin is the best signal found and no
+calibration of it is both cheap and truth-blind yet. Five studies, five
+ways of learning that the vocabulary does not know what it does not know
+— and one strong result about what the corpus IS: a room-sized field
+with a balance and no centre.
+
+*Filed 2026-10-22. Full measurement: `docs/GLYPH-TRUNCATED-NULL.md`,
+`experiments/glyph_truncated_null.py`, `results/glyph_truncated_null.json`.*
